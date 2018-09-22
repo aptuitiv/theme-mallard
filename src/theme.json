@@ -187,6 +187,46 @@
                         ]
                     },
                     {
+                        "key": "spacer",
+                        "name": "Spacer",
+                        "type": "full",
+                        "template": "spacer",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "size",
+                                "name": "Size",
+                                "type": "select",
+                                "value": "",
+                                "description": "",
+                                "options": [
+                                    {
+                                        "value": "1",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "2",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "3",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "4",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "5",
+                                        "default": false
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "key": "_bd-image-small",
                         "name": "Small Image",
                         "type": "full",
