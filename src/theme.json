@@ -236,12 +236,126 @@
                 "name": "Content Elements",
                 "elements": [
                     {
+                        "key": "image-grid-2",
+                        "name": "Columned Content",
+                        "type": "full",
+                        "template": "columned-content",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "numberOfColumns",
+                                "name": "Number of columns per row",
+                                "type": "select",
+                                "value": "",
+                                "description": "Number of columns to display at the largest screen size.\n\"Auto\" will determine the number of columns based on the number of items.",
+                                "options": [
+                                    {
+                                        "value": "Auto",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "2",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "3",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "4",
+                                        "default": false
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "displayText",
+                                "name": "Display text",
+                                "type": "select",
+                                "value": "",
+                                "description": "",
+                                "options": [
+                                    {
+                                        "value": "Above Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Centered on Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "On Bottom of Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Below Image",
+                                        "default": true
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "columns",
+                                "name": "Columns",
+                                "type": "repeating",
+                                "configuration": {
+                                    "collectionItemSort": "1",
+                                    "collectionItemDelete": "1",
+                                    "collectionMinNumItems": "",
+                                    "collectionMaxNumItems": "",
+                                    "collectionOrientation": "vertical",
+                                    "collectionItemName": "Image"
+                                },
+                                "value": "",
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "key": "title",
+                                        "name": "Title",
+                                        "type": "text",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "link",
+                                        "name": "Link",
+                                        "type": "url",
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "image",
+                                        "name": "Image",
+                                        "type": "image",
+                                        "configuration": {
+                                            "path": "\/images\/grid",
+                                            "height": 500,
+                                            "width": 500
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "content",
+                                        "name": "Content",
+                                        "type": "richTextEditor",
+                                        "value": "",
+                                        "description": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "key": "_bd-content",
                         "name": "Content",
                         "type": "full",
                         "template": "content",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -258,8 +372,8 @@
                         "name": "Form",
                         "type": "full",
                         "template": "form",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -276,8 +390,8 @@
                         "name": "Full Width Image",
                         "type": "full",
                         "template": "full-width-image",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -308,8 +422,8 @@
                         "name": "HTML Code",
                         "type": "full",
                         "template": "html-code",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -326,8 +440,8 @@
                         "name": "Iframe Embed",
                         "type": "full",
                         "template": "iframe-embed",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -339,23 +453,23 @@
                                 "options": [
                                     {
                                         "value": "4by3",
-                                        "default": "0"
+                                        "default": false
                                     },
                                     {
                                         "value": "3by2",
-                                        "default": "1"
+                                        "default": true
                                     },
                                     {
                                         "value": "5by3",
-                                        "default": "0"
+                                        "default": false
                                     },
                                     {
                                         "value": "2by1",
-                                        "default": "0"
+                                        "default": false
                                     },
                                     {
                                         "value": "1by1",
-                                        "default": "0"
+                                        "default": false
                                     }
                                 ]
                             },
@@ -369,12 +483,119 @@
                         ]
                     },
                     {
+                        "key": "image-grid",
+                        "name": "Image Grid",
+                        "type": "full",
+                        "template": "image-grid",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "numberOfColumns",
+                                "name": "Number of columns per row",
+                                "type": "select",
+                                "value": "",
+                                "description": "Number of columns to display at the largest screen size.\n\"Auto\" will determine the number of columns based on the number of items.",
+                                "options": [
+                                    {
+                                        "value": "Auto",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "2",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "3",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "4",
+                                        "default": false
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "displayText",
+                                "name": "Display text",
+                                "type": "select",
+                                "value": "",
+                                "description": "",
+                                "options": [
+                                    {
+                                        "value": "Above Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Centered on Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "On Bottom of Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Below Image",
+                                        "default": true
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "images",
+                                "name": "Images",
+                                "type": "repeating",
+                                "configuration": {
+                                    "collectionItemSort": "1",
+                                    "collectionItemDelete": "1",
+                                    "collectionMinNumItems": "",
+                                    "collectionMaxNumItems": "",
+                                    "collectionOrientation": "vertical",
+                                    "collectionItemName": "Image"
+                                },
+                                "value": "",
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "key": "image",
+                                        "name": "Image",
+                                        "type": "image",
+                                        "configuration": {
+                                            "path": "\/images\/grid",
+                                            "height": 500,
+                                            "width": 500
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "title",
+                                        "name": "Title",
+                                        "type": "text",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "link",
+                                        "name": "Link",
+                                        "type": "url",
+                                        "value": "",
+                                        "description": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "key": "media-embed",
                         "name": "Media Embed",
                         "type": "full",
                         "template": "media-embed",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -386,23 +607,23 @@
                                 "options": [
                                     {
                                         "value": "4by3",
-                                        "default": "0"
+                                        "default": false
                                     },
                                     {
                                         "value": "3by2",
-                                        "default": "1"
+                                        "default": true
                                     },
                                     {
                                         "value": "5by3",
-                                        "default": "0"
+                                        "default": false
                                     },
                                     {
                                         "value": "2by1",
-                                        "default": "0"
+                                        "default": false
                                     },
                                     {
                                         "value": "1by1",
-                                        "default": "0"
+                                        "default": false
                                     }
                                 ]
                             },
@@ -412,6 +633,64 @@
                                 "type": "embedUrl",
                                 "value": "",
                                 "description": "Enter the URL of the media content. For example, for YouTube simply enter the URL to view the video on the YouTube website."
+                            }
+                        ]
+                    },
+                    {
+                        "key": "_bd-image-small",
+                        "name": "Small Image",
+                        "type": "full",
+                        "template": "small-image",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "image",
+                                "name": "Image",
+                                "type": "image",
+                                "configuration": {
+                                    "path": "\/images",
+                                    "height": 400,
+                                    "width": 400
+                                },
+                                "value": "",
+                                "description": ""
+                            },
+                            {
+                                "key": "alignment",
+                                "name": "Alignment",
+                                "type": "select",
+                                "value": "",
+                                "description": "",
+                                "options": [
+                                    {
+                                        "value": "Default",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Center",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Float Left",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Float Right",
+                                        "default": false
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "caption",
+                                "name": "Caption",
+                                "type": "text",
+                                "configuration": {
+                                    "allowCode": "no"
+                                },
+                                "value": "",
+                                "description": ""
                             }
                         ]
                     },
@@ -454,64 +733,6 @@
                                 ]
                             }
                         ]
-                    },
-                    {
-                        "key": "_bd-image-small",
-                        "name": "Small Image",
-                        "type": "full",
-                        "template": "small-image",
-                        "enabled": "1",
-                        "parse": "1",
-                        "description": "",
-                        "fields": [
-                            {
-                                "key": "image",
-                                "name": "Image",
-                                "type": "image",
-                                "configuration": {
-                                    "path": "\/images",
-                                    "height": 400,
-                                    "width": 400
-                                },
-                                "value": "",
-                                "description": ""
-                            },
-                            {
-                                "key": "alignment",
-                                "name": "Alignment",
-                                "type": "select",
-                                "value": "",
-                                "description": "",
-                                "options": [
-                                    {
-                                        "value": "Default",
-                                        "default": "0"
-                                    },
-                                    {
-                                        "value": "Center",
-                                        "default": "0"
-                                    },
-                                    {
-                                        "value": "Float Left",
-                                        "default": "0"
-                                    },
-                                    {
-                                        "value": "Float Right",
-                                        "default": "0"
-                                    }
-                                ]
-                            },
-                            {
-                                "key": "caption",
-                                "name": "Caption",
-                                "type": "text",
-                                "configuration": {
-                                    "allowCode": "no"
-                                },
-                                "value": "",
-                                "description": ""
-                            }
-                        ]
                     }
                 ]
             },
@@ -524,8 +745,8 @@
                         "name": "Heading 1",
                         "type": "full",
                         "template": "heading-1",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -542,8 +763,8 @@
                         "name": "Heading 2",
                         "type": "full",
                         "template": "heading-2",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -560,8 +781,8 @@
                         "name": "Heading 3",
                         "type": "full",
                         "template": "heading-3",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -578,8 +799,8 @@
                         "name": "Heading 4",
                         "type": "full",
                         "template": "heading-4",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -596,8 +817,8 @@
                         "name": "Heading 5",
                         "type": "full",
                         "template": "heading-5",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -614,8 +835,8 @@
                         "name": "Heading 6",
                         "type": "full",
                         "template": "heading-6",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "description": "",
                         "fields": [
                             {
@@ -638,8 +859,8 @@
                         "name": "2 Columns (1\/2 - 1\/2)",
                         "type": "grid",
                         "template": "2-columns-1-2-1-2",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "2",
                         "sizes": "6,6",
                         "size": "12",
@@ -651,8 +872,8 @@
                         "name": "2 Columns (1\/2 - 1\/2) Bottom Align",
                         "type": "grid",
                         "template": "2-columns-1-2-1-2-bottom-align",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "2",
                         "sizes": "6,6",
                         "size": "12",
@@ -664,8 +885,8 @@
                         "name": "2 Columns (1\/2 - 1\/2) Center Align",
                         "type": "grid",
                         "template": "2-columns-1-2-1-2-center-align",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "2",
                         "sizes": "6,6",
                         "size": "12",
@@ -677,8 +898,8 @@
                         "name": "2 Columns (1\/3 - 2\/3)",
                         "type": "grid",
                         "template": "2-columns-1-3-2-3",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "2",
                         "sizes": "4,8",
                         "size": "12",
@@ -690,8 +911,8 @@
                         "name": "2 Columns (1\/4 - 3\/4)",
                         "type": "grid",
                         "template": "2-columns-1-4-3-4",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "2",
                         "sizes": "3,9",
                         "size": "12",
@@ -703,8 +924,8 @@
                         "name": "2 Columns (2\/3 - 1\/3)",
                         "type": "grid",
                         "template": "2-columns-2-3-1-3",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "2",
                         "sizes": "8,4",
                         "size": "12",
@@ -716,8 +937,8 @@
                         "name": "2 Columns (3\/4 - 1\/4)",
                         "type": "grid",
                         "template": "2-columns-3-4-1-4",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "2",
                         "sizes": "9,3",
                         "size": "12",
@@ -729,8 +950,8 @@
                         "name": "3 Columns (1\/2 - 1\/4 - 1\/4)",
                         "type": "grid",
                         "template": "3-columns-1-2-1-4-1-4",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "3",
                         "sizes": "6,3,3",
                         "size": "12",
@@ -742,8 +963,8 @@
                         "name": "3 Columns (1\/3 - 1\/3 - 1\/3)",
                         "type": "grid",
                         "template": "3-columns-1-3-1-3-1-3",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "3",
                         "sizes": "4,4,4",
                         "size": "12",
@@ -755,8 +976,8 @@
                         "name": "3 Columns (1\/4 - 1\/2 - 1\/4)",
                         "type": "grid",
                         "template": "3-columns-1-4-1-2-1-4",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "3",
                         "sizes": "3,6,3",
                         "size": "12",
@@ -768,8 +989,8 @@
                         "name": "3 Columns (1\/4 - 1\/4- 1\/2)",
                         "type": "grid",
                         "template": "3-columns-1-4-1-4-1-2",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "3",
                         "sizes": "3,3,6",
                         "size": "12",
@@ -781,8 +1002,8 @@
                         "name": "4 Columns (1\/4 - 1\/4 - 1\/4 - 1\/4)",
                         "type": "grid",
                         "template": "4-columns-1-4-1-4-1-4-1-4",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "4",
                         "sizes": "3,3,3,3",
                         "size": "12",
@@ -794,8 +1015,8 @@
                         "name": "5 Columns (1\/5 - 1\/5 - 1\/5 - 1\/5 - 1\/5)",
                         "type": "grid",
                         "template": "5-columns-1-5-1-5-1-5-1-5-1-5",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "5",
                         "sizes": "1,1,1,1,1",
                         "size": "5",
@@ -807,8 +1028,8 @@
                         "name": "6 Columns (1\/6 - 1\/6 - 1\/6 - 1\/6 - 1\/6 - 1\/6)",
                         "type": "grid",
                         "template": "6-columns-1-6-1-6-1-6-1-6-1-6-1-6",
-                        "enabled": "1",
-                        "parse": "1",
+                        "enabled": true,
+                        "parse": true,
                         "columns": "6",
                         "sizes": "2,2,2,2,2,2",
                         "size": "12",
@@ -821,10 +1042,40 @@
     },
     "templates": [
         {
-            "key": "default",
-            "name": "Default",
-            "is_default": "1",
-            "admin_bar_enabled": "1"
+            "key": "one-column",
+            "name": "One Column",
+            "default": true,
+            "adminBar": true,
+            "contentAreas": [
+                "header"
+            ]
+        },
+        {
+            "key": "narrow",
+            "name": "Narrow",
+            "default": false,
+            "adminBar": true,
+            "contentAreas": [
+                "header"
+            ]
+        },
+        {
+            "key": "two-column-left-sidebar",
+            "name": "Two Column Left Sidebar",
+            "default": false,
+            "adminBar": true,
+            "contentAreas": [
+                "header"
+            ]
+        },
+        {
+            "key": "two-column-right-sidebar",
+            "name": "Two Column Right Sidebar",
+            "default": false,
+            "adminBar": true,
+            "contentAreas": [
+                "header"
+            ]
         },
         {
             "key": "snippets\/pagination",
@@ -837,6 +1088,10 @@
         {
             "key": "snippets\/footer",
             "name": "footer"
+        },
+        {
+            "key": "snippets\/svg-icons",
+            "name": "svg-icons"
         },
         {
             "key": "navigation\/embeded-navigation",
@@ -853,34 +1108,6 @@
         {
             "key": "navigation\/footer",
             "name": "footer"
-        },
-        {
-            "key": "content-builder\/content",
-            "name": "Content"
-        },
-        {
-            "key": "content-builder\/form",
-            "name": "Form"
-        },
-        {
-            "key": "content-builder\/full-width-image",
-            "name": "Full Width Image"
-        },
-        {
-            "key": "content-builder\/html-code",
-            "name": "HTML Code"
-        },
-        {
-            "key": "content-builder\/iframe-embed",
-            "name": "Iframe Embed"
-        },
-        {
-            "key": "content-builder\/media-embed",
-            "name": "Media Embed"
-        },
-        {
-            "key": "content-builder\/small-image",
-            "name": "Small Image"
         },
         {
             "key": "content-builder\/heading-1",
@@ -907,40 +1134,52 @@
             "name": "Heading 6"
         },
         {
+            "key": "content-builder\/html-code",
+            "name": "HTML Code"
+        },
+        {
+            "key": "content-builder\/content",
+            "name": "Content"
+        },
+        {
+            "key": "content-builder\/full-width-image",
+            "name": "Full Width Image"
+        },
+        {
+            "key": "content-builder\/small-image",
+            "name": "Small Image"
+        },
+        {
+            "key": "content-builder\/form",
+            "name": "Form"
+        },
+        {
             "key": "content-builder\/2-columns-1-2-1-2",
             "name": "2 Columns (1\/2 - 1\/2)"
-        },
-        {
-            "key": "content-builder\/2-columns-1-2-1-2-bottom-align",
-            "name": "2 Columns (1\/2 - 1\/2) Bottom Align"
-        },
-        {
-            "key": "content-builder\/2-columns-1-2-1-2-center-align",
-            "name": "2 Columns (1\/2 - 1\/2) Center Align"
         },
         {
             "key": "content-builder\/2-columns-1-3-2-3",
             "name": "2 Columns (1\/3 - 2\/3)"
         },
         {
-            "key": "content-builder\/2-columns-1-4-3-4",
-            "name": "2 Columns (1\/4 - 3\/4)"
-        },
-        {
             "key": "content-builder\/2-columns-2-3-1-3",
             "name": "2 Columns (2\/3 - 1\/3)"
+        },
+        {
+            "key": "content-builder\/2-columns-1-4-3-4",
+            "name": "2 Columns (1\/4 - 3\/4)"
         },
         {
             "key": "content-builder\/2-columns-3-4-1-4",
             "name": "2 Columns (3\/4 - 1\/4)"
         },
         {
-            "key": "content-builder\/3-columns-1-2-1-4-1-4",
-            "name": "3 Columns (1\/2 - 1\/4 - 1\/4)"
-        },
-        {
             "key": "content-builder\/3-columns-1-3-1-3-1-3",
             "name": "3 Columns (1\/3 - 1\/3 - 1\/3)"
+        },
+        {
+            "key": "content-builder\/3-columns-1-2-1-4-1-4",
+            "name": "3 Columns (1\/2 - 1\/4 - 1\/4)"
         },
         {
             "key": "content-builder\/3-columns-1-4-1-2-1-4",
@@ -963,8 +1202,36 @@
             "name": "6 Columns (1\/6 - 1\/6 - 1\/6 - 1\/6 - 1\/6 - 1\/6)"
         },
         {
-            "key": "content-builder\/large-image",
-            "name": "Full Width Image"
+            "key": "content-builder\/iframe-embed",
+            "name": "Iframe Embed"
+        },
+        {
+            "key": "content-builder\/media-embed",
+            "name": "Media Embed"
+        },
+        {
+            "key": "content-builder\/spacer",
+            "name": "Spacer"
+        },
+        {
+            "key": "content-builder\/2-columns-1-2-1-2-bottom-align",
+            "name": "2 Columns (1\/2 - 1\/2) Bottom Align"
+        },
+        {
+            "key": "content-builder\/2-columns-1-2-1-2-center-align",
+            "name": "2 Columns (1\/2 - 1\/2) Center Align"
+        },
+        {
+            "key": "content-builder\/image-grid",
+            "name": "Image Grid"
+        },
+        {
+            "key": "content-builder\/columned-content",
+            "name": "Columned Content"
+        },
+        {
+            "key": "content-layouts\/header",
+            "name": "Header"
         },
         {
             "key": "forms\/grid",
@@ -1127,5 +1394,900 @@
         "inactive_item_class": "",
         "last_item_class": "is-last"
     },
-    "appSettings": []
+    "appSettings": {
+        "account": {
+            "account_forms_body_class": "",
+            "account_forms_breadcrumb": "My Account Forms",
+            "account_forms_css_files": "",
+            "account_forms_footer": "",
+            "account_forms_form_body_class": "",
+            "account_forms_form_breadcrumb": "Form Submissions",
+            "account_forms_form_css_files": "",
+            "account_forms_form_footer": "",
+            "account_forms_form_header": "",
+            "account_forms_form_head_content": "",
+            "account_forms_form_inline_css": "",
+            "account_forms_form_inline_js": "",
+            "account_forms_form_js_files": "",
+            "account_forms_form_title": "Form Submissions",
+            "account_forms_header": "",
+            "account_forms_head_content": "",
+            "account_forms_inline_css": "",
+            "account_forms_inline_js": "",
+            "account_forms_js_files": "",
+            "account_forms_title": "My Account Forms",
+            "account_forms_view_body_class": "",
+            "account_forms_view_breadcrumb": "My Submission",
+            "account_forms_view_css_files": "",
+            "account_forms_view_footer": "",
+            "account_forms_view_header": "",
+            "account_forms_view_head_content": "",
+            "account_forms_view_inline_css": "",
+            "account_forms_view_inline_js": "",
+            "account_forms_view_js_files": "",
+            "account_forms_view_title": "My Submission",
+            "additional_breadcrumb_links": "",
+            "additional_login_field": "",
+            "avatar_height": "48",
+            "avatar_image_path": "\/images\/account\/avatar\/",
+            "avatar_width": "48",
+            "breadcrumb_text": "My Account",
+            "contacts_enabled": "1",
+            "contact_create_welcome_email": "",
+            "contact_create_welcome_email_from_email": "hello@mallard-theme.branchcms.com",
+            "contact_create_welcome_email_from_name": "Website",
+            "contact_create_welcome_email_subject": "A new contact has been created for you",
+            "date_format": "F j, Y",
+            "edit_contact_body_class": "",
+            "edit_contact_breadcrumb": "Edit My Account",
+            "edit_contact_css_files": "",
+            "edit_contact_footer": "",
+            "edit_contact_header": "",
+            "edit_contact_head_content": "",
+            "edit_contact_inline_css": "",
+            "edit_contact_inline_js": "",
+            "edit_contact_js_files": "",
+            "edit_contact_title": "Edit My Account",
+            "login_body_class": "",
+            "login_breadcrumb": "Login",
+            "login_css_files": "",
+            "login_footer": "",
+            "login_header": "",
+            "login_head_content": "",
+            "login_inline_css": "",
+            "login_inline_js": "",
+            "login_ips": "",
+            "login_ip_allow": "0",
+            "login_js_files": "",
+            "login_method": "username_password",
+            "login_redirect_custom": "0",
+            "login_redirect_referrer": "1",
+            "login_redirect_url": "\/account",
+            "login_title": "Login",
+            "myaccount_body_class": "",
+            "myaccount_css_files": "",
+            "myaccount_footer": "",
+            "myaccount_header": "",
+            "myaccount_head_content": "",
+            "myaccount_inline_css": "",
+            "myaccount_inline_js": "",
+            "myaccount_js_files": "",
+            "myaccount_title": "My Account",
+            "not_allowed_body_class": "",
+            "not_allowed_breadcrumb": "Not Allowed",
+            "not_allowed_content": "<p>You are not allowed to access that page.<\/p>",
+            "not_allowed_css_files": "",
+            "not_allowed_footer": "",
+            "not_allowed_header": "",
+            "not_allowed_head_content": "",
+            "not_allowed_inline_css": "",
+            "not_allowed_inline_js": "",
+            "not_allowed_js_files": "",
+            "not_allowed_title": "Not Allowed",
+            "pagination_page_range": "10",
+            "pagination_style": "Sliding",
+            "password_reset_body_class": "",
+            "password_reset_breadcrumb": "Password Reset",
+            "password_reset_css_files": "",
+            "password_reset_email_from_email": "hello@mallard-theme.branchcms.com",
+            "password_reset_email_from_name": "mallard-theme.branchcms.com",
+            "password_reset_email_html": "<html>\n<head>\n\t<meta http-equiv=\"Content-Type\" content=\"text\/html; charset=utf-8\" \/>\n<\/head>\n<body>\n\t<p>Your request to reset your password has been processed. Your new password is: {#account.newPassword}<\/p>  \n\t<p>You can go to <a href=\"{#urls.login}\">{#urls.login}<\/a> to log in.<\/p>\n\t<p>Once you log in you can change your password.<\/p>\n<\/body>\n<\/html>",
+            "password_reset_email_subject": "Password Reset",
+            "password_reset_email_text": "Your request to reset your password has been processed. Your new password is: {#account.newPassword}  \n\nYou can go to {#urls.login} to log in.\n\nOnce you log in you can change your password.",
+            "password_reset_footer": "",
+            "password_reset_header": "",
+            "password_reset_head_content": "",
+            "password_reset_inline_css": "",
+            "password_reset_inline_js": "",
+            "password_reset_js_files": "",
+            "password_reset_title": "Password Reset",
+            "payment_profile_add_body_class": "",
+            "payment_profile_add_breadcrumb": "Add Payment Profile",
+            "payment_profile_add_css_files": "",
+            "payment_profile_add_footer": "",
+            "payment_profile_add_header": "",
+            "payment_profile_add_head_content": "",
+            "payment_profile_add_inline_css": "",
+            "payment_profile_add_inline_js": "",
+            "payment_profile_add_js_files": "",
+            "payment_profile_add_title": "Add Payment Profile",
+            "payment_profile_edit_body_class": "",
+            "payment_profile_edit_breadcrumb": "Edit Payment Profile",
+            "payment_profile_edit_css_files": "",
+            "payment_profile_edit_footer": "",
+            "payment_profile_edit_header": "",
+            "payment_profile_edit_head_content": "",
+            "payment_profile_edit_inline_css": "",
+            "payment_profile_edit_inline_js": "",
+            "payment_profile_edit_js_files": "",
+            "payment_profile_edit_title": "Edit Payment Profile",
+            "payment_profile_list_body_class": "",
+            "payment_profile_list_breadcrumb": "Payment Profiles",
+            "payment_profile_list_css_files": "",
+            "payment_profile_list_footer": "",
+            "payment_profile_list_header": "",
+            "payment_profile_list_head_content": "",
+            "payment_profile_list_inline_css": "",
+            "payment_profile_list_inline_js": "",
+            "payment_profile_list_js_files": "",
+            "payment_profile_list_title": "Payment Profiles",
+            "register_body_class": "",
+            "register_breadcrumb": "Register",
+            "register_confirm_password": "0",
+            "register_css_files": "",
+            "register_footer": "",
+            "register_header": "",
+            "register_head_content": "",
+            "register_inline_css": "",
+            "register_inline_js": "",
+            "register_js_files": "",
+            "register_title": "Register",
+            "send_contact_create_welcome_email": "0",
+            "session_cookie_lifetime": "30",
+            "session_cookie_lifetime_mode": "optional",
+            "session_cookie_lifetime_units": "days",
+            "session_gcmaxlifetime": "24",
+            "session_gcmaxlifetime_units": "hours",
+            "time_format": "g:i A"
+        },
+        "search": {
+            "additional_breadcrumb_links": "",
+            "date_format": "F j, Y",
+            "description_highlight": "bold",
+            "description_length": "250",
+            "elasticsearch_index_name": "mallard-theme_branchcms_com",
+            "enabled": "0",
+            "force_wildcard_search": "no",
+            "index_directory": "ap-search-index",
+            "index_url": "0",
+            "last_manual_update": "",
+            "last_updated": "",
+            "log_add_document": "no",
+            "log_queries": "no",
+            "num_results_per_page": "10",
+            "pagination_style": "Sliding",
+            "results_body_class": "",
+            "results_breadcrumb": "Search Results for \"{{ searchTerm }}\"",
+            "results_css_files": "",
+            "results_footer": "",
+            "results_header": "",
+            "results_head_content": "",
+            "results_inline_css": "",
+            "results_inline_js": "",
+            "results_js_files": "",
+            "results_per_page_intervals": "10,20,50,100",
+            "results_title": "Search Results for \"{{ searchTerm }}\"",
+            "search_body_class": "",
+            "search_breadcrumb": "Search",
+            "search_css_files": "",
+            "search_engine": "elasticsearch",
+            "search_footer": "",
+            "search_header": "",
+            "search_head_content": "",
+            "search_host": "amazon",
+            "search_inline_css": "",
+            "search_inline_js": "",
+            "search_js_files": "",
+            "search_title": "Search",
+            "segment_date_format": "F j, Y",
+            "segment_description_highlight": "bold",
+            "segment_description_length": "250",
+            "segment_num_results_per_page": "10",
+            "segment_pagination_style": "Sliding",
+            "segment_results_body_class": "",
+            "segment_results_breadcrumb": "Search Results for \"{{ searchTerm }}\"",
+            "segment_results_css_files": "",
+            "segment_results_footer": "",
+            "segment_results_header": "",
+            "segment_results_head_content": "",
+            "segment_results_inline_css": "",
+            "segment_results_inline_js": "",
+            "segment_results_js_files": "",
+            "segment_results_per_page_intervals": "10,20,50,100",
+            "segment_results_title": "Search Results for \"{{ searchTerm }}\"",
+            "segment_search_body_class": "",
+            "segment_search_breadcrumb": "Search",
+            "segment_search_css_files": "",
+            "segment_search_footer": "",
+            "segment_search_header": "",
+            "segment_search_head_content": "",
+            "segment_search_inline_css": "",
+            "segment_search_inline_js": "",
+            "segment_search_js_files": "",
+            "segment_search_title": "Search",
+            "stop_words": [
+                "a",
+                "able",
+                "about",
+                "above",
+                "according",
+                "accordingly",
+                "across",
+                "actually",
+                "after",
+                "afterwards",
+                "again",
+                "against",
+                "ain't",
+                "all",
+                "allow",
+                "allows",
+                "almost",
+                "alone",
+                "along",
+                "already",
+                "also",
+                "although",
+                "always",
+                "am",
+                "among",
+                "amongst",
+                "an",
+                "and",
+                "another",
+                "any",
+                "anybody",
+                "anyhow",
+                "anyone",
+                "anything",
+                "anyway",
+                "anyways",
+                "anywhere",
+                "apart",
+                "appear",
+                "appreciate",
+                "appropriate",
+                "are",
+                "aren't",
+                "around",
+                "as",
+                "aside",
+                "ask",
+                "asking",
+                "associated",
+                "at",
+                "available",
+                "away",
+                "awfully",
+                "be",
+                "became",
+                "because",
+                "become",
+                "becomes",
+                "becoming",
+                "been",
+                "before",
+                "beforehand",
+                "behind",
+                "being",
+                "believe",
+                "below",
+                "beside",
+                "besides",
+                "best",
+                "better",
+                "between",
+                "beyond",
+                "both",
+                "brief",
+                "but",
+                "by",
+                "c'mon",
+                "came",
+                "can",
+                "can't",
+                "cannot",
+                "cant",
+                "cause",
+                "causes",
+                "certain",
+                "certainly",
+                "changes",
+                "clearly",
+                "co",
+                "com",
+                "come",
+                "comes",
+                "concerning",
+                "consequently",
+                "consider",
+                "considering",
+                "contain",
+                "containing",
+                "contains",
+                "corresponding",
+                "could",
+                "couldn't",
+                "course",
+                "currently",
+                "definitely",
+                "described",
+                "despite",
+                "did",
+                "didn't",
+                "different",
+                "do",
+                "does",
+                "doesn't",
+                "doing",
+                "don't",
+                "done",
+                "down",
+                "downwards",
+                "during",
+                "each",
+                "edu",
+                "eg",
+                "eight",
+                "either",
+                "else",
+                "elsewhere",
+                "enough",
+                "entirely",
+                "especially",
+                "et",
+                "etc",
+                "even",
+                "ever",
+                "every",
+                "everybody",
+                "everyone",
+                "everything",
+                "everywhere",
+                "ex",
+                "exactly",
+                "example",
+                "except",
+                "far",
+                "few",
+                "fifth",
+                "first",
+                "five",
+                "followed",
+                "following",
+                "follows",
+                "for",
+                "former",
+                "formerly",
+                "forth",
+                "four",
+                "from",
+                "further",
+                "furthermore",
+                "get",
+                "gets",
+                "getting",
+                "given",
+                "gives",
+                "go",
+                "goes",
+                "going",
+                "gone",
+                "got",
+                "gotten",
+                "greetings",
+                "had",
+                "hadn't",
+                "happens",
+                "hardly",
+                "has",
+                "hasn't",
+                "have",
+                "haven't",
+                "having",
+                "he",
+                "he's",
+                "hello",
+                "help",
+                "hence",
+                "her",
+                "here",
+                "here's",
+                "hereafter",
+                "hereby",
+                "herein",
+                "hereupon",
+                "hers",
+                "herself",
+                "hi",
+                "him",
+                "himself",
+                "his",
+                "hither",
+                "hopefully",
+                "how",
+                "howbeit",
+                "however",
+                "i'd",
+                "i'll",
+                "i'm",
+                "i've",
+                "ie",
+                "if",
+                "ignored",
+                "immediate",
+                "in",
+                "inasmuch",
+                "inc",
+                "indeed",
+                "indicate",
+                "indicated",
+                "indicates",
+                "inner",
+                "insofar",
+                "instead",
+                "into",
+                "inward",
+                "is",
+                "isn't",
+                "it",
+                "it'd",
+                "it'll",
+                "it's",
+                "its",
+                "itself",
+                "just",
+                "keep",
+                "keeps",
+                "kept",
+                "know",
+                "known",
+                "knows",
+                "last",
+                "lately",
+                "later",
+                "latter",
+                "latterly",
+                "least",
+                "less",
+                "lest",
+                "let",
+                "let's",
+                "like",
+                "liked",
+                "likely",
+                "little",
+                "look",
+                "looking",
+                "looks",
+                "ltd",
+                "mainly",
+                "many",
+                "may",
+                "maybe",
+                "me",
+                "mean",
+                "meanwhile",
+                "merely",
+                "might",
+                "more",
+                "moreover",
+                "most",
+                "mostly",
+                "much",
+                "must",
+                "my",
+                "myself",
+                "name",
+                "namely",
+                "nd",
+                "near",
+                "nearly",
+                "necessary",
+                "need",
+                "needs",
+                "neither",
+                "never",
+                "nevertheless",
+                "new",
+                "next",
+                "nine",
+                "no",
+                "nobody",
+                "non",
+                "none",
+                "noone",
+                "nor",
+                "normally",
+                "not",
+                "nothing",
+                "novel",
+                "now",
+                "nowhere",
+                "obviously",
+                "of",
+                "off",
+                "often",
+                "oh",
+                "ok",
+                "okay",
+                "old",
+                "on",
+                "once",
+                "one",
+                "ones",
+                "only",
+                "onto",
+                "or",
+                "other",
+                "others",
+                "otherwise",
+                "ought",
+                "our",
+                "ours",
+                "ourselves",
+                "out",
+                "outside",
+                "over",
+                "overall",
+                "own",
+                "particular",
+                "particularly",
+                "per",
+                "perhaps",
+                "placed",
+                "please",
+                "plus",
+                "possible",
+                "presumably",
+                "probably",
+                "provides",
+                "que",
+                "quite",
+                "qv",
+                "rather",
+                "rd",
+                "re",
+                "really",
+                "reasonably",
+                "regarding",
+                "regardless",
+                "regards",
+                "relatively",
+                "respectively",
+                "right",
+                "said",
+                "same",
+                "saw",
+                "say",
+                "saying",
+                "says",
+                "second",
+                "secondly",
+                "see",
+                "seeing",
+                "seem",
+                "seemed",
+                "seeming",
+                "seems",
+                "seen",
+                "self",
+                "selves",
+                "sensible",
+                "sent",
+                "serious",
+                "seriously",
+                "seven",
+                "several",
+                "shall",
+                "she",
+                "should",
+                "shouldn't",
+                "since",
+                "six",
+                "so",
+                "some",
+                "somebody",
+                "somehow",
+                "someone",
+                "something",
+                "sometime",
+                "sometimes",
+                "somewhat",
+                "somewhere",
+                "soon",
+                "sorry",
+                "specified",
+                "specify",
+                "specifying",
+                "still",
+                "sub",
+                "such",
+                "sup",
+                "sure",
+                "take",
+                "taken",
+                "tell",
+                "tends",
+                "than",
+                "thank",
+                "thanks",
+                "thanx",
+                "that",
+                "that's",
+                "thats",
+                "the",
+                "their",
+                "theirs",
+                "them",
+                "themselves",
+                "then",
+                "thence",
+                "there",
+                "there's",
+                "thereafter",
+                "thereby",
+                "therefore",
+                "therein",
+                "theres",
+                "thereupon",
+                "these",
+                "they",
+                "they'd",
+                "they'll",
+                "they're",
+                "they've",
+                "think",
+                "third",
+                "this",
+                "thorough",
+                "thoroughly",
+                "those",
+                "though",
+                "three",
+                "through",
+                "throughout",
+                "thru",
+                "thus",
+                "to",
+                "together",
+                "too",
+                "took",
+                "toward",
+                "towards",
+                "tried",
+                "tries",
+                "truly",
+                "try",
+                "trying",
+                "twice",
+                "two",
+                "un",
+                "under",
+                "unfortunately",
+                "unless",
+                "unlikely",
+                "until",
+                "unto",
+                "up",
+                "upon",
+                "us",
+                "use",
+                "used",
+                "useful",
+                "uses",
+                "using",
+                "usually",
+                "value",
+                "various",
+                "very",
+                "via",
+                "viz",
+                "vs",
+                "want",
+                "wants",
+                "was",
+                "wasn't",
+                "way",
+                "we",
+                "we'd",
+                "we'll",
+                "we're",
+                "we've",
+                "welcome",
+                "well",
+                "went",
+                "were",
+                "weren't",
+                "what",
+                "what's",
+                "whatever",
+                "when",
+                "whence",
+                "whenever",
+                "where",
+                "where's",
+                "whereafter",
+                "whereas",
+                "whereby",
+                "wherein",
+                "whereupon",
+                "wherever",
+                "whether",
+                "which",
+                "while",
+                "whither",
+                "who",
+                "who's",
+                "whoever",
+                "whole",
+                "whom",
+                "whose",
+                "why",
+                "will",
+                "willing",
+                "wish",
+                "with",
+                "within",
+                "without",
+                "won't",
+                "wonder",
+                "would",
+                "would",
+                "wouldn't",
+                "yes",
+                "yet",
+                "you",
+                "you'd",
+                "you'll",
+                "you're",
+                "you've",
+                "your",
+                "yours",
+                "yourself",
+                "yourselves",
+                "zero"
+            ],
+            "term_minimum_length": "3"
+        }
+    },
+    "contentAreas": [
+        {
+            "key": "header",
+            "name": "Header"
+        }
+    ],
+    "contentLayouts": [
+        {
+            "key": "header",
+            "name": "Header",
+            "description": "",
+            "attributes": [
+                {
+                    "key": "displayType",
+                    "name": "Display Type",
+                    "description": "\u201cSingle slide\u201d will display only the first slide content",
+                    "type": "select",
+                    "size": "medium",
+                    "value": "",
+                    "values": [
+                        {
+                            "value": "Slideshow",
+                            "default": false
+                        },
+                        {
+                            "value": "Single slide",
+                            "default": false
+                        },
+                        {
+                            "value": "Random slide",
+                            "default": false
+                        },
+                        {
+                            "value": "Hide",
+                            "default": false
+                        }
+                    ]
+                },
+                {
+                    "key": "sliderSpeed",
+                    "name": "Slider speed",
+                    "description": "",
+                    "type": "select",
+                    "configuration": {
+                        "0": "",
+                        "after": " seconds"
+                    },
+                    "size": "medium",
+                    "value": "",
+                    "values": [
+                        {
+                            "value": "3",
+                            "default": false
+                        },
+                        {
+                            "value": "4",
+                            "default": false
+                        },
+                        {
+                            "value": "5",
+                            "default": false
+                        },
+                        {
+                            "value": "6",
+                            "default": false
+                        },
+                        {
+                            "value": "7",
+                            "default": false
+                        },
+                        {
+                            "value": "8",
+                            "default": false
+                        }
+                    ]
+                },
+                {
+                    "key": "slides",
+                    "name": "Slides",
+                    "description": "",
+                    "type": "repeating",
+                    "configuration": {
+                        "collectionItemSort": "1",
+                        "collectionItemDelete": "1",
+                        "collectionMinNumItems": "",
+                        "collectionMaxNumItems": "",
+                        "collectionAllowMinNumItems": "none",
+                        "collectionAllowMaxNumItems": "none",
+                        "collectionOrientation": "vertical",
+                        "collectionItemName": "Slide"
+                    },
+                    "size": "medium",
+                    "value": ""
+                },
+                {
+                    "key": "section14",
+                    "name": "Content Heading",
+                    "description": "",
+                    "type": "section",
+                    "size": "medium",
+                    "value": ""
+                },
+                {
+                    "key": "title",
+                    "name": "Title",
+                    "description": "",
+                    "type": "text",
+                    "configuration": {
+                        "allowCode": "no"
+                    },
+                    "size": "medium",
+                    "value": ""
+                },
+                {
+                    "key": "content",
+                    "name": "Content",
+                    "description": "",
+                    "type": "richTextEditor",
+                    "size": "medium",
+                    "value": ""
+                }
+            ]
+        }
+    ],
+    "appForms": [],
+    "widgets": {
+        "collections": [],
+        "feeds": []
+    }
 }
