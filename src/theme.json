@@ -236,6 +236,63 @@
                 "name": "Content Elements",
                 "elements": [
                     {
+                        "key": "staff",
+                        "name": "Staff",
+                        "type": "full",
+                        "template": "staff",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "people",
+                                "name": "People",
+                                "type": "repeating",
+                                "configuration": {
+                                    "collectionItemSort": "1",
+                                    "collectionItemDelete": "1",
+                                    "collectionMinNumItems": "",
+                                    "collectionMaxNumItems": "",
+                                    "collectionOrientation": "vertical",
+                                    "collectionItemName": "Person"
+                                },
+                                "value": "",
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "key": "name",
+                                        "name": "Name",
+                                        "type": "text",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "bio",
+                                        "name": "Bio",
+                                        "type": "richTextEditor",
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "image",
+                                        "name": "Image",
+                                        "type": "image",
+                                        "configuration": {
+                                            "path": "\/images\/staff",
+                                            "height": 500,
+                                            "width": 500
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "key": "image-grid-2",
                         "name": "Columned Content",
                         "type": "full",
