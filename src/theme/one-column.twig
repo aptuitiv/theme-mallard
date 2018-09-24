@@ -1,0 +1,11 @@
+{%  include 'snippets/header' %}
+{{ _page.content('header') }}
+<div class="Container">
+    <div class="Content u-cf">
+        {% if _core.theme.settings.showBreadcrumb == "yes" and _page.isHome == false %}
+            {{ _page.breadcrumb() }}
+        {% endif %}
+        {{ _page.content() }}
+    </div>
+</div>
+{%  include 'snippets/footer' %}

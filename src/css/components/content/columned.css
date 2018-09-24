@@ -1,0 +1,102 @@
+/* =========================================================================== *\
+    Columned Content
+\* =========================================================================== */
+
+
+/* @define ColumnedContent */
+
+.ColumnedContent-col {
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ColumnedContent-item {
+    position: relative;
+}
+
+.ColumnedContent-link {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+}
+
+.ColumnedContent-link:active,
+.ColumnedContent-link:focus,
+.ColumnedContent-link:hover {
+    color: var(--theme-columned-content-title-hover-color);
+    text-decoration: none;
+}
+
+.ColumnedContent-link:active,
+.ColumnedContent-link:focus,
+.ColumnedContent-link:hover {
+    text-decoration: none;
+}
+
+.ColumnedContent-image {
+    height: auto;
+    width: 100%;
+}
+
+@supports (object-fit: cover) {
+    /*
+    .ColumnedContent-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ColumnedContent-item {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+    }
+
+    .ColumnedContent-image {
+        flex: 1 1 auto;
+        object-fit: cover;
+    }
+    */
+}
+
+.ColumnedContent-title {
+    box-sizing: border-box;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 0 8px;
+    text-align: center;
+    width: 100%;
+}
+
+@media (--c-bp-lg) {
+    .ColumnedContent-title {
+        font-size: 1em;
+    }
+}
+
+.ColumnedContent-link:active .ColumnedContent-title,
+.ColumnedContent-link:focus .ColumnedContent-title,
+.ColumnedContent-link:hover .ColumnedContent-title {
+    background: var(--theme-columned-content-title-hover-background);
+    color: var(--theme-columned-content-title-hover-color);
+}
+
+.ColumnedContent-title--center {
+    color: #fff;
+    position: absolute;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .8);
+    top: 50%;
+}
+
+.ColumnedContent-title--bottom {
+    bottom: 0;
+    position: absolute;
+}
+
+.ColumnedContent-title--above,
+.ColumnedContent-title--below,
+.ColumnedContent-title--bottom {
+    background: var(--theme-columned-content-title-background);
+    color: var(--theme-columned-content-title-color);
+    padding: 6px;
+}

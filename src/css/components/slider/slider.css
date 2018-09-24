@@ -1,0 +1,233 @@
+/* =========================================================================== *\
+    SLIDER
+\* =========================================================================== */
+
+
+/** @define Slider */
+
+.Slider {
+    clear: both;
+    position: relative;
+}
+
+.Slider-slide {
+    position: relative;
+}
+
+.Slider-link,
+.Slider-link:active,
+.Slider-link:focus,
+.Slider-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.Slider-image {
+    height: auto;
+    width: 100%;
+}
+
+.Slider-nav {
+    cursor: pointer;
+    display: block;
+    height: 2.5em;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 2.5em;
+    z-index: 10;
+}
+
+.Slider-nav:active,
+.Slider-nav:focus,
+.Slider-nav:hover {
+    background: rgba(255, 255, 255, .3);
+    border-radius: 50%;
+}
+
+.Slider-navIcon {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2em;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.Slider-nav:active .Slider-navIcon,
+.Slider-nav:focus .Slider-navIcon,
+.Slider-nav:hover .Slider-navIcon {
+
+}
+
+.Slider-navPrev {
+    left: 20px;
+}
+
+.Slider-navPrev .Slider-navIcon {
+    left: 35%;
+}
+
+.Slider-navNext {
+    right: 20px;
+}
+
+.Slider-navNext .Slider-navIcon {
+    left: 45%;
+}
+
+.Slider-navCircle {
+    font-size: .9em !important;
+}
+
+@media (--c-bp-md) {
+    .Slider-nav {
+        display: none !important;
+    }
+}
+
+/* ------------------------------------ *\
+    Slider dots
+\* ------------------------------------ */
+
+.Slider-dots {
+    bottom: 15px;
+    box-sizing: border-box;
+    display: block;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0 15px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* postcss-bem-linter: ignore */
+.Slider-dots li {
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    margin: 0 5px;
+    padding: 0;
+    position: relative;
+    width: 15px;
+}
+
+/* postcss-bem-linter: ignore */
+.Slider-dots li button {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, .9);
+    border-radius: 20px;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 20px;
+    line-height: 0;
+    outline: none;
+    padding: 5px;
+    width: 20px;
+}
+
+/* postcss-bem-linter: ignore */
+.Slider-dots li.slick-active button,
+.Slider-dots li button:focus {
+    background: rgba(255, 255, 255, .9);
+}
+
+/* postcss-bem-linter: ignore */
+.Slider-dots li button:hover {
+    background: rgba(255, 255, 255, .3);
+    border: 1px solid rgba(255, 255, 255, .3);
+    outline: none;
+}
+
+@media (--c-bp-md) {
+    .Slider-dots {
+        display: none !important;
+    }
+}
+
+
+/* ------------------------------------ *\
+    #SLIDER CONTENT
+\* ------------------------------------ */
+
+.Slider-content {
+    box-sizing: border-box;
+    left: 0;
+    padding: 0 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Slider-content--bottomLeft,
+.Slider-content--bottomCenter,
+.Slider-content--bottomRight {
+    bottom: 5%;
+    top: auto;
+    transform: none;
+}
+
+.Slider-content--center,
+.Slider-content--bottomCenter {
+    text-align: center;
+    width: 100%;
+}
+
+.Slider-content--centerRight,
+.Slider-content--bottomRight {
+    left: auto;
+    right: 0;
+    text-align: right;
+}
+
+.Slider-caption {
+    color: #fff;
+    font-family: var(--base-typography-heading-fontFamily);
+    font-size: 2.6em;
+    line-height: 1.1;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .6);
+    text-transform: uppercase;
+}
+
+@media (--c-bp-lg) {
+    .Slider-caption {
+        font-size: 2em;
+    }
+}
+
+@media (--c-bp-md) {
+    .Slider-content {
+        background: var(--theme-slider-caption-small-screen-background);
+        bottom: auto;
+        display: block;
+        left: auto;
+        padding: 4px 8px;
+        position: relative;
+        right: auto;
+        text-align: left;
+        text-shadow: none;
+        top: auto;
+        transform: none;
+    }
+
+    .Slider-caption {
+        font-size: var(--base-typography-h1-fontSize);
+        line-height: var(--base-typography-h1-lineHeight);
+        text-shadow: 0 0 2px rgba(0, 0, 0, .5);
+    }
+}
+
+@media (--c-bp-sm) {
+    .Slider-caption {
+        font-size: var(--base-typography-h2-fontSize);
+        line-height: var(--base-typography-h2-lineHeight);
+        text-transform: none;
+    }
+}

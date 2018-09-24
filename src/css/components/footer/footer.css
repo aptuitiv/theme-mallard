@@ -6,7 +6,8 @@
 /* @define Footer */
 
 .Footer {
-    background: var(--theme-footer-bg);
+    background: var(--theme-footer-background);
+    border-top: var(--theme-footer-border);
     color: var(--theme-footer-color);
     font-size: var(--theme-footer-font-size);
     padding: 1.5rem var(--g-gutter);

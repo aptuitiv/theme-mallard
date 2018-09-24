@@ -1,0 +1,101 @@
+/* =========================================================================== *\
+    Photo Grid component
+\* =========================================================================== */
+
+
+/* @define ImageGrid */
+
+.ImageGrid {
+
+}
+
+.ImageGrid-col {
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ImageGrid-item {
+    position: relative;
+}
+
+.ImageGrid-link {
+    text-decoration: none;
+}
+
+.ImageGrid-link:active,
+.ImageGrid-link:focus,
+.ImageGrid-link:hover {
+    text-decoration: none;
+}
+
+.ImageGrid-image {
+    height: auto;
+    width: 100%;
+}
+
+@supports (object-fit: cover) {
+    .ImageGrid-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ImageGrid-item {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+    }
+
+    .ImageGrid-image {
+        flex: 1 1 auto;
+        object-fit: cover;
+    }
+}
+
+.ImageGrid-title {
+    box-sizing: border-box;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 0 8px;
+    text-align: center;
+    width: 100%;
+}
+
+@media (--c-bp-lg) {
+    .ImageGrid-title {
+        font-size: 1em;
+    }
+}
+
+.ImageGrid-title--center {
+    color: #fff;
+    position: absolute;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .8);
+    top: 50%;
+}
+
+.ImageGrid-title--bottom {
+    bottom: 0;
+    position: absolute;
+}
+
+.ImageGrid-title--above,
+.ImageGrid-title--below,
+.ImageGrid-title--bottom {
+    background: var(--theme-image-grid-title-background);
+    color: var(--theme-image-grid-title-color);
+    padding: 8px;
+}
+
+.ImageGrid-link:active .ImageGrid-title--above,
+.ImageGrid-link:focus .ImageGrid-title--above,
+.ImageGrid-link:hover .ImageGrid-title--above,
+.ImageGrid-link:active .ImageGrid-title--below,
+.ImageGrid-link:focus .ImageGrid-title--below,
+.ImageGrid-link:hover .ImageGrid-title--below,
+.ImageGrid-link:active .ImageGrid-title--bottom,
+.ImageGrid-link:focus .ImageGrid-title--bottom,
+.ImageGrid-link:hover .ImageGrid-title--bottom {
+    background: var(--theme-image-grid-title-hover-background);
+    color: var(--theme-image-grid-title-hover-color);
+}

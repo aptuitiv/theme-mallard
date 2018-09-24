@@ -219,7 +219,7 @@ h6 {
     font-family: var(--theme-typography-heading-fontFamily);
     font-weight: var(--base-typography-heading-fontWeight);
     letter-spacing: var(--base-typography-heading-letterSpacing);
-    margin: calc(var(--base-typography-spacing) * 1.2) 0 calc(var(--base-typography-spacing) / 3);
+    margin: var(--base-typography-spacing) 0 calc(var(--base-typography-spacing) / 3);
 }
 
 h2:first-child,

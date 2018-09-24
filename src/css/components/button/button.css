@@ -15,11 +15,11 @@
 
 :root {
     --Button-background: var(--theme-button-background);
-    --Button-backgroundHover: var(--theme-button-background-hover);
+    --Button-backgroundHover: var(--theme-button-hover-background);
     --Button-border: 0;
     --Button-border-radius: 4px;
     --Button-color: var(--theme-button-color);
-    --Button-colorHover: var(--theme-button-color-hover);
+    --Button-colorHover: var(--theme-button-hover-color);
     --Button-disabled-opacity: .6;
     --Button-fontFamily: var(--theme-button-font);
     --Button-fontSize: inherit;
@@ -86,15 +86,15 @@
  * Color modifiers
  */
 .Button--secondary {
-    background: var(--theme-button-background-alt);
-    color: var(--theme-button-color-alt);
+    background: var(--theme-button-alt-background);
+    color: var(--theme-button-alt-color);
 }
 
 .Button--secondary:active,
 .Button--secondary:focus,
 .Button--secondary:hover {
-    background: var(--theme-button-background-hover-alt);
-    color: var(--theme-button-color-hover-alt);
+    background: var(--theme-button-alt-hover-background);
+    color: var(--theme-button-alt-hover-color);
 }
 
 /**

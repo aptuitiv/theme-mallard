@@ -10,7 +10,7 @@
 
 :root {
     --Dropdown-background: var(--theme-nav-dropdown-background);
-    --Dropdown-fontSize: inherit;
+    --Dropdown-fontSize: var(--theme-nav-dropdown-font-size);
     --Dropdown-lineHeight: inherit;
     --Dropdown-item-padding: .5em 1em;
     --Dropdown-item-padding-small-screen: .8em 30px .8em 1em;
@@ -77,8 +77,9 @@
     box-sizing: border-box;
     color: var(--Dropdown-link-color);
     display: block;
+    font-family: var(--theme-nav-dropdown-font);
     font-size: var(--Dropdown-fontSize);
-    font-weight: 400;
+    font-weight: var(--theme-nav-dropdown-font-weight);
     line-height: var(--Dropdown-lineHeight);
     padding: var(--Dropdown-item-padding);
     text-decoration: none;

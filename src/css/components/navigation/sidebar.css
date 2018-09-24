@@ -17,29 +17,44 @@
 }
 
 .SidebarNav-link {
-    color: #333;
+    color: var(--theme-sidenav-color);
     display: block;
-    font-weight: 300;
+    font-family: var(--theme-sidenav-font);
+    font-weight: var(--theme-sidenav-font-weight);
+    letter-spacing: var(--theme-sidenav-letter-spacing);
     padding: 4px 8px;
     position: relative;
     text-decoration: none;
 }
 
 .SidebarNav-link--isParent {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 30px;
+    border-bottom: 1px solid var(--theme-sidenav-parent-color);
+    color: var(--theme-sidenav-parent-color);
+    font-family: var(--theme-sidenav-parent-font);
+    font-size: var(--theme-sidenav-parent-font-size);
+    font-weight: var(--theme-sidenav-parent-font-weight);
+    letter-spacing: var(--theme-sidenav-parent-letter-spacing);
+    line-height: var(--theme-sidenav-parent-line-height);
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .SidebarNav-link:active,
 .SidebarNav-link:focus,
 .SidebarNav-link:hover {
-    color: #333;
+    background: var(--theme-sidenav-hover-background);
+    color: var(--theme-sidenav-hover-color);
     text-decoration: none;
 }
 
 .SidebarNav-link.is-current,
 .SidebarNav-link.is-currentParent {
-    color: #333;
+    color: var(--theme-sidenav-current-color);
     text-decoration: none;
+}
+
+.SidebarNav-link--isParent.is-current,
+.SidebarNav-link--isParent.is-currentParent {
+    background: transparent;
+    color: var(--theme-sidenav-color);
 }

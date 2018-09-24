@@ -1,4 +1,5 @@
-@import './bar';
+/* @import './bar'; */
+
 @import './dropdown';
 @import './footer';
 @import './mainnav';

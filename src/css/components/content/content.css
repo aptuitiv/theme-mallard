@@ -1,5 +1,9 @@
 /* =========================================================================== *\
     Content
+    To be used as a wrapper around content for padding
+    <div class="Container">
+        <div class="Content">{{ _page.content() }}</div>
+    </div>
 \* =========================================================================== */
 
 

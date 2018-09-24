@@ -1,0 +1,66 @@
+{% macro columnTitle(column, titleClass) %}
+    {% if column.link %}
+        <div class="ColumnedContent-title {{ titleClass }}"><a href="{{ column.link }}" class="ColumnedContent-link">{{ column.title }}</a></div>
+    {% else %}
+        <div class="ColumnedContent-title {{ titleClass }}">{{ column.title }}</div>
+    {% endif %}
+{% endmacro %}
+
+{% import _self as macros %}
+
+{% if columns %}
+    {# Set the column classes based on the number of columns #}
+    {% set count = numberOfColumns == 'Auto' ? columns|length : numberOfColumns %}
+
+    {% if count == '2' %}
+        {% set class = 'u-size1of2 u-sm-sizeFull u-sm-margBottom2' %}
+    {% elseif count == '3' %}
+        {% set class = 'u-size1of3 u-md-sizeFull u-md-margBottom2' %}
+    {% elseif count == '4' %}
+        {% set class = 'u-size1of4 u-md-size1of2 u-sm-sizeFull u-md-margBottom2' %}
+    {% elseif count > 4 %}
+        {% set class = 'u-size1of4 u-md-size1of2 u-sm-sizeFull u-md-margBottom2' %}
+    {% else %}
+        {% set class = 'Grid-cell--center u-sm-sizeFull u-margBottom2' %}
+    {% endif %}
+
+    {# Set the title text position class #}
+    {% set titleClass = 'ColumnedContent-title--center' %}
+    {% if displayText == 'Above Image' %}
+        {% set titleClass = 'ColumnedContent-title--above' %}
+    {% elseif displayText == 'Centered on Image' %}
+        {% set titleClass = 'ColumnedContent-title--center' %}
+    {% elseif displayText == 'On Bottom of Image' %}
+        {% set titleClass = 'ColumnedContent-title--bottom' %}
+    {% elseif displayText == 'Below Image' %}
+        {% set titleClass = 'ColumnedContent-title--below' %}
+    {% endif %}
+    <div class="Grid Grid--withGutter ColumnedContent">
+        {% for column in columns %}
+            {% if column.image %}
+                {% if column.image.alt|length == 0 %}
+                    {% set column.image.alt = column.title %}
+                {% endif %}
+                {% set column.image.class = 'ColumnedContent-image' %}
+            {% endif %}
+            <div class="Grid-cell {{ class }} ColumnedContent-col">
+                <div class="ColumnedContent-item">
+                    {% spaceless %}
+                        {% if column.link %}
+                            <a href="{{ column.link }}" class="ColumnedContent-link">
+                        {% endif %}
+                        {% if column.title and displayText != 'Below Image'%}<div class="ColumnedContent-title {{ titleClass }}">{{ column.title }}</div>{% endif %}
+                        <div class="ColumnedContent-imageWrap">{{ column.image.tag }}</div>
+                        {% if column.title and displayText == 'Below Image'%}<div class="ColumnedContent-title {{ titleClass }}">{{ column.title }}</div>{% endif %}
+                        {% if column.link %}
+                            </a>
+                        {% endif %}
+                    {% endspaceless %}
+                    {% if column.content %}
+                        <div class="ColumnedContent-content">{{ column.content }}</div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

@@ -1,0 +1,22 @@
+{%  include 'snippets/header' %}
+{{ _page.content('header') }}
+<div class="Container">
+    <div class="Content u-cf">
+        {% if _core.theme.settings.showBreadcrumb == "yes" and _page.isHome == false %}
+            {{ _page.breadcrumb() }}
+        {% endif %}
+        <div class="Grid Grid--withGutterLg">
+            <div class="Grid-cell u-size3of4 u-lg-size2of3 u-sm-sizeFull">
+                {{ _page.content() }}
+            </div>
+            <div class="Grid-cell u-size1of4 u-lg-size1of3 u-sm-sizeFull">
+                <div class="u-padLeft2 u-sm-padLeft0">
+                    {% block sidebar %}
+                    {{ _api.navigation.getSubNavigationByUrl.key('main').getParentItem('yes').showSubNav('yes').template('sidebar') }}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'snippets/footer' %}

@@ -8,8 +8,8 @@
     --MainNav-fontFamily: var(--theme-nav-font);
     --MainNav-fontSize: var(--theme-nav-font-size);
     --MainNav-lineHeight: var(--theme-nav-line-height);
-    --MainNav-link-background: var(--theme-nav-item-bg);
-    --MainNav-link-backgroundHover: var(--theme-nav-item-bg-hover);
+    --MainNav-link-background: var(--theme-nav-item-background);
+    --MainNav-link-backgroundHover: var(--theme-nav-item-background-hover);
     --MainNav-link-color: var(--theme-nav-color);
     --MainNav-link-colorHover: var(--theme-nav-color-hover);
 }
@@ -23,16 +23,17 @@
     display: inline-block;
     font-family: var(--MainNav-fontFamily);
     font-size: var(--MainNav-fontSize);
+    letter-spacing: 1px;
     line-height: var(--MainNav-lineHeight);
     list-style: none;
-    margin: 0 0 0 -1em;
+    margin: 0;
     padding: 0;
 }
 
 @media(--c-bp-largeScreenNav) {
     .MainNav {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
 
@@ -43,7 +44,6 @@
 .MainNav-item {
     box-sizing: border-box;
     display: inline-block;
-    margin-left: 1em;
 }
 
 /** Item that should only be shown in the small screen navigation **/
@@ -64,12 +64,16 @@
 
 .MainNav-link {
     background: var(--MainNav-link-background);
+    border-bottom: 1px solid transparent;
     box-sizing: border-box;
     color: var(--MainNav-link-color);
     display: block;
-    padding: .5em 1.5rem;
+    font-weight: var(--theme-nav-font-weight);
+    padding: .5em 3rem;
     position: relative;
+    text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 @media (--c-bp-largeScreenNav) {
@@ -77,7 +81,14 @@
     .MainNav-item.is-currentParent > .MainNav-link,
     .MainNav-item:hover > .MainNav-link {
         background: var(--MainNav-link-backgroundHover);
+        border-bottom: 1px solid var(--theme-typography-link-color);
         color: var(--MainNav-link-colorHover);
         text-decoration: none;
+    }
+
+    /* postcss-bem-linter: ignore */
+
+    .MainNav-item.Dropdown:hover > .MainNav-link {
+        border-bottom: 1px solid transparent;
     }
 }

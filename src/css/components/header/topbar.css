@@ -1,0 +1,56 @@
+/* =========================================================================== *\
+    Header top bar
+\* =========================================================================== */
+
+
+/* @define TopBar */
+
+.TopBar {
+    background: var(--theme-topbar-color);
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 6px 0;
+}
+
+.TopBar-contact {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.TopBar-social {
+    line-height: 1;
+}
+
+.TopBar-socialLink {
+    background: #fff;
+    border-radius: 50%;
+    color: var(--theme-topbar-color);
+    display: inline-block;
+    font-size: 1.8rem;
+    height: 1.6em;
+    line-height: 1;
+    margin-right: 8px;
+    position: relative;
+    text-decoration: none;
+    width: 1.6em;
+}
+
+.TopBar-socialLink:last-child {
+    margin-right: 0;
+}
+
+.TopBar-socialLink:active,
+.TopBar-socialLink:focus,
+.TopBar-socialLink:hover {
+    background: var(--theme-topbar-color);
+    color: #fff;
+    text-decoration: none;
+}
+
+.TopBar-socialIcon {
+    left: 50%;
+    margin: 0 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}

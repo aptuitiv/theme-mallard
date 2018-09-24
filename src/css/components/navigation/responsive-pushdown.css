@@ -87,6 +87,7 @@
     .Dropdown-link {
         border: none;
         padding: var(--Dropdown-item-padding-small-screen);
+        text-align: center;
         white-space: normal;
     }
 

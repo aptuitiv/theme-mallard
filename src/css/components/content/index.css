@@ -1,1 +1,3 @@
-@import './content';
+@import './columned.css';
+@import './content.css';
+@import './header.css';
