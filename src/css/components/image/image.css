@@ -1,0 +1,21 @@
+/* =========================================================================== *\
+    Image Styles
+\* =========================================================================== */
+
+
+/* @define Image */
+
+.Image--zoom {
+    cursor: zoom-in;
+}
+
+.Image--fit {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
+
+.Image--outline {
+    outline: 2px solid var(--theme-primary-color);
+}

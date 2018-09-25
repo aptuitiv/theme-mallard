@@ -1,0 +1,21 @@
+/* =========================================================================== *\
+    File-Heading
+\* =========================================================================== */
+
+
+/* @define ImageWrapper */
+
+.ImageWrapper {
+    overflow: hidden;
+}
+
+.ImageWrapper-viewport {
+    height: 80vh;
+    text-align: center;
+}
+
+@media (--c-bp-sm) {
+    .ImageWrapper-viewport {
+        height: auto;
+    }
+}

@@ -1,1 +1,38 @@
 {% extends 'one-column' %}
+
+{% block header %}
+    <div class="ContentHeader">
+        <div class="Container">
+            <h1 class="ContentHeader-title">Gallery</h1>
+            <div class="ContentHeader-content">Alternate view of gallery items</div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block main %}
+    <div class="u-margBottom3 u-textCenter">
+        <a href="{{ appUrls.home }}">Main view</a>
+        {% for category in _app.categories %}
+            | <a href="{{ category.url }}">{{ category.categoryName }}</a>
+        {% endfor %}
+    </div>
+    {% if items %}
+        {% spaceless %}
+        <div class="Masonry Masonry--tight">
+            {% for item in items %}
+                {% set image = attribute(item.images|first, 'image') %}
+                {% set image.small.alt = item.itemName %}
+                {% set image.small.class = 'Masonry-image' %}
+                <div class="Masonry-item">
+                    <a href="{{ item.url }}" class="Masonry-link" title="View {{ item.itemName }}">
+                        <div class="Masonry-imageWrap">{{ image.small.tag }}</div>
+                        <div class="Masonry-title">{{ item.itemName }}</div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        {% endspaceless %}
+        {% include 'snippets/pagination' %}
+    {% endif %}
+
+{% endblock %}
