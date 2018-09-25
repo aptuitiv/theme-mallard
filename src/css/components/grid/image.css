@@ -54,8 +54,8 @@
 
 .ImageGrid-title {
     box-sizing: border-box;
-    font-size: 1.2em;
-    font-weight: 300;
+    font-size: var(--theme-image-grid-title-font-size);
+    font-weight: var(--theme-image-grid-title-font-weight);
     padding: 0 8px;
     text-align: center;
     width: 100%;
@@ -98,4 +98,63 @@
 .ImageGrid-link:hover .ImageGrid-title--bottom {
     background: var(--theme-image-grid-title-hover-background);
     color: var(--theme-image-grid-title-hover-color);
+}
+
+/* ------------------------------------ *\
+    Image Grid Hover
+\* ------------------------------------ */
+
+.ImageGrid-hover {
+    position: relative;
+}
+
+.ImageGrid-content {
+    background: var(--theme-image-grid-title-background);
+    box-sizing: border-box;
+    color: var(--theme-image-grid-title-color);
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.ImageGrid-contentInner {
+    box-sizing: border-box;
+    left: 0;
+    max-height: 100%;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.ImageGrid-contentHeading {
+    font-size: var(--theme-image-grid-title-font-size);
+    font-weight: var(--theme-image-grid-title-font-weight);
+    margin-bottom: 15px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.ImageGrid-contentHeading::after {
+    border-top: 1px solid var(--theme-image-grid-title-color);
+    bottom: -4px;
+    content: '';
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 10%;
+}
+
+.ImageGrid-contentWrap {
+    font-size: 1.5rem;
+}
+
+.ImageGrid-hover:hover .ImageGrid-content {
+    display: block;
 }

@@ -115,6 +115,8 @@
 :root {
     --theme-image-grid-title-background: #008372;
     --theme-image-grid-title-color: #fff;
+    --theme-image-grid-title-font-size: 1.2em;
+    --theme-image-grid-title-font-weight: 300;
     --theme-image-grid-title-hover-background: #006a5c;
     --theme-image-grid-title-hover-color: #fff;
 }
