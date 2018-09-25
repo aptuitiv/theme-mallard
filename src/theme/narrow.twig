@@ -1,12 +1,14 @@
 {%  include 'snippets/header' %}
-{{ _page.content('header') }}
+{% block header %}
+    {{ _page.content('header') }}
+{% endblock %}
 <div class="Container">
     <div class="Content u-cf">
         {% if _core.theme.settings.showBreadcrumb == "yes" and _page.isHome == false %}
             {{ _page.breadcrumb() }}
         {% endif %}
         <div class="Grid">
-            <div class="Grid-cell u-size2of3 u-md-sizeFull u-push1of6 u-md-pushNone">{{ _page.content() }}</div>
+            <div class="Grid-cell u-size2of3 u-md-sizeFull u-push1of6 u-md-pushNone">{% block main %}{{ _page.content() }}{% endblock %}</div>
         </div>
     </div>
 </div>

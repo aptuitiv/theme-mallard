@@ -1,5 +1,7 @@
 {%  include 'snippets/header' %}
-{{ _page.content('header') }}
+{% block header %}
+    {{ _page.content('header') }}
+{% endblock %}
 <div class="Container">
     <div class="Content u-cf">
         {% if _core.theme.settings.showBreadcrumb == "yes" and _page.isHome == false %}
@@ -7,7 +9,7 @@
         {% endif %}
         <div class="Grid Grid--withGutterLg">
             <div class="Grid-cell u-size3of4 u-push1of4 u-lg-size2of3 u-lg-push1of3 u-sm-sizeFull u-sm-pushNone">
-                {{ _page.content() }}
+                {% block main %}{{ _page.content() }}{% endblock %}
             </div>
             <div class="Grid-cell u-size1of4 u-pull3of4 u-lg-size1of3 u-lg-pull2of3 u-sm-sizeFull u-sm-pullNone">
                 {{ _api.navigation.getSubNavigationByUrl.key('main').getParentItem('yes').showSubNav('yes').template('sidebar') }}
