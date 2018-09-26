@@ -39,26 +39,6 @@
     width: 100%;
 }
 
-@supports (object-fit: cover) {
-    /*
-    .ColumnedContent-col {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .ColumnedContent-item {
-        display: flex;
-        flex: 1 0 auto;
-        flex-direction: column;
-    }
-
-    .ColumnedContent-image {
-        flex: 1 1 auto;
-        object-fit: cover;
-    }
-    */
-}
-
 .ColumnedContent-title {
     box-sizing: border-box;
     font-size: 1.2em;

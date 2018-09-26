@@ -21,9 +21,6 @@
 .MainNav {
     box-sizing: border-box;
     display: inline-block;
-    font-family: var(--MainNav-fontFamily);
-    font-size: var(--MainNav-fontSize);
-    letter-spacing: 1px;
     line-height: var(--MainNav-lineHeight);
     list-style: none;
     margin: 0;
@@ -32,8 +29,9 @@
 
 @media(--c-bp-largeScreenNav) {
     .MainNav {
-        display: flex;
-        justify-content: space-around;
+        display: block;
+        margin-right: -3rem;
+        text-align: right;
     }
 }
 
@@ -64,11 +62,14 @@
 
 .MainNav-link {
     background: var(--MainNav-link-background);
-    border-bottom: 1px solid transparent;
     box-sizing: border-box;
     color: var(--MainNav-link-color);
     display: block;
+    font-family: var(--MainNav-fontFamily);
+    font-size: var(--MainNav-fontSize);
     font-weight: var(--theme-nav-font-weight);
+    letter-spacing: 1px;
+    line-height: var(--MainNav-lineHeight);
     padding: .5em 3rem;
     position: relative;
     text-align: center;
@@ -81,14 +82,25 @@
     .MainNav-item.is-currentParent > .MainNav-link,
     .MainNav-item:hover > .MainNav-link {
         background: var(--MainNav-link-backgroundHover);
-        border-bottom: 1px solid var(--theme-typography-link-color);
         color: var(--MainNav-link-colorHover);
         text-decoration: none;
     }
 
+    .MainNav-item.is-current > .MainNav-link:after,
+    .MainNav-item.is-currentParent > .MainNav-link:after,
+    .MainNav-item:hover > .MainNav-link:after {
+        border-top: 1px solid var(--MainNav-link-colorHover);
+        bottom: -1px;
+        content: '';
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 45px;
+    }
+
     /* postcss-bem-linter: ignore */
 
-    .MainNav-item.Dropdown:hover > .MainNav-link {
-        border-bottom: 1px solid transparent;
+    .MainNav-item.Dropdown:hover > .MainNav-link:after {
+        display: none;
     }
 }

@@ -36,6 +36,7 @@
     min-width: 100%;
     padding: 0;
     position: absolute;
+    text-align: left;
     top: 100%;
     z-index: 999;
 }
@@ -94,7 +95,7 @@
     }
 
     .Dropdown-link:hover {
-        text-decoration: none;
+        text-decoration: underline;
     }
 }
 
@@ -119,7 +120,7 @@
 
     .Dropdown.is-last:hover > .Dropdown-menu {
         left: auto;
-        right: 0;
+        right: 3rem;
     }
 
     /* fly-out to the right */

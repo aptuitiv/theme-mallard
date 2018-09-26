@@ -10,8 +10,9 @@
     border-top: var(--theme-footer-border);
     color: var(--theme-footer-color);
     font-size: var(--theme-footer-font-size);
-    padding: 1.5rem var(--g-gutter);
+    padding: var(--theme-footer-padding);
     text-align: center;
+    text-transform: uppercase;
 }
 
 @media (--c-bp-sm) {
@@ -22,19 +23,19 @@
 
 
 .Footer-link {
-    color: #fff;
+    color: var(--theme-footer-nav-color);
     text-decoration: none;
 }
 
 .Footer-link:active,
 .Footer-link:focus,
 .Footer-link:hover {
-    color: #fff;
+    color: var(--theme-footer-nav-color-hover);
     text-decoration: underline;
 }
 
 .Footer-credit {
-    border-left: 1px solid #fff;
+    border-left: 1px solid var(--theme-footer-color);
     display: inline-block;
     line-height: 1;
     padding: 0 1rem;

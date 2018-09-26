@@ -236,63 +236,6 @@
                 "name": "Content Elements",
                 "elements": [
                     {
-                        "key": "staff",
-                        "name": "Staff",
-                        "type": "full",
-                        "template": "staff",
-                        "enabled": true,
-                        "parse": true,
-                        "description": "",
-                        "fields": [
-                            {
-                                "key": "people",
-                                "name": "People",
-                                "type": "repeating",
-                                "configuration": {
-                                    "collectionItemSort": "1",
-                                    "collectionItemDelete": "1",
-                                    "collectionMinNumItems": "",
-                                    "collectionMaxNumItems": "",
-                                    "collectionOrientation": "vertical",
-                                    "collectionItemName": "Person"
-                                },
-                                "value": "",
-                                "description": "",
-                                "fields": [
-                                    {
-                                        "key": "name",
-                                        "name": "Name",
-                                        "type": "text",
-                                        "configuration": {
-                                            "allowCode": "no"
-                                        },
-                                        "value": "",
-                                        "description": ""
-                                    },
-                                    {
-                                        "key": "bio",
-                                        "name": "Bio",
-                                        "type": "richTextEditor",
-                                        "value": "",
-                                        "description": ""
-                                    },
-                                    {
-                                        "key": "image",
-                                        "name": "Image",
-                                        "type": "image",
-                                        "configuration": {
-                                            "path": "\/images\/staff",
-                                            "height": 500,
-                                            "width": 500
-                                        },
-                                        "value": "",
-                                        "description": ""
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
                         "key": "image-grid-2",
                         "name": "Columned Content",
                         "type": "full",
@@ -540,6 +483,80 @@
                         ]
                     },
                     {
+                        "key": "staff-2",
+                        "name": "Image Beside Content",
+                        "type": "full",
+                        "template": "image-beside-content",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "rows",
+                                "name": "Rows",
+                                "type": "repeating",
+                                "configuration": {
+                                    "collectionItemSort": "1",
+                                    "collectionItemDelete": "1",
+                                    "collectionMinNumItems": "",
+                                    "collectionMaxNumItems": "",
+                                    "collectionOrientation": "vertical",
+                                    "collectionItemName": "Row"
+                                },
+                                "value": "",
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "key": "heading",
+                                        "name": "Heading",
+                                        "type": "text",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "image",
+                                        "name": "Image",
+                                        "type": "image",
+                                        "configuration": {
+                                            "path": "\/images\/staff",
+                                            "height": 500,
+                                            "width": 500
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "alignImage",
+                                        "name": "Align Image",
+                                        "type": "select",
+                                        "value": "",
+                                        "description": "",
+                                        "options": [
+                                            {
+                                                "value": "Left",
+                                                "default": false
+                                            },
+                                            {
+                                                "value": "Right",
+                                                "default": false
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "key": "content",
+                                        "name": "Content",
+                                        "type": "richTextEditor",
+                                        "value": "",
+                                        "description": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "key": "image-grid",
                         "name": "Image Grid",
                         "type": "full",
@@ -639,6 +656,123 @@
                                         "key": "link",
                                         "name": "Link",
                                         "type": "url",
+                                        "value": "",
+                                        "description": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "key": "image-grid-3",
+                        "name": "Image Grid with Hover",
+                        "type": "full",
+                        "template": "image-grid-hover",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "numberOfColumns",
+                                "name": "Number of columns per row",
+                                "type": "select",
+                                "value": "",
+                                "description": "Number of columns to display at the largest screen size.\n\"Auto\" will determine the number of columns based on the number of items.",
+                                "options": [
+                                    {
+                                        "value": "Auto",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "2",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "3",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "4",
+                                        "default": false
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "displayText",
+                                "name": "Display text",
+                                "type": "select",
+                                "value": "",
+                                "description": "",
+                                "options": [
+                                    {
+                                        "value": "Above Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Centered on Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "On Bottom of Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Below Image",
+                                        "default": true
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "images",
+                                "name": "Images",
+                                "type": "repeating",
+                                "configuration": {
+                                    "collectionItemSort": "1",
+                                    "collectionItemDelete": "1",
+                                    "collectionMinNumItems": "",
+                                    "collectionMaxNumItems": "",
+                                    "collectionOrientation": "vertical",
+                                    "collectionItemName": "Image"
+                                },
+                                "value": "",
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "key": "image",
+                                        "name": "Image",
+                                        "type": "image",
+                                        "configuration": {
+                                            "path": "\/images\/grid",
+                                            "height": 500,
+                                            "width": 500
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "title",
+                                        "name": "Title",
+                                        "type": "text",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "link",
+                                        "name": "Link",
+                                        "type": "url",
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "content",
+                                        "name": "Content",
+                                        "type": "textarea",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        },
                                         "value": "",
                                         "description": ""
                                     }
@@ -786,6 +920,110 @@
                                     {
                                         "value": "5",
                                         "default": false
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "key": "staff",
+                        "name": "Staff",
+                        "type": "full",
+                        "template": "staff",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "alignImages",
+                                "name": "Align Images",
+                                "type": "select",
+                                "value": "",
+                                "description": "",
+                                "options": [
+                                    {
+                                        "value": "Left",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Right",
+                                        "default": false
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "people",
+                                "name": "People",
+                                "type": "repeating",
+                                "configuration": {
+                                    "collectionItemSort": "1",
+                                    "collectionItemDelete": "1",
+                                    "collectionMinNumItems": "",
+                                    "collectionMaxNumItems": "",
+                                    "collectionOrientation": "vertical",
+                                    "collectionItemName": "Person"
+                                },
+                                "value": "",
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "key": "name",
+                                        "name": "Name",
+                                        "type": "text",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "title",
+                                        "name": "Title",
+                                        "type": "text",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "email",
+                                        "name": "Email",
+                                        "type": "text",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "phoneNumber",
+                                        "name": "Phone Number",
+                                        "type": "text",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "image",
+                                        "name": "Image",
+                                        "type": "image",
+                                        "configuration": {
+                                            "path": "\/images\/staff",
+                                            "height": 500,
+                                            "width": 500
+                                        },
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "bio",
+                                        "name": "Bio",
+                                        "type": "richTextEditor",
+                                        "value": "",
+                                        "description": ""
                                     }
                                 ]
                             }
@@ -1287,6 +1525,18 @@
             "name": "Columned Content"
         },
         {
+            "key": "content-builder\/staff",
+            "name": "Staff"
+        },
+        {
+            "key": "content-builder\/image-beside-content",
+            "name": "Image Beside Content"
+        },
+        {
+            "key": "content-builder\/image-grid-hover",
+            "name": "Image Grid with Hover"
+        },
+        {
             "key": "content-layouts\/header",
             "name": "Header"
         },
@@ -1313,7 +1563,7 @@
         "robotsText": "User-agent: *\nDisallow: \/",
         "tinymce_allow_scripts": "0",
         "tinymce_allow_unsafe_link_target_protection": "1",
-        "tinymce_block_classes": "",
+        "tinymce_block_classes": [],
         "tinymce_css": "",
         "tinymce_file_browser": "apBrowser",
         "tinymce_font_family": [
@@ -1399,9 +1649,12 @@
         "tinymce_import_stylesheets": [
             {
                 "import_file": "\/theme\/custom\/css\/main.css"
+            },
+            {
+                "import_file": "https:\/\/fonts.googleapis.com\/css?family=Asap+Condensed:600|Open+Sans:300,400,400i,700,700i"
             }
         ],
-        "tinymce_inline_classes": "",
+        "tinymce_inline_classes": [],
         "tinymce_link_classes": [
             {
                 "title": "Button",
@@ -1430,14 +1683,14 @@
         ],
         "tinymce_paste_as_text": "0",
         "tinymce_show_contextmenu": "1",
-        "tinymce_table_cell_classes": "",
+        "tinymce_table_cell_classes": [],
         "tinymce_table_classes": [
             {
                 "title": "Themed",
                 "class": "Table--themed"
             }
         ],
-        "tinymce_table_row_classes": "",
+        "tinymce_table_row_classes": [],
         "tinymce_use_background_color": "0",
         "tinymce_use_font": "0",
         "tinymce_use_font_color": "0",

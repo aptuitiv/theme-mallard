@@ -14,8 +14,8 @@
 
 .Masonry-item {
     background-color: #eee;
-    break-inside: avoid;
     box-sizing: border-box;
+    break-inside: avoid;
     display: inline-block;
     margin: 0 0 1em;
     page-break-inside: avoid;

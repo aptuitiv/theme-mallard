@@ -141,4 +141,5 @@
     --theme-footer-nav-font-size: 1em;
     --theme-footer-nav-color: #4c5c4c;
     --theme-footer-nav-color-hover: #4c5c4c;
+    --theme-footer-padding: 1.5rem var(--g-gutter);
 }
