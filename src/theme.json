@@ -236,7 +236,7 @@
                 "name": "Content Elements",
                 "elements": [
                     {
-                        "key": "image-grid-2",
+                        "key": "columned-content",
                         "name": "Columned Content",
                         "type": "full",
                         "template": "columned-content",
@@ -483,7 +483,7 @@
                         ]
                     },
                     {
-                        "key": "staff-2",
+                        "key": "image-beside-content",
                         "name": "Image Beside Content",
                         "type": "full",
                         "template": "image-beside-content",
@@ -664,7 +664,7 @@
                         ]
                     },
                     {
-                        "key": "image-grid-3",
+                        "key": "image-grid-hover",
                         "name": "Image Grid with Hover",
                         "type": "full",
                         "template": "image-grid-hover",
