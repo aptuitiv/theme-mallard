@@ -2,6 +2,8 @@
 @import './button';
 @import './container';
 @import './content';
+@import './feature';
+@import './featured';
 @import './footer';
 @import './grid';
 @import './header';

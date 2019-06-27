@@ -104,6 +104,25 @@
     --theme-content-header-color: var(--theme-typography-color);
 }
 
+/* Content Grid */
+
+:root {
+    --theme-content-grid-title-color: var(--theme-primary-color);
+    --theme-content-grid-title-hover-color: var(--theme-primary-color);
+}
+
+/* Featured Content */
+
+:root {
+    --theme-featured-content-background: var(--theme-primary-color);
+    --theme-featured-content-heading-color: #efdbd5;
+    --theme-featured-content-color: #fff;
+    --theme-featured-button-background: #fff;
+    --theme-featured-button-color: var(--theme-primary-color);
+    --theme-featured-button-background-hover: #003337;
+    --theme-featured-button-color-hover: #fff;
+}
+
 /* Full page slider */
 
 :root {
@@ -120,6 +139,19 @@
     --theme-image-grid-title-hover-background: #006a5c;
     --theme-image-grid-title-hover-color: #fff;
 }
+
+/* General Component Styles */
+
+:root {
+    --theme-component-top-margin: 20px;
+}
+
+/* Featured Content */
+
+:root {
+    --theme-feature-top-margin: 60px;
+}
+
 
 /* Columned Content */
 
