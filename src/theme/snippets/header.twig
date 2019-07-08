@@ -1,3 +1,5 @@
+{% import 'macros/macros' as macros %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -78,7 +80,7 @@
                         <div class="Grid-cell u-size1of3 u-md-sizeFull u-textRight u-md-textCenter">
                             <div class="TopBar-social">
                             {% for social in _core.theme.settings.social %}
-                                <a href="{{ social.url }}" title="Follow us on {{ social.name }}" class="TopBar-socialLink"><svg class="Icon TopBar-socialIcon"><use xlink:href="#icon-{{ social.icon }}" /></svg></a>
+                                <a href="{{ social.url }}" title="Follow us on {{ social.name }}" class="TopBar-socialLink">{{ macros.iconImg(social.icon, social.name, "Icon TopBar-socialIcon") }}</a>
                             {% endfor %}
                             </div>
                         </div>

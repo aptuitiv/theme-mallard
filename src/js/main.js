@@ -6,7 +6,6 @@
 $(function() {
     smallScreenNav.init();
     navAccess.init();
-    console.log("chnaged");
 });
 
 /**
