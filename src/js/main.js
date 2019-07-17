@@ -50,7 +50,6 @@ var smallScreenNav = {
     }
 };
 
-
 /**
  * Adds accessibly functionality to the main navigation.
  * Adds support for navigating with the keyboard.
@@ -88,18 +87,6 @@ var navAccess = {
             left = ['ArrowLeft', 'Left'],
             right = ['ArrowRight', 'Right'],
             focusEl;
-        if (subs.length > 0) {
-            subs.forEach(function (sub) {
-                sub.setAttribute('role', 'menu');
-                /*sub.setAttribute('aria-hidden', true);*/
-            });
-        }
-        for(var li = 0; li < mainnav.length; li++){
-            mainnav[li].setAttribute('tabindex', '0');
-            mainnav[li].addEventListener('focus', function (e) {
-                this.querySelector('.js-navLink').focus();
-            }.bind(mainnav[li]));
-        }
         nav.forEach(function (item) {
             // Handle the "keydown" event
             item.addEventListener('keydown', function (e) {
@@ -189,9 +176,11 @@ var navAccess = {
                 }
             }
         }
-        if (focusEl !== null) {
+        if (focusEl) {
             event.preventDefault();
             focusEl.focus();
+        } else {
+            el.blur();
         }
     },
 
@@ -203,11 +192,7 @@ var navAccess = {
         if (el.classList.contains('js-dropdownParent')) {
             el.classList.add('is-active');
             // change the aria-expanded and aria-hidden values on the <ul> tag
-            var ul = el.querySelector('ul');
-            if (ul !== null) {
-                ul.setAttribute('aria-expanded', 'true');
-                /*ul.setAttribute('aria-hidden', 'false');*/
-            }
+            el.querySelector('a').setAttribute('aria-expanded', 'true');
         }
     },
     /**
@@ -218,11 +203,7 @@ var navAccess = {
         var parent = this.getParent(el);
         parent.parentNode.classList.remove('is-active');
         // change the aria-expanded and aria-hidden values on the <ul> tag
-        var ul = parent.querySelector('ul');
-        if (ul !== null) {
-            ul.setAttribute('aria-expanded', 'false');
-            /*ul.setAttribute('aria-hidden', 'true');*/
-        }
+        parent.setAttribute('aria-expanded', 'false');
     },
     // Returns returns true is the first element of a dropdown list
     isDropdownFirst: function(el) {
@@ -247,12 +228,12 @@ var navAccess = {
     // Returns the previous navLink
     getPrevLink: function (el) {
         var list = Array.prototype.slice.call(document.querySelectorAll('.js-navLink'));
-        return list[this.getLinkIndex(el) - 1] || el; // return el if undefined
+        return list[this.getLinkIndex(el) - 1];
     },
     // Returns the next navLink
     getNextLink: function (el) {
         var list = Array.prototype.slice.call(document.querySelectorAll('.js-navLink'));
-        return list[this.getLinkIndex(el) + 1] || el; // return el if undefined
+        return list[this.getLinkIndex(el) + 1] ;
     },
     // Returns the parent navigation link
     getParent: function (el) {
