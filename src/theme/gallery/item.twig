@@ -1,5 +1,7 @@
 {% extends 'one-column' %}
 
+{% import 'macros/macros' as macros %}
+
 {% block header %}
     <div class="ContentHeader">
         <div class="Container">
@@ -118,7 +120,7 @@
     {% if item.images|length > 1 %}
         <div class="Grid Grid--withGutterSm">
             {% for image in item.images %}
-                <div class="Grid-cell u-size1of{{ size }} u-sm-size1of3 u-xs-size1of2 u-margBottom1"><a href="#" class="js-thumb Constrain Constrain--4by3" data-index="{{ loop.index0 }}" style="background-image: url('{{ image.image.small.src }}')"></a></div>
+                <div class="Grid-cell u-size1of{{ size }} u-sm-size1of3 u-xs-size1of2 u-margBottom1"><a href="#" class="js-thumb Constrain Constrain--4by3" aria-label="{{ image.image.large.alt }}" data-index="{{ loop.index0 }}" style="background-image: url('{{ image.image.small.src }}')"></a></div>
             {% endfor %}
         </div>
     {% endif %}
