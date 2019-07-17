@@ -92,6 +92,9 @@
             <div class="Container Container--pad">
                 <div class="Grid Grid--withGutterLg Grid--alignMiddle">
                     <div class="Grid-cell u-size1of4 u-md-sizeFull u-md-margBottom2 u-md-textCenter">
+                        {% if _core.theme.settings.headerLogo.alt|length == 0 %}
+                            {% set _core.theme.settings.headerLogo.alt = _core.theme.settings.company %}
+                        {% endif %}
                         <a href="/">{{ _core.theme.settings.headerLogo.tag }}</a>
                     </div>
                     <div class="Grid-cell u-size3of4 u-md-sizeFull u-hidden u-lg-show">

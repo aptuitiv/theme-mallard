@@ -5,7 +5,7 @@
 /* Color Config */
 
 :root {
-    --theme-primary-color: #006569;
+    --theme-primary-color: #008576;
     --theme-gray: #cbcdcc;
     --theme-dark: #313131;
     --theme-light: #fbdcc5;
@@ -40,7 +40,7 @@
     --theme-button-color: #102408;
     --theme-button-hover-background: #ff9b45;
     --theme-button-hover-color: #1a390c;
-    --theme-button-alt-background: #00907f;
+    --theme-button-alt-background: var(--theme-primary-color);
     --theme-button-alt-color: #fff;
     --theme-button-alt-hover-background: #007769;
     --theme-button-alt-hover-color: #fff;
@@ -56,7 +56,7 @@
 /* Top Bar */
 
 :root {
-    --theme-topbar-color: #00907f;
+    --theme-topbar-color: var(--theme-primary-color);
 }
 
 /* Main Navigation and Navigation Bar */
@@ -86,7 +86,7 @@
     --theme-sidenav-font: var(--theme-typography-fontFamily);
     --theme-sidenav-font-weight: 400;
     --theme-sidenav-letter-spacing: 1px;
-    --theme-sidenav-current-color: #00907f;
+    --theme-sidenav-current-color: var(--theme-primary-color);;
     --theme-sidenav-hover-background: var(--theme-primary-color);
     --theme-sidenav-hover-color: #fff;
     --theme-sidenav-parent-color: var(--theme-primary-color);
