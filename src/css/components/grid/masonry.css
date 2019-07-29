@@ -25,7 +25,6 @@
 
 .Masonry-image {
     height: auto;
-    transition: all .4s ease-in-out;
     width: 100%;
 }
 
