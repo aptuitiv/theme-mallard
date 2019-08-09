@@ -86,7 +86,7 @@
     --theme-sidenav-font: var(--theme-typography-fontFamily);
     --theme-sidenav-font-weight: 400;
     --theme-sidenav-letter-spacing: 1px;
-    --theme-sidenav-current-color: var(--theme-primary-color);;
+    --theme-sidenav-current-color: var(--theme-primary-color);
     --theme-sidenav-hover-background: var(--theme-primary-color);
     --theme-sidenav-hover-color: #fff;
     --theme-sidenav-parent-color: var(--theme-primary-color);

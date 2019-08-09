@@ -86,9 +86,9 @@
         text-decoration: none;
     }
 
-    .MainNav-item.is-current > .MainNav-link:after,
-    .MainNav-item.is-currentParent > .MainNav-link:after,
-    .MainNav-item:hover > .MainNav-link:after {
+    .MainNav-item.is-current > .MainNav-link::after,
+    .MainNav-item.is-currentParent > .MainNav-link::after,
+    .MainNav-item:hover > .MainNav-link::after {
         border-top: 1px solid var(--MainNav-link-colorHover);
         bottom: -1px;
         content: '';
@@ -100,7 +100,7 @@
 
     /* postcss-bem-linter: ignore */
 
-    .MainNav-item.Dropdown:hover > .MainNav-link:after {
+    .MainNav-item.Dropdown:hover > .MainNav-link::after {
         display: none;
     }
 }
