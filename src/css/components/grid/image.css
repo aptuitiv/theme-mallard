@@ -6,7 +6,7 @@
 /* @define ImageGrid */
 
 .ImageGrid {
-
+    margin-top: var(--theme-component-top-margin);
 }
 
 .ImageGrid-col {
@@ -17,6 +17,7 @@
 
 .ImageGrid-item {
     position: relative;
+    width: 100%;
 }
 
 .ImageGrid-link {
@@ -31,7 +32,17 @@
 
 .ImageGrid-image {
     height: auto;
+    margin: auto;
+}
+
+.ImageGrid-image--scale {
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    right: 0;
     width: 100%;
+    z-index: 0;
 }
 
 @supports (object-fit: cover) {
@@ -40,7 +51,14 @@
         flex-direction: column;
     }
 
-    .ImageGrid-item {
+    .ImageGrid-item--cover,
+    .ImageGrid-hover {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+    }
+
+    .ImageGrid-imageWrap {
         display: flex;
         flex: 1 0 auto;
         flex-direction: column;
@@ -50,15 +68,22 @@
         flex: 1 1 auto;
         object-fit: cover;
     }
+
+    .ImageGrid-image--fit {
+        object-fit: contain;
+    }
 }
 
 .ImageGrid-title {
     box-sizing: border-box;
     font-size: var(--theme-image-grid-title-font-size);
     font-weight: var(--theme-image-grid-title-font-weight);
+    letter-spacing: 1px;
     padding: 0 8px;
     text-align: center;
+    text-transform: uppercase;
     width: 100%;
+    z-index: 1;
 }
 
 @media (--c-bp-lg) {
@@ -69,6 +94,7 @@
 
 .ImageGrid-title--center {
     color: #fff;
+    left: 0;
     position: absolute;
     text-shadow: 0 0 5px rgba(0, 0, 0, .8);
     top: 50%;
@@ -76,12 +102,20 @@
 
 .ImageGrid-title--bottom {
     bottom: 0;
+    left: 0;
     position: absolute;
+}
+
+.ImageGrid-title--top {
+    left: 0;
+    position: absolute;
+    top: 0;
 }
 
 .ImageGrid-title--above,
 .ImageGrid-title--below,
-.ImageGrid-title--bottom {
+.ImageGrid-title--bottom,
+.ImageGrid-title--top {
     background: var(--theme-image-grid-title-background);
     color: var(--theme-image-grid-title-color);
     padding: 8px;
@@ -95,9 +129,20 @@
 .ImageGrid-link:hover .ImageGrid-title--below,
 .ImageGrid-link:active .ImageGrid-title--bottom,
 .ImageGrid-link:focus .ImageGrid-title--bottom,
-.ImageGrid-link:hover .ImageGrid-title--bottom {
+.ImageGrid-link:hover .ImageGrid-title--bottom,
+.ImageGrid-link:active .ImageGrid-title--top,
+.ImageGrid-link:focus .ImageGrid-title--top,
+.ImageGrid-link:hover .ImageGrid-title--top {
     background: var(--theme-image-grid-title-hover-background);
     color: var(--theme-image-grid-title-hover-color);
+}
+
+/* ------------------------------------ *\
+    Image Grid Content - not hover content
+\* ------------------------------------ */
+
+.ImageGrid-content {
+    margin-top: 10px;
 }
 
 /* ------------------------------------ *\
@@ -108,10 +153,10 @@
     position: relative;
 }
 
-.ImageGrid-content {
-    background: var(--theme-image-grid-title-background);
+.ImageGrid-hoverContent {
+    background: var(--theme-image-grid-title-hover-background);
     box-sizing: border-box;
-    color: var(--theme-image-grid-title-color);
+    color: var(--theme-image-grid-title-hover-color);
     display: none;
     height: 100%;
     left: 0;
@@ -121,7 +166,7 @@
     width: 100%;
 }
 
-.ImageGrid-contentInner {
+.ImageGrid-hoverContentInner {
     box-sizing: border-box;
     left: 0;
     max-height: 100%;
@@ -133,7 +178,7 @@
     width: 100%;
 }
 
-.ImageGrid-contentHeading {
+.ImageGrid-hoverContentHeading {
     font-size: var(--theme-image-grid-title-font-size);
     font-weight: var(--theme-image-grid-title-font-weight);
     margin-bottom: 15px;
@@ -141,7 +186,7 @@
     text-transform: uppercase;
 }
 
-.ImageGrid-contentHeading::after {
+.ImageGrid-hoverContentHeading::after {
     border-top: 1px solid var(--theme-image-grid-title-color);
     bottom: -4px;
     content: '';
@@ -151,10 +196,65 @@
     width: 10%;
 }
 
-.ImageGrid-contentWrap {
+.ImageGrid-hoverContentWrap {
     font-size: 1.5rem;
 }
 
-.ImageGrid-hover:hover .ImageGrid-content {
+.ImageGrid-hover:hover .ImageGrid-hoverContent {
     display: block;
+}
+
+/* ------------------------------------ *\
+    Image Grid Content Covering Image
+\* ------------------------------------ */
+
+.ImageGrid-cover {
+    position: relative;
+}
+
+.ImageGrid-coverContent {
+    background: var(--theme-image-grid-cover-background);
+    box-sizing: border-box;
+    color: var(--theme-image-grid-title-cover-color);
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .6);
+    top: 0;
+    width: 100%;
+}
+
+.ImageGrid-coverContentInner {
+    box-sizing: border-box;
+    left: 0;
+    max-height: 100%;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.ImageGrid-coverContentHeading {
+    font-size: var(--theme-image-grid-title-font-size);
+    font-weight: var(--theme-image-grid-title-font-weight);
+    margin-bottom: 15px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.ImageGrid-coverContentHeading::after {
+    border-top: 1px solid var(--theme-image-grid-title-color);
+    bottom: -4px;
+    content: '';
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 10%;
+}
+
+.ImageGrid-coverContentWrap {
+    font-size: 1.5rem;
 }
