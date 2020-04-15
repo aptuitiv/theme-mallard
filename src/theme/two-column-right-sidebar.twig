@@ -9,13 +9,15 @@
         {% endif %}
         <div class="Grid Grid--withGutterLg">
             <div class="Grid-cell u-size3of4 u-lg-size2of3 u-sm-sizeFull">
-                {% block main %}{{ _page.content() }}{% endblock %}
+                {% block main %}<main id="main">{{ _page.content() }}</main>{% endblock %}
             </div>
             <div class="Grid-cell u-size1of4 u-lg-size1of3 u-sm-sizeFull">
                 <div class="u-padLeft2 u-sm-padLeft0">
-                    {% block sidebar %}
-                    {{ _api.navigation.getSubNavigationByUrl.key('main').getParentItem('yes').showSubNav('yes').template('sidebar') }}
-                    {% endblock %}
+                    <aside>
+                        {% block sidebar %}
+                            {{ _api.navigation.getSubNavigationByUrl.key('main').getParentItem('yes').showSubNav('yes').template('sidebar') }}
+                        {% endblock %}
+                    </aside>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@
             {{ _page.breadcrumb() }}
         {% endif %}
         <div class="Grid">
-            <div class="Grid-cell u-size2of3 u-md-sizeFull u-push1of6 u-md-pushNone">{% block main %}{{ _page.content() }}{% endblock %}</div>
+            <div class="Grid-cell u-size2of3 u-md-sizeFull u-push1of6 u-md-pushNone">{% block main %}<main id="main">{{ _page.content() }}</main>{% endblock %}</div>
         </div>
     </div>
 </div>

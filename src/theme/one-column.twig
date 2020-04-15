@@ -7,7 +7,7 @@
         {% if _core.theme.settings.showBreadcrumb == "yes" and _page.isHome == false %}
             {{ _page.breadcrumb() }}
         {% endif %}
-        {% block main %}{{ _page.content() }}{% endblock %}
+        {% block main %}<main id="main">{{ _page.content() }}</main>{% endblock %}
     </div>
 </div>
 {%  include 'snippets/footer' %}

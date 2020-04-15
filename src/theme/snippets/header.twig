@@ -1,3 +1,5 @@
+{% import 'macros/macros' as macros %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -37,6 +39,7 @@
     <div class="u-hiddenVisually">{{ source('snippets/svg-icons.twig') }}</div>
     {% spaceless %}
     <header>
+        <a class="Header-skipToMain" href="#main">skip to main content {{ macros.iconAriaHidden("chevron-small-right") }}</a>
         <div class="TopBar">
             <div class="Container Container--pad">
                 <div class="Grid Grid--alignMiddle">
@@ -78,7 +81,7 @@
                         <div class="Grid-cell u-size1of3 u-md-sizeFull u-textRight u-md-textCenter">
                             <div class="TopBar-social">
                             {% for social in _core.theme.settings.social %}
-                                <a href="{{ social.url }}" title="Follow us on {{ social.name }}" class="TopBar-socialLink"><svg class="Icon TopBar-socialIcon"><use xlink:href="#icon-{{ social.icon }}" /></svg></a>
+                                <a href="{{ social.url }}" title="Follow us on {{ social.name }}" class="TopBar-socialLink">{{ macros.iconImg(social.icon, social.name, "TopBar-socialIcon") }}</a>
                             {% endfor %}
                             </div>
                         </div>
@@ -88,8 +91,11 @@
         </div>
         <div class="Header">
             <div class="Container Container--pad">
-                <div class="Grid Grid--withGutterLg Grid--alignMiddle">
+                <nav class="Grid Grid--withGutterLg Grid--alignMiddle">
                     <div class="Grid-cell u-size1of4 u-md-sizeFull u-md-margBottom2 u-md-textCenter">
+                        {% if _core.theme.settings.headerLogo.alt|length == 0 %}
+                            {% set _core.theme.settings.headerLogo.alt = _core.theme.settings.company %}
+                        {% endif %}
                         <a href="/">{{ _core.theme.settings.headerLogo.tag }}</a>
                     </div>
                     <div class="Grid-cell u-size3of4 u-md-sizeFull u-hidden u-lg-show">
@@ -98,7 +104,7 @@
                     <div class="Grid-cell u-size3of4 u-lg-sizeFull ">
                         {{ _api.navigation.get.key('main') }}
                     </div>
-                </div>
+                </nav>
             </div>
         </div>
     </header>

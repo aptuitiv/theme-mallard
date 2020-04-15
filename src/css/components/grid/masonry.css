@@ -25,7 +25,8 @@
 
 .Masonry-image {
     height: auto;
-    transition: all .4s ease-in-out;
+
+    /* transition: all .4s ease-in-out; */
     width: 100%;
 }
 
@@ -62,7 +63,8 @@
 .Masonry-link:active .Masonry-image,
 .Masonry-link:focus .Masonry-image,
 .Masonry-link:hover .Masonry-image {
-    transform: scale(1.15);
+
+    /* transform: scale(1.15); */
 }
 
 .Masonry-title {

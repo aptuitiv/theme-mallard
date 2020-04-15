@@ -1,10 +1,12 @@
 {% extends 'one-column' %}
 
+{% import 'macros/macros' as macros %}
+
 {% block header %}
     <div class="ContentHeader">
         <div class="Container">
             <h1 class="ContentHeader-title">{{ item.itemName }}</h1>
-            <div class="ContentHeader-content"><a href="{{ item.goBackUrl }}"><svg class="Icon"><use xlink:href="#icon-caret-left" /></svg>Back to Gallery</a></div>
+            <div class="ContentHeader-content"><a href="{{ item.goBackUrl }}"> {{ macros.iconImg("caret-left", "Go Back") }} Back </a></div>
         </div>
     </div>
 {% endblock %}
@@ -14,12 +16,15 @@
     {% set video = item.video.urlInfo|first %}
     <div class="FlexEmbed u-margBottom2">
         <div class="FlexEmbed-ratio FlexEmbed-ratio--8by5"></div>
-        <iframe class="FlexEmbed-content" frameborder="0" allowfullscreen src="{{ video.iframeEmbed.src }}"></iframe>
+        <iframe class="FlexEmbed-content" frameborder="0" title="{{ video.title }}" allowfullscreen src="{{ video.iframeEmbed.src }}"></iframe>
     </div>
 {% endmacro %}
 
 {# Image Macro #}
 {% macro image(item) %}
+
+
+    {% import 'macros/macros' as macros %}
     <div class="Slider js-slider u-margBottom1">
         {% for image in item.images %}
             {% if image.altText %}
@@ -49,6 +54,7 @@
         {% endinlinejs %}
         {% do _page.registerJs('slick/slick.min.js'|theme_url) %}
 
+
         {% inlinejs %}
         loadjs.ready('slickheader', {
             success: function() {
@@ -60,8 +66,8 @@
                         dots: false,
                         dotsClass: 'Slider-dots',
                         fade: true,
-                        prevArrow: '<a href="#" class="Slider-nav Slider-navPrev"><svg class="Slider-navIcon Icon"><use xlink:href="#icon-chevron-thin-left" /></svg></a>',
-                        nextArrow: '<a href="#" class="Slider-nav Slider-navNext"><svg class="Slider-navIcon Icon"><use xlink:href="#icon-chevron-thin-right" /></svg></a>',
+                        prevArrow: '<a href="#" class="Slider-nav Slider-navPrev"> {{ macros.iconImg("chevron-thin-left", "Slide Left", "Slider-navIcon") }} </a>',
+                        nextArrow: '<a href="#" class="Slider-nav Slider-navNext"> {{ macros.iconImg("chevron-thin-right", "Slide Right", "Slider-navIcon") }} </a>',
                         speed: 500
                     });
                     $('.js-thumb:first').addClass('Image--outline');
@@ -114,32 +120,32 @@
     {% if item.images|length > 1 %}
         <div class="Grid Grid--withGutterSm">
             {% for image in item.images %}
-                <div class="Grid-cell u-size1of{{ size }} u-sm-size1of3 u-xs-size1of2 u-margBottom1"><a href="#" class="js-thumb Constrain Constrain--4by3" data-index="{{ loop.index0 }}" style="background-image: url('{{ image.image.small.src }}')"></a></div>
+                <div class="Grid-cell u-size1of{{ size }} u-sm-size1of3 u-xs-size1of2 u-margBottom1"><a href="#" class="js-thumb Constrain Constrain--4by3" aria-label="{{ image.image.large.alt }}" data-index="{{ loop.index0 }}" style="background-image: url('{{ image.image.small.src }}')"></a></div>
             {% endfor %}
         </div>
     {% endif %}
 {% endmacro %}
 
-{% import _self as macros %}
+{% import _self as item_macros %}
 
 {% block main %}
     {% if item.video %}
         {# Displaying the video #}
         {% if item.description %}
             <div class="Grid Grid--withGutterLg">
-                <div class="Grid-cell u-size2of3 u-lg-size1of2 u-md-sizeFull u-md-margBottom2">{{ macros.video(item) }}</div>
+                <div class="Grid-cell u-size2of3 u-lg-size1of2 u-md-sizeFull u-md-margBottom2">{{ item_macros.video(item) }}</div>
                 <div class="Grid-cell u-size1of3 u-lg-size1of2 u-md-sizeFull">{{ item.description }}</div>
             </div>
         {% else %}
-            <div class="u-push1of6 u-size2of3 u-md-sizeFull u-md-pushNone">{{ macros.video(item) }}</div>
+            <div class="u-push1of6 u-size2of3 u-md-sizeFull u-md-pushNone">{{ item_macros.video(item) }}</div>
         {% endif %}
     {% else %}
         {# Displaying images #}
         {% if item.description %}
             <div class="Grid Grid--withGutterLg">
                 <div class="Grid-cell u-size1of2 u-md-sizeFull u-md-margBottom2">
-                    {{ macros.image(item) }}
-                    {{ macros.thumbnails(item, 5) }}
+                    {{ item_macros.image(item) }}
+                    {{ item_macros.thumbnails(item, 5) }}
                 </div>
                 <div class="Grid-cell u-size1of2 u-md-sizeFull">
                     {{ item.description }}
@@ -148,14 +154,14 @@
         {% elseif item.images|length > 1 %}
             <div class="Grid Grid--withGutterLg">
                 <div class="Grid-cell u-size1of2 u-md-sizeFull u-md-margBottom2">
-                    {{ macros.image(item) }}
+                    {{ item_macros.image(item) }}
                 </div>
                 <div class="Grid-cell u-size1of2 u-md-sizeFull">
-                    {{ macros.thumbnails(item, 4) }}
+                    {{ item_macros.thumbnails(item, 4) }}
                 </div>
             </div>
         {% else %}
-            <div class="u-push1of6 u-size2of3 u-md-sizeFull u-md-pushNone">{{ macros.image(item) }}</div>
+            <div class="u-push1of6 u-size2of3 u-md-sizeFull u-md-pushNone">{{ item_macros.image(item) }}</div>
         {% endif %}
     {% endif %}
 {% endblock %}

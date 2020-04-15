@@ -1,4 +1,4 @@
-<div class="Footer">
+<footer class="Footer">
     <div class="Container Container--pad">
         {% if _core.theme.settings.footerShowNavigation == 'yes' %}
             {{ _api.navigation.get.key('main').showSubNav('no').template('footer') }}
@@ -37,7 +37,7 @@
         {% endif %}
         &copy; {{ _core.date.year }} {{ _core.theme.settings.company }}
     </div>
-</div>
+</footer>
 
 {{ _page.js() }}
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
