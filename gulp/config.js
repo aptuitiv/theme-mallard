@@ -19,7 +19,7 @@ module.exports = {
      * It should include the closing "/"
      * http://www.mysite.com/
      */
-    url: 'http://ridge-theme.branchcms.com',
+    url: 'http://mallard-theme.branchcms.com',
 
     /**
      * Paths for different asset sources and their distribution path
@@ -28,10 +28,11 @@ module.exports = {
         src: {
             base: src,
             css: [
-                src + '/css/main.css'
+                src + '/css/main.css',
             ],
+            font: src + '/fonts/**/*.{eot,ttf,woff,woff2}',
             icon: src + '/icons/**/*.svg',
-            img: src + '/images/**/*.{png,jpg,jpeg,gif,svg}',
+            img: src + '/images/**/*.{gif,jpg,jpeg,png,svg,webp}',
             stylelint: [src + '/css/**/*.css'],
             theme: src + '/theme/**/*.twig',
             themeFolder: src + '/theme'
@@ -43,6 +44,7 @@ module.exports = {
         dist: {
             base: dist,
             css: dist + '/css',
+            font: dist + '/fonts',
             img: dist + '/images',
             js: dist + '/js',
             theme: dist + '/templates',
@@ -80,9 +82,10 @@ module.exports = {
      * 'url' is a sample URL of a page using that template to generate the critical CSS from
      */
     criticalCss: [
-        {'template': 'default', 'url': ''}
+        {'template': 'one-column', 'url': '/contact'},
+        {'template': 'one-column-full-width-header', 'url': ''},
+        {'template': 'two-column', 'url': '/who-we-are'},
     ],
-
 
     /**
      * Path to export the theme files to and from.
@@ -108,8 +111,8 @@ module.exports = {
                 dest: ''
             },
             {
-                src: 'config.js',
-                dest: ''
+                src: 'gulp/**/*',
+                dest: 'gulp'
             },
             {
                 src: 'gulpfile.js',
@@ -121,7 +124,7 @@ module.exports = {
             }
         ]
     },
-    
+
     /**
      * Scripts to build
      * name: The name of the file to build
@@ -131,7 +134,7 @@ module.exports = {
         {
             name: 'main.js',
             src: [
-                src + '/scripts/modernizr-flexbox-detection.js',
+                src + '/js/modernizr-flexbox-detection.js',
                 'node_modules/jquery/dist/jquery.js',
                 src + '/js/main.js'
             ]

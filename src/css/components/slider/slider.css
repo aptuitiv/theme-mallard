@@ -209,7 +209,9 @@
 }
 
 .Slider-captionTitle {
+    box-sizing: border-box;
     color: #fff;
+    display: block;
     font-family: var(--base-typography-heading-fontFamily);
     font-size: 2.6em;
     line-height: 1.1;
@@ -226,6 +228,13 @@
     line-height: 1.2;
     max-width: 30vw;
     text-shadow: 0 0 2px rgba(0, 0, 0, .6);
+}
+
+.Slider-content--center .Slider-captionTitle,
+.Slider-content--center .Slider-caption,
+.Slider-content--bottomCenter .Slider-captionTitle,
+.Slider-content--bottomCenter .Slider-caption {
+    max-width: 100%;
 }
 
 @media (--c-bp-lg) {
