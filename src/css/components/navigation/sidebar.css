@@ -53,6 +53,17 @@
     text-decoration: none;
 }
 
+.SidebarNav-link.is-current:active,
+.SidebarNav-link.is-current:focus,
+.SidebarNav-link.is-current:hover,
+.SidebarNav-link.is-currentParent:active,
+.SidebarNav-link.is-currentParent:focus,
+.SidebarNav-link.is-currentParent:hover {
+    background: var(--theme-sidenav-hover-background);
+    color: var(--theme-sidenav-hover-color);
+    text-decoration: none;
+}
+
 .SidebarNav-link--isParent.is-current,
 .SidebarNav-link--isParent.is-currentParent {
     background: transparent;
