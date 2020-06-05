@@ -36,6 +36,7 @@
     {{ _page.head() }}
 </head>
 <body>
+{{ _api.widgets.collection.get('notification-bar') }}
     <div class="u-hiddenVisually">{{ source('snippets/svg-icons.twig') }}</div>
     {% spaceless %}
     <header>
