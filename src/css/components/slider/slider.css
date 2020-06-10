@@ -19,6 +19,8 @@
 .Slider-link:focus,
 .Slider-link:hover {
     color: inherit;
+    display: block;
+    overflow: hidden; /* Done to prevent a scaled blurred image (with .u-imageBlur) from overflowing */
     text-decoration: none;
 }
 
@@ -126,6 +128,13 @@
     width: 100%;
 }
 
+.Slider-dots--left {
+    text-align: left;
+}
+
+.Slider-dots--right {
+    text-align: right;
+}
 
 /* postcss-bem-linter: ignore */
 .Slider-dots li {

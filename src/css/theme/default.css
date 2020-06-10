@@ -129,6 +129,43 @@
     --theme-slider-caption-small-screen-background: var(--theme-primary-color);
 }
 
+/* Image Slider */
+:root {
+    --theme-image-slider-background: #f2f2f2;
+    --theme-image-slider-color: var(--theme-typography-color);
+    --theme-image-slider-title-background: var(--theme-primary-color);
+    --theme-image-slider-title-color: #fff;
+    --theme-image-slider-title-background-hover: #7a0504;
+    --theme-image-slider-title-color-hover: #fff;
+    --theme-image-slider-title-font-size: 1.2em;
+    --theme-image-slider-title-font-weight: 300;
+    --theme-image-slider-hover-background: #7a0504;
+    --theme-image-slider-hover-color: #fff;
+    --theme-image-slider-cover-background: rgba(162, 21, 20, .5);
+    --theme-image-slider-cover-color: #fff;
+}
+
+/* Page Content Header */
+
+:root {
+    --theme-content-header-background: #f2f2f2;
+    --theme-content-header-color: var(--theme-typography-color);
+}
+
+/* Content Bar */
+
+:root {
+    --theme-content-bar-background: #285585;
+    --theme-content-bar-heading-color: #fcfdfe;
+    --theme-content-bar-color: #fcfdfe;
+    --theme-content-bar-button-background: #fcfdfe;
+    --theme-content-bar-button-color: var(--theme-content-bar-background);
+    --theme-content-bar-button-background-hover: #cfdff1;
+    --theme-content-bar-button-color-hover: var(--theme-content-bar-background);
+    --theme-content-bar-link-color: #fcfdfe;
+    --theme-content-bar-link-color-hover: #fcfdfe;
+}
+
 /* Image Grid */
 
 :root {
