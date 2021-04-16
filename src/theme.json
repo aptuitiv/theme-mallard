@@ -230,10 +230,11 @@
         ]
     },
     "contentBuilder": {
-        "groups": [
-            {
+        "groups": {
+            "_bd-simple-content-elements": {
                 "key": "_bd-simple-content-elements",
                 "name": "Content Elements",
+                "display_order": "1",
                 "elements": [
                     {
                         "key": "columned-content",
@@ -298,14 +299,6 @@
                                 "key": "columns",
                                 "name": "Columns",
                                 "type": "repeating",
-                                "configuration": {
-                                    "collectionItemSort": "1",
-                                    "collectionItemDelete": "1",
-                                    "collectionMinNumItems": "",
-                                    "collectionMaxNumItems": "",
-                                    "collectionOrientation": "vertical",
-                                    "collectionItemName": "Image"
-                                },
                                 "value": "",
                                 "description": "",
                                 "fields": [
@@ -313,16 +306,18 @@
                                         "key": "title",
                                         "name": "Title",
                                         "type": "text",
+                                        "size": "medium",
+                                        "value": "",
+                                        "description": "",
                                         "configuration": {
                                             "allowCode": "no"
-                                        },
-                                        "value": "",
-                                        "description": ""
+                                        }
                                     },
                                     {
                                         "key": "link",
                                         "name": "Link",
                                         "type": "url",
+                                        "size": "medium",
                                         "value": "",
                                         "description": ""
                                     },
@@ -330,13 +325,13 @@
                                         "key": "image",
                                         "name": "Image",
                                         "type": "image",
-                                        "configuration": {
-                                            "path": "/images/grid",
-                                            "height": 500,
-                                            "width": 500
-                                        },
                                         "value": "",
-                                        "description": ""
+                                        "description": "",
+                                        "configuration": {
+                                            "height": 500,
+                                            "path": "/images/grid",
+                                            "width": 500
+                                        }
                                     },
                                     {
                                         "key": "content",
@@ -345,7 +340,91 @@
                                         "value": "",
                                         "description": ""
                                     }
-                                ]
+                                ],
+                                "configuration": {
+                                    "collectionItemDelete": "1",
+                                    "collectionItemName": "Image",
+                                    "collectionItemSort": "1",
+                                    "collectionMaxNumItems": "",
+                                    "collectionMinNumItems": "",
+                                    "collectionOrientation": "vertical"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "key": "columned-feature",
+                        "name": "Columned Feature",
+                        "type": "full",
+                        "template": "columned-feature",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "columns",
+                                "name": "Columns",
+                                "type": "repeating",
+                                "value": "",
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "key": "heading",
+                                        "name": "Heading",
+                                        "type": "text",
+                                        "size": "",
+                                        "value": "",
+                                        "description": "",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        }
+                                    },
+                                    {
+                                        "key": "image",
+                                        "name": "Image",
+                                        "type": "image",
+                                        "value": "",
+                                        "description": "",
+                                        "configuration": {
+                                            "height": 400,
+                                            "path": "/images/columned-feature",
+                                            "width": 400
+                                        }
+                                    },
+                                    {
+                                        "key": "content",
+                                        "name": "Content",
+                                        "type": "richTextEditor",
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "link",
+                                        "name": "Link",
+                                        "type": "url",
+                                        "size": "",
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "buttonText",
+                                        "name": "Button Text",
+                                        "type": "text",
+                                        "size": "",
+                                        "value": "Learn More",
+                                        "description": "",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        }
+                                    }
+                                ],
+                                "configuration": {
+                                    "collectionItemDelete": "1",
+                                    "collectionItemSort": "1",
+                                    "collectionMaxNumItems": 4,
+                                    "collectionMinNumItems": "",
+                                    "collectionOrientation": "vertical"
+                                }
                             }
                         ]
                     },
@@ -364,6 +443,206 @@
                                 "type": "richTextEditor",
                                 "value": "",
                                 "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "key": "content-grid",
+                        "name": "Content Grid",
+                        "type": "full",
+                        "template": "content-grid",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "columns",
+                                "name": "Columns",
+                                "type": "repeating",
+                                "value": "",
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "key": "title",
+                                        "name": "Title",
+                                        "type": "text",
+                                        "size": "",
+                                        "value": "",
+                                        "description": "",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        }
+                                    },
+                                    {
+                                        "key": "link",
+                                        "name": "Link",
+                                        "type": "url",
+                                        "size": "",
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "linkText",
+                                        "name": "Link Text",
+                                        "type": "text",
+                                        "size": "",
+                                        "value": "Learn More",
+                                        "description": "",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        }
+                                    },
+                                    {
+                                        "key": "content",
+                                        "name": "Content",
+                                        "type": "richTextEditor",
+                                        "value": "",
+                                        "description": ""
+                                    }
+                                ],
+                                "configuration": {
+                                    "collectionItemDelete": "1",
+                                    "collectionItemName": "Column",
+                                    "collectionItemSort": "1",
+                                    "collectionMaxNumItems": "",
+                                    "collectionMinNumItems": "",
+                                    "collectionOrientation": "vertical"
+                                }
+                            },
+                            {
+                                "key": "numberOfColumns",
+                                "name": "Number of columns per row",
+                                "type": "select",
+                                "value": "",
+                                "description": "Number of columns to display at the largest screen size.\n\"Auto\" will determine the number of columns based on the number of items.",
+                                "options": [
+                                    {
+                                        "value": "Auto",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "2",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "3",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "4",
+                                        "default": false
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "key": "content-wrap",
+                        "name": "Content Wrap",
+                        "type": "full",
+                        "template": "content-wrap",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "background",
+                                "name": "Background",
+                                "type": "select",
+                                "value": "",
+                                "description": "",
+                                "options": [
+                                    {
+                                        "value": "White",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Light",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Dark",
+                                        "default": false
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "spacing",
+                                "name": "Spacing above and below content",
+                                "type": "select",
+                                "value": "",
+                                "description": "",
+                                "options": [
+                                    {
+                                        "value": "None",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Small",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Medium",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Large",
+                                        "default": false
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "parent",
+                                "name": "Content",
+                                "type": "parent",
+                                "value": "",
+                                "description": "Drop content elements here"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "featured-content-wrapper",
+                        "name": "Featured Content Wrapper",
+                        "type": "grid",
+                        "template": "featured-content-wrapper",
+                        "enabled": true,
+                        "parse": true,
+                        "columns": "1",
+                        "sizes": "12",
+                        "size": "12",
+                        "description": "",
+                        "fields": []
+                    },
+                    {
+                        "key": "featured-text",
+                        "name": "Featured Text",
+                        "type": "full",
+                        "template": "featured-text",
+                        "enabled": true,
+                        "parse": false,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "content",
+                                "name": "Content",
+                                "type": "textarea",
+                                "size": "",
+                                "value": "",
+                                "description": "",
+                                "configuration": {
+                                    "allowCode": "no"
+                                }
+                            },
+                            {
+                                "key": "subTitle",
+                                "name": "Sub Title",
+                                "type": "text",
+                                "size": "",
+                                "value": "",
+                                "description": "",
+                                "configuration": {
+                                    "allowCode": "no"
+                                }
                             }
                         ]
                     },
@@ -398,22 +677,23 @@
                                 "key": "image",
                                 "name": "Image",
                                 "type": "image",
+                                "value": "",
+                                "description": "",
                                 "configuration": {
                                     "path": "/images",
                                     "width": 1200
-                                },
-                                "value": "",
-                                "description": ""
+                                }
                             },
                             {
                                 "key": "caption",
                                 "name": "Caption",
                                 "type": "text",
+                                "size": "",
+                                "value": "",
+                                "description": "",
                                 "configuration": {
                                     "allowCode": "no"
-                                },
-                                "value": "",
-                                "description": ""
+                                }
                             }
                         ]
                     },
@@ -430,6 +710,7 @@
                                 "key": "code",
                                 "name": "HTML Code",
                                 "type": "code",
+                                "size": "",
                                 "value": "",
                                 "description": ""
                             }
@@ -477,6 +758,7 @@
                                 "key": "iframeTag",
                                 "name": "Iframe Tag",
                                 "type": "iframeEmbed",
+                                "size": "",
                                 "value": "",
                                 "description": "Description: Use this to embed an iframe like a Google Map iframe. Use the Media Embed element for YouTube videos or other media."
                             }
@@ -492,67 +774,95 @@
                         "description": "",
                         "fields": [
                             {
-                                "key": "rows",
-                                "name": "Rows",
-                                "type": "repeating",
-                                "configuration": {
-                                    "collectionItemSort": "1",
-                                    "collectionItemDelete": "1",
-                                    "collectionMinNumItems": "",
-                                    "collectionMaxNumItems": "",
-                                    "collectionOrientation": "vertical",
-                                    "collectionItemName": "Row"
-                                },
+                                "key": "heading",
+                                "name": "Heading",
+                                "type": "text",
+                                "size": "medium",
                                 "value": "",
                                 "description": "",
-                                "fields": [
+                                "configuration": {
+                                    "allowCode": "no"
+                                }
+                            },
+                            {
+                                "key": "image",
+                                "name": "Image",
+                                "type": "image",
+                                "value": "",
+                                "description": "",
+                                "configuration": {
+                                    "height": 600,
+                                    "path": "/images",
+                                    "width": 600
+                                }
+                            },
+                            {
+                                "key": "imageSize",
+                                "name": "Image size",
+                                "type": "select",
+                                "value": "",
+                                "description": "",
+                                "options": [
                                     {
-                                        "key": "heading",
-                                        "name": "Heading",
-                                        "type": "text",
-                                        "configuration": {
-                                            "allowCode": "no"
-                                        },
-                                        "value": "",
-                                        "description": ""
+                                        "value": "1/4",
+                                        "default": false
                                     },
                                     {
-                                        "key": "image",
-                                        "name": "Image",
-                                        "type": "image",
-                                        "configuration": {
-                                            "path": "/images/staff",
-                                            "height": 500,
-                                            "width": 500
-                                        },
-                                        "value": "",
-                                        "description": ""
+                                        "value": "1/3",
+                                        "default": false
                                     },
                                     {
-                                        "key": "alignImage",
-                                        "name": "Align Image",
-                                        "type": "select",
-                                        "value": "",
-                                        "description": "",
-                                        "options": [
-                                            {
-                                                "value": "Left",
-                                                "default": false
-                                            },
-                                            {
-                                                "value": "Right",
-                                                "default": false
-                                            }
-                                        ]
+                                        "value": "2/5",
+                                        "default": false
                                     },
                                     {
-                                        "key": "content",
-                                        "name": "Content",
-                                        "type": "richTextEditor",
-                                        "value": "",
-                                        "description": ""
+                                        "value": "1/2",
+                                        "default": false
                                     }
                                 ]
+                            },
+                            {
+                                "key": "alignImage",
+                                "name": "Align image",
+                                "type": "select",
+                                "value": "",
+                                "description": "",
+                                "options": [
+                                    {
+                                        "value": "Left",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Right",
+                                        "default": false
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "link",
+                                "name": "Link",
+                                "type": "url",
+                                "size": "medium",
+                                "value": "",
+                                "description": ""
+                            },
+                            {
+                                "key": "buttonText",
+                                "name": "Button text",
+                                "type": "text",
+                                "size": "medium",
+                                "value": "Learn More",
+                                "description": "",
+                                "configuration": {
+                                    "allowCode": "no"
+                                }
+                            },
+                            {
+                                "key": "content",
+                                "name": "Content",
+                                "type": "richTextEditor",
+                                "value": "",
+                                "description": ""
                             }
                         ]
                     },
@@ -591,8 +901,8 @@
                                 ]
                             },
                             {
-                                "key": "displayText",
-                                "name": "Display text",
+                                "key": "displayTitle",
+                                "name": "Display title",
                                 "type": "select",
                                 "value": "",
                                 "description": "",
@@ -606,7 +916,7 @@
                                         "default": false
                                     },
                                     {
-                                        "value": "On Bottom of Image",
+                                        "value": "Bottom of Image",
                                         "default": false
                                     },
                                     {
@@ -616,17 +926,9 @@
                                 ]
                             },
                             {
-                                "key": "images",
-                                "name": "Images",
+                                "key": "columns",
+                                "name": "Columns",
                                 "type": "repeating",
-                                "configuration": {
-                                    "collectionItemSort": "1",
-                                    "collectionItemDelete": "1",
-                                    "collectionMinNumItems": "",
-                                    "collectionMaxNumItems": "",
-                                    "collectionOrientation": "vertical",
-                                    "collectionItemName": "Image"
-                                },
                                 "value": "",
                                 "description": "",
                                 "fields": [
@@ -634,40 +936,67 @@
                                         "key": "image",
                                         "name": "Image",
                                         "type": "image",
-                                        "configuration": {
-                                            "path": "/images/grid",
-                                            "height": 500,
-                                            "width": 500
-                                        },
                                         "value": "",
-                                        "description": ""
+                                        "description": "",
+                                        "configuration": {
+                                            "height": 500,
+                                            "path": "/images/grid",
+                                            "width": 500
+                                        }
                                     },
                                     {
                                         "key": "title",
                                         "name": "Title",
                                         "type": "text",
+                                        "size": "medium",
+                                        "value": "",
+                                        "description": "",
                                         "configuration": {
                                             "allowCode": "no"
-                                        },
-                                        "value": "",
-                                        "description": ""
+                                        }
                                     },
                                     {
                                         "key": "link",
                                         "name": "Link",
                                         "type": "url",
+                                        "size": "medium",
                                         "value": "",
                                         "description": ""
+                                    },
+                                    {
+                                        "key": "displayImage",
+                                        "name": "How to Display Image",
+                                        "type": "select",
+                                        "value": "",
+                                        "description": "\"Scale to fit\" means that the image will be scaled to fit in a perfect square.\n\"Fit\" means that the image will be centered but will not be displayed as a perfect square",
+                                        "options": [
+                                            {
+                                                "value": "Scale to fit",
+                                                "default": false
+                                            },
+                                            {
+                                                "value": "Fit",
+                                                "default": false
+                                            }
+                                        ]
                                     }
-                                ]
+                                ],
+                                "configuration": {
+                                    "collectionItemDelete": "1",
+                                    "collectionItemName": "Column",
+                                    "collectionItemSort": "1",
+                                    "collectionMaxNumItems": "",
+                                    "collectionMinNumItems": "",
+                                    "collectionOrientation": "vertical"
+                                }
                             }
                         ]
                     },
                     {
                         "key": "image-grid-hover",
-                        "name": "Image Grid with Hover",
+                        "name": "Image Grid with Content",
                         "type": "full",
-                        "template": "image-grid-hover",
+                        "template": "image-grid-with-content",
                         "enabled": true,
                         "parse": true,
                         "description": "",
@@ -698,8 +1027,8 @@
                                 ]
                             },
                             {
-                                "key": "displayText",
-                                "name": "Display text",
+                                "key": "displayTitle",
+                                "name": "Display title",
                                 "type": "select",
                                 "value": "",
                                 "description": "",
@@ -723,17 +1052,30 @@
                                 ]
                             },
                             {
-                                "key": "images",
-                                "name": "Images",
+                                "key": "displayContent",
+                                "name": "Display content",
+                                "type": "select",
+                                "value": "",
+                                "description": "Showing text \"Behind Image\" will have the text show when you hover over the image.",
+                                "options": [
+                                    {
+                                        "value": "Below Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Behind Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Over Image",
+                                        "default": false
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "columns",
+                                "name": "Columns",
                                 "type": "repeating",
-                                "configuration": {
-                                    "collectionItemSort": "1",
-                                    "collectionItemDelete": "1",
-                                    "collectionMinNumItems": "",
-                                    "collectionMaxNumItems": "",
-                                    "collectionOrientation": "vertical",
-                                    "collectionItemName": "Image"
-                                },
                                 "value": "",
                                 "description": "",
                                 "fields": [
@@ -741,11 +1083,182 @@
                                         "key": "image",
                                         "name": "Image",
                                         "type": "image",
+                                        "value": "",
+                                        "description": "",
                                         "configuration": {
-                                            "path": "/images/grid",
                                             "height": 500,
+                                            "path": "/images/grid",
                                             "width": 500
-                                        },
+                                        }
+                                    },
+                                    {
+                                        "key": "title",
+                                        "name": "Title",
+                                        "type": "text",
+                                        "size": "medium",
+                                        "value": "",
+                                        "description": "",
+                                        "configuration": {
+                                            "allowCode": "no"
+                                        }
+                                    },
+                                    {
+                                        "key": "link",
+                                        "name": "Link",
+                                        "type": "url",
+                                        "size": "medium",
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "content",
+                                        "name": "Content",
+                                        "type": "richTextEditor",
+                                        "value": "",
+                                        "description": ""
+                                    },
+                                    {
+                                        "key": "displayImage",
+                                        "name": "How to Display Image",
+                                        "type": "select",
+                                        "value": "",
+                                        "description": "",
+                                        "options": [
+                                            {
+                                                "value": "Scale to Fit",
+                                                "default": false
+                                            },
+                                            {
+                                                "value": "Fit",
+                                                "default": false
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "configuration": {
+                                    "collectionItemDelete": "1",
+                                    "collectionItemName": "Column",
+                                    "collectionItemSort": "1",
+                                    "collectionMaxNumItems": "",
+                                    "collectionMinNumItems": "",
+                                    "collectionOrientation": "vertical"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "key": "image-slider",
+                        "name": "Image Slider",
+                        "type": "full",
+                        "template": "image-slider",
+                        "enabled": true,
+                        "parse": true,
+                        "description": "",
+                        "fields": [
+                            {
+                                "key": "displayContent",
+                                "name": "Display Content",
+                                "type": "select",
+                                "value": "",
+                                "description": "Showing text \"Behind Image\" will have the text show when you hover over the image.",
+                                "options": [
+                                    {
+                                        "value": "Below Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Right of Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Left of Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Over Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Behind Image",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "Hide",
+                                        "default": false
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "sliderSpeed",
+                                "name": "Slider Speed",
+                                "type": "select",
+                                "value": "",
+                                "description": "",
+                                "options": [
+                                    {
+                                        "value": "3",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "4",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "5",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "6",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "7",
+                                        "default": false
+                                    },
+                                    {
+                                        "value": "8",
+                                        "default": false
+                                    }
+                                ],
+                                "configuration": {
+                                    "0": "",
+                                    "after": "seconds"
+                                }
+                            },
+                            {
+                                "key": "autoPlaySlides",
+                                "name": "Auto play slides",
+                                "type": "selectYesNo",
+                                "value": "no",
+                                "description": "",
+                                "configuration": {
+                                    "optionLabel": "yesNo"
+                                }
+                            },
+                            {
+                                "key": "slides",
+                                "name": "Slides",
+                                "type": "repeating",
+                                "value": "",
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "key": "image",
+                                        "name": "Image",
+                                        "type": "image",
+                                        "value": "",
+                                        "description": "",
+                                        "configuration": {
+                                            "height": 600,
+                                            "path": "/images/slides",
+                                            "width": 600
+                                        }
+                                    },
+                                    {
+                                        "key": "link",
+                                        "name": "Link",
+                                        "type": "url",
+                                        "size": "medium",
                                         "value": "",
                                         "description": ""
                                     },
@@ -753,30 +1266,29 @@
                                         "key": "title",
                                         "name": "Title",
                                         "type": "text",
+                                        "size": "medium",
+                                        "value": "",
+                                        "description": "",
                                         "configuration": {
                                             "allowCode": "no"
-                                        },
-                                        "value": "",
-                                        "description": ""
-                                    },
-                                    {
-                                        "key": "link",
-                                        "name": "Link",
-                                        "type": "url",
-                                        "value": "",
-                                        "description": ""
+                                        }
                                     },
                                     {
                                         "key": "content",
                                         "name": "Content",
-                                        "type": "textarea",
-                                        "configuration": {
-                                            "allowCode": "no"
-                                        },
+                                        "type": "richTextEditor",
                                         "value": "",
                                         "description": ""
                                     }
-                                ]
+                                ],
+                                "configuration": {
+                                    "collectionItemDelete": "1",
+                                    "collectionItemName": "Slide",
+                                    "collectionItemSort": "1",
+                                    "collectionMaxNumItems": "",
+                                    "collectionMinNumItems": "",
+                                    "collectionOrientation": "vertical"
+                                }
                             }
                         ]
                     },
@@ -822,6 +1334,7 @@
                                 "key": "embedUrl",
                                 "name": "Embed URL",
                                 "type": "embedUrl",
+                                "size": "",
                                 "value": "",
                                 "description": "Enter the URL of the media content. For example, for YouTube simply enter the URL to view the video on the YouTube website."
                             }
@@ -836,18 +1349,6 @@
                         "parse": true,
                         "description": "",
                         "fields": [
-                            {
-                                "key": "image",
-                                "name": "Image",
-                                "type": "image",
-                                "configuration": {
-                                    "path": "/images",
-                                    "height": 400,
-                                    "width": 400
-                                },
-                                "value": "",
-                                "description": ""
-                            },
                             {
                                 "key": "alignment",
                                 "name": "Alignment",
@@ -874,14 +1375,27 @@
                                 ]
                             },
                             {
+                                "key": "image",
+                                "name": "Image",
+                                "type": "image",
+                                "value": "",
+                                "description": "",
+                                "configuration": {
+                                    "height": 400,
+                                    "path": "/images",
+                                    "width": 400
+                                }
+                            },
+                            {
                                 "key": "caption",
                                 "name": "Caption",
                                 "type": "text",
+                                "size": "",
+                                "value": "",
+                                "description": "",
                                 "configuration": {
                                     "allowCode": "no"
-                                },
-                                "value": "",
-                                "description": ""
+                                }
                             }
                         ]
                     },
@@ -955,14 +1469,6 @@
                                 "key": "people",
                                 "name": "People",
                                 "type": "repeating",
-                                "configuration": {
-                                    "collectionItemSort": "1",
-                                    "collectionItemDelete": "1",
-                                    "collectionMinNumItems": "",
-                                    "collectionMaxNumItems": "",
-                                    "collectionOrientation": "vertical",
-                                    "collectionItemName": "Person"
-                                },
                                 "value": "",
                                 "description": "",
                                 "fields": [
@@ -970,53 +1476,57 @@
                                         "key": "name",
                                         "name": "Name",
                                         "type": "text",
+                                        "size": "medium",
+                                        "value": "",
+                                        "description": "",
                                         "configuration": {
                                             "allowCode": "no"
-                                        },
-                                        "value": "",
-                                        "description": ""
+                                        }
                                     },
                                     {
                                         "key": "title",
                                         "name": "Title",
                                         "type": "text",
+                                        "size": "medium",
+                                        "value": "",
+                                        "description": "",
                                         "configuration": {
                                             "allowCode": "no"
-                                        },
-                                        "value": "",
-                                        "description": ""
+                                        }
                                     },
                                     {
                                         "key": "email",
                                         "name": "Email",
                                         "type": "text",
+                                        "size": "medium",
+                                        "value": "",
+                                        "description": "",
                                         "configuration": {
                                             "allowCode": "no"
-                                        },
-                                        "value": "",
-                                        "description": ""
+                                        }
                                     },
                                     {
                                         "key": "phoneNumber",
                                         "name": "Phone Number",
                                         "type": "text",
+                                        "size": "medium",
+                                        "value": "",
+                                        "description": "",
                                         "configuration": {
                                             "allowCode": "no"
-                                        },
-                                        "value": "",
-                                        "description": ""
+                                        }
                                     },
                                     {
                                         "key": "image",
                                         "name": "Image",
                                         "type": "image",
-                                        "configuration": {
-                                            "path": "/images/staff",
-                                            "height": 500,
-                                            "width": 500
-                                        },
                                         "value": "",
-                                        "description": ""
+                                        "description": "",
+                                        "configuration": {
+                                            "height": 500,
+                                            "path": "/images/staff",
+                                            "width": 500
+                                        }
                                     },
                                     {
                                         "key": "bio",
@@ -1025,219 +1535,24 @@
                                         "value": "",
                                         "description": ""
                                     }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "key": "content-grid",
-                        "name": "Content Grid",
-                        "type": "full",
-                        "template": "content-grid",
-                        "enabled": true,
-                        "parse": true,
-                        "description": "",
-                        "fields": [
-                            {
-                                "key": "numberOfColumns",
-                                "name": "Number of columns per row",
-                                "type": "select",
-                                "value": "",
-                                "description": "Number of columns to display at the largest screen size.\n\"Auto\" will determine the number of columns based on the number of items.",
-                                "options": [
-                                    {
-                                        "value": "Auto",
-                                        "default": false
-                                    },
-                                    {
-                                        "value": "2",
-                                        "default": false
-                                    },
-                                    {
-                                        "value": "3",
-                                        "default": false
-                                    },
-                                    {
-                                        "value": "4",
-                                        "default": false
-                                    }
-                                ]
-                            },
-                            {
-                                "key": "columns",
-                                "name": "Columns",
-                                "type": "repeating",
+                                ],
                                 "configuration": {
-                                    "collectionItemSort": "1",
                                     "collectionItemDelete": "1",
-                                    "collectionMinNumItems": "",
+                                    "collectionItemName": "Person",
+                                    "collectionItemSort": "1",
                                     "collectionMaxNumItems": "",
-                                    "collectionOrientation": "vertical",
-                                    "collectionItemName": "Column"
-                                },
-                                "value": "",
-                                "description": "",
-                                "fields": [
-                                    {
-                                        "key": "title",
-                                        "name": "Title",
-                                        "type": "text",
-                                        "configuration": {
-                                            "allowCode": "no"
-                                        },
-                                        "value": "",
-                                        "description": ""
-                                    },
-                                    {
-                                        "key": "link",
-                                        "name": "Link",
-                                        "type": "url",
-                                        "value": "",
-                                        "description": ""
-                                    },
-                                    {
-                                        "key": "linkText",
-                                        "name": "Link Text",
-                                        "type": "text",
-                                        "configuration": {
-                                            "allowCode": "no"
-                                        },
-                                        "value": "Learn More",
-                                        "description": ""
-                                    },
-                                    {
-                                        "key": "content",
-                                        "name": "Content",
-                                        "type": "richTextEditor",
-                                        "value": "",
-                                        "description": ""
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "key": "featured-content-wrapper",
-                        "name": "Featured Content Wrapper",
-                        "type": "grid",
-                        "template": "featured-content-wrapper",
-                        "enabled": true,
-                        "parse": true,
-                        "columns": "1",
-                        "sizes": "12",
-                        "size": "12",
-                        "description": "",
-                        "fields": []
-                    },
-                    {
-                        "key": "featured-text",
-                        "name": "Featured Text",
-                        "type": "full",
-                        "template": "featured-text",
-                        "enabled": true,
-                        "parse": false,
-                        "description": "",
-                        "fields": [
-                            {
-                                "key": "content",
-                                "name": "Content",
-                                "type": "textarea",
-                                "configuration": {
-                                    "allowCode": "no"
-                                },
-                                "value": "",
-                                "description": ""
-                            },
-                            {
-                                "key": "subTitle",
-                                "name": "Sub Title",
-                                "type": "text",
-                                "configuration": {
-                                    "allowCode": "no"
-                                },
-                                "value": "",
-                                "description": ""
-                            }
-                        ]
-                    },
-                    {
-                        "key": "columned-feature",
-                        "name": "Columned Feature",
-                        "type": "full",
-                        "template": "columned-feature",
-                        "enabled": true,
-                        "parse": true,
-                        "description": "",
-                        "fields": [
-                            {
-                                "key": "columns",
-                                "name": "Columns",
-                                "type": "repeating",
-                                "configuration": {
-                                    "collectionItemSort": "1",
-                                    "collectionItemDelete": "1",
                                     "collectionMinNumItems": "",
-                                    "collectionMaxNumItems": 4,
                                     "collectionOrientation": "vertical"
-                                },
-                                "value": "",
-                                "description": "",
-                                "fields": [
-                                    {
-                                        "key": "heading",
-                                        "name": "Heading",
-                                        "type": "text",
-                                        "configuration": {
-                                            "allowCode": "no"
-                                        },
-                                        "value": "",
-                                        "description": ""
-                                    },
-                                    {
-                                        "key": "image",
-                                        "name": "Image",
-                                        "type": "image",
-                                        "configuration": {
-                                            "path": "/images/columned-feature",
-                                            "height": 400,
-                                            "width": 400
-                                        },
-                                        "value": "",
-                                        "description": ""
-                                    },
-                                    {
-                                        "key": "content",
-                                        "name": "Content",
-                                        "type": "richTextEditor",
-                                        "value": "",
-                                        "description": ""
-                                    },
-                                    {
-                                        "key": "link",
-                                        "name": "Link",
-                                        "type": "url",
-                                        "value": "",
-                                        "description": ""
-                                    },
-                                    {
-                                        "key": "buttonText",
-                                        "name": "Button Text",
-                                        "type": "text",
-                                        "configuration": {
-                                            "allowCode": "no"
-                                        },
-                                        "value": "Learn More",
-                                        "description": ""
-                                    }
-                                ]
+                                }
                             }
                         ]
                     }
                 ]
             },
-            {
+            "_bd-text-headings": {
                 "key": "_bd-text-headings",
                 "name": "Text Headings",
+                "display_order": "2",
                 "elements": [
                     {
                         "key": "_bd-heading1",
@@ -1252,6 +1567,7 @@
                                 "key": "heading",
                                 "name": "Heading 1",
                                 "type": "text",
+                                "size": "medium",
                                 "value": "",
                                 "description": ""
                             }
@@ -1270,6 +1586,7 @@
                                 "key": "heading",
                                 "name": "Heading 2",
                                 "type": "text",
+                                "size": "medium",
                                 "value": "",
                                 "description": ""
                             }
@@ -1288,6 +1605,7 @@
                                 "key": "heading",
                                 "name": "Heading 3",
                                 "type": "text",
+                                "size": "medium",
                                 "value": "",
                                 "description": ""
                             }
@@ -1306,6 +1624,7 @@
                                 "key": "heading",
                                 "name": "Heading 4",
                                 "type": "text",
+                                "size": "medium",
                                 "value": "",
                                 "description": ""
                             }
@@ -1324,6 +1643,7 @@
                                 "key": "heading",
                                 "name": "Heading 5",
                                 "type": "text",
+                                "size": "medium",
                                 "value": "",
                                 "description": ""
                             }
@@ -1342,6 +1662,7 @@
                                 "key": "heading",
                                 "name": "Heading 6",
                                 "type": "text",
+                                "size": "medium",
                                 "value": "",
                                 "description": ""
                             }
@@ -1349,9 +1670,10 @@
                     }
                 ]
             },
-            {
+            "_bd-grids": {
                 "key": "_bd-grids",
                 "name": "Column Layouts",
+                "display_order": "3",
                 "elements": [
                     {
                         "key": "_bd-grid2-12-12",
@@ -1537,7 +1859,7 @@
                     }
                 ]
             }
-        ]
+        }
     },
     "templates": [
         {
@@ -1737,8 +2059,32 @@
             "name": "Image Beside Content"
         },
         {
-            "key": "content-builder/image-grid-hover",
-            "name": "Image Grid with Hover"
+            "key": "content-builder/image-grid-with-content",
+            "name": "Image Grid with Content"
+        },
+        {
+            "key": "content-builder/content-grid",
+            "name": "Content Grid"
+        },
+        {
+            "key": "content-builder/featured-content-wrapper",
+            "name": "Featured Content Wrapper"
+        },
+        {
+            "key": "content-builder/featured-text",
+            "name": "Featured Text"
+        },
+        {
+            "key": "content-builder/columned-feature",
+            "name": "Columned Feature"
+        },
+        {
+            "key": "content-builder/image-slider",
+            "name": "Image Slider"
+        },
+        {
+            "key": "content-builder/content-wrap",
+            "name": "Content Wrap"
         },
         {
             "key": "content-layouts/header",
@@ -1751,6 +2097,139 @@
         {
             "key": "forms/label-above-field",
             "name": "label-above-field"
+        },
+        {
+            "key": "widgets/collections/notification-bar",
+            "name": "Default",
+            "collection": "notification-bar",
+            "default": true
+        },
+        {
+            "key": "blog/categories",
+            "name": "categories",
+            "type": ""
+        },
+        {
+            "key": "blog/category",
+            "name": "category",
+            "type": "category-detail"
+        },
+        {
+            "key": "blog/home",
+            "name": "home",
+            "type": "home"
+        },
+        {
+            "key": "blog/post-list-item-simple",
+            "name": "post-list-item-simple",
+            "type": ""
+        },
+        {
+            "key": "blog/post",
+            "name": "post",
+            "type": ""
+        },
+        {
+            "key": "blog/posts",
+            "name": "posts",
+            "type": "post-list"
+        },
+        {
+            "key": "blog/tag",
+            "name": "tag",
+            "type": ""
+        },
+        {
+            "key": "blog/tags",
+            "name": "tags",
+            "type": ""
+        },
+        {
+            "key": "blog/api-category-filter",
+            "name": "api-category-filter",
+            "type": "api-category-filter"
+        },
+        {
+            "key": "blog/api-post-archive",
+            "name": "api-post-archive",
+            "type": "api-post-archive"
+        },
+        {
+            "key": "blog/api-recent-comments",
+            "name": "api-recent-comments",
+            "type": "api-recent-comments-filter"
+        },
+        {
+            "key": "blog/api-recent-posts-footer",
+            "name": "api-recent-posts-footer",
+            "type": "api-recent-posts"
+        },
+        {
+            "key": "blog/api-recent-posts",
+            "name": "api-recent-posts",
+            "type": "api-recent-posts"
+        },
+        {
+            "key": "blog/api-tag-filter",
+            "name": "api-tag-filter",
+            "type": "api-tag-filter"
+        },
+        {
+            "key": "blog/archive",
+            "name": "archive",
+            "type": ""
+        },
+        {
+            "key": "blog/forms/comment-default-template",
+            "name": "Default Template",
+            "type": "form",
+            "default": true,
+            "formKey": "comment"
+        },
+        {
+            "key": "calendar/event-list-agenda",
+            "name": "event-list-agenda",
+            "type": ""
+        },
+        {
+            "key": "calendar/event-list-grid",
+            "name": "event-list-grid",
+            "type": ""
+        },
+        {
+            "key": "calendar/event-list-list",
+            "name": "event-list-list",
+            "type": ""
+        },
+        {
+            "key": "calendar/home",
+            "name": "home",
+            "type": ""
+        },
+        {
+            "key": "gallery/categories",
+            "name": "categories",
+            "type": ""
+        },
+        {
+            "key": "gallery/category",
+            "name": "category",
+            "type": ""
+        },
+        {
+            "key": "gallery/home",
+            "name": "home",
+            "type": ""
+        },
+        {
+            "key": "gallery/item",
+            "name": "item",
+            "type": ""
+        },
+        {
+            "key": "gallery/items",
+            "name": "items",
+            "type": ""
         }
     ],
     "siteSettings": {
@@ -1760,14 +2239,45 @@
         "breadcrumb_inactive_template": "<a href=\"{{ item.link }}\">{{ item.text }}</a>",
         "breadcrumb_separator": " &gt; ",
         "breadcrumb_template_type": "custom",
-        "customFavicon": "",
+        "custom_favicon": "",
         "doctype": "HTML5",
         "navigationImagePath": "/images/navigation/",
         "public_admin_bar_enabled": "no",
-        "robotsText": "User-agent: *\nDisallow: /",
+        "robots_text": "User-agent: *\nDisallow: /",
         "tinymce_allow_scripts": "0",
         "tinymce_allow_unsafe_link_target_protection": "1",
-        "tinymce_block_classes": [],
+        "tinymce_block_classes": [
+            {
+                "title": "X-Large Text",
+                "class": "u-textXLarge",
+                "tag": "p,div,ol,ul,li,h1,h2,h3,h4,h5,h6"
+            },
+            {
+                "title": "H1 Size Text",
+                "class": "u-textH1",
+                "tag": "p,div,ol,ul,li,h1,h2,h3,h4,h5,h6"
+            },
+            {
+                "title": "H2 Size Text",
+                "class": "u-textH2",
+                "tag": "p,div,ol,ul,li,h1,h2,h3,h4,h5,h6"
+            },
+            {
+                "title": "H3 Size Text",
+                "class": "u-textH3",
+                "tag": "p,div,ol,ul,li,h1,h2,h3,h4,h5,h6"
+            },
+            {
+                "title": "H4 Size Text",
+                "class": "u-textH4",
+                "tag": "p,div,ol,ul,li,h1,h2,h3,h4,h5,h6"
+            },
+            {
+                "title": "Heading Centered Underline",
+                "class": "u-headingCentered",
+                "tag": "h1,h2,h3,h4,h5,h6"
+            }
+        ],
         "tinymce_css": "",
         "tinymce_file_browser": "apBrowser",
         "tinymce_font_family": [
@@ -1852,13 +2362,35 @@
         "tinymce_image_title": "0",
         "tinymce_import_stylesheets": [
             {
-                "import_file": "/theme/custom/css/main.css"
+                "import_file": "https://bcms-files.s3.amazonaws.com/lzPLbG4m5b-1156/theme/custom/css/main.css"
             },
             {
                 "import_file": "https://fonts.googleapis.com/css?family=Asap+Condensed:600|Open+Sans:300,400,400i,700,700i"
             }
         ],
-        "tinymce_inline_classes": [],
+        "tinymce_inline_classes": [
+            {
+                "title": "X-Large Text inline",
+                "class": "u-textXLarge"
+            },
+            {
+                "title": "H1 Size Text inline",
+                "class": "u-textH1"
+            },
+            {
+                "title": "H2 Size Text inline",
+                "class": "u-textH2"
+            },
+            {
+                "title": "H3 Size Text inline",
+                "class": "u-textH3"
+            },
+            {
+                "title": "H4 Size Text inline",
+                "class": "u-textH4"
+            }
+        ],
+        "tinymce_invalid_styles": "",
         "tinymce_link_classes": [
             {
                 "title": "Button",
@@ -1886,7 +2418,8 @@
             }
         ],
         "tinymce_paste_as_text": "0",
-        "tinymce_show_contextmenu": "1",
+        "tinymce_show_contextmenu": "0",
+        "tinymce_table_allow_resize": "1",
         "tinymce_table_cell_classes": [],
         "tinymce_table_classes": [
             {
@@ -1894,7 +2427,25 @@
                 "class": "Table--themed"
             }
         ],
+        "tinymce_table_column_resizing": "preservetable",
+        "tinymce_table_default_attributes": [
+            {
+                "name": "border",
+                "val": "1"
+            }
+        ],
+        "tinymce_table_default_styles": [
+            {
+                "name": "border-collapse",
+                "val": "collapse"
+            },
+            {
+                "name": "width",
+                "val": "100%"
+            }
+        ],
         "tinymce_table_row_classes": [],
+        "tinymce_table_sizing_mode": "auto",
         "tinymce_use_background_color": "0",
         "tinymce_use_font": "0",
         "tinymce_use_font_color": "0",
@@ -1942,6 +2493,8 @@
             "account_forms_view_title": "My Submission",
             "additional_breadcrumb_links": "",
             "additional_login_field": "",
+            "app_item_not_found_custom_redirect": "",
+            "app_item_not_found_handler": "redirectAppHome",
             "avatar_height": "48",
             "avatar_image_path": "/images/account/avatar/",
             "avatar_width": "48",
@@ -1974,6 +2527,8 @@
             "login_ip_allow": "0",
             "login_js_files": "",
             "login_method": "username_password",
+            "login_page": "default",
+            "login_page_custom_url": "",
             "login_redirect_custom": "0",
             "login_redirect_referrer": "1",
             "login_redirect_url": "/account",
@@ -2062,6 +2617,545 @@
             "session_cookie_lifetime_units": "days",
             "session_gcmaxlifetime": "24",
             "session_gcmaxlifetime_units": "hours",
+            "time_format": "g:i A"
+        },
+        "blog": {
+            "additional_breadcrumb_links": "",
+            "app_item_not_found_custom_redirect": "",
+            "app_item_not_found_handler": "redirectAppHome",
+            "archive_body_class": "",
+            "archive_breadcrumb": "Archive",
+            "archive_css_files": "",
+            "archive_footer": "",
+            "archive_header": "",
+            "archive_head_content": "",
+            "archive_inline_css": "",
+            "archive_inline_js": "",
+            "archive_js_files": "",
+            "archive_title": "Blog Archive",
+            "breadcrumb_text": "Blog",
+            "category_body_class": "",
+            "category_breadcrumb": "{{ categoryName }}",
+            "category_css_files": "",
+            "category_footer": "",
+            "category_header": "",
+            "category_head_content": "",
+            "category_inline_css": "",
+            "category_inline_js": "",
+            "category_js_files": "",
+            "category_list_body_class": "",
+            "category_list_breadcrumb": "View by Category",
+            "category_list_css_files": "",
+            "category_list_footer": "",
+            "category_list_header": "",
+            "category_list_head_content": "",
+            "category_list_inline_css": "",
+            "category_list_inline_js": "",
+            "category_list_js_files": "",
+            "category_list_title": "View By Category",
+            "category_social_og_type": "",
+            "category_title": "Category {{ categoryName }}",
+            "date_format": "F j, Y",
+            "feed_author": "",
+            "feed_category_description": "",
+            "feed_category_entry_title": "{{ title }}",
+            "feed_category_title": "Items in {{ categoryName }}",
+            "feed_comment_description": "",
+            "feed_comment_entry_title": "By {{ commentAuthor.fullName }}",
+            "feed_comment_title": "Comments",
+            "feed_copyright": "",
+            "feed_description": "",
+            "feed_email": "",
+            "feed_entry_title": "{{ title }}",
+            "feed_generator": "BranchCMS",
+            "feed_image": "",
+            "feed_item_description_source": "content",
+            "feed_language": "en-us",
+            "feed_skipDays": "",
+            "feed_skipHours": "",
+            "feed_tag_description": "",
+            "feed_tag_entry_title": "{{ title }}",
+            "feed_tag_title": "Items Tagged \"{{ tagName }}\"",
+            "feed_title": "Feed",
+            "feed_webmaster": "",
+            "home_body_class": "",
+            "home_css_files": "",
+            "home_footer": "",
+            "home_header": "<p>This shows a sample blog. You can create as many posts as you want. Newer posts will show first.</p>",
+            "home_head_content": "",
+            "home_inline_css": "",
+            "home_inline_js": "",
+            "home_js_files": "",
+            "home_title": "Blog",
+            "pagination_page_range": "10",
+            "pagination_style": "Sliding",
+            "post_body_class": "",
+            "post_breadcrumb": "{{ postTitle }}",
+            "post_css_files": "",
+            "post_footer": "",
+            "post_header": "",
+            "post_head_content": "",
+            "post_inline_css": "",
+            "post_inline_js": "",
+            "post_js_files": "",
+            "post_list_body_class": "",
+            "post_list_breadcrumb": "View all Posts",
+            "post_list_css_files": "",
+            "post_list_footer": "",
+            "post_list_header": "",
+            "post_list_head_content": "",
+            "post_list_inline_css": "",
+            "post_list_inline_js": "",
+            "post_list_js_files": "",
+            "post_list_title": "Blog Post",
+            "post_title": "Blog - {{ postTitle }}",
+            "search_body_class": "",
+            "search_breadcrumb": "Search",
+            "search_css_files": "",
+            "search_footer": "",
+            "search_get_all_ids": "0",
+            "search_header": "",
+            "search_head_content": "",
+            "search_inline_css": "",
+            "search_inline_js": "",
+            "search_js_files": "",
+            "search_results_body_class": "",
+            "search_results_breadcrumb": "Search Results",
+            "search_results_css_files": "",
+            "search_results_footer": "",
+            "search_results_header": "",
+            "search_results_head_content": "",
+            "search_results_inline_css": "",
+            "search_results_inline_js": "",
+            "search_results_js_files": "",
+            "search_results_title": "Search Results",
+            "search_title": "Search",
+            "tag_body_class": "",
+            "tag_breadcrumb": "{{ tagName }}",
+            "tag_cloud_data_max_weight": "20",
+            "tag_cloud_data_min_weight": "10",
+            "tag_cloud_html_cloud_separator": "space",
+            "tag_cloud_html_cloud_separator_tag": "",
+            "tag_cloud_html_cloud_wrapper": [
+                {
+                    "tag": "ul"
+                }
+            ],
+            "tag_cloud_html_tag_classes": "",
+            "tag_cloud_html_tag_font_size_unit": "px",
+            "tag_cloud_html_tag_max_font_size": "20",
+            "tag_cloud_html_tag_min_font_size": "10",
+            "tag_cloud_html_tag_style": "font",
+            "tag_cloud_html_tag_wrapper": [
+                {
+                    "tag": "li"
+                }
+            ],
+            "tag_cloud_order": "date",
+            "tag_css_files": "",
+            "tag_footer": "",
+            "tag_header": "",
+            "tag_head_content": "",
+            "tag_inline_css": "",
+            "tag_inline_js": "",
+            "tag_js_files": "",
+            "tag_list_body_class": "",
+            "tag_list_breadcrumb": "View by Tag",
+            "tag_list_css_files": "",
+            "tag_list_footer": "",
+            "tag_list_header": "",
+            "tag_list_head_content": "",
+            "tag_list_inline_css": "",
+            "tag_list_inline_js": "",
+            "tag_list_js_files": "",
+            "tag_list_title": "View By Tag",
+            "tag_social_og_type": "",
+            "tag_title": "Tag - {{ tagName }}",
+            "time_format": "g:i A"
+        },
+        "calendar": {
+            "account_registration_detail_body_class": "",
+            "account_registration_detail_breadcrumb": "Account Registration Detail",
+            "account_registration_detail_css_files": "",
+            "account_registration_detail_footer": "",
+            "account_registration_detail_header": "",
+            "account_registration_detail_head_content": "",
+            "account_registration_detail_inline_css": "",
+            "account_registration_detail_inline_js": "",
+            "account_registration_detail_js_files": "",
+            "account_registration_detail_title": "Account Registration Detail",
+            "account_registration_list_body_class": "",
+            "account_registration_list_breadcrumb": "Account Registrations List",
+            "account_registration_list_css_files": "",
+            "account_registration_list_footer": "",
+            "account_registration_list_header": "",
+            "account_registration_list_head_content": "",
+            "account_registration_list_inline_css": "",
+            "account_registration_list_inline_js": "",
+            "account_registration_list_js_files": "",
+            "account_registration_list_title": "Account Registrations List",
+            "additional_breadcrumb_links": "",
+            "agenda_view_body_class": "",
+            "agenda_view_breadcrumb": "{{ dateRange }}",
+            "agenda_view_css_files": "",
+            "agenda_view_footer": "",
+            "agenda_view_header": "",
+            "agenda_view_head_content": "",
+            "agenda_view_inline_css": "",
+            "agenda_view_inline_js": "",
+            "agenda_view_js_files": "",
+            "agenda_view_title": "Calendar of Events - {{ dateRange }}",
+            "app_item_not_found_custom_redirect": "",
+            "app_item_not_found_handler": "redirectAppHome",
+            "breadcrumb_text": "Calendar",
+            "category_body_class": "",
+            "category_breadcrumb": "{{ categoryName }}",
+            "category_css_files": "",
+            "category_display": "filter",
+            "category_footer": "",
+            "category_header": "",
+            "category_head_content": "",
+            "category_inline_css": "",
+            "category_inline_js": "",
+            "category_js_files": "",
+            "category_list_body_class": "",
+            "category_list_breadcrumb": "View by Category",
+            "category_list_css_files": "",
+            "category_list_footer": "",
+            "category_list_header": "",
+            "category_list_head_content": "",
+            "category_list_inline_css": "",
+            "category_list_inline_js": "",
+            "category_list_js_files": "",
+            "category_list_title": "View By Category",
+            "category_social_og_type": "",
+            "category_title": "Category {{ categoryName }}",
+            "date_format": "F j, Y",
+            "date_nav_format": "F j, Y",
+            "event_add_body_class": "",
+            "event_add_breadcrumb": "Add an Event",
+            "event_add_css_files": "",
+            "event_add_footer": "",
+            "event_add_header": "",
+            "event_add_head_content": "",
+            "event_add_inline_css": "",
+            "event_add_inline_js": "",
+            "event_add_js_files": "",
+            "event_add_not_logged_in_action": "404",
+            "event_add_not_logged_in_action_redirect": "",
+            "event_add_title": "Add an Event",
+            "event_body_class": "",
+            "event_breadcrumb": "{{ title }}",
+            "event_css_files": "",
+            "event_date_format": "l, F j, Y",
+            "event_edit_body_class": "",
+            "event_edit_breadcrumb": "Edit Event",
+            "event_edit_css_files": "",
+            "event_edit_footer": "",
+            "event_edit_header": "",
+            "event_edit_head_content": "",
+            "event_edit_inline_css": "",
+            "event_edit_inline_js": "",
+            "event_edit_js_files": "",
+            "event_edit_title": "Edit Event",
+            "event_footer": "",
+            "event_header": "",
+            "event_head_content": "",
+            "event_inline_css": "",
+            "event_inline_js": "",
+            "event_js_files": "",
+            "event_list_agenda_view": "enable",
+            "event_list_default_view": "agenda",
+            "event_list_grid_view": "enable",
+            "event_list_list_view": "disable",
+            "event_social_og_type": "",
+            "event_time_format": "g:i a",
+            "event_title": "{{ title }} - {{ date }}",
+            "feed_author": "",
+            "feed_category_description": "",
+            "feed_category_entry_title": "{{ title }}",
+            "feed_category_title": "Items in {{ categoryName }}",
+            "feed_copyright": "",
+            "feed_description": "",
+            "feed_email": "",
+            "feed_entry_title": "{{ title }}",
+            "feed_generator": "BranchCMS",
+            "feed_image": "",
+            "feed_item_description_source": "abstract",
+            "feed_language": "en-us",
+            "feed_skipDays": "",
+            "feed_skipHours": "",
+            "feed_tag_description": "",
+            "feed_tag_entry_title": "{{ title }}",
+            "feed_tag_title": "Items Tagged \"{{ tagName }}\"",
+            "feed_title": "Feed",
+            "feed_webmaster": "",
+            "grid_view_body_class": "",
+            "grid_view_breadcrumb": "{{ dateRange }}",
+            "grid_view_css_files": "",
+            "grid_view_footer": "",
+            "grid_view_header": "",
+            "grid_view_head_content": "",
+            "grid_view_inline_css": "",
+            "grid_view_inline_js": "",
+            "grid_view_js_files": "",
+            "grid_view_title": "Calendar of Events - {{ dateRange }}",
+            "home_body_class": "",
+            "home_css_files": "",
+            "home_footer": "",
+            "home_header": "",
+            "home_head_content": "",
+            "home_inline_css": "",
+            "home_inline_js": "",
+            "home_js_files": "",
+            "home_title": "Calendar",
+            "item_add_category_select_option_text": "-- Select a Category --",
+            "item_add_include_categories": "1",
+            "item_add_include_subcategories": "1",
+            "item_add_indent_subcategories": "custom",
+            "item_add_indent_subcategories_custom": "--",
+            "item_add_indent_subcategories_parent_separator": " :: ",
+            "item_add_order_categories_by": "name",
+            "item_add_order_categories_direction": "asc",
+            "item_edit_category_select_option_text": "-- Select a Category --",
+            "item_edit_include_categories": "1",
+            "item_edit_include_subcategories": "1",
+            "item_edit_indent_subcategories": "custom",
+            "item_edit_indent_subcategories_custom": "--",
+            "item_edit_indent_subcategories_parent_separator": " :: ",
+            "item_edit_order_categories_by": "name",
+            "item_edit_order_categories_direction": "asc",
+            "list_view_body_class": "",
+            "list_view_breadcrumb": "{{ dateRange }}",
+            "list_view_css_files": "",
+            "list_view_footer": "",
+            "list_view_header": "",
+            "list_view_head_content": "",
+            "list_view_inline_css": "",
+            "list_view_inline_js": "",
+            "list_view_js_files": "",
+            "list_view_title": "Calendar of Events - {{ dateRange }}",
+            "next_text": "&#62;&#62;",
+            "no_events_message": "<p>There are no events for this date range</p>",
+            "pagination_page_range": "10",
+            "pagination_style": "Sliding",
+            "previous_text": "&#60;&#60;",
+            "registration_body_class": "",
+            "registration_breadcrumb": "Event Registration",
+            "registration_css_files": "",
+            "registration_footer": "",
+            "registration_header": "",
+            "registration_head_content": "",
+            "registration_inline_css": "",
+            "registration_inline_js": "",
+            "registration_js_files": "",
+            "registration_title": "Event Registration",
+            "search_body_class": "",
+            "search_breadcrumb": "Search",
+            "search_css_files": "",
+            "search_date": "all",
+            "search_footer": "",
+            "search_get_all_ids": "0",
+            "search_header": "",
+            "search_head_content": "",
+            "search_inline_css": "",
+            "search_inline_js": "",
+            "search_js_files": "",
+            "search_results_body_class": "",
+            "search_results_breadcrumb": "Search Results",
+            "search_results_css_files": "",
+            "search_results_footer": "",
+            "search_results_header": "",
+            "search_results_head_content": "",
+            "search_results_inline_css": "",
+            "search_results_inline_js": "",
+            "search_results_js_files": "",
+            "search_results_title": "Search Results",
+            "search_sort": "relevance",
+            "search_title": "Search",
+            "tag_body_class": "",
+            "tag_breadcrumb": "{{ tagName }}",
+            "tag_cloud_data_max_weight": "20",
+            "tag_cloud_data_min_weight": "10",
+            "tag_cloud_html_cloud_separator": "space",
+            "tag_cloud_html_cloud_separator_tag": "",
+            "tag_cloud_html_cloud_wrapper": [
+                {
+                    "tag": "ul"
+                }
+            ],
+            "tag_cloud_html_tag_classes": "",
+            "tag_cloud_html_tag_font_size_unit": "px",
+            "tag_cloud_html_tag_max_font_size": "20",
+            "tag_cloud_html_tag_min_font_size": "10",
+            "tag_cloud_html_tag_style": "font",
+            "tag_cloud_html_tag_wrapper": [
+                {
+                    "tag": "li"
+                }
+            ],
+            "tag_cloud_order": "date",
+            "tag_css_files": "",
+            "tag_footer": "",
+            "tag_header": "",
+            "tag_head_content": "",
+            "tag_inline_css": "",
+            "tag_inline_js": "",
+            "tag_js_files": "",
+            "tag_list_body_class": "",
+            "tag_list_breadcrumb": "View by Tag",
+            "tag_list_css_files": "",
+            "tag_list_footer": "",
+            "tag_list_header": "",
+            "tag_list_head_content": "",
+            "tag_list_inline_css": "",
+            "tag_list_inline_js": "",
+            "tag_list_js_files": "",
+            "tag_list_title": "View By Tag",
+            "tag_social_og_type": "",
+            "tag_title": "Tag - {{ tagName }}",
+            "time_format": "g:i A"
+        },
+        "gallery": {
+            "additional_breadcrumb_links": "",
+            "app_item_not_found_custom_redirect": "",
+            "app_item_not_found_handler": "redirectAppHome",
+            "breadcrumb_text": "Gallery",
+            "category_body_class": "",
+            "category_breadcrumb": "{{ categoryName }}",
+            "category_css_files": "",
+            "category_footer": "",
+            "category_header": "",
+            "category_head_content": "",
+            "category_inline_css": "",
+            "category_inline_js": "",
+            "category_js_files": "",
+            "category_list_body_class": "",
+            "category_list_breadcrumb": "View by Category",
+            "category_list_css_files": "",
+            "category_list_footer": "",
+            "category_list_header": "",
+            "category_list_head_content": "",
+            "category_list_inline_css": "",
+            "category_list_inline_js": "",
+            "category_list_js_files": "",
+            "category_list_title": "View By Category",
+            "category_social_og_type": "",
+            "category_title": "{{ categoryName }}",
+            "date_format": "F j, Y",
+            "feed_author": "",
+            "feed_category_description": "",
+            "feed_category_entry_title": "{{ title }}",
+            "feed_category_title": "Items in {{ categoryName }}",
+            "feed_copyright": "",
+            "feed_description": "",
+            "feed_email": "",
+            "feed_entry_title": "{{ title }}",
+            "feed_generator": "BranchCMS",
+            "feed_image": "",
+            "feed_item_description_source": "abstract",
+            "feed_language": "en-us",
+            "feed_skipDays": "",
+            "feed_skipHours": "",
+            "feed_tag_description": "",
+            "feed_tag_entry_title": "{{ title }}",
+            "feed_tag_title": "Items Tagged \"{{ tagName }}\"",
+            "feed_title": "Feed",
+            "feed_webmaster": "",
+            "home_body_class": "",
+            "home_css_files": "",
+            "home_footer": "",
+            "home_header": "",
+            "home_head_content": "",
+            "home_inline_css": "",
+            "home_inline_js": "",
+            "home_js_files": "",
+            "home_title": "Gallery",
+            "item_body_class": "",
+            "item_breadcrumb": "{{ itemName }}",
+            "item_css_files": "",
+            "item_footer": "",
+            "item_header": "",
+            "item_head_content": "",
+            "item_inline_css": "",
+            "item_inline_js": "",
+            "item_js_files": "",
+            "item_list_body_class": "",
+            "item_list_breadcrumb": "View all Items",
+            "item_list_css_files": "",
+            "item_list_footer": "",
+            "item_list_header": "",
+            "item_list_head_content": "",
+            "item_list_inline_css": "",
+            "item_list_inline_js": "",
+            "item_list_js_files": "",
+            "item_list_title": "Gallery Items",
+            "item_social_og_type": "",
+            "item_title": "{{ itemName }} - Gallery",
+            "pagination_page_range": "10",
+            "pagination_style": "Sliding",
+            "search_body_class": "",
+            "search_breadcrumb": "Search",
+            "search_css_files": "",
+            "search_footer": "",
+            "search_get_all_ids": "0",
+            "search_header": "",
+            "search_head_content": "",
+            "search_inline_css": "",
+            "search_inline_js": "",
+            "search_js_files": "",
+            "search_results_body_class": "",
+            "search_results_breadcrumb": "Search Results",
+            "search_results_css_files": "",
+            "search_results_footer": "",
+            "search_results_header": "",
+            "search_results_head_content": "",
+            "search_results_inline_css": "",
+            "search_results_inline_js": "",
+            "search_results_js_files": "",
+            "search_results_title": "Search Results",
+            "search_title": "Search",
+            "tag_body_class": "",
+            "tag_breadcrumb": "{{ tagName }}",
+            "tag_cloud_data_max_weight": "20",
+            "tag_cloud_data_min_weight": "10",
+            "tag_cloud_html_cloud_separator": "space",
+            "tag_cloud_html_cloud_separator_tag": "",
+            "tag_cloud_html_cloud_wrapper": [
+                {
+                    "tag": "ul"
+                }
+            ],
+            "tag_cloud_html_tag_classes": "",
+            "tag_cloud_html_tag_font_size_unit": "px",
+            "tag_cloud_html_tag_max_font_size": "20",
+            "tag_cloud_html_tag_min_font_size": "10",
+            "tag_cloud_html_tag_style": "font",
+            "tag_cloud_html_tag_wrapper": [
+                {
+                    "tag": "li"
+                }
+            ],
+            "tag_cloud_order": "date",
+            "tag_css_files": "",
+            "tag_footer": "",
+            "tag_header": "",
+            "tag_head_content": "",
+            "tag_inline_css": "",
+            "tag_inline_js": "",
+            "tag_js_files": "",
+            "tag_list_body_class": "",
+            "tag_list_breadcrumb": "View by Tag",
+            "tag_list_css_files": "",
+            "tag_list_footer": "",
+            "tag_list_header": "",
+            "tag_list_head_content": "",
+            "tag_list_inline_css": "",
+            "tag_list_inline_js": "",
+            "tag_list_js_files": "",
+            "tag_list_title": "View By Tag",
+            "tag_social_og_type": "",
+            "tag_title": "Tag - {{ tagName }}",
             "time_format": "g:i A"
         },
         "search": {
@@ -2673,6 +3767,320 @@
                 "zero"
             ],
             "term_minimum_length": "3"
+        },
+        "store": {
+            "account_body_class": "",
+            "account_breadcrumb": "My Account",
+            "account_css_files": "",
+            "account_edit_body_class": "",
+            "account_edit_breadcrumb": "Edit Account",
+            "account_edit_confirm_password": "0",
+            "account_edit_css_files": "",
+            "account_edit_footer": "",
+            "account_edit_header": "",
+            "account_edit_head_content": "",
+            "account_edit_inline_css": "",
+            "account_edit_inline_js": "",
+            "account_edit_js_files": "",
+            "account_edit_title": "Edit Account",
+            "account_footer": "",
+            "account_header": "",
+            "account_head_content": "",
+            "account_inline_css": "",
+            "account_inline_js": "",
+            "account_js_files": "",
+            "account_title": "My Account",
+            "additional_breadcrumb_links": "",
+            "addresses_add_body_class": "",
+            "addresses_add_breadcrumb": "Add Address",
+            "addresses_add_css_files": "",
+            "addresses_add_footer": "",
+            "addresses_add_header": "",
+            "addresses_add_head_content": "",
+            "addresses_add_inline_css": "",
+            "addresses_add_inline_js": "",
+            "addresses_add_js_files": "",
+            "addresses_add_title": "Add Address",
+            "addresses_body_class": "",
+            "addresses_breadcrumb": "My Addresses",
+            "addresses_css_files": "",
+            "addresses_delete_body_class": "",
+            "addresses_delete_breadcrumb": "Delete Address",
+            "addresses_delete_css_files": "",
+            "addresses_delete_footer": "",
+            "addresses_delete_header": "",
+            "addresses_delete_head_content": "",
+            "addresses_delete_inline_css": "",
+            "addresses_delete_inline_js": "",
+            "addresses_delete_js_files": "",
+            "addresses_delete_title": "Delete Address",
+            "addresses_edit_body_class": "",
+            "addresses_edit_breadcrumb": "Edit Address",
+            "addresses_edit_css_files": "",
+            "addresses_edit_footer": "",
+            "addresses_edit_header": "",
+            "addresses_edit_head_content": "",
+            "addresses_edit_inline_css": "",
+            "addresses_edit_inline_js": "",
+            "addresses_edit_js_files": "",
+            "addresses_edit_title": "Edit Address",
+            "addresses_footer": "",
+            "addresses_header": "",
+            "addresses_head_content": "",
+            "addresses_inline_css": "",
+            "addresses_inline_js": "",
+            "addresses_js_files": "",
+            "addresses_title": "My Addresses",
+            "app_item_not_found_custom_redirect": "",
+            "app_item_not_found_handler": "redirectAppHome",
+            "breadcrumb_text": "Store",
+            "cart_body_class": "",
+            "cart_breadcrumb": "Shopping Cart",
+            "cart_css_files": "",
+            "cart_empty_body_class": "",
+            "cart_empty_breadcrumb": "Shopping Cart",
+            "cart_empty_css_files": "",
+            "cart_empty_footer": "",
+            "cart_empty_header": "",
+            "cart_empty_head_content": "",
+            "cart_empty_inline_css": "",
+            "cart_empty_inline_js": "",
+            "cart_empty_js_files": "",
+            "cart_empty_title": "Shopping Cart",
+            "cart_footer": "",
+            "cart_header": "",
+            "cart_head_content": "",
+            "cart_inline_css": "",
+            "cart_inline_js": "",
+            "cart_js_files": "",
+            "cart_title": "Shopping Cart",
+            "category_body_class": "",
+            "category_breadcrumb": "{{ categoryName }}",
+            "category_css_files": "",
+            "category_footer": "",
+            "category_header": "",
+            "category_head_content": "",
+            "category_inline_css": "",
+            "category_inline_js": "",
+            "category_js_files": "",
+            "category_list_body_class": "",
+            "category_list_breadcrumb": "View by Category",
+            "category_list_css_files": "",
+            "category_list_footer": "",
+            "category_list_header": "",
+            "category_list_head_content": "",
+            "category_list_inline_css": "",
+            "category_list_inline_js": "",
+            "category_list_js_files": "",
+            "category_list_title": "View By Category",
+            "category_social_og_type": "product.group",
+            "category_title": "Category {{ categoryName }}",
+            "checkout_billing_body_class": "",
+            "checkout_billing_breadcrumb": "Checkout - Billing",
+            "checkout_billing_css_files": "",
+            "checkout_billing_disabled": "0",
+            "checkout_billing_footer": "",
+            "checkout_billing_header": "",
+            "checkout_billing_head_content": "",
+            "checkout_billing_inline_css": "",
+            "checkout_billing_inline_js": "",
+            "checkout_billing_js_files": "",
+            "checkout_billing_title": "Billing",
+            "checkout_error_body_class": "",
+            "checkout_error_breadcrumb": "Checkout - Error",
+            "checkout_error_css_files": "",
+            "checkout_error_footer": "",
+            "checkout_error_header": "",
+            "checkout_error_head_content": "",
+            "checkout_error_inline_css": "",
+            "checkout_error_inline_js": "",
+            "checkout_error_js_files": "",
+            "checkout_error_title": "Error",
+            "checkout_receipt_body_class": "",
+            "checkout_receipt_breadcrumb": "Checkout - Receipt",
+            "checkout_receipt_css_files": "",
+            "checkout_receipt_footer": "",
+            "checkout_receipt_header": "",
+            "checkout_receipt_head_content": "",
+            "checkout_receipt_inline_css": "",
+            "checkout_receipt_inline_js": "",
+            "checkout_receipt_js_files": "",
+            "checkout_receipt_title": "Receipt",
+            "checkout_review_body_class": "",
+            "checkout_review_breadcrumb": "Checkout - Review",
+            "checkout_review_css_files": "",
+            "checkout_review_footer": "",
+            "checkout_review_header": "",
+            "checkout_review_head_content": "",
+            "checkout_review_inline_css": "",
+            "checkout_review_inline_js": "",
+            "checkout_review_js_files": "",
+            "checkout_review_title": "Review",
+            "checkout_shipping_body_class": "",
+            "checkout_shipping_breadcrumb": "Checkout - Shipping",
+            "checkout_shipping_css_files": "",
+            "checkout_shipping_disabled": "0",
+            "checkout_shipping_footer": "",
+            "checkout_shipping_header": "",
+            "checkout_shipping_head_content": "",
+            "checkout_shipping_inline_css": "",
+            "checkout_shipping_inline_js": "",
+            "checkout_shipping_js_files": "",
+            "checkout_shipping_title": "Shipping",
+            "date_format": "F j, Y",
+            "home_body_class": "",
+            "home_css_files": "",
+            "home_footer": "",
+            "home_header": "",
+            "home_head_content": "",
+            "home_inline_css": "",
+            "home_inline_js": "",
+            "home_js_files": "",
+            "home_title": "Store",
+            "login_body_class": "",
+            "login_breadcrumb": "Log In",
+            "login_css_files": "",
+            "login_footer": "",
+            "login_header": "",
+            "login_head_content": "",
+            "login_inline_css": "",
+            "login_inline_js": "",
+            "login_js_files": "",
+            "login_title": "Log In",
+            "manufacturer_body_class": "",
+            "manufacturer_breadcrumb": "{{ manufacturerName }}",
+            "manufacturer_css_files": "",
+            "manufacturer_footer": "",
+            "manufacturer_header": "",
+            "manufacturer_head_content": "",
+            "manufacturer_inline_css": "",
+            "manufacturer_inline_js": "",
+            "manufacturer_js_files": "",
+            "manufacturer_list_body_class": "",
+            "manufacturer_list_breadcrumb": "View by Manufacturer",
+            "manufacturer_list_css_files": "",
+            "manufacturer_list_footer": "",
+            "manufacturer_list_header": "",
+            "manufacturer_list_head_content": "",
+            "manufacturer_list_inline_css": "",
+            "manufacturer_list_inline_js": "",
+            "manufacturer_list_js_files": "",
+            "manufacturer_list_title": "View By Manufacturer",
+            "manufacturer_social_og_type": "",
+            "manufacturer_title": "{{ manufacturerName }}",
+            "order_invoice_date_format": "n/j/Y",
+            "order_invoice_template": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n   \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\n   <head>\n      <title>Invoice</title>\n      <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n      <style>\n         body{font:12px/16px Arial, Verdana, Helvetica, sans-serif;color:#333;background:#fff}\n         .container{width:650px}\n         th,td{text-align:left;vertical-align:top;padding:3px}\n         th{font-weight:700;white-space:nowrap}\n         .tblTop{width:100%}\n         .tblTop .col_2{width:25%}\n         .tblDateOrderNumber td,.tblDateOrderNumber th{width:50%;border-left:1px solid #000;border-bottom:1px solid #000}\n         .tblBillShip{width:100%;margin:20px 0}\n         .tblBillShip td{width:50%}\n         .tblBillShip td.col_2{text-align:right}\n         .tblBillTo,.tblShipTo{width:90%;border-top:1px solid #000;border-right:1px solid #000}\n         .tblBillTo{float:right}\n         .tblBoxes{width:100%;margin-bottom:20px}\n         .tblBoxes td{padding:0}\n         .tblBoxes .col_1{width:40%}\n         .tblBoxes .col_2,.tblBoxes .col_3{width:30%}\n         .tblShippingMethod{border-right:none}\n         .tblPaymentMethod td,.tblPaymentMethod th,.tblShippingMethod td,.tblShippingMethod th{border-left:1px solid #000;border-bottom:1px solid #000;padding:3px}\n         .tblProducts .col_1{width:10%}\n         .tblProducts tfoot td.footCol_1{border:none}\n         .tblProducts tfoot td.footCol_2{font-weight:700}\n         .tblProducts tfoot .order_total{font-weight:700;font-size:140%}\n         .tblTop .col_1,.tblProducts .col_2{width:75%}\n         .tblDateOrderNumber,.tblPaymentMethod,.tblShippingMethod,.tblProducts{width:100%;border-top:1px solid #000;border-right:1px solid #000}\n         .tblBillTo td,.tblBillTo th,.tblShipTo td,.tblShipTo th,.tblProducts th,.tblProducts td{border-left:1px solid #000;border-bottom:1px solid #000}\n         .tblProducts .col_3,.tblProducts .col_4,.tblProducts .col_5{width:5%}\n      </style>\n   </head>\n   <body>\n      <div class=\"container\">\n         <table cellspacing=\"0\" class=\"tblTop\">\n            <tr>\n               <td class=\"col_1\"><h1>{{ store.name }}</h1></td>\n               <td class=\"col_2\">\n                  <h3>Invoice </h3>\n                  <table cellspacing=\"0\" class=\"tblDateOrderNumber\">\n                     <tr>\n                        <th>Order Date</th><th>Order #</th>\n                     </tr>\n                     <tr>\n                       <td>{{ order.date }}</td>\n                       <td>{{ order.number }}</td>\n                     </tr>\n                  </table>\n               </td>\n            </tr>\n         </table>\n         <table cellspacing=\"0\" class=\"tblBillShip\">\n            <tr>\n              <td class=\"col_1\">\n     \t         <table cellspacing=\"0\" class=\"tblShipTo\">\n                    <tr><th>Ship To</th></tr>\n                    <tr>\n                        <td>\n                           {% if shipping.company %}{{ shipping.company }}<br />{% endif %}\n                           {{ shipping.firstName }} {{ shipping.lastName }}<br />\n                           {{ shipping.address }}\n                           {{ shipping.city }}, {{ shipping.state }} {{ shipping.zipCode }}<br />\n                           {{ shipping.country }}\n                        </td>\n                     </tr>\n                  </table>\n               </td>\n           <td class=\"col_2\">\n             <table cellspacing=\"0\" class=\"tblBillTo\">\n               <tr>\n                 <th>Bill To</th>\n               </tr>\n               <tr>\n                 <td>\n             \t{% if billing.company %}{{ billing.company }}<br />{% endif %}\n               \t{{ billing.firstName }} {{ billing.lastName }}<br />\n\t\t\t{{ billing.address }}\n\t\t\t{{ billing.city }}, {{ billing.state }} {{ billing.zipCode }}<br />\n\t\t\t{{ billing.country }}\n                 </td>\n               </tr>\n             </table>\n     \t  </td>\n         </tr>\n       </table>\n       <table cellspacing=\"0\" class=\"tblBoxes\">\n         <tr>\n           <td class=\"col_1\">&nbsp;</td>\n           <td class=\"col_2\">\n             <table cellspacing=\"0\" class=\"tblShippingMethod\">\n               <tr>\n                 <th>Ship Method</th>\n               </tr>\n               <tr>\n                 <td>{{ order.shipping.option }}</td>\n               </tr>\n             </table>\n           </td>\n           <td class=\"col_3\">\n             <table cellspacing=\"0\" class=\"tblPaymentMethod\">\n               <tr>\n                 <th>Payment Method</th>\n               </tr>\n               <tr>\n                 <td>\n                 \t{{ order.paymentMethod }}\n                 </td>\n               </tr>\n             </table>\n           </td>\n         </tr>\n       </table>\n       <table cellspacing=\"0\" class=\"tblProducts\">\n         <thead>\n            <tr>\n              <th class=\"col_1\">Item #</th>\n              <th class=\"col_2\">Item</th>\n              <th class=\"col_3\">Quantity</th>\n              <th class=\"col_4\">Unit Price</th>\n              <th class=\"col_5\">Product Total</th>\n            </tr>\n         </thead>\n         <tfoot>\n            <tr>\n               <td colspan=\"3\" class=\"footCol_1\">&nbsp;</td>\n     \t  <td class=\"footCol_2\">Subtotal</td>\n     \t  <td>{{ order.subtotalBeforeDiscounts }}</td>\n            </tr>\n            {% if order.coupons %}\n               {% for coupon in order.coupons %}\n                  <tr>\n                     <td colspan=\"3\" class=\"footCol_1\">&nbsp;</td>\n           \t        <td class=\"footCol_2\">{{ coupon.name }}<br />({{ coupon.code }})</td>\n           \t        <td>{{ coupon.savingsValue }}</td>\n                  </tr>\n               {% endfor %}\n               <tr>\n                  <td colspan=\"3\" class=\"footCol_1\">&nbsp;</td>\n        \t     <td class=\"footCol_2\">Subtotal</td>\n        \t     <td>{{ order.subtotal }}</td>\n               </tr>\n            {% endif %}\n     \t  <tr>\n     \t    <td colspan=\"3\" class=\"footCol_1\">&nbsp;</td>\n     \t\t<td class=\"footCol_2\">Shipping</td>\n     \t\t<td>{{ order.shipping.total }}</td>\n           </tr>\n     \t  <tr>\n     \t    <td colspan=\"3\" class=\"footCol_1\">&nbsp;</td>\n     \t\t<td class=\"footCol_2\">Tax</td>\n     \t\t<td>{{ order.tax.total }}</td>\n           </tr>\n     \t  <tr class=\"order_total\">\n     \t    <td colspan=\"3\" class=\"footCol_1\">&nbsp;</td>\n     \t\t<td class=\"footCol_2\">Total</td>\n     \t\t<td>{{ order.total }}</td>\n           </tr>\n     \t</tfoot>\n         <tbody>\n     \t{% for product in products %}\n               <tr>\n                 <td class=\"col_1\">{{ product.sku }}</td>\n                 <td class=\"col_2\"><strong>{{ product.productName }}</strong>{% for option in product.options %}<br/><em>{{ option.label }}</em>:{% if option.value is iterable %}\n                  {{ option.value|join('<br />') }}\n               {% elseif option.file %}\n                  <a href=\"{{ option.file.src }}\">{{ option.value }}</a>\n               {% elseif option.image %}\n                     <a href=\"{{ option.image.src }}\">{{ option.value }}</a>\n                     {{ option.image.tag }}\n               {% else %}\n                  {{ option.value }}\n               {% endif %}{% endfor %}</td>\n                 <td class=\"col_3\">{{ product.quantityTotal.withFraction }}</td>\n                 <td class=\"col_4\">{{ product.price }}</td>\n                 <td class=\"col_5\">{{ product.totalPrice }}</td>\n               </tr>\n            {% endfor %}\n         </tbody>\n       </table>\n       {% if shipping.comments %}\n       \t<p><b>Shipping Comments:</b><br />{{ shipping.comments }}</p>\n       {% endif %}\n       {% if order.comments %}\n          <p><b>Order Comments</b></p>\n          {% for comment in order.comments %}\n             <div style=\"margin: 10px 0;\">{{ comment.createdOnDate }} - {{ comment.createdBy }}\n               <div style=\"margin-left: 20px; margin-top: 5px;\">{{ comment.comment }}</div>\n             </div>\n          {% endfor %}\n       {% endif %}\n     </div>\n </body>\n</html>",
+            "order_invoice_time_format": "g:i A",
+            "order_packing_list_date_format": "n/j/Y",
+            "order_packing_list_template": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n   \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\n<head>\n\t<title>Packing List</title>\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n    <style type=\"text/css\">\n        body {          font: small Arial, Verdana, Helvetica, sans-serif;\n          color: #333;\n          background: #fff;\n        }\n        .container {\n          width: 650px;\n        }\n        th, td {\n          padding: 3px;\n          text-align: left;\n          vertical-align: top;\n        }\n        th {\n          font-weight: bold;\n          white-space: nowrap;\n        }\n        .tblTop {\n          width: 100%;\n        }\n        .tblTop .col_1 {\n          width: 75%;\n        }\n        .tblTop .col_2 {\n          width: 25%;\n        }\n        .tblDateOrderNumber {\n          width: 100%;\n          border-top: 1px solid #000;\n          border-right: 1px solid #000;\n        }\n        .tblDateOrderNumber td, .tblDateOrderNumber th {\n          width: 50%;\n          border-left: 1px solid #000;\n          border-bottom: 1px solid #000;\n        }\n        .tblBillShip {\n          width: 100%;\n          margin: 20px 0;\n        }\n        .tblBillShip td {\n          width: 50%;\n        }\n        .tblBillShip td.col_2{\n          text-align: right;\n        }\n        .tblBillTo, .tblShipTo {\n          width: 90%;\n          border-top: 1px solid #000;\n          border-right: 1px solid #000;\n        }\n        .tblBillTo {\n          float: right;\n        }\n        .tblBillTo td, .tblBillTo th, .tblShipTo td, .tblShipTo th {\n          border-left: 1px solid #000;\n          border-bottom: 1px solid #000;\n        }\n        .tblBoxes {\n          width: 100%;\n          margin-bottom: 20px;\n        }\n        .tblBoxes td {\n          padding: 0;\n        }\n        .tblBoxes .col_1 {\n          width: 40%;\n        }\n        .tblBoxes .col_2, .tblBoxes .col_3 {\n          width: 30%;\n        }\n        .tblPaymentMethod, .tblShippingMethod {\n          width: 100%;\n          border-top: 1px solid #000;\n          border-right: 1px solid #000;\n        }\n        .tblPaymentMethod {\n          border-right: none;\n        }\n        .tblPaymentMethod td, .tblPaymentMethod th, .tblShippingMethod td, .tblShippingMethod th {\n          border-left: 1px solid #000;\n          border-bottom: 1px solid #000;\n          padding: 3px;\n        }\n        .tblProducts {\n          width: 100%;\n          border-top: 1px solid #000;\n          border-right: 1px solid #000;\n        }\n        .tblProducts th, .tblProducts td {\n          border-left: 1px solid #000;\n          border-bottom: 1px solid #000;\n        }\n        .tblProducts .col_1 {\n          width: 15%;\n        }\n        .tblProducts .col_2 {\n          width: 80%;\n        }\n        .tblProducts .col_3 {\n          width: 5%;\n        }\n    </style>\n\t</head>\n\t<body>\n        <div class=\"container\">\n          <table cellspacing=\"0\" class=\"tblTop\">\n            <tr>\n              <td class=\"col_1\"><h1>{{ store.name }}</h1></td>\n              <td class=\"col_2\">\n                <h3>Packing List</h3>\n                <table cellspacing=\"0\" class=\"tblDateOrderNumber\">\n                  <tr>\n                    <th>Order Date</th>\n                    <th>Order #</th>\n                  </tr>\n                  <tr>\n                    <td>{{ order.date }}</td>\n                    <td>{{ order.number }}</td>\n                  </tr>\n                </table>\n              </td>\n            </tr>\n          </table>\n\n          <table cellspacing=\"0\" class=\"tblBillShip\">\n            <tr>\n              <td class=\"col_1\">\n        \t<table cellspacing=\"0\" class=\"tblShipTo\">\n                  <tr>\n                    <th>Ship To</th>\n                  </tr>\n                  <tr>\n                    <td>\n              \t\t\t{% if shipping.company %}{{ shipping.company }}<br />{% endif %}\n                  \t\t{{ shipping.firstName }} {{ shipping.lastName }}<br />\n\t\t\t\t\t\t{{ shipping.address }}\n\t\t\t\t\t\t{{ shipping.city }}, {{ shipping.state }} {{ shipping.zipCode }}<br />\n\t\t\t\t\t\t{{ shipping.country }}\n                  \t</td>\n                  </tr>\n                </table>\n              </td>\n              <td class=\"col_2\">\n                  <table cellspacing=\"0\" class=\"tblBillTo\">\n                  <tr>\n                    <th>Bill To</th>\n                  </tr>\n                  <tr>\n                  \t<td>\n              \t\t\t{% if billing.company %}{{ billing.company }}<br />{% endif %}\n                  \t\t{{ billing.firstName }} {{ billing.lastName }}<br />\n\t\t\t\t\t\t{{ billing.address }}\n\t\t\t\t\t\t{{ billing.city }}, {{ billing.state }} {{ billing.zipCode }}<br />\n\t\t\t\t\t\t{{ billing.country }}\n                  \t</td>\n                  </tr>\n                </table>\n        \t  </td>\n            </tr>\n          </table>\n          <table cellspacing=\"0\" class=\"tblBoxes\">\n            <tr>\n              <td class=\"col_1\">&nbsp;</td>\n              <td class=\"col_3\">\n                <table cellspacing=\"0\" class=\"tblShippingMethod\">\n                  <tr>\n                    <th>Ship Method</th>\n                  </tr>\n                  <tr>\n                    <td>{{ order.shipping.option }}</td>\n                  </tr>\n                  {% if shipment %}\n                    {% if shipment.carrierName %}\n                        <tr><td>{{ shipment.carrierName }}</td></tr>\n                    {% endif %}\n                    {% if shipment.trackingNumber %}\n                        <tr><td>Tracking #: {{ shipment.trackingNumber }}</td></tr>\n                    {% endif %}\n                    {% if shipment.notes %}\n                        <tr><td>{{ shipment.notes }}</td></tr>\n                    {% endif %}\n                  {% endif %}\n                </table>\n              </td>\n            </tr>\n          </table>\n          <table cellspacing=\"0\" class=\"tblProducts\">\n          \t<thead>\n                <tr>\n                  <th class=\"col_1\">Item #</th>\n                  <th class=\"col_2\">Item</th>\n                  <th class=\"col_3\">Quantity</th>\n                </tr>\n            </thead>\n            <tfoot></tfoot>\n            <tbody>\n            \t{% for product in products %}\n                <tr>\n                  <td class=\"col_1\">{{ product.sku }}</td>\n                  <td class=\"col_2\"><strong>{{ product.productName }}</strong>{% for option in product.options %}<br/><em>{{ option.label }}</em>:{% if option.value is iterable %}\n                  {{ option.value|join('<br />') }}\n               {% elseif option.file %}\n                  <a href=\"{{ option.file.src }}\">{{ option.value }}</a>\n               {% elseif option.image %}\n                     <a href=\"{{ option.image.src }}\">{{ option.value }}</a>\n                     {{ option.image.tag }}\n               {% else %}\n                  {{ option.value }}\n               {% endif %}{% endfor %}</td>\n                  <td class=\"col_3\">{{ product.quantityTotal.withFraction }}</td>\n                </tr>\n                {% endfor %}\n            </tbody>\n          </table>\n        </div>\n    </body>\n</html>",
+            "order_packing_list_time_format": "g:i A",
+            "pagination_page_range": "10",
+            "pagination_style": "Sliding",
+            "password_reset_body_class": "",
+            "password_reset_breadcrumb": "Password Reset",
+            "password_reset_css_files": "",
+            "password_reset_footer": "",
+            "password_reset_header": "",
+            "password_reset_head_content": "",
+            "password_reset_inline_css": "",
+            "password_reset_inline_js": "",
+            "password_reset_js_files": "",
+            "password_reset_title": "Password Reset",
+            "product_body_class": "",
+            "product_breadcrumb": "{{ productName }}",
+            "product_css_files": "",
+            "product_footer": "",
+            "product_header": "",
+            "product_head_content": "",
+            "product_inline_css": "",
+            "product_inline_js": "",
+            "product_js_files": "",
+            "product_list_body_class": "",
+            "product_list_breadcrumb": "View all Products",
+            "product_list_css_files": "",
+            "product_list_footer": "",
+            "product_list_header": "",
+            "product_list_head_content": "",
+            "product_list_inline_css": "",
+            "product_list_inline_js": "",
+            "product_list_js_files": "",
+            "product_list_title": "Products",
+            "product_option_file_upload_path": "/store/customer-uploads",
+            "product_social_og_type": "product.item",
+            "product_title": "{{ productName }}",
+            "register_body_class": "",
+            "register_breadcrumb": "Register",
+            "register_css_files": "",
+            "register_footer": "",
+            "register_header": "",
+            "register_head_content": "",
+            "register_inline_css": "",
+            "register_inline_js": "",
+            "register_js_files": "",
+            "register_title": "Register",
+            "search_body_class": "",
+            "search_breadcrumb": "Search",
+            "search_css_files": "",
+            "search_footer": "",
+            "search_get_all_ids": "0",
+            "search_header": "",
+            "search_head_content": "",
+            "search_inline_css": "",
+            "search_inline_js": "",
+            "search_js_files": "",
+            "search_results_body_class": "",
+            "search_results_breadcrumb": "Search Results",
+            "search_results_css_files": "",
+            "search_results_footer": "",
+            "search_results_header": "",
+            "search_results_head_content": "",
+            "search_results_inline_css": "",
+            "search_results_inline_js": "",
+            "search_results_js_files": "",
+            "search_results_title": "Search Results",
+            "search_title": "Search",
+            "tag_body_class": "",
+            "tag_breadcrumb": "{{ tagName }}",
+            "tag_cloud_data_max_weight": "20",
+            "tag_cloud_data_min_weight": "10",
+            "tag_cloud_html_cloud_separator": "space",
+            "tag_cloud_html_cloud_separator_tag": "",
+            "tag_cloud_html_cloud_wrapper": [
+                {
+                    "tag": "ul"
+                }
+            ],
+            "tag_cloud_html_tag_classes": "",
+            "tag_cloud_html_tag_font_size_unit": "px",
+            "tag_cloud_html_tag_max_font_size": "20",
+            "tag_cloud_html_tag_min_font_size": "10",
+            "tag_cloud_html_tag_style": "font",
+            "tag_cloud_html_tag_wrapper": [
+                {
+                    "tag": "li"
+                }
+            ],
+            "tag_cloud_order": "date",
+            "tag_css_files": "",
+            "tag_footer": "",
+            "tag_header": "",
+            "tag_head_content": "",
+            "tag_inline_css": "",
+            "tag_inline_js": "",
+            "tag_js_files": "",
+            "tag_list_body_class": "",
+            "tag_list_breadcrumb": "View by Tag",
+            "tag_list_css_files": "",
+            "tag_list_footer": "",
+            "tag_list_header": "",
+            "tag_list_head_content": "",
+            "tag_list_inline_css": "",
+            "tag_list_inline_js": "",
+            "tag_list_js_files": "",
+            "tag_list_title": "View By Tag",
+            "tag_social_og_type": "",
+            "tag_title": "Tag - {{ tagName }}",
+            "time_format": "g:i A"
         }
     },
     "contentAreas": [
@@ -2686,11 +4094,17 @@
             "key": "header",
             "name": "Header",
             "description": "",
-            "attributes": [
+            "availableOnSnippets": true,
+            "availableOnContentAreas": "specific",
+            "parseOnRequest": true,
+            "contentAreas": [
+                "header"
+            ],
+            "fields": [
                 {
                     "key": "displayType",
                     "name": "Display Type",
-                    "description": "“Single slide” will display only the first slide content",
+                    "description": "\u201cSingle slide\u201d will display only the first slide content",
                     "type": "select",
                     "size": "medium",
                     "value": "",
@@ -2718,12 +4132,12 @@
                     "name": "Slider speed",
                     "description": "",
                     "type": "select",
+                    "size": "medium",
+                    "value": "",
                     "configuration": {
                         "0": "",
                         "after": " seconds"
                     },
-                    "size": "medium",
-                    "value": "",
                     "values": [
                         {
                             "value": "3",
@@ -2756,18 +4170,180 @@
                     "name": "Slides",
                     "description": "",
                     "type": "repeating",
-                    "configuration": {
-                        "collectionItemSort": "1",
-                        "collectionItemDelete": "1",
-                        "collectionMinNumItems": "",
-                        "collectionMaxNumItems": "",
-                        "collectionAllowMinNumItems": "none",
-                        "collectionAllowMaxNumItems": "none",
-                        "collectionOrientation": "vertical",
-                        "collectionItemName": "Slide"
-                    },
                     "size": "medium",
-                    "value": ""
+                    "value": "",
+                    "configuration": {
+                        "collectionAllowMaxNumItems": "none",
+                        "collectionAllowMinNumItems": "none",
+                        "collectionItemDelete": "1",
+                        "collectionItemName": "Slide",
+                        "collectionItemSort": "1",
+                        "collectionMaxNumItems": "",
+                        "collectionMinNumItems": "",
+                        "collectionOrientation": "vertical"
+                    },
+                    "children": [
+                        {
+                            "key": "imageEffect",
+                            "name": "Image Effect",
+                            "description": "",
+                            "type": "select",
+                            "size": "medium",
+                            "value": "",
+                            "values": [
+                                {
+                                    "value": "None",
+                                    "default": false
+                                },
+                                {
+                                    "value": "Blur Small",
+                                    "default": false
+                                },
+                                {
+                                    "value": "Blur Medium",
+                                    "default": false
+                                },
+                                {
+                                    "value": "Blur Large",
+                                    "default": false
+                                },
+                                {
+                                    "value": "Grayscale",
+                                    "default": false
+                                }
+                            ]
+                        },
+                        {
+                            "key": "images",
+                            "name": "Image",
+                            "description": "",
+                            "type": "imageSet",
+                            "size": "medium",
+                            "value": "",
+                            "configuration": {
+                                "imgSetSingleUpload": "single"
+                            },
+                            "children": [
+                                {
+                                    "key": "large",
+                                    "name": "Large",
+                                    "description": "",
+                                    "type": "image",
+                                    "size": "medium",
+                                    "value": "",
+                                    "configuration": {
+                                        "height": 720,
+                                        "path": "/images/header",
+                                        "width": 2000
+                                    }
+                                },
+                                {
+                                    "key": "medium",
+                                    "name": "Medium",
+                                    "description": "",
+                                    "type": "image",
+                                    "size": "medium",
+                                    "value": "",
+                                    "configuration": {
+                                        "height": 432,
+                                        "path": "/images/header",
+                                        "width": 1200
+                                    }
+                                },
+                                {
+                                    "key": "small",
+                                    "name": "Small",
+                                    "description": "",
+                                    "type": "image",
+                                    "size": "medium",
+                                    "value": "",
+                                    "configuration": {
+                                        "height": 216,
+                                        "path": "/images/header",
+                                        "width": 600
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "key": "altText",
+                            "name": "Image Alt Text",
+                            "description": "Add image alt text for SEO. Avoid using words like \"image\", \"graphic\", \"photo\".",
+                            "type": "text",
+                            "size": "medium",
+                            "value": "",
+                            "configuration": {
+                                "allowCode": "no"
+                            }
+                        },
+                        {
+                            "key": "captionPosition",
+                            "name": "Caption Position",
+                            "description": "",
+                            "type": "select",
+                            "size": "medium",
+                            "value": "",
+                            "values": [
+                                {
+                                    "value": "Center Left",
+                                    "default": false
+                                },
+                                {
+                                    "value": "Center",
+                                    "default": false
+                                },
+                                {
+                                    "value": "Center Right",
+                                    "default": false
+                                },
+                                {
+                                    "value": "Bottom Left",
+                                    "default": false
+                                },
+                                {
+                                    "value": "Bottom Center",
+                                    "default": false
+                                },
+                                {
+                                    "value": "Bottom Right",
+                                    "default": false
+                                }
+                            ]
+                        },
+                        {
+                            "key": "captionTitle",
+                            "name": "Caption Title",
+                            "description": "",
+                            "type": "textarea",
+                            "size": "tiny",
+                            "value": "",
+                            "configuration": {
+                                "allowCode": "no"
+                            }
+                        },
+                        {
+                            "key": "caption",
+                            "name": "Caption",
+                            "description": "",
+                            "type": "textarea",
+                            "size": "small",
+                            "value": "",
+                            "configuration": {
+                                "allowCode": "no"
+                            }
+                        },
+                        {
+                            "key": "link",
+                            "name": "Link",
+                            "description": "Optional link for the slide",
+                            "type": "url",
+                            "size": "medium",
+                            "value": "",
+                            "configuration": [
+                                ""
+                            ]
+                        }
+                    ]
                 },
                 {
                     "key": "section14",
@@ -2782,11 +4358,11 @@
                     "name": "Title",
                     "description": "",
                     "type": "text",
+                    "size": "medium",
+                    "value": "",
                     "configuration": {
                         "allowCode": "no"
-                    },
-                    "size": "medium",
-                    "value": ""
+                    }
                 },
                 {
                     "key": "content",
@@ -2799,9 +4375,76 @@
             ]
         }
     ],
-    "appForms": [],
+    "appForms": {
+        "blog": [
+            {
+                "key": "comment",
+                "name": "Comment",
+                "type": "comment",
+                "default": true
+            }
+        ]
+    },
     "widgets": {
-        "collections": [],
+        "collections": [
+            {
+                "key": "notification-bar",
+                "name": "Notification Bar",
+                "description": "",
+                "displayNumber": 1,
+                "orderBy": "custom",
+                "orderDirection": "asc",
+                "dateFormat": "l, F j, Y",
+                "timeFormat": "g:i a",
+                "attributes": [
+                    {
+                        "key": "icon",
+                        "name": "Icon",
+                        "description": "",
+                        "type": "select",
+                        "size": "medium",
+                        "value": "",
+                        "values": [
+                            {
+                                "value": "None",
+                                "default": false
+                            },
+                            {
+                                "value": "Bullhorn",
+                                "default": false
+                            },
+                            {
+                                "value": "Info",
+                                "default": false
+                            },
+                            {
+                                "value": "Warning",
+                                "default": false
+                            }
+                        ]
+                    },
+                    {
+                        "key": "canBeClosed",
+                        "name": "Can be closed",
+                        "description": "Wether or not the visitor can close the message.",
+                        "type": "selectYesNo",
+                        "size": "medium",
+                        "value": "no",
+                        "configuration": {
+                            "optionLabel": "yesNo"
+                        }
+                    },
+                    {
+                        "key": "notificationMessage",
+                        "name": "Notification Message",
+                        "description": "",
+                        "type": "richTextEditor",
+                        "size": "medium",
+                        "value": ""
+                    }
+                ]
+            }
+        ],
         "feeds": []
     }
 }
