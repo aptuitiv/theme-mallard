@@ -50,31 +50,31 @@
                             <div itemscope itemtype="http://schema.org/Organization" class="TopBar-contact">
                                 {% if _core.theme.settings.headerShowAddress == 'yes' %}
                                     <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                                        {% if _core.theme.settings.address %}
-                                            <span itemprop="streetAddress">{{ _core.theme.settings.address }}</span> /
+                                        {% if _core.settings.companyAddressStreet %}
+                                            <span itemprop="streetAddress">{{ _core.settings.companyAddressStreet }}</span> /
                                         {% endif %}
-                                        {% if _core.theme.settings.city %}
-                                            <span itemprop="addressLocality">{{ _core.theme.settings.city }}</span>{% if _core.theme.settings.state %}, {% endif %}
+                                        {% if _core.settings.companyAddressCity %}
+                                            <span itemprop="addressLocality">{{ _core.settings.companyAddressCity }}</span>{% if _core.settings.companyAddressState %}, {% endif %}
                                         {% endif %}
-                                        {% if _core.theme.settings.state %}
-                                            <span itemprop="addressRegion">{{ _core.theme.settings.state }} </span>
+                                        {% if _core.settings.companyAddressState %}
+                                            <span itemprop="addressRegion">{{ _core.settings.companyAddressState }} </span>
                                         {% endif %}
-                                        {% if _core.theme.settings.zip %}
-                                            <span itemprop="postalCode">{{ _core.theme.settings.zip }}</span>
+                                        {% if _core.settings.companyAddressPostalCode %}
+                                            <span itemprop="postalCode">{{ _core.settings.companyAddressPostalCode }}</span>
                                         {% endif %}
                                     </span>
                                 {% endif %}
-                                {% if _core.theme.settings.headerShowPhone == 'yes' and _core.theme.settings.phone|length > 0 %}
+                                {% if _core.theme.settings.headerShowPhone == 'yes' and _core.settings.companyPhone|length > 0 %}
                                     {% if _core.theme.settings.headerShowAddress == 'yes' %}
                                         /
                                     {% endif %}
-                                    <span itemprop="telephone"><a href="tel:{{ _core.theme.settings.phone|replace({'(': '', '}': '', '-': '', ' ': ''}) }}" aria-label="Call {{ _core.theme.settings.phone }}">{{ _core.theme.settings.phone }}</a></span>
+                                    <span itemprop="telephone"><a href="tel:{{ _core.settings.companyPhone|replace({'(': '', '}': '', '-': '', ' ': ''}) }}" aria-label="Call {{ _core.settings.companyPhone }}">{{ _core.settings.companyPhone }}</a></span>
                                 {% endif %}
-                                {% if _core.theme.settings.headerShowEmail == 'yes' and _core.theme.settings.email|length > 0 %}
+                                {% if _core.theme.settings.headerShowEmail == 'yes' and _core.settings.companyEmail|length > 0 %}
                                     {% if _core.theme.settings.headerShowAddress == 'yes' or _core.theme.settings.headerShowPhone == 'yes' %}
                                         /
                                     {% endif %}
-                                    <a href="mailto:{{ _core.theme.settings.email }}" itemprop="email" title="Email {{ _core.theme.settings.email }}" class="u-linkSubtle">{{ _core.theme.settings.email }}</a>
+                                    <a href="mailto:{{ _core.settings.companyEmail }}" itemprop="email" title="Email {{ _core.settings.companyEmail }}" class="u-linkSubtle">{{ _core.settings.companyEmail }}</a>
                                 {% endif %}
                             </div>
                         {% endif %}
@@ -96,7 +96,7 @@
                 <nav class="Grid Grid--withGutterLg Grid--alignMiddle">
                     <div class="Grid-cell u-size1of4 u-md-sizeFull u-md-margBottom2 u-md-textCenter">
                         {% if _core.theme.settings.headerLogo.alt|length == 0 %}
-                            {% set _core.theme.settings.headerLogo.alt = _core.theme.settings.company %}
+                            {% set _core.theme.settings.headerLogo.alt = _core.settings.companyName %}
                         {% endif %}
                         <a href="/">{{ _core.theme.settings.headerLogo.tag }}</a>
                     </div>
