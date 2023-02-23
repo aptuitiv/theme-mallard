@@ -72,8 +72,8 @@ const config = {
             dest: 'magnific'
         },
         {
-            src: ['node_modules/slick-carousel/slick/*.{css,min.js,gif}'],
-            dest: 'slick'
+            src: 'node_modules/@splidejs/splide/dist/**/*',
+            dest: 'splide'
         },
         {
             src: ['node_modules/slick-carousel/slick/fonts/*'],
