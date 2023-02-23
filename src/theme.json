@@ -1820,7 +1820,7 @@
             "default": true,
             "adminBar": true,
             "contentAreas": [
-                "header"
+                "banner"
             ]
         },
         {
@@ -1829,7 +1829,7 @@
             "default": false,
             "adminBar": true,
             "contentAreas": [
-                "header"
+                "banner"
             ]
         },
         {
@@ -1838,7 +1838,7 @@
             "default": false,
             "adminBar": true,
             "contentAreas": [
-                "header"
+                "banner"
             ]
         },
         {
@@ -1847,7 +1847,7 @@
             "default": false,
             "adminBar": true,
             "contentAreas": [
-                "header"
+                "banner"
             ]
         },
         {
@@ -2039,8 +2039,8 @@
             "name": "Content Wrap"
         },
         {
-            "key": "content-layouts/header",
-            "name": "Header"
+            "key": "content-layouts/banner",
+            "name": "Banner"
         },
         {
             "key": "forms/grid",
@@ -2585,6 +2585,27 @@
             "archive_inline_js": "",
             "archive_js_files": "",
             "archive_title": "Blog Archive",
+            "author_body_class": "",
+            "author_breadcrumb": "{{ firstName }} {{ lastName }}",
+            "author_css_files": "",
+            "author_footer": "",
+            "author_header": "",
+            "author_head_content": "",
+            "author_inline_css": "",
+            "author_inline_js": "",
+            "author_js_files": "",
+            "author_list_body_class": "",
+            "author_list_breadcrumb": "Authors",
+            "author_list_css_files": "",
+            "author_list_footer": "",
+            "author_list_header": "",
+            "author_list_head_content": "",
+            "author_list_inline_css": "",
+            "author_list_inline_js": "",
+            "author_list_js_files": "",
+            "author_list_title": "Authors",
+            "author_social_og_type": "",
+            "author_title": "{{ firstName }} {{ lastName }}",
             "breadcrumb_text": "Blog",
             "category_body_class": "",
             "category_breadcrumb": "{{ categoryName }}",
@@ -2682,6 +2703,7 @@
             "search_results_js_files": "",
             "search_results_title": "Search Results",
             "search_title": "Search",
+            "search_wildcard_term": "0",
             "tag_body_class": "",
             "tag_breadcrumb": "{{ tagName }}",
             "tag_cloud_data_max_weight": "20",
@@ -2925,6 +2947,7 @@
             "search_results_title": "Search Results",
             "search_sort": "relevance",
             "search_title": "Search",
+            "search_wildcard_term": "0",
             "tag_body_class": "",
             "tag_breadcrumb": "{{ tagName }}",
             "tag_cloud_data_max_weight": "20",
@@ -3067,6 +3090,7 @@
             "search_results_js_files": "",
             "search_results_title": "Search Results",
             "search_title": "Search",
+            "search_wildcard_term": "0",
             "tag_body_class": "",
             "tag_breadcrumb": "{{ tagName }}",
             "tag_cloud_data_max_weight": "20",
@@ -3827,17 +3851,6 @@
             "category_list_title": "View By Category",
             "category_social_og_type": "product.group",
             "category_title": "Category {{ categoryName }}",
-            "checkout_billing_body_class": "",
-            "checkout_billing_breadcrumb": "Checkout - Billing",
-            "checkout_billing_css_files": "",
-            "checkout_billing_disabled": "0",
-            "checkout_billing_footer": "",
-            "checkout_billing_header": "",
-            "checkout_billing_head_content": "",
-            "checkout_billing_inline_css": "",
-            "checkout_billing_inline_js": "",
-            "checkout_billing_js_files": "",
-            "checkout_billing_title": "Billing",
             "checkout_error_body_class": "",
             "checkout_error_breadcrumb": "Checkout - Error",
             "checkout_error_css_files": "",
@@ -3848,6 +3861,17 @@
             "checkout_error_inline_js": "",
             "checkout_error_js_files": "",
             "checkout_error_title": "Error",
+            "checkout_payment_body_class": "",
+            "checkout_payment_breadcrumb": "Checkout - Billing",
+            "checkout_payment_css_files": "",
+            "checkout_payment_disabled": "0",
+            "checkout_payment_footer": "",
+            "checkout_payment_header": "",
+            "checkout_payment_head_content": "",
+            "checkout_payment_inline_css": "",
+            "checkout_payment_inline_js": "",
+            "checkout_payment_js_files": "",
+            "checkout_payment_title": "Billing",
             "checkout_receipt_body_class": "",
             "checkout_receipt_breadcrumb": "Checkout - Receipt",
             "checkout_receipt_css_files": "",
@@ -3868,17 +3892,27 @@
             "checkout_review_inline_js": "",
             "checkout_review_js_files": "",
             "checkout_review_title": "Review",
-            "checkout_shipping_body_class": "",
-            "checkout_shipping_breadcrumb": "Checkout - Shipping",
-            "checkout_shipping_css_files": "",
+            "checkout_shipping_address_body_class": "",
+            "checkout_shipping_address_breadcrumb": "Checkout - Shipping",
+            "checkout_shipping_address_css_files": "",
+            "checkout_shipping_address_footer": "",
+            "checkout_shipping_address_header": "",
+            "checkout_shipping_address_head_content": "",
+            "checkout_shipping_address_inline_css": "",
+            "checkout_shipping_address_inline_js": "",
+            "checkout_shipping_address_js_files": "",
+            "checkout_shipping_address_title": "Shipping",
             "checkout_shipping_disabled": "0",
-            "checkout_shipping_footer": "",
-            "checkout_shipping_header": "",
-            "checkout_shipping_head_content": "",
-            "checkout_shipping_inline_css": "",
-            "checkout_shipping_inline_js": "",
-            "checkout_shipping_js_files": "",
-            "checkout_shipping_title": "Shipping",
+            "checkout_shipping_method_body_class": "",
+            "checkout_shipping_method_breadcrumb": "Checkout - Shipping Method",
+            "checkout_shipping_method_css_files": "",
+            "checkout_shipping_method_footer": "",
+            "checkout_shipping_method_header": "",
+            "checkout_shipping_method_head_content": "",
+            "checkout_shipping_method_inline_css": "",
+            "checkout_shipping_method_inline_js": "",
+            "checkout_shipping_method_js_files": "",
+            "checkout_shipping_method_title": "Shipping Methods",
             "date_format": "F j, Y",
             "home_body_class": "",
             "home_css_files": "",
@@ -3938,6 +3972,8 @@
             "password_reset_inline_js": "",
             "password_reset_js_files": "",
             "password_reset_title": "Password Reset",
+            "pay_later_enabled": "no",
+            "pay_later_products": "all",
             "product_body_class": "",
             "product_breadcrumb": "{{ productName }}",
             "product_css_files": "",
@@ -4037,20 +4073,20 @@
     },
     "contentAreas": [
         {
-            "key": "header",
-            "name": "Header"
+            "key": "banner",
+            "name": "Banner"
         }
     ],
     "contentLayouts": [
         {
-            "key": "header",
-            "name": "Header",
+            "key": "banner",
+            "name": "Banner",
             "description": "",
             "availableOnSnippets": true,
             "availableOnContentAreas": "specific",
             "parseOnRequest": true,
             "contentAreas": [
-                "header"
+                "banner"
             ],
             "fields": [
                 {
@@ -4058,7 +4094,7 @@
                     "name": "Display Type",
                     "description": "\u201cSingle slide\u201d will display only the first slide content",
                     "type": "select",
-                    "size": "medium",
+                    "size": "",
                     "value": "",
                     "values": [
                         {
@@ -4080,11 +4116,66 @@
                     ]
                 },
                 {
+                    "key": "autoPlaySlides",
+                    "name": "Auto play slides",
+                    "description": "",
+                    "type": "selectYesNo",
+                    "size": "medium",
+                    "value": "yes",
+                    "configuration": {
+                        "optionLabel": "yesNo"
+                    }
+                },
+                {
+                    "key": "showDots",
+                    "name": "Show dots",
+                    "description": "",
+                    "type": "selectYesNo",
+                    "size": "medium",
+                    "value": "yes",
+                    "configuration": {
+                        "optionLabel": "yesNo"
+                    }
+                },
+                {
+                    "key": "dotPosition",
+                    "name": "Dot position",
+                    "description": "",
+                    "type": "select",
+                    "size": "medium",
+                    "value": "",
+                    "values": [
+                        {
+                            "value": "Left",
+                            "default": false
+                        },
+                        {
+                            "value": "Center",
+                            "default": false
+                        },
+                        {
+                            "value": "Right",
+                            "default": false
+                        }
+                    ]
+                },
+                {
+                    "key": "showArrows",
+                    "name": "Show arrows",
+                    "description": "",
+                    "type": "selectYesNo",
+                    "size": "medium",
+                    "value": "yes",
+                    "configuration": {
+                        "optionLabel": "yesNo"
+                    }
+                },
+                {
                     "key": "sliderSpeed",
                     "name": "Slider speed",
                     "description": "",
                     "type": "select",
-                    "size": "medium",
+                    "size": "",
                     "value": "",
                     "configuration": {
                         "0": "",
@@ -4118,15 +4209,31 @@
                     ]
                 },
                 {
+                    "key": "slideTransition",
+                    "name": "Slide transition",
+                    "description": "",
+                    "type": "select",
+                    "size": "medium",
+                    "value": "",
+                    "values": [
+                        {
+                            "value": "Fade",
+                            "default": false
+                        },
+                        {
+                            "value": "Slide",
+                            "default": false
+                        }
+                    ]
+                },
+                {
                     "key": "slides",
                     "name": "Slides",
                     "description": "",
                     "type": "repeating",
-                    "size": "medium",
+                    "size": "",
                     "value": "",
                     "configuration": {
-                        "collectionAllowMaxNumItems": "none",
-                        "collectionAllowMinNumItems": "none",
                         "collectionItemDelete": "1",
                         "collectionItemName": "Slide",
                         "collectionItemSort": "1",
@@ -4137,7 +4244,7 @@
                     "children": [
                         {
                             "key": "imageEffect",
-                            "name": "Image Effect",
+                            "name": "Image effect",
                             "description": "",
                             "type": "select",
                             "size": "medium",
@@ -4220,13 +4327,21 @@
                         {
                             "key": "altText",
                             "name": "Image Alt Text",
-                            "description": "Add image alt text for SEO. Avoid using words like \"image\", \"graphic\", \"photo\".",
+                            "description": "",
                             "type": "text",
                             "size": "medium",
                             "value": "",
                             "configuration": {
                                 "allowCode": "no"
                             }
+                        },
+                        {
+                            "key": "link",
+                            "name": "Link",
+                            "description": "",
+                            "type": "url",
+                            "size": "medium",
+                            "value": ""
                         },
                         {
                             "key": "captionPosition",
@@ -4266,8 +4381,8 @@
                             "key": "captionTitle",
                             "name": "Caption Title",
                             "description": "",
-                            "type": "textarea",
-                            "size": "tiny",
+                            "type": "text",
+                            "size": "medium",
                             "value": "",
                             "configuration": {
                                 "allowCode": "no"
@@ -4278,31 +4393,20 @@
                             "name": "Caption",
                             "description": "",
                             "type": "textarea",
-                            "size": "small",
+                            "size": "medium",
                             "value": "",
                             "configuration": {
                                 "allowCode": "no"
                             }
-                        },
-                        {
-                            "key": "link",
-                            "name": "Link",
-                            "description": "Optional link for the slide",
-                            "type": "url",
-                            "size": "medium",
-                            "value": "",
-                            "configuration": [
-                                ""
-                            ]
                         }
                     ]
                 },
                 {
-                    "key": "section14",
+                    "key": "section8",
                     "name": "Content Heading",
                     "description": "",
                     "type": "section",
-                    "size": "medium",
+                    "size": "",
                     "value": ""
                 },
                 {
@@ -4321,7 +4425,7 @@
                     "name": "Content",
                     "description": "",
                     "type": "richTextEditor",
-                    "size": "medium",
+                    "size": "",
                     "value": ""
                 }
             ]
