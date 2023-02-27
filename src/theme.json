@@ -1183,9 +1183,7 @@
                                 "type": "selectYesNo",
                                 "value": "no",
                                 "description": "",
-                                "configuration": {
-                                    "optionLabel": "yesNo"
-                                }
+                                "configuration": []
                             },
                             {
                                 "key": "slides",
@@ -4094,7 +4092,7 @@
                     "name": "Display Type",
                     "description": "\u201cSingle slide\u201d will display only the first slide content",
                     "type": "select",
-                    "size": "",
+                    "size": "medium",
                     "value": "",
                     "values": [
                         {
@@ -4151,7 +4149,7 @@
                         },
                         {
                             "value": "Center",
-                            "default": false
+                            "default": true
                         },
                         {
                             "value": "Right",
@@ -4175,11 +4173,11 @@
                     "name": "Slider speed",
                     "description": "",
                     "type": "select",
-                    "size": "",
+                    "size": "medium",
                     "value": "",
                     "configuration": {
                         "0": "",
-                        "after": " seconds"
+                        "after": "seconds"
                     },
                     "values": [
                         {
@@ -4231,7 +4229,7 @@
                     "name": "Slides",
                     "description": "",
                     "type": "repeating",
-                    "size": "",
+                    "size": "medium",
                     "value": "",
                     "configuration": {
                         "collectionItemDelete": "1",
@@ -4341,7 +4339,10 @@
                             "description": "",
                             "type": "url",
                             "size": "medium",
-                            "value": ""
+                            "value": "",
+                            "configuration": [
+                                ""
+                            ]
                         },
                         {
                             "key": "captionPosition",
@@ -4393,7 +4394,7 @@
                             "name": "Caption",
                             "description": "",
                             "type": "textarea",
-                            "size": "medium",
+                            "size": "small",
                             "value": "",
                             "configuration": {
                                 "allowCode": "no"
@@ -4402,11 +4403,11 @@
                     ]
                 },
                 {
-                    "key": "section8",
+                    "key": "section14",
                     "name": "Content Heading",
                     "description": "",
                     "type": "section",
-                    "size": "",
+                    "size": "medium",
                     "value": ""
                 },
                 {
@@ -4425,7 +4426,7 @@
                     "name": "Content",
                     "description": "",
                     "type": "richTextEditor",
-                    "size": "",
+                    "size": "medium",
                     "value": ""
                 }
             ]
@@ -4486,9 +4487,7 @@
                         "type": "selectYesNo",
                         "size": "medium",
                         "value": "no",
-                        "configuration": {
-                            "optionLabel": "yesNo"
-                        }
+                        "configuration": []
                     },
                     {
                         "key": "notificationMessage",
