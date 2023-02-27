@@ -19,19 +19,22 @@
 .Slider-link:focus,
 .Slider-link:hover {
     color: inherit;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     overflow: hidden; /* Done to prevent a scaled blurred image (with .u-imageBlur) from overflowing */
     text-decoration: none;
 }
 
 .Slider-image {
-    display: block;
     height: auto;
+    height: 100%;
     width: 100%;
 }
 
 /* postcss-bem-linter: ignore */
 .Slider-image > img {
+    height: 100%;
     object-fit: cover;
     width: 100%;
 }
