@@ -2,117 +2,111 @@
     Default Theme
 \* =========================================================================== */
 
-/* Color Config */
-
+/* Colors */
 :root {
     --theme-primary-color: #008576;
-    --theme-gray: #cbcdcc;
-    --theme-dark: #313131;
-    --theme-light: #fbdcc5;
+    --theme-light-color: #fbdcc5;
 }
 
 /* Body */
-
 :root {
     --theme-body-background: #fff;
 }
 
-/*
-   Core typography
-   Serif and monospace fonts from https://css-tricks.com/snippets/css/system-font-stack/#comment-1606328
-*/
-
+/* Core typography */
 :root {
     --theme-typography-color: #4d4d4d;
     --theme-typography-serif: 'Apple Garamond', 'Baskerville', 'Times New Roman', 'Droid Serif', 'Times', 'Source Serif Pro', serif;
-    --them-typography-monospace: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', 'Droid Sans Mono', 'Source Code Pro', monospace;
     --theme-typography-sans-serif: 'Open Sans', sans-serif;
     --theme-typography-fontFamily: var(--theme-typography-sans-serif);
 }
 
-/* Links & Buttons */
-
+/* Links */
 :root {
     --theme-typography-link-color: var(--theme-primary-color);
-    --theme-typography-link-colorHover: color(var(--theme-primary-color) shade(15%));
+    --theme-typography-link-colorHover: #005243;
+}
+
+/* Buttons */
+:root {
     --theme-button-font: var(--theme-typography-fontFamily);
-    --theme-button-background: #ffa95e;
     --theme-button-color: #102408;
-    --theme-button-hover-background: #ff9b45;
     --theme-button-hover-color: #1a390c;
-    --theme-button-alt-background: var(--theme-primary-color);
+    --theme-button-background: #ffa95e;
+    --theme-button-hover-background: #ff9b45;
     --theme-button-alt-color: #fff;
-    --theme-button-alt-hover-background: #007769;
     --theme-button-alt-hover-color: #fff;
+    --theme-button-alt-background: var(--theme-primary-color);
+    --theme-button-alt-hover-background: #007769;
 }
 
 /* Headings */
-
 :root {
     --theme-typography-heading-color: var(--theme-primary-color);
     --theme-typography-heading-fontFamily: 'Asap Condensed', sans-serif;
 }
 
 /* Top Bar */
-
 :root {
     --theme-topbar-color: var(--theme-primary-color);
 }
 
 /* Main Navigation and Navigation Bar */
-
 :root {
+    --theme-nav-font: var(--theme-typography-heading-fontFamily);
+    --theme-nav-font-weight: 400;
+    --theme-nav-font-size: 2.4rem;
+    --theme-nav-line-height: 1.5;
+    
     --theme-navbar-background: var(--theme-primary-color);
     --theme-nav-color: var(--theme-primary-color);
     --theme-nav-color-hover: var(--theme-primary-color);
+    
     --theme-nav-item-background: transparent;
     --theme-nav-item-background-hover: transparent;
-    --theme-nav-font: var(--theme-typography-heading-fontFamily);
-    --theme-nav-font-size: 2.4rem;
-    --theme-nav-font-weight: 400;
-    --theme-nav-line-height: 1.5;
+    
     --theme-nav-dropdown-font: var(--theme-typography-fontFamily);
-    --theme-nav-dropdown-font-size: 1.8rem;
     --theme-nav-dropdown-font-weight: 400;
+    --theme-nav-dropdown-font-size: 1.8rem;
+    
     --theme-nav-dropdown-background: #006c5f;
     --theme-nav-dropdown-color: #fff;
     --theme-nav-dropdown-color-hover: #fff;
 }
 
 /* Sidebar Navigation */
-
 :root {
-    --theme-sidenav-color: #4d4d4d;
     --theme-sidenav-font: var(--theme-typography-fontFamily);
     --theme-sidenav-font-weight: 400;
     --theme-sidenav-letter-spacing: 1px;
+    
+    --theme-sidenav-color: #4d4d4d;
     --theme-sidenav-current-color: var(--theme-primary-color);
     --theme-sidenav-hover-background: var(--theme-primary-color);
     --theme-sidenav-hover-color: #fff;
-    --theme-sidenav-parent-color: var(--theme-primary-color);
+    
     --theme-sidenav-parent-font: var(--theme-typography-heading-fontFamily);
     --theme-sidenav-parent-font-size: 2rem;
     --theme-sidenav-parent-font-weight: 400;
     --theme-sidenav-parent-letter-spacing: 1px;
     --theme-sidenav-parent-line-height: 1.3;
+    
+    --theme-sidenav-parent-color: var(--theme-primary-color);
 }
 
 /* Page Content Header */
-
 :root {
-    --theme-content-header-background: var(--theme-light);
+    --theme-content-header-background: var(--theme-light-color);
     --theme-content-header-color: var(--theme-typography-color);
 }
 
 /* Content Grid */
-
 :root {
     --theme-content-grid-title-color: var(--theme-primary-color);
     --theme-content-grid-title-hover-color: var(--theme-primary-color);
 }
 
 /* Featured Content */
-
 :root {
     --theme-featured-content-background: var(--theme-primary-color);
     --theme-featured-content-heading-color: #efdbd5;
@@ -124,7 +118,6 @@
 }
 
 /* Full page slider */
-
 :root {
     --theme-slider-caption-small-screen-background: var(--theme-primary-color);
 }
@@ -146,14 +139,12 @@
 }
 
 /* Page Content Header */
-
 :root {
     --theme-content-header-background: #f2f2f2;
     --theme-content-header-color: var(--theme-typography-color);
 }
 
 /* Content Bar */
-
 :root {
     --theme-content-bar-background: #285585;
     --theme-content-bar-heading-color: #fcfdfe;
@@ -167,7 +158,6 @@
 }
 
 /* Image Grid */
-
 :root {
     --theme-image-grid-title-background: #008372;
     --theme-image-grid-title-color: #fff;
@@ -178,20 +168,17 @@
 }
 
 /* General Component Styles */
-
 :root {
     --theme-component-top-margin: 20px;
 }
 
 /* Featured Content */
-
 :root {
     --theme-feature-top-margin: 60px;
 }
 
 
 /* Columned Content */
-
 :root {
     --theme-columned-content-title-background: #fff;
     --theme-columned-content-title-color: var(--theme-primary-color);
@@ -200,7 +187,6 @@
 }
 
 /* Footer */
-
 :root {
     --theme-footer-border: 1px solid #ececec;
     --theme-footer-background: #f3f3f3;
