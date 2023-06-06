@@ -14,6 +14,16 @@
                     }
                 },
                 {
+                    "name": "bannerBackgroundSmallScreens",
+                    "label": "Background color (small screens)",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-slider-caption-small-screen-background"
+                    }
+                },
+                {
                     "name": "bannerColor",
                     "label": "Text color",
                     "type": "color",
@@ -135,6 +145,146 @@
             ]
         },
         {
+            "name": "Columned Content",
+            "fields": [
+                {
+                    "name": "columnedContentTitleBackground",
+                    "label": "Title background color",
+                    "type": "color",
+                    "default": "#fff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-columned-content-title-background"
+                    }
+                },
+                {
+                    "name": "columnedContentTitleColor",
+                    "label": "Title color",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-columned-content-title-color"
+                    }
+                },
+                {
+                    "name": "columnedContentTitleBackgroundHover",
+                    "label": "Title background color (hover)",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-columned-content-title-hover-background"
+                    }
+                },
+                {
+                    "name": "columnedContentTitleColorHover",
+                    "label": "Title color (hover)",
+                    "type": "color",
+                    "default": "#fff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-columned-content-title-hover-color"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Content Bar",
+            "fields": [
+                {
+                    "name": "contentBarBackground",
+                    "label": "Background color",
+                    "type": "color",
+                    "default": "#285585",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-content-bar-background"
+                    }
+                },
+                {
+                    "name": "contentBarHeadingColor",
+                    "label": "Heading color",
+                    "type": "color",
+                    "default": "#fcfdfe",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-content-bar-heading-color"
+                    }
+                },
+                {
+                    "name": "contentBarColor",
+                    "label": "Text color",
+                    "type": "color",
+                    "default": "#fcfdfe",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-content-bar-color"
+                    }
+                },
+                {
+                    "name": "contentBarButtonBackground",
+                    "label": "Button background color",
+                    "type": "color",
+                    "default": "#fcfdfe",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-content-bar-button-background"
+                    }
+                },
+                {
+                    "name": "contentBarButtonColor",
+                    "label": "Button text color",
+                    "type": "color",
+                    "default": "#285585",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-content-bar-button-color"
+                    }
+                },
+                {
+                    "name": "contentBarButtonBackgroundHover",
+                    "label": "Button background color (hover)",
+                    "type": "color",
+                    "default": "#cfdff1",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-content-bar-button-background-hover"
+                    }
+                },
+                {
+                    "name": "contentBarButtonColorHover",
+                    "label": "Button text color (hover)",
+                    "type": "color",
+                    "default": "#285585",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-content-bar-button-color-hover"
+                    }
+                },
+                {
+                    "name": "contentBarLinkColor",
+                    "label": "Link color",
+                    "type": "color",
+                    "default": "#fcfdfe",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-content-bar-link-color"
+                    }
+                },
+                {
+                    "name": "contentBarLinkColorHover",
+                    "label": "Link color (hover)",
+                    "type": "color",
+                    "default": "#fcfdfe",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-content-bar-link-color-hover"
+                    }
+                }
+            ]
+        },
+        {
             "name": "Content Grid",
             "fields": [
                 {
@@ -155,6 +305,18 @@
                     "preview": {
                         "type": "css-head",
                         "cssVariable": "--theme-content-grid-title-hover-color"
+                    }
+                },
+                {
+                    "name": "contentGridTopMargin",
+                    "label": "Top margin",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "20",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-component-top-margin",
+                        "template": "{{ value }}px"
                     }
                 }
             ]
@@ -180,6 +342,413 @@
                     "preview": {
                         "type": "css-head",
                         "cssVariable": "--theme-light-color"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Featured Content",
+            "fields": [
+                {
+                    "name": "featuredContentBackground",
+                    "label": "Background color",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-featured-content-background"
+                    }
+                },
+                {
+                    "name": "featuredContentColor",
+                    "label": "Text color",
+                    "type": "color",
+                    "default": "#ffffff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-featured-content-color"
+                    }
+                },
+                {
+                    "name": "featuredContentHeadingColor",
+                    "label": "Heading color",
+                    "type": "color",
+                    "default": "#efdbd5",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-featured-content-heading-color"
+                    }
+                },
+                {
+                    "name": "featuredContentButtonBackground",
+                    "label": "Button background color",
+                    "type": "color",
+                    "default": "#ffffff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-featured-button-background"
+                    }
+                },
+                {
+                    "name": "featuredContentButtonColor",
+                    "label": "Button text color",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-featured-button-color"
+                    }
+                },
+                {
+                    "name": "featuredContentButtonBackgroundHover",
+                    "label": "Button background color (hover)",
+                    "type": "color",
+                    "default": "#003337",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-featured-button-background-hover"
+                    }
+                },
+                {
+                    "name": "featuredContentButtonColorHover",
+                    "label": "Button text color (hover)",
+                    "type": "color",
+                    "default": "#ffffff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-featured-button-color-hover"
+                    }
+                },
+                {
+                    "name": "featuredContentTopMargin",
+                    "label": "Top margin",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "60",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-feature-top-margin",
+                        "template": "{{ value }}px"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Footer",
+            "fields": [
+                {
+                    "name": "footerBorderWidth",
+                    "label": "Border width",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "1",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-footer-border-width",
+                        "template": "{{ value }}px"
+                    }
+                },
+                {
+                    "name": "footerBorderColor",
+                    "label": "Border color",
+                    "type": "color",
+                    "default": "#ececec",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-footer-border-color"
+                    }
+                },
+                {
+                    "name": "footerBackground",
+                    "label": "Background color",
+                    "type": "color",
+                    "default": "#f3f3f3",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-footer-background"
+                    }
+                },
+                {
+                    "name": "footerColor",
+                    "label": "Text color",
+                    "type": "color",
+                    "default": "#4c5c4c",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-footer-color"
+                    }
+                },
+                {
+                    "name": "footerFontSize",
+                    "label": "Font size",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "15",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-footer-font-size",
+                        "template": "{{ value / 10 }}rem"
+                    }
+                },
+                {
+                    "name": "footerNavFontFamily",
+                    "label": "Navigation font family",
+                    "type": "fontFamily",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-footer-nav-font"
+                    }
+                },
+                {
+                    "name": "footerNavFontSize",
+                    "label": "Navigation font size",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "15",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-footer-nav-font-size",
+                        "template": "{{ value / 10 }}rem"
+                    }
+                },
+                {
+                    "name": "footerNavColor",
+                    "label": "Navigation text color",
+                    "type": "color",
+                    "default": "#4c5c4c",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-footer-nav-color"
+                    }
+                },
+                {
+                    "name": "footerNavColorHover",
+                    "label": "Navigation text color (hover)",
+                    "type": "color",
+                    "default": "#4c5c4c",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-footer-nav-color-hover"
+                    }
+                },
+                {
+                    "name": "footerPaddingVertical",
+                    "label": "Vertical padding",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "15",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-footer-padding-vertical",
+                        "template": "{{ value }}px"
+                    }
+                },
+                {
+                    "name": "footerPaddingHorizontal",
+                    "label": "Horizontal padding",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "20",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-footer-padding-horizontal",
+                        "template": "{{ value }}px"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Image Grid",
+            "fields": [
+                {
+                    "name": "imageGridTitleBackground",
+                    "label": "Title background color",
+                    "type": "color",
+                    "default": "#008372",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-grid-title-background"
+                    }
+                },
+                {
+                    "name": "imageGridTitleColor",
+                    "label": "Title color",
+                    "type": "color",
+                    "default": "#fff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-grid-title-color"
+                    }
+                },
+                {
+                    "name": "imageGridTitleBackgroundHover",
+                    "label": "Title background color (hover)",
+                    "type": "color",
+                    "default": "#006a5c",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-grid-title-hover-background"
+                    }
+                },
+                {
+                    "name": "imageGridTitleColorHover",
+                    "label": "Title color (hover)",
+                    "type": "color",
+                    "default": "#fff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-grid-title-hover-color"
+                    }
+                },
+                {
+                    "name": "imageGridTitleFontSize",
+                    "label": "Title font size",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "22",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-grid-title-font-size",
+                        "template": "{{ value / 10 }}rem"
+                    }
+                },
+                {
+                    "name": "imageGridTitleFontWeight",
+                    "label": "Title font weight",
+                    "type": "fontWeight",
+                    "fontFamilyField": "sansSerifFontFamily",
+                    "default": "300",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-grid-title-font-weight"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Image Slider",
+            "fields": [
+                {
+                    "name": "imageSliderBackground",
+                    "label": "Background color",
+                    "type": "color",
+                    "default": "#f2f2f2",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-background"
+                    }
+                },
+                {
+                    "name": "imageSliderColor",
+                    "label": "Text color",
+                    "type": "color",
+                    "default": "#4d4d4d",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-color"
+                    }
+                },
+                {
+                    "name": "imageSliderBackgroundHover",
+                    "label": "Background color (hover)",
+                    "type": "color",
+                    "default": "#7a0504",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-hover-background"
+                    }
+                },
+                {
+                    "name": "imageSliderColorHover",
+                    "label": "Text color (hover)",
+                    "type": "color",
+                    "default": "#ffffff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-hover-color"
+                    }
+                },
+                {
+                    "name": "imageSliderTitleBackground",
+                    "label": "Title background",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-title-background"
+                    }
+                },
+                {
+                    "name": "imageSliderTitleColor",
+                    "label": "Title color",
+                    "type": "color",
+                    "default": "#ffffff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-title-color"
+                    }
+                },
+                {
+                    "name": "imageSliderTitleBackgroundHover",
+                    "label": "Title background color (hover)",
+                    "type": "color",
+                    "default": "#7a0504",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-title-background-hover"
+                    }
+                },
+                {
+                    "name": "imageSliderTitleColorHover",
+                    "label": "Title color (hover)",
+                    "type": "color",
+                    "default": "#ffffff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-title-color-hover"
+                    }
+                },
+                {
+                    "name": "imageSliderTitleFontSize",
+                    "label": "Title font size",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "22",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-title-font-size",
+                        "template": "{{ value / 10 }}rem"
+                    }
+                },
+                {
+                    "name": "imageSliderTitleFontWeight",
+                    "label": "Title font weight",
+                    "type": "fontWeight",
+                    "fontFamilyField": "sansSerifFontFamily",
+                    "default": "300",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-title-font-weight"
+                    }
+                },
+                {
+                    "name": "imageSliderBackgroundCover",
+                    "label": "Cover background color",
+                    "type": "color",
+                    "default": "#a2151480",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-cover-background"
+                    }
+                },
+                {
+                    "name": "imageSliderColorCover",
+                    "label": "Cover text color",
+                    "type": "color",
+                    "default": "#ffffff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-image-slider-cover-color"
                     }
                 }
             ]
@@ -357,6 +926,31 @@
                             }
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Page Header",
+            "fields": [
+                {
+                    "name": "pageHeaderBackground",
+                    "label": "Background color",
+                    "type": "color",
+                    "default": "#f2f2f2",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-content-header-background"
+                    }
+                },
+                {
+                    "name": "pageHeaderColor",
+                    "label": "Text color",
+                    "type": "color",
+                    "default": "#4d4d4d",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--theme-content-header-color"
+                    }
                 }
             ]
         },

@@ -188,7 +188,9 @@
 
 /* Footer */
 :root {
-    --theme-footer-border: 1px solid #ececec;
+    --theme-footer-border-width: 1px;
+    --theme-footer-border-color: #ececec;
+    --theme-footer-border: var(--theme-footer-border-width) solid var(--theme-footer-border-color);
     --theme-footer-background: #f3f3f3;
     --theme-footer-color: #4c5c4c;
     --theme-footer-font-size: 1.5rem;
@@ -196,5 +198,7 @@
     --theme-footer-nav-font-size: 1em;
     --theme-footer-nav-color: #4c5c4c;
     --theme-footer-nav-color-hover: #4c5c4c;
-    --theme-footer-padding: 1.5rem var(--g-gutter);
+    --theme-footer-padding-vertical: 15px;
+    --theme-footer-padding-horizontal: 20px;
+    --theme-footer-padding: var(--theme-footer-padding-vertical) var(--theme-footer-padding-horizontal);
 }
