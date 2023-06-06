@@ -48,32 +48,6 @@
                                 "youtube": "YouTube"
                             }
                         }
-                    ],
-                    "default": [
-                        {
-                            "name": "Facebook",
-                            "icon": "facebook"
-                        },
-                        {
-                            "name": "Instagram",
-                            "icon": "instagram"
-                        },
-                        {
-                            "name": "LinkedIn",
-                            "icon": "linkedin"
-                        },
-                        {
-                            "name": "Pinterest",
-                            "icon": "pinterest"
-                        },
-                        {
-                            "name": "Twitter",
-                            "icon": "twitter"
-                        },
-                        {
-                            "name": "YouTube",
-                            "icon": "youtube"
-                        }
                     ]
                 }
             ]
@@ -127,7 +101,12 @@
                     "label": "Logo",
                     "type": "image",
                     "path": "images",
-                    "default": "/theme/custom/images/logo.svg"
+                    "default": "/theme/custom/images/logo.svg",
+                    "preview": {
+                        "type": "replace",
+                        "contentSelector": ".Header-logo",
+                        "template": "<img src=\"{{ url }}\" height=\"{{ imageHeight }}\" width=\"{{ imageWidth }}\" alt=\"{{ alt }}\" class=\"Header-logo\">"
+                    }
                 }
             ]
         },
