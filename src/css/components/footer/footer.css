@@ -2,15 +2,29 @@
     Footer
 \* =========================================================================== */
 
+:root {
+    --Footer-border-width: 1px;
+    --Footer-border-color: #ececec;
+    --Footer-border: var(--Footer-border-width) solid var(--Footer-border-color);
+    --Footer-background: #f3f3f3;
+    --Footer-color: #4c5c4c;
+    --Footer-font-size: 1.5rem;
+    --Footer-nav-font: var(--base-typography-fontFamily);
+    --Footer-nav-font-size: 1em;
+    --Footer-nav-color: #4c5c4c;
+    --Footer-nav-color-hover: #4c5c4c;
+    --Footer-padding-vertical: 15px;
+    --Footer-padding-horizontal: 20px;
+    --Footer-padding: var(--Footer-padding-vertical) var(--Footer-padding-horizontal);
+}
 
 /* @define Footer */
-
 .Footer {
-    background: var(--theme-footer-background);
-    border-top: var(--theme-footer-border);
-    color: var(--theme-footer-color);
-    font-size: var(--theme-footer-font-size);
-    padding: var(--theme-footer-padding);
+    background: var(--Footer-background);
+    border-top: var(--Footer-border);
+    color: var(--Footer-color);
+    font-size: var(--Footer-font-size);
+    padding: var(--Footer-padding);
     text-align: center;
     text-transform: uppercase;
 }
@@ -23,19 +37,19 @@
 
 
 .Footer-link {
-    color: var(--theme-footer-nav-color);
+    color: var(--Footer-nav-color);
     text-decoration: none;
 }
 
 .Footer-link:active,
 .Footer-link:focus,
 .Footer-link:hover {
-    color: var(--theme-footer-nav-color-hover);
+    color: var(--Footer-nav-color-hover);
     text-decoration: underline;
 }
 
 .Footer-credit {
-    border-left: 1px solid var(--theme-footer-color);
+    border-left: 1px solid var(--Footer-color);
     display: inline-block;
     line-height: 1;
     padding: 0 1rem;

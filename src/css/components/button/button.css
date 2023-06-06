@@ -14,20 +14,25 @@
  */
 
 :root {
-    --Button-background: var(--theme-button-background);
-    --Button-backgroundHover: var(--theme-button-hover-background);
+    --Button-background: #ffa95e;
+    --Button-backgroundHover: #ff9b45;
     --Button-border: 0;
     --Button-border-radius: 4px;
-    --Button-color: var(--theme-button-color);
-    --Button-colorHover: var(--theme-button-hover-color);
+    --Button-color: #102408;
+    --Button-colorHover: #1a390c;
     --Button-disabled-opacity: .6;
-    --Button-fontFamily: var(--theme-button-font);
     --Button-fontSize: inherit;
     --Button-letterSpacing: inherit;
     --Button-lineHeight: 1.4;
     --Button-padding: .35em 1.5em;
     --Button-paddingLg: .7em 2em;
     --Button-paddingSm: .2em .75em;
+    
+    /* Alt Button */
+    --Button-alt-color: #fff;
+    --Button-alt-hover-color: #fff;
+    --Button-alt-background: var(--color-primary);
+    --Button-alt-hover-background: #007769;
 }
 
 /**
@@ -45,7 +50,6 @@
     color: var(--Button-color);
     cursor: pointer;
     display: inline-block;
-    font-family: var(--Button-fontFamily);
     font-size: var(--Button-fontSize);
     letter-spacing: var(--Button-letterSpacing);
     line-height: var(--Button-lineHeight);
@@ -93,8 +97,8 @@
  */
 .Button--secondary,
 .Button--secondary[href^=tel] {
-    background: var(--theme-button-alt-background);
-    color: var(--theme-button-alt-color);
+    background: var(--Button-alt-background);
+    color: var(--Button-alt-color);
 }
 
 .Button--secondary:active,
@@ -103,8 +107,8 @@
 .Button--secondary[href^=tel]:focus,
 .Button--secondary:hover,
 .Button--secondary[href^=tel]:hover {
-    background: var(--theme-button-alt-hover-background);
-    color: var(--theme-button-alt-hover-color);
+    background: var(--Button-alt-hover-background);
+    color: var(--Button-alt-hover-color);
 }
 
 /**

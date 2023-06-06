@@ -2,11 +2,13 @@
     Header top bar
 \* =========================================================================== */
 
+:root {
+    --TopBar-color: var(--color-primary);
+}
 
 /* @define TopBar */
-
 .TopBar {
-    background: var(--theme-topbar-color);
+    background: var(--TopBar-color);
     color: #fff;
     font-size: 1.6rem;
     padding: 6px 0;
@@ -24,7 +26,7 @@
 .TopBar-socialLink {
     background: #fff;
     border-radius: 50%;
-    color: var(--theme-topbar-color);
+    color: var(--TopBar-color);
     display: inline-block;
     font-size: 1.8rem;
     height: 1.6em;
@@ -42,7 +44,7 @@
 .TopBar-socialLink:active,
 .TopBar-socialLink:focus,
 .TopBar-socialLink:hover {
-    background: var(--theme-topbar-color);
+    background: var(--TopBar-color);
     color: #fff;
     text-decoration: none;
 }

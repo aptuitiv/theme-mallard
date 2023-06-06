@@ -2,12 +2,24 @@
     Featured Content
 \* =========================================================================== */
 
+:root {
+    --FeaturedContent-background: var(--color-primary);
+    --FeaturedContent-color: #fff;
+    
+    /* Heading */
+    --FeaturedContent-heading-color: #efdbd5;
+    
+    /* Button */
+    --FeaturedContent-button-background: #fff;
+    --FeaturedContent-button-backgroundHover: #003337;
+    --FeaturedContent-button-color: var(--color-primary);
+    --FeaturedContent-button-colorHover: #fff;
+}
 
 /* @define FeaturedContent */
-
 .FeaturedContent {
-    background: var(--theme-featured-content-background);
-    color: var(--theme-featured-content-color);
+    background: var(--FeaturedContent-background);
+    color: var(--FeaturedContent-color);
     margin: 2em calc(var(--g-gutter) * -1);
     padding: 40px;
 }
@@ -27,20 +39,20 @@
 .FeaturedContent h5,
 .FeaturedContent h6,
 .FeaturedContent .ContentGrid-title {
-    color: var(--theme-featured-content-heading-color);
+    color: var(--FeaturedContent-heading-color);
 }
 
 /* postcss-bem-linter: ignore */
 
 .FeaturedContent .Button {
-    background: var(--theme-featured-button-background);
-    color: var(--theme-featured-button-color);
+    background: var(--FeaturedContent-button-background);
+    color: var(--FeaturedContent-button-color);
 }
 
 /* postcss-bem-linter: ignore */
 .FeaturedContent .Button:active,
 .FeaturedContent .Button:focus,
 .FeaturedContent .Button:hover {
-    background: var(--theme-featured-button-background-hover);
-    color: var(--theme-featured-button-color-hover);
+    background: var(--FeaturedContent-button-backgroundHover);
+    color: var(--FeaturedContent-button-colorHover);
 }

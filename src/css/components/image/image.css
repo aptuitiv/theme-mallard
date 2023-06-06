@@ -17,5 +17,5 @@
 }
 
 .Image--outline {
-    outline: 2px solid var(--theme-primary-color);
+    outline: 2px solid var(--color-primary);
 }

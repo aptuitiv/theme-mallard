@@ -2,9 +2,11 @@
     SLIDER
 \* =========================================================================== */
 
+:root {
+    --Slider-backgroundSmallScreens: var(--color-primary);
+}
 
 /** @define Slider */
-
 .Slider {
     clear: both;
     position: relative;
@@ -119,7 +121,7 @@
 
 @media (--c-bp-md) {
     .Slider-content {
-        background: var(--theme-slider-caption-small-screen-background);
+        background: var(--Slider-backgroundSmallScreens);
         bottom: auto;
         display: block;
         left: auto;

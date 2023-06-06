@@ -2,9 +2,29 @@
     SIDEBAR NAVIGATION
 \* =========================================================================== */
 
+:root {
+    --SidebarNav-fontFamily: var(--base-typography-fontFamily);
+    --SidebarNav-fontWeight: 400;
+    --SidebarNav-letterSpacing: 1px;
+    --SidebarNav-color: #4d4d4d;
+    
+    /* Hover */
+    --SidebarNav-backgroundHover: var(--color-primary);
+    --SidebarNav-colorHover: #fff;
+    
+    /* Current */
+    --SidebarNav-current-color: var(--color-primary);
+    
+    /* Parent */
+    --SidebarNav-parent-fontWeight: 400;
+    --SidebarNav-parent-fontSize: 2rem;
+    --SidebarNav-parent-fontFamily: var(--base-typography-fontFamily);
+    --SidebarNav-parent-letterSpacing: 1px;
+    --SidebarNav-parent-lineHeight: 1.3;
+    --SidebarNav-parent-color: var(--color-primary);
+}
 
 /** @define SidebarNav */
-
 .SidebarNav {
     list-style: none;
     margin: 0;
@@ -17,24 +37,24 @@
 }
 
 .SidebarNav-link {
-    color: var(--theme-sidenav-color);
+    color: var(--SidebarNav-color);
     display: block;
-    font-family: var(--theme-sidenav-font);
-    font-weight: var(--theme-sidenav-font-weight);
-    letter-spacing: var(--theme-sidenav-letter-spacing);
+    font-family: var(--SidebarNav-fontFamily);
+    font-weight: var(--SidebarNav-fontWeight);
+    letter-spacing: var(--SidebarNav-letterSpacing);
     padding: 4px 8px;
     position: relative;
     text-decoration: none;
 }
 
 .SidebarNav-link--isParent {
-    border-bottom: 1px solid var(--theme-sidenav-parent-color);
-    color: var(--theme-sidenav-parent-color);
-    font-family: var(--theme-sidenav-parent-font);
-    font-size: var(--theme-sidenav-parent-font-size);
-    font-weight: var(--theme-sidenav-parent-font-weight);
-    letter-spacing: var(--theme-sidenav-parent-letter-spacing);
-    line-height: var(--theme-sidenav-parent-line-height);
+    border-bottom: 1px solid var(--SidebarNav-parent-color);
+    color: var(--SidebarNav-parent-color);
+    font-family: var(--SidebarNav-parent-fontFamily);
+    font-size: var(--SidebarNav-parent-fontSize);
+    font-weight: var(--SidebarNav-parent-fontWeight);
+    letter-spacing: var(--SidebarNav-parent-letterSpacing);
+    line-height: var(--SidebarNav-parent-lineHeight);
     margin-bottom: 8px;
     text-transform: uppercase;
 }
@@ -42,14 +62,14 @@
 .SidebarNav-link:active,
 .SidebarNav-link:focus,
 .SidebarNav-link:hover {
-    background: var(--theme-sidenav-hover-background);
-    color: var(--theme-sidenav-hover-color);
+    background: var(--SidebarNav-backgroundHover);
+    color: var(--SidebarNav-colorHover);
     text-decoration: none;
 }
 
 .SidebarNav-link.is-current,
 .SidebarNav-link.is-currentParent {
-    color: var(--theme-sidenav-current-color);
+    color: var(--SidebarNav-current-color);
     text-decoration: none;
 }
 
@@ -59,13 +79,13 @@
 .SidebarNav-link.is-currentParent:active,
 .SidebarNav-link.is-currentParent:focus,
 .SidebarNav-link.is-currentParent:hover {
-    background: var(--theme-sidenav-hover-background);
-    color: var(--theme-sidenav-hover-color);
+    background: var(--SidebarNav-backgroundHover);
+    color: var(--SidebarNav-colorHover);
     text-decoration: none;
 }
 
 .SidebarNav-link--isParent.is-current,
 .SidebarNav-link--isParent.is-currentParent {
     background: transparent;
-    color: var(--theme-sidenav-color);
+    color: var(--SidebarNav-color);
 }

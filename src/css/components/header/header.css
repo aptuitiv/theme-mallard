@@ -21,7 +21,7 @@
 
 .Header-skipToMain:focus {
     background-color: #fff;
-    color: var(--theme-primary-color);
+    color: var(--color-primary);
     font-weight: bold;
     height: auto;
     left: 10px;

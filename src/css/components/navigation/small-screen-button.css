@@ -6,7 +6,7 @@
 /** @define SmScBtn **/
 
 .SmScBtn {
-    background: var(--theme-primary-color);
+    background: var(--color-primary);
     border: none;
     color: #fff;
     display: none;

@@ -2,11 +2,13 @@
     Columned feature
 \* =========================================================================== */
 
+:root {
+    --ColumnFeature-marginTop: 60px;
+}
 
 /* @define ColumnFeature */
-
 .ColumnFeature {
-    margin-top: var(--theme-feature-top-margin);
+    margin-top: var(--ColumnFeature-marginTop);
 }
 
 .ColumnFeature-title {

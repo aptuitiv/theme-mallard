@@ -2,10 +2,12 @@
     MAIN NAVIGATION BAR
 \* =========================================================================== */
 
+:root {
+    --NavBar-background: var(--color-primary);
+}
 
 /** @define NavBar */
-
 .NavBar {
-    background: var(--theme-navbar-background);
-    color: var(--theme-nav-color);
+    background: var(--NavBar-background);
+    color: var(--MainNav-link-color);
 }

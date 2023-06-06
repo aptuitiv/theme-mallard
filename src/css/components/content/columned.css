@@ -2,9 +2,14 @@
     Columned Content
 \* =========================================================================== */
 
+:root {
+    --ColumnedContent-title-background: #fff;
+    --ColumnedContent-title-color: var(--color-primary);
+    --ColumnedContent-title-hover-background: var(--color-primary);
+    --ColumnedContent-title-hover-color: #fff;
+}
 
 /* @define ColumnedContent */
-
 .ColumnedContent-col {
     align-items: center;
     margin-bottom: 20px;
@@ -24,7 +29,7 @@
 .ColumnedContent-link:active,
 .ColumnedContent-link:focus,
 .ColumnedContent-link:hover {
-    color: var(--theme-columned-content-title-hover-color);
+    color: var(--ColumnedContent-title-hover-color);
     text-decoration: none;
 }
 
@@ -57,8 +62,8 @@
 .ColumnedContent-link:active .ColumnedContent-title,
 .ColumnedContent-link:focus .ColumnedContent-title,
 .ColumnedContent-link:hover .ColumnedContent-title {
-    background: var(--theme-columned-content-title-hover-background);
-    color: var(--theme-columned-content-title-hover-color);
+    background: var(--ColumnedContent-title-hover-background);
+    color: var(--ColumnedContent-title-hover-color);
 }
 
 .ColumnedContent-title--center {
@@ -76,7 +81,7 @@
 .ColumnedContent-title--above,
 .ColumnedContent-title--below,
 .ColumnedContent-title--bottom {
-    background: var(--theme-columned-content-title-background);
-    color: var(--theme-columned-content-title-color);
+    background: var(--ColumnedContent-title-background);
+    color: var(--ColumnedContent-title-color);
     padding: 6px;
 }

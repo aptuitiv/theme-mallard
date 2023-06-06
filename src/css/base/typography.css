@@ -24,8 +24,8 @@
  */
 
 :root {
-    --base-typography-color: var(--theme-typography-color);
-    --base-typography-fontFamily: var(--theme-typography-fontFamily);
+    --base-typography-color: #4d4d4d;
+    --base-typography-fontFamily: 'Open Sans', sans-serif;
     --base-typography-fontSize: 1.8rem;
     --base-typography-fontWeight: 400;
     --base-typography-hrule-width: 1px;
@@ -35,8 +35,8 @@
 }
 
 :root {
-    --base-typography-link-color: var(--theme-typography-link-color);
-    --base-typography-link-colorHover: var(--theme-typography-link-colorHover);
+    --base-typography-link-color: var(--color-primary);
+    --base-typography-link-colorHover: #005243;
     --base-typography-link-decoration: underline;
     --base-typography-link-decorationHover: underline;
 }
@@ -56,8 +56,8 @@
     --base-typography-h4-lineHeight: 1.2;
     --base-typography-h5-lineHeight: 1.2;
     --base-typography-h6-lineHeight: 1.2;
-    --base-typography-heading-color: inherit;
-    --base-typography-heading-fontFamily: sans-serif;
+    --base-typography-heading-color: var(--color-primary);
+    --base-typography-heading-fontFamily: 'Asap Condensed', sans-serif;
     --base-typography-heading-fontWeight: 700;
     --base-typography-heading-letterSpacing: 0;
 }
@@ -205,8 +205,8 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--theme-typography-heading-color);
-    font-family: var(--theme-typography-heading-fontFamily);
+    color: var(--base-typography-heading-color);
+    font-family: var(--base-typography-heading-fontFamily);
     font-weight: var(--base-typography-heading-fontWeight);
     letter-spacing: var(--base-typography-heading-letterSpacing);
     margin: var(--base-typography-spacing) 0 calc(var(--base-typography-spacing) / 3);

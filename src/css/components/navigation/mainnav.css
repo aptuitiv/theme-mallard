@@ -5,13 +5,14 @@
 /** @define MainNav */
 
 :root {
-    --MainNav-fontFamily: var(--theme-nav-font);
-    --MainNav-fontSize: var(--theme-nav-font-size);
-    --MainNav-lineHeight: var(--theme-nav-line-height);
-    --MainNav-link-background: var(--theme-nav-item-background);
-    --MainNav-link-backgroundHover: var(--theme-nav-item-background-hover);
-    --MainNav-link-color: var(--theme-nav-color);
-    --MainNav-link-colorHover: var(--theme-nav-color-hover);
+    --MainNav-fontFamily: var(--base-typography-heading-fontFamily);
+    --MainNav-fontSize: 2.4rem;
+    --MainNav-fontWeight: 400;
+    --MainNav-lineHeight: 1.5;
+    --MainNav-link-background: transparent;
+    --MainNav-link-backgroundHover: transparent;
+    --MainNav-link-color: var(--color-primary);
+    --MainNav-link-colorHover: var(--color-primary);
 }
 
 /**
@@ -67,7 +68,7 @@
     display: block;
     font-family: var(--MainNav-fontFamily);
     font-size: var(--MainNav-fontSize);
-    font-weight: var(--theme-nav-font-weight);
+    font-weight: var(--MainNav-fontWeight);
     letter-spacing: 1px;
     line-height: var(--MainNav-lineHeight);
     padding: .5em 3rem;

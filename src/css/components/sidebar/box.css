@@ -2,9 +2,7 @@
     Sidebar Box Styles
 \* =========================================================================== */
 
-
 /* @define SidebarBox */
-
 .SidebarBox {
     margin-bottom: 40px;
 }
@@ -15,9 +13,9 @@
 
 .SidebarBox-heading {
     background: transparent;
-    border-bottom: 1px solid var(--theme-navbar-bg);
-    color: var(--theme-nav-color);
-    font-family: var(--theme-typography-heading-fontFamily);
+    border-bottom: 1px solid var(--color-primary);
+    color: var(--MainNav-link-color);
+    font-family: var(--base-typography-heading-fontFamily);
     font-size: var(--base-typography-h3-fontSize);
     font-weight: var(--base-typography-heading-fontWeight);
     letter-spacing: var(--base-typography-heading-letterSpacing);
@@ -41,8 +39,7 @@
     Secondary content
 \* ------------------------------------ */
 
-
 .SidebarBox-secondary {
-    color: var(--theme-color-gray);
+    color: var(--color-light);
     font-size: 80%;
 }
