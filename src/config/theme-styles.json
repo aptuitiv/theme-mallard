@@ -482,15 +482,6 @@
                     }
                 },
                 {
-                    "name": "footerNavFontFamily",
-                    "label": "Navigation font family",
-                    "type": "fontFamily",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-nav-font"
-                    }
-                },
-                {
                     "name": "footerNavFontSize",
                     "label": "Navigation font size",
                     "type": "stepper",
@@ -855,19 +846,10 @@
                     "name": "Dropdowns",
                     "fields": [
                         {
-                            "name": "dropdownFontFamily",
-                            "label": "Font family",
-                            "type": "fontFamily",
-                            "preview": {
-                                "type": "css-head",
-                                "cssVariable": "--Dropdown-fontFamily"
-                            }
-                        },
-                        {
                             "name": "dropdownFontWeight",
                             "label": "Font weight",
                             "type": "fontWeight",
-                            "fontFamilyField": "dropdownFontFamily",
+                            "fontFamilyField": "mainNavFontFamily",
                             "default": "400",
                             "preview": {
                                 "type": "css-head",
@@ -951,15 +933,6 @@
                 {
                     "name": "General",
                     "fields": [
-                        {
-                            "name": "sideNavFontFamily",
-                            "label": "Font family",
-                            "type": "fontFamily",
-                            "preview": {
-                                "type": "css-head",
-                                "cssVariable": "--SidebarNav-fontFamily"
-                            }
-                        },
                         {
                             "name": "sideNavFontWeight",
                             "label": "Font weight",
