@@ -16,7 +16,7 @@
                 },
                 {
                     "name": "bannerBackgroundSmallScreens",
-                    "label": "Background color (small screens)",
+                    "label": "Text background color (small screens)",
                     "type": "color",
                     "default": "#008576",
                     "preview": {
@@ -557,7 +557,7 @@
                 },
                 {
                     "name": "imageSliderBackgroundHover",
-                    "label": "Background color (hover)",
+                    "label": "Background color (only applies to hover content)",
                     "type": "color",
                     "default": "#7a0504",
                     "preview": {
@@ -567,7 +567,7 @@
                 },
                 {
                     "name": "imageSliderColorHover",
-                    "label": "Text color (hover)",
+                    "label": "Text color (only applies to hover content)",
                     "type": "color",
                     "default": "#ffffff",
                     "preview": {

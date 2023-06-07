@@ -2,10 +2,10 @@
     File-Heading
 \* =========================================================================== */
 
-
 /* @define FeaturedText */
-
 .FeaturedText {
+    background-color: var(--FeaturedContent-background);
+    color: var(--FeaturedContent-color);
     font-family: var(--base-typography-fontFamily);
     margin: 2em 0;
     padding: 10px;
@@ -20,6 +20,7 @@
 }
 
 .FeaturedText-title {
+    color: var(--FeaturedContent-heading-color);
     font-weight: bold;
     padding: 0 30px;
 }
