@@ -87,5 +87,5 @@
 .SidebarNav-link--isParent.is-current,
 .SidebarNav-link--isParent.is-currentParent {
     background: transparent;
-    color: var(--SidebarNav-color);
+    color: var(--SidebarNav-parent-color);
 }

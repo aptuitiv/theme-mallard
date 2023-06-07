@@ -2,6 +2,7 @@
     "groups": [
         {
             "name": "Banner",
+            "description": "Styles for the page Banner layout.",
             "fields": [
                 {
                     "name": "bannerBackground",
@@ -37,10 +38,11 @@
         },
         {
             "name": "Body",
+            "description": "Styles for the body of the site.",
             "fields": [
                 {
-                    "name": "bodyColor",
-                    "label": "Body color",
+                    "name": "bodyBackground",
+                    "label": "Body background",
                     "type": "color",
                     "default": "#ffffff",
                     "preview": {
@@ -52,91 +54,103 @@
         },
         {
             "name": "Buttons",
-            "fields": [
+            "description": "Styles for buttons throughout the site.",
+            "sections": [
                 {
-                    "name": "buttonColor",
-                    "label": "Text color",
-                    "type": "color",
-                    "default": "#102408",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Button-color"
-                    }
+                    "name": "Primary button",
+                    "fields": [
+                        {
+                            "name": "buttonColor",
+                            "label": "Text color",
+                            "type": "color",
+                            "default": "#102408",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-color"
+                            }
+                        },
+                        {
+                            "name": "buttonColorHover",
+                            "label": "Text color (hover)",
+                            "type": "color",
+                            "default": "#1a390c",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-colorHover"
+                            }
+                        },
+                        {
+                            "name": "buttonBackground",
+                            "label": "Background color",
+                            "type": "color",
+                            "default": "#ffa95e",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-background"
+                            }
+                        },
+                        {
+                            "name": "buttonBackgroundHover",
+                            "label": "Background color (hover)",
+                            "type": "color",
+                            "default": "#ff9b45",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-backgroundHover"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "name": "buttonColorHover",
-                    "label": "Text color (hover)",
-                    "type": "color",
-                    "default": "#1a390c",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Button-colorHover"
-                    }
-                },
-                {
-                    "name": "buttonBackground",
-                    "label": "Background color",
-                    "type": "color",
-                    "default": "#ffa95e",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Button-background"
-                    }
-                },
-                {
-                    "name": "buttonBackgroundHover",
-                    "label": "Background color (hover)",
-                    "type": "color",
-                    "default": "#ff9b45",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Button-backgroundHover"
-                    }
-                },
-                {
-                    "name": "buttonColorAlt",
-                    "label": "Alt text color",
-                    "type": "color",
-                    "default": "#ffffff",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Button-alt-color"
-                    }
-                },
-                {
-                    "name": "buttonColorHoverAlt",
-                    "label": "Alt text color (hover)",
-                    "type": "color",
-                    "default": "#ffffff",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Button-alt-hover-color"
-                    }
-                },
-                {
-                    "name": "buttonBackgroundAlt",
-                    "label": "Alt background color",
-                    "type": "color",
-                    "default": "#008576",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Button-alt-background"
-                    }
-                },
-                {
-                    "name": "buttonBackgroundHoverAlt",
-                    "label": "Alt background color (hover)",
-                    "type": "color",
-                    "default": "#007769",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Button-alt-hover-background"
-                    }
+                    "name": "Secondary button",
+                    "fields": [
+                        {
+                            "name": "buttonColorSecondary",
+                            "label": "Secondary text color",
+                            "type": "color",
+                            "default": "#ffffff",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-alt-color"
+                            }
+                        },
+                        {
+                            "name": "buttonColorHoverSecondary",
+                            "label": "Secondary text color (hover)",
+                            "type": "color",
+                            "default": "#ffffff",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-alt-hover-color"
+                            }
+                        },
+                        {
+                            "name": "buttonBackgroundSecondary",
+                            "label": "Secondary background color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-alt-background"
+                            }
+                        },
+                        {
+                            "name": "buttonBackgroundHoverSecondary",
+                            "label": "Secondary background color (hover)",
+                            "type": "color",
+                            "default": "#007769",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-alt-hover-background"
+                            }
+                        }
+                    ]
                 }
             ]
         },
         {
             "name": "Columned Content",
+            "description": "Styles for the Columned Content block.",
             "fields": [
                 {
                     "name": "columnedContentTitleBackground",
@@ -181,106 +195,12 @@
             ]
         },
         {
-            "name": "Content Bar",
-            "fields": [
-                {
-                    "name": "contentBarBackground",
-                    "label": "Background color",
-                    "type": "color",
-                    "default": "#285585",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentBar-background"
-                    }
-                },
-                {
-                    "name": "contentBarHeadingColor",
-                    "label": "Heading color",
-                    "type": "color",
-                    "default": "#fcfdfe",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentBar-heading-color"
-                    }
-                },
-                {
-                    "name": "contentBarColor",
-                    "label": "Text color",
-                    "type": "color",
-                    "default": "#fcfdfe",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentBar-color"
-                    }
-                },
-                {
-                    "name": "contentBarButtonBackground",
-                    "label": "Button background color",
-                    "type": "color",
-                    "default": "#fcfdfe",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentBar-button-background"
-                    }
-                },
-                {
-                    "name": "contentBarButtonColor",
-                    "label": "Button text color",
-                    "type": "color",
-                    "default": "#285585",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentBar-button-color"
-                    }
-                },
-                {
-                    "name": "contentBarButtonBackgroundHover",
-                    "label": "Button background color (hover)",
-                    "type": "color",
-                    "default": "#cfdff1",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentBar-button-background-hover"
-                    }
-                },
-                {
-                    "name": "contentBarButtonColorHover",
-                    "label": "Button text color (hover)",
-                    "type": "color",
-                    "default": "#285585",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentBar-button-color-hover"
-                    }
-                },
-                {
-                    "name": "contentBarLinkColor",
-                    "label": "Link color",
-                    "type": "color",
-                    "default": "#fcfdfe",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentBar-link-color"
-                    }
-                },
-                {
-                    "name": "contentBarLinkColorHover",
-                    "label": "Link color (hover)",
-                    "type": "color",
-                    "default": "#fcfdfe",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentBar-link-color-hover"
-                    }
-                }
-            ]
-        },
-        {
             "name": "Content Grid",
+            "description": "Styles for the Content Grid block.",
             "fields": [
                 {
-                    "name": "contentGridColor",
-                    "label": "Text color",
+                    "name": "contentGridHeadingColor",
+                    "label": "Heading color",
                     "type": "color",
                     "default": "#008576",
                     "preview": {
@@ -289,8 +209,8 @@
                     }
                 },
                 {
-                    "name": "contentGridColorHover",
-                    "label": "Text color (hover)",
+                    "name": "contentGridHeadingColorHover",
+                    "label": "Heading color (hover)",
                     "type": "color",
                     "default": "#008576",
                     "preview": {
@@ -314,6 +234,7 @@
         },
         {
             "name": "Core Colors",
+            "description": "The colors primarily used throughout the site.",
             "fields": [
                 {
                     "name": "primaryColor",
@@ -339,6 +260,7 @@
         },
         {
             "name": "Featured Content",
+            "description": "Styles for the Featured Content Wrapper block.",
             "fields": [
                 {
                     "name": "featuredContentBackground",
@@ -426,6 +348,7 @@
         },
         {
             "name": "Footer",
+            "description": "Styles for the site footer.",
             "fields": [
                 {
                     "name": "footerBorderWidth",
@@ -482,6 +405,30 @@
                     }
                 },
                 {
+                    "name": "footerPaddingVertical",
+                    "label": "Vertical padding",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "15",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Footer-padding-vertical",
+                        "template": "{{ value }}px"
+                    }
+                },
+                {
+                    "name": "footerPaddingHorizontal",
+                    "label": "Horizontal padding",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "20",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Footer-padding-horizontal",
+                        "template": "{{ value }}px"
+                    }
+                },
+                {
                     "name": "footerNavFontSize",
                     "label": "Navigation font size",
                     "type": "stepper",
@@ -512,35 +459,12 @@
                         "type": "css-head",
                         "cssVariable": "--Footer-nav-color-hover"
                     }
-                },
-                {
-                    "name": "footerPaddingVertical",
-                    "label": "Vertical padding",
-                    "type": "stepper",
-                    "after": "px",
-                    "default": "15",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-padding-vertical",
-                        "template": "{{ value }}px"
-                    }
-                },
-                {
-                    "name": "footerPaddingHorizontal",
-                    "label": "Horizontal padding",
-                    "type": "stepper",
-                    "after": "px",
-                    "default": "20",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-padding-horizontal",
-                        "template": "{{ value }}px"
-                    }
                 }
             ]
         },
         {
             "name": "Image Grid",
+            "description": "Styles for the Image Grid block.",
             "fields": [
                 {
                     "name": "imageGridTitleBackground",
@@ -609,6 +533,7 @@
         },
         {
             "name": "Image Slider",
+            "description": "Styles for the Image Slider block.",
             "fields": [
                 {
                     "name": "imageSliderBackground",
@@ -737,6 +662,7 @@
         },
         {
             "name": "Main Navigation",
+            "description": "Styles for the main navigation in the header.",
             "sections": [
                 {
                     "name": "General",
@@ -783,16 +709,6 @@
                             "preview": {
                                 "type": "css-head",
                                 "cssVariable": "--MainNav-lineHeight"
-                            }
-                        },
-                        {
-                            "name": "mainNavBackground",
-                            "label": "Background color",
-                            "type": "color",
-                            "default": "#008576",
-                            "preview": {
-                                "type": "css-head",
-                                "cssVariable": "--NavBar-background"
                             }
                         },
                         {
@@ -903,32 +819,8 @@
             ]
         },
         {
-            "name": "Page Header",
-            "fields": [
-                {
-                    "name": "pageHeaderBackground",
-                    "label": "Background color",
-                    "type": "color",
-                    "default": "#f2f2f2",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentHeader-background"
-                    }
-                },
-                {
-                    "name": "pageHeaderColor",
-                    "label": "Text color",
-                    "type": "color",
-                    "default": "#4d4d4d",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentHeader-color"
-                    }
-                }
-            ]
-        },
-        {
             "name": "Sidebar Navigation",
+            "description": "Styles for the sidebar navigation used in two-column page templates.",
             "sections": [
                 {
                     "name": "General",
@@ -1000,21 +892,13 @@
                 },
                 {
                     "name": "Parent",
+                    "description": "Styles for the current page's parent link.",
                     "fields": [
-                        {
-                            "name": "sideNavParentFontFamily",
-                            "label": "Font family",
-                            "type": "fontFamily",
-                            "preview": {
-                                "type": "css-head",
-                                "cssVariable": "--SidebarNav-parent-fontFamily"
-                            }
-                        },
                         {
                             "name": "sideNavParentFontWeight",
                             "label": "Font weight",
                             "type": "fontWeight",
-                            "fontFamilyField": "sideNavParentFontFamily",
+                            "fontFamilyField": "baseFontFamily",
                             "default": "400",
                             "preview": {
                                 "type": "css-head",
@@ -1073,21 +957,93 @@
         },
         {
             "name": "Top Bar",
-            "fields": [
+            "description": "Styles for the bar above the header.",
+            "sections": [
                 {
-                    "name": "topBarBackground",
-                    "label": "Background color",
-                    "type": "color",
-                    "default": "#008576",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--TopBar-color"
-                    }
+                    "name": "General",
+                    "fields": [
+                        {
+                            "name": "topBarBackground",
+                            "label": "Background color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-background"
+                            }
+                        },
+                        {
+                            "name": "topBarColor",
+                            "label": "Text color",
+                            "type": "color",
+                            "default": "#ffffff",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-color"
+                            }
+                        },
+                        {
+                            "name": "topBarColorHover",
+                            "label": "Text color (hover)",
+                            "type": "color",
+                            "default": "#ffffff",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-colorHover"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Social",
+                    "fields": [
+                        {
+                            "name": "topBarSocialBackground",
+                            "label": "Social background color",
+                            "type": "color",
+                            "default": "#ffffff",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-background"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialColor",
+                            "label": "Social icon color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-color"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialBackgroundHover",
+                            "label": "Social background color (hover)",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-backgroundHover"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialColorHover",
+                            "label": "Social icon color (hover)",
+                            "type": "color",
+                            "default": "#ffffff",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-colorHover"
+                            }
+                        }
+                    ]
                 }
             ]
         },
         {
             "name": "Typography",
+            "description": "Core typography styles for the site.",
             "sections": [
                 {
                     "name": "Core",

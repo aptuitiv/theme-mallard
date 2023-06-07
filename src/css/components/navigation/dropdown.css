@@ -10,7 +10,7 @@
 
 :root {
     --Dropdown-background: #006c5f;
-    --Dropdown-fontFamily: var(--base-typography-fontFamily);
+    --Dropdown-fontFamily: var(--MainNav-fontFamily);
     --Dropdown-fontSize: 1.8rem;
     --Dropdown-fontWeight: 400;
     --Dropdown-lineHeight: inherit;

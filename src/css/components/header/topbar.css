@@ -3,13 +3,21 @@
 \* =========================================================================== */
 
 :root {
-    --TopBar-color: var(--color-primary);
+    --TopBar-background: var(--color-primary);
+    --TopBar-color: #fff;
+    --TopBar-colorHover: #fff;
+    
+    /* Social */
+    --TopBar-social-background: #fff;
+    --TopBar-social-color: #008576;
+    --TopBar-social-backgroundHover: #008576;
+    --TopBar-social-colorHover: #fff;
 }
 
 /* @define TopBar */
 .TopBar {
-    background: var(--TopBar-color);
-    color: #fff;
+    background: var(--TopBar-background);
+    color: var(--TopBar-color);
     font-size: 1.6rem;
     padding: 6px 0;
 }
@@ -19,14 +27,37 @@
     letter-spacing: 1px;
 }
 
+/* postcss-bem-linter: ignore */
+.TopBar-contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* postcss-bem-linter: ignore */
+.TopBar-contact a:focus-visible {
+    color: var(--TopBar-colorHover);
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    /* postcss-bem-linter: ignore */
+    .TopBar-contact a:hover {
+        color: var(--TopBar-colorHover);
+    }
+}
+
+/* ------------------------------------ *\
+    Social
+\* ------------------------------------ */
+
 .TopBar-social {
     line-height: 1;
 }
 
 .TopBar-socialLink {
-    background: #fff;
+    background: var(--TopBar-social-background);
     border-radius: 50%;
-    color: var(--TopBar-color);
+    color: var(--TopBar-social-color);
     display: inline-block;
     font-size: 1.8rem;
     height: 1.6em;
@@ -44,8 +75,8 @@
 .TopBar-socialLink:active,
 .TopBar-socialLink:focus,
 .TopBar-socialLink:hover {
-    background: var(--TopBar-color);
-    color: #fff;
+    background: var(--TopBar-social-backgroundHover);
+    color: var(--TopBar-social-colorHover);
     text-decoration: none;
 }
 
