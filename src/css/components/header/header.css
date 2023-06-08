@@ -2,9 +2,11 @@
     Header
 \* =========================================================================== */
 
+:root {
+    --Header-skipMain-color: var(--color-primary);
+}
 
 /* @define Header */
-
 .Header {
     padding: 2rem 0;
 }
@@ -21,7 +23,7 @@
 
 .Header-skipToMain:focus {
     background-color: #fff;
-    color: var(--color-primary);
+    color: var(--Header-skipMain-color);
     font-weight: bold;
     height: auto;
     left: 10px;

@@ -2,12 +2,17 @@
     Notification banner at the top of pages
 \* =========================================================================== */
 
+:root {
+    --Notification-background: var(--ContentHeader-background);
+    --Notification-color: var(--ContentHeader-color);
+    --Notification-link-color: var(--color-primary);
+    --Notification-link-colorHover: var(--color-primary);
+}
 
 /* @define Notification */
-
 .Notification {
-    background: var(--ContentHeader-background);
-    color: var(--ContentHeader-color);
+    background: var(--Notification-background);
+    color: var(--Notification-color);
     font-size: 1.18em; /* 26px */
     line-height: 1.2;
     padding: 25px 0;
@@ -20,8 +25,21 @@
 
 /* postcss-bem-linter: ignore */
 .Notification a {
-    color: var(--color-primary);
+    color: var(--Notification-link-color);
     text-decoration: underline;
+}
+
+/* postcss-bem-linter: ignore */
+.Notification a:focus-visible {
+    color: var(--Notification-link-colorHover);
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    /* postcss-bem-linter: ignore */
+    .Notification a:hover {
+        color: var(--Notification-link-colorHover);
+    }
 }
 
 .Notification-content {
@@ -49,7 +67,4 @@
 
 .Notification-close {
     margin-left: 20px;
-}
-
-.Notification-closeIcon {
 }

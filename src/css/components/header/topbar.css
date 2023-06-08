@@ -9,8 +9,8 @@
     
     /* Social */
     --TopBar-social-background: #fff;
-    --TopBar-social-color: #008576;
-    --TopBar-social-backgroundHover: #008576;
+    --TopBar-social-color: var(--color-primary);
+    --TopBar-social-backgroundHover: var(--color-primary);
     --TopBar-social-colorHover: #fff;
 }
 

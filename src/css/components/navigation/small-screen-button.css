@@ -2,13 +2,18 @@
     SMALL SCREEN NAVIGATION BUTTON
 \* =========================================================================== */
 
+:root {
+    --SmScBtn-background: var(--color-primary);
+    --SmScBtn-color: #fff;
+    --SmScBtn-backgroundHover: var(--color-primary);
+    --SmScBtn-colorHover: #fff;
+}
 
 /** @define SmScBtn **/
-
 .SmScBtn {
-    background: var(--color-primary);
+    background: var(--SmScBtn-background);
     border: none;
-    color: #fff;
+    color: var(--SmScBtn-color);
     display: none;
     font-size: 16px;
     line-height: 45px;
@@ -35,7 +40,8 @@
 .SmScBtn:active,
 .SmScBtn:focus,
 .SmScBtn:hover {
-    color: #fff;
+    background: var(--SmScBtn-backgroundHover);
+    color: var(--SmScBtn-colorHover);
     text-decoration: none;
 }
 
@@ -49,13 +55,25 @@
 .SmScBtn-icon,
 .SmScBtn-icon::before,
 .SmScBtn-icon::after {
-    background-color: #fff;
+    background-color: var(--SmScBtn-color);
     border-radius: 4px;
     height: 2px;
     transition-duration: .1s;
     transition-property: all;
     transition-timing-function: cubic-bezier(.55, .055, .675, .19);
     width: 12px;
+}
+
+.SmScBtn:active .SmScBtn-icon,
+.SmScBtn:active .SmScBtn-icon::before,
+.SmScBtn:active .SmScBtn-icon::after,
+.SmScBtn:focus .SmScBtn-icon,
+.SmScBtn:focus .SmScBtn-icon::before,
+.SmScBtn:focus .SmScBtn-icon::after,
+.SmScBtn:hover .SmScBtn-icon,
+.SmScBtn:hover .SmScBtn-icon::before,
+.SmScBtn:hover .SmScBtn-icon::after {
+    background-color: var(--SmScBtn-colorHover);
 }
 
 .SmScBtn-icon::before,

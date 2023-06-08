@@ -84,7 +84,6 @@
 }
 
 /* postcss-bem-linter: ignore */
-
 .ContentBar--dark .u-headingCentered::after {
     background: #fff;
 }

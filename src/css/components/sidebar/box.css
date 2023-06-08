@@ -2,6 +2,11 @@
     Sidebar Box Styles
 \* =========================================================================== */
 
+:root {
+    --SidebarBox-heading-color: var(--color-primary);
+    --SidebarBox-secondary-color: #4d4d4d;
+}
+
 /* @define SidebarBox */
 .SidebarBox {
     margin-bottom: 40px;
@@ -13,8 +18,8 @@
 
 .SidebarBox-heading {
     background: transparent;
-    border-bottom: 1px solid var(--color-primary);
-    color: var(--MainNav-link-color);
+    border-bottom: 1px solid var(--SidebarBox-heading-color);
+    color: var(--SidebarBox-heading-color);
     font-family: var(--base-typography-heading-fontFamily);
     font-size: var(--base-typography-h3-fontSize);
     font-weight: var(--base-typography-heading-fontWeight);
@@ -40,6 +45,6 @@
 \* ------------------------------------ */
 
 .SidebarBox-secondary {
-    color: var(--color-light);
+    color: var(--SidebarBox-secondary-color);
     font-size: 80%;
 }

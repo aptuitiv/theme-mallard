@@ -33,6 +33,49 @@
                         "type": "css-head",
                         "cssVariable": "--ContentHeader-color"
                     }
+                },
+                {
+                    "name": "bannerDotColor",
+                    "label": "Dot color (small screens)",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--ImageSlider-dot-color"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Blog",
+            "description": "Styles for the Blog app.",
+            "sections": [
+                {
+                    "name": "Sidebar",
+                    "description": "Styles for the Blog app sidebar.",
+                    "fields": [
+                        {
+                            "name": "blogSidebarHeadingColor",
+                            "label": "Heading color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--SidebarBox-heading-color"
+                            }
+                        },
+                        {
+                            "name": "blogSidebarSecondaryColor",
+                            "label": "Accent color",
+                            "description": "Used for post count and dates.",
+                            "type": "color",
+                            "default": "#4d4d4d",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--SidebarBox-secondary-color"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -228,32 +271,6 @@
                         "type": "css-head",
                         "cssVariable": "--ContentGrid-marginTop",
                         "template": "{{ value }}px"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Core Colors",
-            "description": "The colors primarily used throughout the site.",
-            "fields": [
-                {
-                    "name": "primaryColor",
-                    "label": "Primary color",
-                    "type": "color",
-                    "default": "#008576",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--color-primary"
-                    }
-                },
-                {
-                    "name": "lightColor",
-                    "label": "Light color",
-                    "type": "color",
-                    "default": "#fbdcc5",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--color-light"
                     }
                 }
             ]
@@ -559,7 +576,7 @@
                     "name": "imageSliderBackgroundHover",
                     "label": "Background color (only applies to hover content)",
                     "type": "color",
-                    "default": "#7a0504",
+                    "default": "#008576",
                     "preview": {
                         "type": "css-head",
                         "cssVariable": "--ImageSlider-hover-background"
@@ -599,7 +616,7 @@
                     "name": "imageSliderTitleBackgroundHover",
                     "label": "Title background color (hover)",
                     "type": "color",
-                    "default": "#7a0504",
+                    "default": "#008576",
                     "preview": {
                         "type": "css-head",
                         "cssVariable": "--ImageSlider-title-background-hover"
@@ -642,7 +659,7 @@
                     "name": "imageSliderBackgroundCover",
                     "label": "Cover background color",
                     "type": "color",
-                    "default": "#a2151480",
+                    "default": "#00857680",
                     "preview": {
                         "type": "css-head",
                         "cssVariable": "--ImageSlider-cover-background"
@@ -819,6 +836,98 @@
             ]
         },
         {
+            "name": "Menu Button (Small Screens)",
+            "description": "Styles for the small screen main navigation button.",
+            "fields": [
+                {
+                    "name": "menuButtonBackground",
+                    "label": "Background color",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--SmScBtn-background"
+                    }
+                },
+                {
+                    "name": "menuButtonColor",
+                    "label": "Text color",
+                    "type": "color",
+                    "default": "#ffffff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--SmScBtn-color"
+                    }
+                },
+                {
+                    "name": "menuButtonBackgroundHover",
+                    "label": "Background color (hover)",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--SmScBtn-backgroundHover"
+                    }
+                },
+                {
+                    "name": "menuButtonColorHover",
+                    "label": "Text color (hover)",
+                    "type": "color",
+                    "default": "#ffffff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--SmScBtn-colorHover"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Notification Bar",
+            "description": "Styles for the notification bar above the header. Editable under Widgets &rarr; Collections &rarr; Notification Bar.",
+            "fields": [
+                {
+                    "name": "notificationBackground",
+                    "label": "Background color",
+                    "type": "color",
+                    "default": "#fbdcc5",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Notification-background"
+                    }
+                },
+                {
+                    "name": "notificationColor",
+                    "label": "Text color",
+                    "type": "color",
+                    "default": "#4d4d4d",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Notification-color"
+                    }
+                },
+                {
+                    "name": "notificationLinkColor",
+                    "label": "Link color",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Notification-link-color"
+                    }
+                },
+                {
+                    "name": "notificationLinkColorHover",
+                    "label": "Link color (hover)",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Notification-link-colorHover"
+                    }
+                }
+            ]
+        },
+        {
             "name": "Sidebar Navigation",
             "description": "Styles for the sidebar navigation used in two-column page templates.",
             "sections": [
@@ -952,6 +1061,22 @@
                             }
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Skip to Main Button",
+            "description": "Styles for the \"Skip to Main\" button when using a keyboard to navigate the site.",
+            "fields": [
+                {
+                    "name": "skipMainButtonColor",
+                    "label": "Text color",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Header-skipMain-color"
+                    }
                 }
             ]
         },
@@ -1114,6 +1239,17 @@
                             "preview": {
                                 "type": "css-head",
                                 "cssVariable": "--base-typography-heading-color"
+                            }
+                        },
+                        {
+                            "name": "headingUnderlineColor",
+                            "label": "Underline color",
+                            "description": "Can be applied to headings in the rich text editor under Block &rarr; Heading Centered Underline.",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Heading-underline-color"
                             }
                         }
                     ]
