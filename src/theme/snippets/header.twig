@@ -37,7 +37,7 @@
 {{ _page.bodyStartCode() }}
 {{ _api.widgets.collection.get('notification-bar') }}
     <div class="u-hiddenVisually">{{ source('snippets/svg-icons.twig') }}</div>
-    {% spaceless %}
+    {% apply spaceless %}
     <header>
         <a class="Header-skipToMain" href="#main">skip to main content {{ macros.iconAriaHidden("chevron-small-right") }}</a>
         <div class="TopBar">
@@ -107,4 +107,4 @@
             </div>
         </div>
     </header>
-    {% endspaceless %}
+    {% endapply %}

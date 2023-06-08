@@ -45,7 +45,7 @@
             {% endif %}
             <div class="Grid-cell {{ class }} ColumnedContent-col">
                 <div class="ColumnedContent-item">
-                    {% spaceless %}
+                    {% apply spaceless %}
                         {% if column.link %}
                             <a href="{{ column.link }}" class="ColumnedContent-link">
                         {% endif %}
@@ -55,7 +55,7 @@
                         {% if column.link %}
                             </a>
                         {% endif %}
-                    {% endspaceless %}
+                    {% endapply %}
                     {% if column.content %}
                         <div class="ColumnedContent-content">{{ column.content }}</div>
                     {% endif %}
