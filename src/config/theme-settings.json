@@ -6,11 +6,7 @@
                 {
                     "name": "showBreadcrumb",
                     "label": "Show Breadcrumb Text",
-                    "type": "radio",
-                    "options": {
-                        "yes": "Yes",
-                        "no": "No"
-                    },
+                    "type": "switch",
                     "default": "yes"
                 }
             ]
@@ -57,46 +53,6 @@
             "description": "Content for the header that is used on all pages",
             "fields": [
                 {
-                    "name": "headerShowAddress",
-                    "label": "Show Address",
-                    "type": "radio",
-                    "options": {
-                        "yes": "Yes",
-                        "no": "No"
-                    },
-                    "default": "yes"
-                },
-                {
-                    "name": "headerShowPhone",
-                    "label": "Show Phone Number",
-                    "type": "radio",
-                    "options": {
-                        "yes": "Yes",
-                        "no": "No"
-                    },
-                    "default": "yes"
-                },
-                {
-                    "name": "headerShowEmail",
-                    "label": "Show Email",
-                    "type": "radio",
-                    "options": {
-                        "yes": "Yes",
-                        "no": "No"
-                    },
-                    "default": "yes"
-                },
-                {
-                    "name": "headerShowSocial",
-                    "label": "Show Social",
-                    "type": "radio",
-                    "options": {
-                        "yes": "Yes",
-                        "no": "No"
-                    },
-                    "default": "yes"
-                },
-                {
                     "name": "headerLogo",
                     "label": "Logo",
                     "type": "image",
@@ -107,6 +63,30 @@
                         "contentSelector": ".Header-logo",
                         "template": "<img src=\"{{ url }}\" height=\"{{ imageHeight }}\" width=\"{{ imageWidth }}\" alt=\"{{ alt }}\" class=\"Header-logo\">"
                     }
+                },
+                {
+                    "name": "headerShowAddress",
+                    "label": "Show Address",
+                    "type": "switch",
+                    "default": "yes"
+                },
+                {
+                    "name": "headerShowPhone",
+                    "label": "Show Phone Number",
+                    "type": "switch",
+                    "default": "yes"
+                },
+                {
+                    "name": "headerShowEmail",
+                    "label": "Show Email",
+                    "type": "switch",
+                    "default": "yes"
+                },
+                {
+                    "name": "headerShowSocial",
+                    "label": "Show Social",
+                    "type": "switch",
+                    "default": "yes"
                 }
             ]
         },
@@ -117,41 +97,25 @@
                 {
                     "name": "footerShowNavigation",
                     "label": "Show Navigation",
-                    "type": "radio",
-                    "options": {
-                        "yes": "Yes",
-                        "no": "No"
-                    },
+                    "type": "switch",
                     "default": "yes"
                 },
                 {
                     "name": "footerShowAddress",
                     "label": "Show Address",
-                    "type": "radio",
-                    "options": {
-                        "yes": "Yes",
-                        "no": "No"
-                    },
+                    "type": "switch",
                     "default": "yes"
                 },
                 {
                     "name": "footerShowPhone",
                     "label": "Show Phone Number",
-                    "type": "radio",
-                    "options": {
-                        "yes": "Yes",
-                        "no": "No"
-                    },
+                    "type": "switch",
                     "default": "yes"
                 },
                 {
                     "name": "footerShowEmail",
                     "label": "Show Email",
-                    "type": "radio",
-                    "options": {
-                        "yes": "Yes",
-                        "no": "No"
-                    },
+                    "type": "switch",
                     "default": "yes"
                 }
             ]
