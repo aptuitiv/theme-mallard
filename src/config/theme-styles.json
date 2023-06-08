@@ -1232,6 +1232,17 @@
                             }
                         },
                         {
+                            "name": "headingFontWeight",
+                            "label": "Font weight",
+                            "type": "fontWeight",
+                            "fontFamilyField": "headingFontFamily",
+                            "default": "700",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-heading-fontWeight"
+                            }
+                        },
+                        {
                             "name": "headingColor",
                             "label": "Text color",
                             "type": "color",
