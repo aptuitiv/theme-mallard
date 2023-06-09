@@ -1420,9 +1420,9 @@
         {
             "name": "Typography",
             "description": "Core typography styles for the site.",
-            "sections": [
+            "groups": [
                 {
-                    "name": "Core",
+                    "name": "General",
                     "fields": [
                         {
                             "name": "baseFontFamily",
@@ -1483,27 +1483,6 @@
                             }
                         },
                         {
-                            "name": "headingFontWeight",
-                            "label": "Font weight",
-                            "type": "fontWeight",
-                            "fontFamilyField": "headingFontFamily",
-                            "default": "700",
-                            "preview": {
-                                "type": "css-head",
-                                "cssVariable": "--base-typography-heading-fontWeight"
-                            }
-                        },
-                        {
-                            "name": "headingColor",
-                            "label": "Text color",
-                            "type": "color",
-                            "default": "#008576",
-                            "preview": {
-                                "type": "css-head",
-                                "cssVariable": "--base-typography-heading-color"
-                            }
-                        },
-                        {
                             "name": "headingUnderlineColor",
                             "label": "Underline color",
                             "description": "Can be applied to headings in the rich text editor under Block &rarr; Heading Centered Underline.",
@@ -1512,6 +1491,540 @@
                             "preview": {
                                 "type": "css-head",
                                 "cssVariable": "--Heading-underline-color"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "H1",
+                    "fields": [
+                        {
+                            "name": "h1FontWeight",
+                            "label": "H1 font weight",
+                            "type": "fontWeight",
+                            "fontFamilyField": "headingFontFamily",
+                            "default": "700",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h1-fontWeight"
+                            }
+                        },
+                        {
+                            "name": "h1TextTransform",
+                            "label": "H1 capitalization",
+                            "type": "select",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h1-textTransform"
+                            }
+                        },
+                        {
+                            "name": "h1FontSize",
+                            "label": "H1 Font size",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "27",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h1-fontSize",
+                                "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "h1LineHeight",
+                            "label": "H1 Line height",
+                            "type": "stepper",
+                            "step": "0.1",
+                            "decimals": "1",
+                            "default": "1.2",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h1-lineHeight"
+                            }
+                        },
+                        {
+                            "name": "h1MarginBottom",
+                            "label": "H1 Bottom Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "15",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h1-marginBottom",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "h1MarginTop",
+                            "label": "H1 Top Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "40",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h1-marginTop",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "fontH1Color",
+                            "label": "H1 color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h1-color"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "H2",
+                    "fields": [
+                        {
+                            "name": "h2FontWeight",
+                            "label": "H2 font weight",
+                            "type": "fontWeight",
+                            "fontFamilyField": "headingFontFamily",
+                            "default": "700",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h2-fontWeight"
+                            }
+                        },
+                        {
+                            "name": "h2TextTransform",
+                            "label": "H2 capitalization",
+                            "type": "select",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h2-textTransform"
+                            }
+                        },
+                        {
+                            "name": "h2FontSize",
+                            "label": "H2 Font size",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "25",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h2-fontSize",
+                                "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "h2LineHeight",
+                            "label": "H2 Line height",
+                            "type": "stepper",
+                            "step": "0.1",
+                            "decimals": "1",
+                            "default": "1.2",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h2-lineHeight"
+                            }
+                        },
+                        {
+                            "name": "h2MarginBottom",
+                            "label": "H2 Bottom Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "15",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h2-marginBottom",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "h2MarginTop",
+                            "label": "H2 Top Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "40",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h2-marginTop",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "fontH2Color",
+                            "label": "H2 color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h2-color"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "H3",
+                    "fields": [
+                        {
+                            "name": "h3FontWeight",
+                            "label": "H3 font weight",
+                            "type": "fontWeight",
+                            "fontFamilyField": "headingFontFamily",
+                            "default": "700",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h3-fontWeight"
+                            }
+                        },
+                        {
+                            "name": "h3TextTransform",
+                            "label": "H3 capitalization",
+                            "type": "select",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h3-textTransform"
+                            }
+                        },
+                        {
+                            "name": "h3FontSize",
+                            "label": "H3 Font size",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "23",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h3-fontSize",
+                                "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "h3LineHeight",
+                            "label": "H3 Line height",
+                            "type": "stepper",
+                            "step": "0.1",
+                            "decimals": "1",
+                            "default": "1.2",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h3-lineHeight"
+                            }
+                        },
+                        {
+                            "name": "h3MarginBottom",
+                            "label": "H3 Bottom Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "15",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h3-marginBottom",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "h3MarginTop",
+                            "label": "H3 Top Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "40",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h3-marginTop",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "fontH3Color",
+                            "label": "H3 color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h3-color"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "H4",
+                    "fields": [
+                        {
+                            "name": "h4FontWeight",
+                            "label": "H4 font weight",
+                            "type": "fontWeight",
+                            "fontFamilyField": "headingFontFamily",
+                            "default": "700",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h4-fontWeight"
+                            }
+                        },
+                        {
+                            "name": "h4TextTransform",
+                            "label": "H4 capitalization",
+                            "type": "select",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h4-textTransform"
+                            }
+                        },
+                        {
+                            "name": "h4FontSize",
+                            "label": "H4 Font size",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "20",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h4-fontSize",
+                                "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "h4LineHeight",
+                            "label": "H4 Line height",
+                            "type": "stepper",
+                            "step": "0.1",
+                            "decimals": "1",
+                            "default": "1.2",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h4-lineHeight"
+                            }
+                        },
+                        {
+                            "name": "h4MarginBottom",
+                            "label": "H4 Bottom Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "15",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h4-marginBottom",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "h4MarginTop",
+                            "label": "H4 Top Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "40",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h4-marginTop",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "fontH4Color",
+                            "label": "H4 color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h4-color"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "H5",
+                    "fields": [
+                        {
+                            "name": "h5FontWeight",
+                            "label": "H5 font weight",
+                            "type": "fontWeight",
+                            "fontFamilyField": "headingFontFamily",
+                            "default": "700",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h5-fontWeight"
+                            }
+                        },
+                        {
+                            "name": "h5TextTransform",
+                            "label": "H5 capitalization",
+                            "type": "select",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h5-textTransform"
+                            }
+                        },
+                        {
+                            "name": "h5FontSize",
+                            "label": "H5 Font size",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "18",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h5-fontSize",
+                                "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "h5LineHeight",
+                            "label": "H4 Line height",
+                            "type": "stepper",
+                            "step": "0.1",
+                            "decimals": "1",
+                            "default": "1.2",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h5-lineHeight"
+                            }
+                        },
+                        {
+                            "name": "h5MarginBottom",
+                            "label": "H5 Bottom Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "15",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h5-marginBottom",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "h5MarginTop",
+                            "label": "H5 Top Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "40",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h5-marginTop",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "fontH5Color",
+                            "label": "H5 color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h5-color"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "H6",
+                    "fields": [
+                        {
+                            "name": "h6FontWeight",
+                            "label": "H6 font weight",
+                            "type": "fontWeight",
+                            "fontFamilyField": "headingFontFamily",
+                            "default": "700",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h6-fontWeight"
+                            }
+                        },
+                        {
+                            "name": "h6TextTransform",
+                            "label": "H6 capitalization",
+                            "type": "select",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h6-textTransform"
+                            }
+                        },
+                        {
+                            "name": "h6FontSize",
+                            "label": "H6 Font size",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "18",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h6-fontSize",
+                                "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "h6LineHeight",
+                            "label": "H6 Line height",
+                            "type": "stepper",
+                            "step": "0.1",
+                            "decimals": "1",
+                            "default": "1.2",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h6-lineHeight"
+                            }
+                        },
+                        {
+                            "name": "h6MarginBottom",
+                            "label": "H6 Bottom Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "15",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h6-marginBottom",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "h6MarginTop",
+                            "label": "H6 Top Margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "40",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h6-marginTop",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "fontH6Color",
+                            "label": "H6 color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--base-typography-h6-color"
                             }
                         }
                     ]
