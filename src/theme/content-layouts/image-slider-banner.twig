@@ -3,15 +3,14 @@
         <a href="{{ slide.link }}" class="Slider-link">
     {% endif %}
     
-    <picture class="Slider-image">
-        <source media="(max-width: 600px)" srcset="{{ slide.images.small.src }}">
-        <source media="(max-width: 1200px)" srcset="{{ slide.images.medium.src }}">
-        {% if slide.altText %}
-            {% set slide.images.large.alt = slide.altText %}
-        {% endif %}
-        {{ slide.images.large.tag }}
-    </picture>
+    {# Image #}
+    {% set slide.image.picture.class = "Slider-image" %}
+    {% for imageOption in _core.theme.settings.bannerSmallScreenImagesPipeline %}
+        {% do slide.image.addSource("(max-width: " ~ imageOption.maxWidth ~ "px)").resize(imageOption.maxWidth) %}
+    {% endfor %}
+    {{ slide.image.tag }}
     
+    {# Content #}
     {% if slide.captionTitle or slide.caption  %}
         <span class="Slider-content Slider-content--{{ slide.captionPosition|camel }}">
             {% if slide.captionTitle %}

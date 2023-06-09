@@ -987,6 +987,32 @@
             ]
         },
         {
+            "name": "Image Pipeline",
+            "description": "Change the behavior of the image pipeline. The image pipeline optimizes for a variety of different screen sizes.",
+            "sections": [
+                {
+                    "name": "Banner",
+                    "fields": [
+                        {
+                            "name": "bannerSmallScreenImagesPipeline",
+                            "label": "Small screen image widths",
+                            "description": "The breakpoints and widths to reprocess an image for a user's screen. Ex: 600, 800, 1000.",
+                            "type": "repeating",
+                            "itemName": "Image",
+                            "children": [
+                                {
+                                    "name": "maxWidth",
+                                    "label": "Max width",
+                                    "type": "stepper",
+                                    "after": "px"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Image Slider",
             "description": "Styles for the Image Slider block.",
             "sections": [
