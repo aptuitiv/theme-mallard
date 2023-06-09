@@ -2,8 +2,12 @@
     FIELD LABEL
 \* =========================================================================== */
 
+:root {
+    --FormLabel-fontWeight: 700;
+}
+
 .FormLabel {
-    font-weight: bold;
+    font-weight: var(--FormLabel-fontWeight);
 }
 
 .FormLabel--block {

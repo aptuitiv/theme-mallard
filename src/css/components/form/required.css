@@ -2,8 +2,11 @@
     REQUIRED MESSAGE
 \* =========================================================================== */
 
-/** @define FormRequired */
+:root {
+    --FormRequired-color: #d83c35;
+}
 
+/** @define FormRequired */
 .FormRequired {
-    color: #d83c35;
+    color: var(--FormRequired-color);
 }

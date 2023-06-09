@@ -2,8 +2,6 @@
    SelectInput
    ========================================================================== */
 
-/** @define SelectInput; weak */
-
 /**
  * Provides custom styles for select menu input fields.
  * Any <select> that is a child of a `.SelectInput` element will be styled.
@@ -11,21 +9,21 @@
 
 :root {
     --SelectInput-background: #fff;
-    --SelectInput-border: 1px solid #777;
+    --SelectInput-borderWidth: 1px;
+    --SelectInput-borderColor: #777;
+    --SelectInput-border: var(--SelectInput-borderWidth) solid var(--SelectInput-borderColor);
+    --SelectInput-borderRadius: 4px;
     --SelectInput-padding: .25em .5em;
     --SelectInput-color: inherit;
     --SelectInput-errorColor: #f00;
     --SelectInput-successColor: #0f0;
 }
 
-/**
- * Field wrapper that theme is applied to
- */
-
+/** @define SelectInput; weak */
 .SelectInput {
     background: var(--SelectInput-background);
     border: var(--SelectInput-border);
-    border-radius: var(--Button-border-radius);
+    border-radius: var(--SelectInput-borderRadius);
     box-sizing: border-box;
     color: var(--SelectInput-color);
     display: inline-block;
@@ -37,7 +35,6 @@
 /**
  * Dropdown arrow element
  */
-
 .SelectInput::before {
     background: none;
     border: 6px solid;
@@ -56,12 +53,12 @@
  * 1. Select input reset
  * 2. Appear above the `.SelectInput::before` element to allow for clicking.
  */
-
 .SelectInput > select {
     appearance: none; /* 1 */
     background: transparent; /* 1 */
     border: 0; /* 1 */
     box-sizing: border-box;
+    color: var(--SelectInput-color);
     display: block;
     margin: 0; /* 1 */
     outline: 0; /* 1 */
@@ -73,7 +70,6 @@
 /**
  * UI states
  */
-
 .SelectInput.is-invalid {
     color: var(--SelectInput-errorColor);
     outline: 1px solid var(--SelectInput-errorColor);

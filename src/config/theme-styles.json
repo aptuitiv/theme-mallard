@@ -908,6 +908,135 @@
             ]
         },
         {
+            "name": "Forms",
+            "sections": [
+                {
+                    "name": "General",
+                    "fields": [
+                        {
+                            "name": "formLabelFontWeight",
+                            "label": "Form label font weight",
+                            "type": "fontWeight",
+                            "fontFamilyField": "bodyFontFamily",
+                            "default": "700",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FormLabel-fontWeight"
+                            }
+                        },
+                        {
+                            "name": "formRequiredColor",
+                            "label": "Required asterisk color",
+                            "type": "color",
+                            "default": "#d83c35",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FormRequired-color"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Text Input",
+                    "fields": [
+                        {
+                            "name": "textInputBorderRadius",
+                            "label": "Border radius",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "4",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--TextInput-borderRadius",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "textInputBorderWidth",
+                            "label": "Border width",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "1",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--TextInput-borderWidth",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "textInputBorderColor",
+                            "label": "Border color",
+                            "type": "color",
+                            "default": "#777",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--TextInput-borderColor"
+                            }
+                        },
+                        {
+                            "name": "textInputTextColor",
+                            "label": "Text color",
+                            "type": "color",
+                            "default": "#4d4d4d",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--TextInput-color"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Select Input",
+                    "fields": [
+                        {
+                            "name": "selectInputBorderRadius",
+                            "label": "Border radius",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "4",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--SelectInput-borderRadius",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "selectInputBorderWidth",
+                            "label": "Border width",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "1",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--SelectInput-borderWidth",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "selectInputBorderColor",
+                            "label": "Border color",
+                            "type": "color",
+                            "default": "#777",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--SelectInput-borderColor"
+                            }
+                        },
+                        {
+                            "name": "selectInputTextColor",
+                            "label": "Text color",
+                            "type": "color",
+                            "default": "#4d4d4d",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--SelectInput-color"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Image Grid",
             "description": "Styles for the Image Grid block.",
             "sections": [

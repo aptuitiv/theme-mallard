@@ -2,25 +2,27 @@
    TextInput
    ========================================================================== */
 
-/** @define TextInput */
-
 /**
  * Provides custom styling for text input fields and textareas
  */
 
 :root {
+    --TextInput-borderWidth: 1px;
+    --TextInput-borderColor: #777;
+    --TextInput-border: var(--TextInput-borderWidth) solid var(--TextInput-borderColor);
+    --TextInput-borderRadius: 4px;
     --TextInput-background: #fff;
-    --TextInput-border: 1px solid #777;
     --TextInput-padding: .25em .5em;
     --TextInput-color: inherit;
     --TextInput-errorColor: #f00;
     --TextInput-successColor: #0f0;
 }
 
+/** @define TextInput */
 .TextInput {
     background: var(--TextInput-background);
     border: var(--TextInput-border);
-    border-radius: var(--Button-border-radius);
+    border-radius: var(--TextInput-borderRadius);
     box-sizing: border-box;
     color: var(--TextInput-color);
     outline: none;
