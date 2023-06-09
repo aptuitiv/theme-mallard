@@ -2,9 +2,18 @@
     File-Heading
 \* =========================================================================== */
 
+:root {
+    --FeaturedText-content-fontWeight: 400;
+    --FeaturedText-content-fontSize: 3rem;
+    
+    --FeaturedText-title-fontWeight: 700;
+    --FeaturedText-title-fontSize: 1.8rem;
+}
+
 /* @define FeaturedText */
 .FeaturedText {
     background-color: var(--FeaturedContent-background);
+    border-radius: var(--FeaturedContent-borderRadius);
     color: var(--FeaturedContent-color);
     font-family: var(--base-typography-fontFamily);
     margin: 2em 0;
@@ -13,14 +22,16 @@
 }
 
 .FeaturedText-content {
-    font-size: 30px;
+    font-size: var(--FeaturedText-content-fontSize);
     font-style: italic;
-    line-height: 42px;
-    margin-bottom: 1em;
+    font-weight: var(--FeaturedText-content-fontWeight);
+    margin-bottom: 20px;
 }
 
 .FeaturedText-title {
-    color: var(--FeaturedContent-heading-color);
+    color: var(--FeaturedContent-title-color);
+    font-size: var(--FeaturedText-title-fontSize);
     font-weight: bold;
+    font-weight: var(--FeaturedText-title-fontWeight);
     padding: 0 30px;
 }

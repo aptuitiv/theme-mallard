@@ -52,5 +52,5 @@
 
 /* postcss-bem-linter: ignore */
 .FeaturedContent .ContentGrid-title {
-    color: var(--FeaturedContent-heading-color);
+    color: var(--FeaturedContent-title-color);
 }

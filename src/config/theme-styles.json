@@ -349,89 +349,162 @@
         },
         {
             "name": "Featured Content",
-            "description": "Styles for the Featured Content Wrapper block.",
-            "fields": [
+            "description": "Styles for the Featured Content Wrapper &amp; Featured Text block.",
+            "sections": [
                 {
-                    "name": "featuredContentBackground",
-                    "label": "Background color",
-                    "type": "color",
-                    "default": "#008576",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--FeaturedContent-background"
-                    }
+                    "name": "General",
+                    "fields": [
+                        {
+                            "name": "featuredContentBackground",
+                            "label": "Background color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedContent-background"
+                            }
+                        },
+                        {
+                            "name": "featuredContentColor",
+                            "label": "Text color",
+                            "type": "color",
+                            "default": "#ffffff",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedContent-color"
+                            }
+                        },
+                        {
+                            "name": "featuredContentTitleColor",
+                            "label": "Title color",
+                            "type": "color",
+                            "default": "#efdbd5",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedContent-title-color"
+                            }
+                        },
+                        {
+                            "name": "featuredContentTopMargin",
+                            "label": "Top margin",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "60",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--ColumnFeature-marginTop",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "featuredContentBorderRadius",
+                            "label": "Border radius",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "0",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedContent-borderRadius",
+                                "template": "{{ value }}px"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "name": "featuredContentColor",
-                    "label": "Text color",
-                    "type": "color",
-                    "default": "#ffffff",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--FeaturedContent-color"
-                    }
+                    "name": "Text",
+                    "fields": [
+                        {
+                            "name": "featuredTextContentFontSize",
+                            "label": "Content font size",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "30",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedText-content-fontSize",
+                                "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "featuredTextContentFontWeight",
+                            "label": "Content font weight",
+                            "type": "fontWeight",
+                            "fontFamilyField": "baseFontFamily",
+                            "default": "400",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedText-content-fontWeight"
+                            }
+                        },
+                        {
+                            "name": "featuredTextTitleFontSize",
+                            "label": "Title font size",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "18",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedText-title-fontSize",
+                                "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "featuredTextTitleFontWeight",
+                            "label": "Title font weight",
+                            "type": "fontWeight",
+                            "fontFamilyField": "baseFontFamily",
+                            "default": "700",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedText-title-fontWeight"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "name": "featuredContentHeadingColor",
-                    "label": "Heading color",
-                    "type": "color",
-                    "default": "#efdbd5",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--FeaturedContent-heading-color"
-                    }
-                },
-                {
-                    "name": "featuredContentButtonBackground",
-                    "label": "Button background color",
-                    "type": "color",
-                    "default": "#ffffff",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--FeaturedContent-button-background"
-                    }
-                },
-                {
-                    "name": "featuredContentButtonColor",
-                    "label": "Button text color",
-                    "type": "color",
-                    "default": "#008576",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--FeaturedContent-button-color"
-                    }
-                },
-                {
-                    "name": "featuredContentButtonBackgroundHover",
-                    "label": "Button background color (hover)",
-                    "type": "color",
-                    "default": "#003337",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--FeaturedContent-button-backgroundHover"
-                    }
-                },
-                {
-                    "name": "featuredContentButtonColorHover",
-                    "label": "Button text color (hover)",
-                    "type": "color",
-                    "default": "#ffffff",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--FeaturedContent-button-colorHover"
-                    }
-                },
-                {
-                    "name": "featuredContentTopMargin",
-                    "label": "Top margin",
-                    "type": "stepper",
-                    "after": "px",
-                    "default": "60",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ColumnFeature-marginTop",
-                        "template": "{{ value }}px"
-                    }
+                    "name": "Button",
+                    "fields": [
+                        {
+                            "name": "featuredContentButtonBackground",
+                            "label": "Button background color",
+                            "type": "color",
+                            "default": "#ffffff",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedContent-button-background"
+                            }
+                        },
+                        {
+                            "name": "featuredContentButtonColor",
+                            "label": "Button text color",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedContent-button-color"
+                            }
+                        },
+                        {
+                            "name": "featuredContentButtonBackgroundHover",
+                            "label": "Button background color (hover)",
+                            "type": "color",
+                            "default": "#003337",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedContent-button-backgroundHover"
+                            }
+                        },
+                        {
+                            "name": "featuredContentButtonColorHover",
+                            "label": "Button text color (hover)",
+                            "type": "color",
+                            "default": "#ffffff",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FeaturedContent-button-colorHover"
+                            }
+                        }
+                    ]
                 }
             ]
         },

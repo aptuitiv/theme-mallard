@@ -5,9 +5,10 @@
 :root {
     --FeaturedContent-background: var(--color-primary);
     --FeaturedContent-color: #fff;
+    --FeaturedContent-borderRadius: 0;
     
     /* Heading */
-    --FeaturedContent-heading-color: #efdbd5;
+    --FeaturedContent-title-color: #efdbd5;
     
     /* Button */
     --FeaturedContent-button-background: #fff;
@@ -19,6 +20,7 @@
 /* @define FeaturedContent */
 .FeaturedContent {
     background: var(--FeaturedContent-background);
+    border-radius: var(--FeaturedContent-borderRadius);
     color: var(--FeaturedContent-color);
     margin: 2em calc(var(--g-gutter) * -1);
     padding: 40px;
@@ -39,7 +41,7 @@
 .FeaturedContent h5,
 .FeaturedContent h6,
 .FeaturedContent .ContentGrid-title {
-    color: var(--FeaturedContent-heading-color);
+    color: var(--FeaturedContent-title-color);
 }
 
 /* postcss-bem-linter: ignore */
