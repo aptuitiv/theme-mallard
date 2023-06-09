@@ -1,12 +1,10 @@
 {% extends 'two-column-right-sidebar' %}
 
 {% block banner %}
-    <div class="ContentHeader">
-        <div class="Container">
-            <h1 class="ContentHeader-title">Blog</h1>
-            {{ header }}
-        </div>
-    </div>
+    {% set title = "Blog" %}
+    {% set titleHeading = true %}
+    {% set subtitle = header %}
+    {% include("content-layouts/text-banner") %}
 {% endblock %}
 
 {% block main %}

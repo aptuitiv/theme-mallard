@@ -1,9 +1,14 @@
 {% extends 'two-column-right-sidebar' %}
 
-{% block main %}
-    <h1>{{ tag.tagName }}</h1>
-    {{ tag.description }}
+{% block banner %}
+    {% set title = "Blog - " ~ tag.tagName %}
+    {% set titleHeading = true %}
+    {% set subtitle = header %}
+    {% include("content-layouts/text-banner") %}
+{% endblock %}
 
+{% block main %}
+    {{ tag.description }}
     {% if tag.posts %}
         {% for post in tag.posts %}
             {% include 'blog/post-list-item-simple' %}

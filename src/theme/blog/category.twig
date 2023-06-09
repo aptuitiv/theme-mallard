@@ -1,16 +1,20 @@
 {% extends 'two-column-right-sidebar' %}
 
-{% block main %}
-    <h1>{{ category.categoryName }}</h1>
-    {{ category.description }}
+{% block banner %}
+    {% set title = "Blog - " ~ category.categoryName %}
+    {% set titleHeading = true %}
+    {% set subtitle = header %}
+    {% include("content-layouts/text-banner") %}
+{% endblock %}
 
+{% block main %}
+    {{ category.description }}
     {% if category.subCategories %}
         <h2>Sub categories</h2>
         {% for subCategory in category.subCategories %}
             <p><a href="{{ subCategory.url }}">{{ subCategory.categoryName }}</a></p>
         {% endfor %}
     {% endif %}
-
     {% if category.posts %}
         {% for post in category.posts %}
             {% include 'blog/post-list-item-simple' %}
