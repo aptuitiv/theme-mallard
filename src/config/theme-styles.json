@@ -173,6 +173,51 @@
             ]
         },
         {
+            "name": "Breadcrumbs",
+            "sections": [
+                {
+                    "name": "General",
+                    "fields": [
+                        {
+                            "name": "breadcrumbsColor",
+                            "label": "Text color",
+                            "type": "color",
+                            "default": "#4d4d4d",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Breadcrumbs-color"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Links",
+                    "fields": [
+                        {
+                            "name": "breadcrumbsLinkColor",
+                            "label": "Link color",
+                            "type": "color",
+                            "default": "#888",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Breadcrumbs-link-color"
+                            }
+                        },
+                        {
+                            "name": "breadcrumbsLinkColorHover",
+                            "label": "Link color (hover)",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Breadcrumbs-link-colorHover"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Buttons",
             "description": "Styles for buttons throughout the site.",
             "sections": [
