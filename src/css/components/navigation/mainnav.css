@@ -30,9 +30,14 @@
 
 @media(--c-bp-largeScreenNav) {
     .MainNav {
-        display: block;
-        margin-right: -3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         text-align: right;
+    }
+    
+    .MainNav-item {
+        flex-shrink: 0;
     }
 }
 
@@ -52,8 +57,18 @@
 }
 
 @media (--c-bp-smallScreenNav) {
+    .MainNav {
+        grid-column: 1 / span 2;
+    }
+    
     .MainNav-item--smallScreen {
         display: block;
+    }
+}
+
+@media (--c-bp-md) {
+    .MainNav {
+        grid-column: 1 / span 1;
     }
 }
 

@@ -89,20 +89,16 @@
         </div>
         <div class="Header">
             <div class="Container Container--pad">
-                <nav class="Grid Grid--withGutterLg Grid--alignMiddle">
-                    <div class="Grid-cell u-size1of4 u-md-sizeFull u-md-margBottom2 u-md-textCenter">
+                <nav class="Header-items">
+                    <div class="Header-logoWrapper">
                         {% if _core.theme.settings.headerLogo.alt|length == 0 %}
                             {% set _core.theme.settings.headerLogo.alt = _core.settings.companyName %}
                         {% endif %}
                         {% set _core.theme.settings.headerLogo.class = "Header-logo" %}
                         <a href="/">{{ _core.theme.settings.headerLogo.tag }}</a>
                     </div>
-                    <div class="Grid-cell u-size3of4 u-md-sizeFull u-hidden u-lg-show">
-                        <div class="NavBar u-lg-padRight1 u-md-padRight0 u-textRight"><button class="SmScBtn js-ssNavBtn"><span class="SmScBtn-icon"></span>Menu</button></div>
-                    </div>
-                    <div class="Grid-cell u-size3of4 u-lg-sizeFull ">
-                        {{ _api.navigation.get.key('main') }}
-                    </div>
+                    <div class="NavBar u-lg-padRight1 u-md-padRight0 u-textRight"><button class="SmScBtn js-ssNavBtn"><span class="SmScBtn-icon"></span>Menu</button></div>
+                    {{ _api.navigation.get.key('main') }}
                 </nav>
             </div>
         </div>
