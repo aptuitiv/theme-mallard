@@ -604,25 +604,6 @@
             ]
         },
         {
-            "name": "Header",
-            "description": "Styles for the main navigation header.",
-            "fields": [
-                {
-                    "name": "logoWidth",
-                    "label": "Logo width",
-                    "description": "The maximum width of header logo.",
-                    "type": "stepper",
-                    "after": "px",
-                    "default": "200",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Header-logo-width",
-                        "template": "{{ value }}px"
-                    }
-                }
-            ]
-        },
-        {
             "name": "Image Grid",
             "description": "Styles for the Image Grid block.",
             "fields": [

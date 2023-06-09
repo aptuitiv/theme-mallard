@@ -65,6 +65,19 @@
                     }
                 },
                 {
+                    "name": "logoWidth",
+                    "label": "Logo width",
+                    "description": "The maximum width of header logo.",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "200",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Header-logo-width",
+                        "template": "{{ value }}px"
+                    }
+                },
+                {
                     "name": "headerShowAddress",
                     "label": "Show Address",
                     "type": "switch",
