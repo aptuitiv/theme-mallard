@@ -13,6 +13,7 @@
     --Dropdown-fontFamily: var(--MainNav-fontFamily);
     --Dropdown-fontSize: 1.8rem;
     --Dropdown-fontWeight: 400;
+    --Dropdown-textTransform: none;
     --Dropdown-lineHeight: inherit;
     --Dropdown-item-padding: .5em 1em;
     --Dropdown-item-padding-small-screen: .8em 30px .8em 1em;
@@ -86,6 +87,7 @@
     line-height: var(--Dropdown-lineHeight);
     padding: var(--Dropdown-item-padding);
     text-decoration: none;
+    text-transform: var(--Dropdown-textTransform);
     white-space: nowrap;
 }
 

@@ -5,6 +5,7 @@
 :root {
     --ContentHeader-background: var(--color-light);
     --ContentHeader-color: var(--base-typography-color);
+    --ContentHeader-title-textTransform: uppercase;
 }
 
 /* @define ContentHeader */
@@ -23,7 +24,7 @@
     line-height: 1.4;
     margin: 0;
     position: relative;
-    text-transform: uppercase;
+    text-transform: var(--ContentHeader-title-textTransform);
 }
 
 .ContentHeader-content {

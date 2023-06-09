@@ -9,6 +9,7 @@
     --Footer-background: #f3f3f3;
     --Footer-color: #4c5c4c;
     --Footer-font-size: 1.5rem;
+    --Footer-textTransform: uppercase;
     --Footer-nav-font: var(--base-typography-fontFamily);
     --Footer-nav-font-size: 1em;
     --Footer-nav-color: #4c5c4c;
@@ -26,7 +27,7 @@
     font-size: var(--Footer-font-size);
     padding: var(--Footer-padding);
     text-align: center;
-    text-transform: uppercase;
+    text-transform: var(--Footer-textTransform);
 }
 
 @media (--c-bp-sm) {
@@ -34,7 +35,6 @@
         padding: 1rem var(--g-gutter-sm);
     }
 }
-
 
 .Footer-link {
     color: var(--Footer-nav-color);

@@ -2,13 +2,11 @@
     Footer Navigation
 \* =========================================================================== */
 
-
-
 /** @define FooterNav */
-
 :root {
     --FooterNav-fontSize: var(--Footer-nav-font-size);
     --FooterNav-lineHeight: 1;
+    --FooterNav-textTransform: uppercase;
     --FooterNav-link-color: var(--Footer-nav-color);
     --FooterNav-link-colorHover: var(--Footer-nav-color-hover);
 }
@@ -50,7 +48,7 @@
     color: var(--FooterNav-link-color);
     display: block;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: var(--FooterNav-textTransform);
 }
 
 .FooterNav-link:hover {

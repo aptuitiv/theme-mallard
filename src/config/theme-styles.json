@@ -3,46 +3,93 @@
         {
             "name": "Banner",
             "description": "Styles for the page Banner layout.",
-            "fields": [
+            "sections": [
                 {
-                    "name": "bannerBackground",
-                    "label": "Background color",
-                    "type": "color",
-                    "default": "#fbdcc5",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentHeader-background"
-                    }
+                    "name": "General",
+                    "fields": [
+                        {
+                            "name": "bannerBackground",
+                            "label": "Background color",
+                            "type": "color",
+                            "default": "#fbdcc5",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--ContentHeader-background"
+                            }
+                        },
+                        {
+                            "name": "bannerBackgroundSmallScreens",
+                            "label": "Text background color (small screens)",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Slider-backgroundSmallScreens"
+                            }
+                        },
+                        {
+                            "name": "bannerColor",
+                            "label": "Text color",
+                            "type": "color",
+                            "default": "#4d4d4d",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--ContentHeader-color"
+                            }
+                        },
+                        {
+                            "name": "bannerDotColor",
+                            "label": "Dot color (small screens)",
+                            "type": "color",
+                            "default": "#008576",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--ImageSlider-dot-color"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "name": "bannerBackgroundSmallScreens",
-                    "label": "Text background color (small screens)",
-                    "type": "color",
-                    "default": "#008576",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Slider-backgroundSmallScreens"
-                    }
+                    "name": "Caption Title",
+                    "fields": [
+                        {
+                            "name": "bannerHeadingTextTransform",
+                            "label": "Capitalization",
+                            "type": "select",
+                            "default": "uppercase",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Slider-captionTitleTextTransform"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "name": "bannerColor",
-                    "label": "Text color",
-                    "type": "color",
-                    "default": "#4d4d4d",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ContentHeader-color"
-                    }
-                },
-                {
-                    "name": "bannerDotColor",
-                    "label": "Dot color (small screens)",
-                    "type": "color",
-                    "default": "#008576",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--ImageSlider-dot-color"
-                    }
+                    "name": "Content Header Title",
+                    "fields": [
+                        {
+                            "name": "contentHeaderTitleTextTransform",
+                            "label": "Capitalization",
+                            "type": "select",
+                            "default": "uppercase",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--ContentHeader-title-textTransform"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -391,116 +438,168 @@
         {
             "name": "Footer",
             "description": "Styles for the site footer.",
-            "fields": [
+            "sections": [
                 {
-                    "name": "footerBorderWidth",
-                    "label": "Border width",
-                    "type": "stepper",
-                    "after": "px",
-                    "default": "1",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-border-width",
-                        "template": "{{ value }}px"
-                    }
+                    "name": "General",
+                    "fields": [
+                        {
+                            "name": "footerBackground",
+                            "label": "Background color",
+                            "type": "color",
+                            "default": "#f3f3f3",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Footer-background"
+                            }
+                        },
+                        {
+                            "name": "footerColor",
+                            "label": "Text color",
+                            "type": "color",
+                            "default": "#4c5c4c",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Footer-color"
+                            }
+                        },
+                        {
+                            "name": "footerFontSize",
+                            "label": "Font size",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "15",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Footer-font-size",
+                                "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "footerTextTransform",
+                            "label": "Capitalization",
+                            "type": "select",
+                            "default": "uppercase",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Footer-textTransform"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "name": "footerBorderColor",
-                    "label": "Border color",
-                    "type": "color",
-                    "default": "#ececec",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-border-color"
-                    }
+                    "name": "Padding",
+                    "fields": [
+                        {
+                            "name": "footerPaddingVertical",
+                            "label": "Vertical padding",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "15",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Footer-padding-vertical",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "footerPaddingHorizontal",
+                            "label": "Horizontal padding",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "20",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Footer-padding-horizontal",
+                                "template": "{{ value }}px"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "name": "footerBackground",
-                    "label": "Background color",
-                    "type": "color",
-                    "default": "#f3f3f3",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-background"
-                    }
+                    "name": "Top Border",
+                    "fields": [
+                        {
+                            "name": "footerBorderWidth",
+                            "label": "Border width",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "1",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Footer-border-width",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "footerBorderColor",
+                            "label": "Border color",
+                            "type": "color",
+                            "default": "#ececec",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Footer-border-color"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "name": "footerColor",
-                    "label": "Text color",
-                    "type": "color",
-                    "default": "#4c5c4c",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-color"
-                    }
-                },
-                {
-                    "name": "footerFontSize",
-                    "label": "Font size",
-                    "type": "stepper",
-                    "after": "px",
-                    "default": "15",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-font-size",
-                        "template": "{{ value / 10 }}rem"
-                    }
-                },
-                {
-                    "name": "footerPaddingVertical",
-                    "label": "Vertical padding",
-                    "type": "stepper",
-                    "after": "px",
-                    "default": "15",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-padding-vertical",
-                        "template": "{{ value }}px"
-                    }
-                },
-                {
-                    "name": "footerPaddingHorizontal",
-                    "label": "Horizontal padding",
-                    "type": "stepper",
-                    "after": "px",
-                    "default": "20",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-padding-horizontal",
-                        "template": "{{ value }}px"
-                    }
-                },
-                {
-                    "name": "footerNavFontSize",
-                    "label": "Navigation font size",
-                    "type": "stepper",
-                    "after": "px",
-                    "default": "15",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-nav-font-size",
-                        "template": "{{ value / 10 }}rem"
-                    }
-                },
-                {
-                    "name": "footerNavColor",
-                    "label": "Navigation text color",
-                    "type": "color",
-                    "default": "#4c5c4c",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-nav-color"
-                    }
-                },
-                {
-                    "name": "footerNavColorHover",
-                    "label": "Navigation text color (hover)",
-                    "type": "color",
-                    "default": "#4c5c4c",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Footer-nav-color-hover"
-                    }
+                    "name": "Navigation",
+                    "fields": [
+                        {
+                            "name": "footerNavFontSize",
+                            "label": "Navigation font size",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "15",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Footer-nav-font-size",
+                                "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "footerNavTextTransform",
+                            "label": "Capitalization",
+                            "type": "select",
+                            "default": "uppercase",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--FooterNav-textTransform"
+                            }
+                        },
+                        {
+                            "name": "footerNavColor",
+                            "label": "Navigation text color",
+                            "type": "color",
+                            "default": "#4c5c4c",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Footer-nav-color"
+                            }
+                        },
+                        {
+                            "name": "footerNavColorHover",
+                            "label": "Navigation text color (hover)",
+                            "type": "color",
+                            "default": "#4c5c4c",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Footer-nav-color-hover"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -773,6 +872,22 @@
                             }
                         },
                         {
+                            "name": "mainNavTextTransform",
+                            "label": "Capitalization",
+                            "type": "select",
+                            "default": "uppercase",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-link-textTransform"
+                            }
+                        },
+                        {
                             "name": "mainNavColor",
                             "label": "Text color",
                             "type": "color",
@@ -843,6 +958,22 @@
                                 "type": "css-head",
                                 "cssVariable": "--Dropdown-fontSize",
                                 "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "dropdownTextTransform",
+                            "label": "Capitalization",
+                            "type": "select",
+                            "default": "uppercase",
+                            "options": {
+                                "none": "Regular",
+                                "uppercase": "UPPERCASE",
+                                "lowercase": "lowercase",
+                                "capitalize": "Title Case"
+                            },
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Dropdown-textTransform"
                             }
                         },
                         {
