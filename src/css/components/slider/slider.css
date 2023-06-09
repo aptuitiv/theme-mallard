@@ -102,6 +102,10 @@
     text-shadow: 0 0 2px rgba(0, 0, 0, .6);
 }
 
+.Slider-captionTitle + .Slider-caption {
+    margin-top: 20px;
+}
+
 .Slider-content--center .Slider-captionTitle,
 .Slider-content--center .Slider-caption,
 .Slider-content--bottomCenter .Slider-captionTitle,

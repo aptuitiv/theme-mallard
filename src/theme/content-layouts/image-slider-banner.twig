@@ -30,7 +30,7 @@
     {% endif %}
 {% endmacro %}
 
-<div class="u-md-margBottom4">
+<div class="u-margBottom4">
     {% if slides and displayType != 'Hide' %}
         {% import _self as macros %}
         
@@ -96,16 +96,3 @@
         {% endif %}
     {% endif %}
 </div>
-
-{% if title or content %}
-    <div class="ContentHeader">
-        <div class="Container">
-            {% if title %}
-                <h1 class="ContentHeader-title">{{ title }}</h1>
-            {% endif %}
-            {% if content %}
-                <div class="ContentHeader-content">{{ content }}</div>
-            {% endif %}
-        </div>
-    </div>
-{% endif %}

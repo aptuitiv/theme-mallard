@@ -32,7 +32,7 @@
 }
 
 /* postcss-bem-linter: ignore */
-
-.ContentHeader-content p:last-child {
+.ContentHeader-content > *:last-child {
     margin-bottom: 0;
+    padding-bottom: 0;
 }
