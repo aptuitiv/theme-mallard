@@ -177,6 +177,157 @@
             "description": "Styles for buttons throughout the site.",
             "sections": [
                 {
+                    "name": "General",
+                    "fields": [
+                        {
+                            "name": "buttonFontWeight",
+                            "label": "Font weight",
+                            "type": "fontWeight",
+                            "fontFamilyField": "baseFontFamily",
+                            "default": "400",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-fontWeight"
+                            }
+                        },
+                        {
+                            "name": "buttonBorderRadius",
+                            "label": "Border radius",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "4",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-border-radius",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "buttonFontSize",
+                            "label": "Font size",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "18",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-fontSize",
+                                "template": "{{ value / 10 }}rem"
+                            }
+                        },
+                        {
+                            "name": "buttonLetterSpacing",
+                            "label": "Letter spacing",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "0",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-letterSpacing",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "buttonLineHeight",
+                            "label": "Line height",
+                            "step": "0.1",
+                            "decimals": "2",
+                            "type": "stepper",
+                            "default": "1.4",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-lineHeight"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Padding",
+                    "fields": [
+                        {
+                            "name": "buttonPaddingVertical",
+                            "label": "Normal button vertical padding",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "10",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-paddingVertical",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "buttonPaddingHorizontal",
+                            "label": "Normal button horizontal padding",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "25",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-paddingHorizontal",
+                                "template": "{{ value }}px"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Padding (large)",
+                    "fields": [
+                        {
+                            "name": "buttonLargePaddingVertical",
+                            "label": "Large button vertical padding",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "15",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-paddingVerticalLg",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "buttonLargePaddingHorizontal",
+                            "label": "Large button horizontal padding",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "45",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-paddingHorizontalLg",
+                                "template": "{{ value }}px"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Padding (small)",
+                    "fields": [
+                        {
+                            "name": "buttonSmallPaddingVertical",
+                            "label": "Small button vertical padding",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "5",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-paddingVerticalSm",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "buttonSmallPaddingHorizontal",
+                            "label": "Small button horizontal padding",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "15",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Button-paddingHorizontalSm",
+                                "template": "{{ value }}px"
+                            }
+                        }
+                    ]
+                },
+                {
                     "name": "Primary Button",
                     "fields": [
                         {

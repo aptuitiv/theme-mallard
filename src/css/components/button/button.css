@@ -22,11 +22,21 @@
     --Button-colorHover: #1a390c;
     --Button-disabled-opacity: .6;
     --Button-fontSize: inherit;
+    --Button-fontWeight: 400;
     --Button-letterSpacing: inherit;
     --Button-lineHeight: 1.4;
-    --Button-padding: .35em 1.5em;
-    --Button-paddingLg: .7em 2em;
-    --Button-paddingSm: .2em .75em;
+    
+    /* Padding */
+    --Button-paddingVertical: 10px;
+    --Button-paddingHorizontal: 25px;
+    --Button-paddingVerticalLg: 15px;
+    --Button-paddingHorizontalLg: 45px;
+    --Button-paddingVerticalSm: 5px;
+    --Button-paddingHorizontalSm: 15px;
+    
+    --Button-padding: var(--Button-paddingVertical) var(--Button-paddingHorizontal);
+    --Button-paddingLg: var(--Button-paddingVerticalLg) var(--Button-paddingHorizontalLg);
+    --Button-paddingSm: var(--Button-paddingVerticalSm) var(--Button-paddingHorizontalSm);
     
     /* Alt Button */
     --Button-alt-color: #fff;
@@ -51,6 +61,7 @@
     cursor: pointer;
     display: inline-block;
     font-size: var(--Button-fontSize);
+    font-weight: var(--Button-fontWeight);
     letter-spacing: var(--Button-letterSpacing);
     line-height: var(--Button-lineHeight);
     margin: 0;
