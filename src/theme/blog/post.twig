@@ -29,35 +29,34 @@
     <p><a href="{{ post.goBackUrl }}">&lt; Back to the blog</a></p>
 
     {# COMMENTS #}
-
-    {% if post.comments %}
-        <h2>{{ post.commentCount }}
-            {% if post.commentCount > 1 %}Comments{% else %}Comment{% endif %}
-            on "{{ post.postTitle }}"</h2>
-        {% for comment in post.comments %}
-            <div class="u-margBottom2">
-                {{ comment.anchor.tag }}{{ comment.createdOnDate }} {{ comment.createdOnTime }}<br>
-                {% if comment.name %}
-                    {% if comment.website %}
-                        <a href="{{ comment.website|url }}" target="_blank">{{ comment.name }}</a>
+    {% if post.commentsEnabled %}
+        {% if post.comments %}
+            <h2>{{ post.commentCount }}
+                {% if post.commentCount > 1 %}Comments{% else %}Comment{% endif %}
+                on "{{ post.postTitle }}"</h2>
+            {% for comment in post.comments %}
+                <div class="u-margBottom2">
+                    {{ comment.anchor.tag }}{{ comment.createdOnDate }} {{ comment.createdOnTime }}<br>
+                    {% if comment.name %}
+                        {% if comment.website %}
+                            <a href="{{ comment.website|url }}" target="_blank">{{ comment.name }}</a>
+                        {% else %}
+                            {{ comment.name }}
+                        {% endif %}
                     {% else %}
-                        {{ comment.name }}
+                        Anonymous
                     {% endif %}
-                {% else %}
-                    Anonymous
-                {% endif %}
-                says: <br>
-                {{ comment.comments|nl2br }}
-            </div>
-        {% endfor %}
-        <p><strong>Leave a comment</strong></p>
-    {% else %}
-        <h2>Comments</h2>
-        <p><strong>Leave the first comment</strong></p>
+                    says: <br>
+                    {{ comment.comments|nl2br }}
+                </div>
+            {% endfor %}
+            <p><strong>Leave a comment</strong></p>
+        {% else %}
+            <h2>Comments</h2>
+            <p><strong>Leave the first comment</strong></p>
+        {% endif %}
+        {{ post.commentForm.content }}
     {% endif %}
-
-    {# COMMENT FORM #}
-    {{ post.commentForm.content }}
 {% endblock %}
 
 
