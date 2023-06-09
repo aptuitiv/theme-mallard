@@ -3,6 +3,34 @@
     Adds styles to the Cacao Pagination component
 \* =========================================================================== */
 
+:root {
+    --Pagination-separator-color: var(--color-primary);
+    --Pagination-background: transparent;
+    --Pagination-color: var(--color-primary);
+    --Pagination-backgroundHover: var(--color-primary);
+    --Pagination-colorHover: #fff;
+    --Pagination-backgroundCurrent: var(--color-primary);
+    --Pagination-colorCurrent: #fff;
+}
 
-/**  @define Pagination */
+/* @define Pagination */
+.Pagination {
+    color: var(--Pagination-separator-color);
+}
 
+.Pagination-item {
+    background-color: var(--Pagination-background);
+    color: var(--Pagination-color);
+}
+
+.Pagination-item:active,
+.Pagination-item:focus,
+.Pagination-item:hover {
+    background-color: var(--Pagination-backgroundHover);
+    color: var(--Pagination-colorHover);
+}
+
+.Pagination-item--isActive {
+    background-color: var(--Pagination-backgroundCurrent);
+    color: var(--Pagination-colorCurrent);
+}

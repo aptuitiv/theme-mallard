@@ -6,14 +6,15 @@
     </div>
 \* =========================================================================== */
 
-
-/* @define Content */
-
-.Content {
-    background: #fff;
-    padding: 1rem var(--g-gutter) 2rem;
+:root {
+    --Content-background: #fff;
 }
 
+/* @define Content */
+.Content {
+    background: var(--Content-background);
+    padding: 1rem var(--g-gutter) 2rem;
+}
 
 @media (--c-bp-sm) {
     .Content {

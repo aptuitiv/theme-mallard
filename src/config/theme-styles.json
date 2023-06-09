@@ -86,11 +86,36 @@
                 {
                     "name": "bodyBackground",
                     "label": "Body background",
+                    "description": "The background outside the main content.",
                     "type": "color",
                     "default": "#ffffff",
                     "preview": {
                         "type": "css-head",
                         "cssVariable": "--body-background"
+                    }
+                },
+                {
+                    "name": "contentBackground",
+                    "label": "Content background",
+                    "description": "The background of the main content.",
+                    "type": "color",
+                    "default": "#ffffff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Content-background"
+                    }
+                },
+                {
+                    "name": "containerWidth",
+                    "label": "Container width",
+                    "description": "The maximum width of main content.",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "1200",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Container-width",
+                        "template": "{{ value }}px"
                     }
                 }
             ]
@@ -475,6 +500,25 @@
                     "preview": {
                         "type": "css-head",
                         "cssVariable": "--Footer-nav-color-hover"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Header",
+            "description": "Styles for the main navigation header.",
+            "fields": [
+                {
+                    "name": "logoWidth",
+                    "label": "Logo width",
+                    "description": "The maximum width of header logo.",
+                    "type": "stepper",
+                    "after": "px",
+                    "default": "200",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Header-logo-width",
+                        "template": "{{ value }}px"
                     }
                 }
             ]
@@ -923,6 +967,82 @@
                     "preview": {
                         "type": "css-head",
                         "cssVariable": "--Notification-link-colorHover"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Pagination",
+            "description": "Styles for the pagination at the bottom of app pages like Blog Home.",
+            "fields": [
+                {
+                    "name": "paginationSeparatorColor",
+                    "label": "Separator color",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Pagination-separator-color"
+                    }
+                },
+                {
+                    "name": "paginationBackground",
+                    "label": "Background color",
+                    "type": "color",
+                    "default": "#00000000",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Pagination-background"
+                    }
+                },
+                {
+                    "name": "paginationColor",
+                    "label": "Text color",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Pagination-color"
+                    }
+                },
+                {
+                    "name": "paginationBackgroundHover",
+                    "label": "Background color (hover)",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Pagination-backgroundHover"
+                    }
+                },
+                {
+                    "name": "paginationColorHover",
+                    "label": "Text color (hover)",
+                    "type": "color",
+                    "default": "#fff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Pagination-colorHover"
+                    }
+                },
+                {
+                    "name": "paginationBackgroundCurrent",
+                    "label": "Background color (current)",
+                    "type": "color",
+                    "default": "#008576",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Pagination-backgroundCurrent"
+                    }
+                },
+                {
+                    "name": "paginationColorCurrent",
+                    "label": "Text color (current)",
+                    "type": "color",
+                    "default": "#fff",
+                    "preview": {
+                        "type": "css-head",
+                        "cssVariable": "--Pagination-colorCurrent"
                     }
                 }
             ]

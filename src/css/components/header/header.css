@@ -4,6 +4,7 @@
 
 :root {
     --Header-skipMain-color: var(--color-primary);
+    --Header-logo-width: 200px;
 }
 
 /* @define Header */
@@ -30,4 +31,37 @@
     padding: 5px 10px;
     text-decoration: underline;
     width: auto;
+}
+
+.Header-items {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Header-logo {
+    margin-right: 20px;
+    max-width: var(--Header-logo-width);
+    width: 100%;
+}
+
+@media (--c-bp-smallScreenNav) {
+    .Header-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (--c-bp-md) {
+    .Header-items {
+        grid-template-columns: 100%;
+    }
+    
+    .Header-logoWrapper {
+        text-align: center;
+    }
+    
+    .Header-logo {
+        margin-bottom: 30px;
+    }
 }
