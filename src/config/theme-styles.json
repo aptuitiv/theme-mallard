@@ -867,7 +867,12 @@
                                 "type": "css-head",
                                 "cssVariable": "--MainNav-link-textTransform"
                             }
-                        },
+                        }
+                    ]
+                },
+                {
+                    "name": "Items",
+                    "fields": [
                         {
                             "name": "mainNavColor",
                             "label": "Text color",
@@ -887,12 +892,7 @@
                                 "type": "css-head",
                                 "cssVariable": "--MainNav-link-colorHover"
                             }
-                        }
-                    ]
-                },
-                {
-                    "name": "Items",
-                    "fields": [
+                        },
                         {
                             "name": "mainNavItemBackground",
                             "label": "Background color",
@@ -911,6 +911,30 @@
                             "preview": {
                                 "type": "css-head",
                                 "cssVariable": "--MainNav-link-backgroundHover"
+                            }
+                        },
+                        {
+                            "name": "mainNavItemPaddingVertical",
+                            "label": "Vertical padding",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "10",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-link-paddingVertical",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "mainNavItemPaddingHorizontal",
+                            "label": "Horizontal padding",
+                            "type": "stepper",
+                            "after": "px",
+                            "default": "30",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-link-paddingHorizontal",
+                                "template": "{{ value }}px"
                             }
                         }
                     ]

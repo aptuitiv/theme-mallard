@@ -14,6 +14,8 @@
     --MainNav-link-backgroundHover: transparent;
     --MainNav-link-color: var(--color-primary);
     --MainNav-link-colorHover: var(--color-primary);
+    --MainNav-link-paddingVertical: 10px;
+    --MainNav-link-paddingHorizontal: 30px;
 }
 
 /**
@@ -87,7 +89,7 @@
     font-weight: var(--MainNav-fontWeight);
     letter-spacing: 1px;
     line-height: var(--MainNav-lineHeight);
-    padding: .5em 3rem;
+    padding: var(--MainNav-link-paddingVertical) var(--MainNav-link-paddingHorizontal);
     position: relative;
     text-align: center;
     text-decoration: none;
