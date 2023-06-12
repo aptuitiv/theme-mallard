@@ -1126,7 +1126,7 @@
                             "name": "bannerSmallScreenImagesPipeline",
                             "label": "Small screen image widths",
                             "description": "The breakpoints and widths to reprocess an image for a user's screen. Ex: 600, 800, 1000.",
-                            "type": "repeating",
+                            "type": "repeatingGrid",
                             "itemName": "Image",
                             "children": [
                                 {

@@ -18,19 +18,9 @@
                 {
                     "name": "social",
                     "label": "Social Networks",
-                    "type": "repeating",
+                    "type": "repeatingGrid",
                     "itemName": "Social Network",
                     "children": [
-                        {
-                            "name": "name",
-                            "label": "Social network name",
-                            "type": "text"
-                        },
-                        {
-                            "name": "url",
-                            "label": "URL to your page on this social network",
-                            "type": "text"
-                        },
                         {
                             "name": "icon",
                             "label": "Icon",
@@ -42,7 +32,14 @@
                                 "pinterest": "Pinterest",
                                 "twitter": "Twitter",
                                 "youtube": "YouTube"
-                            }
+                            },
+                            "columnWidth": "1fr"
+                        },
+                        {
+                            "name": "url",
+                            "label": "URL to your page on this social network",
+                            "type": "text",
+                            "columnWidth": "2fr"
                         }
                     ]
                 }
