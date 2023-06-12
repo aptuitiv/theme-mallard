@@ -1856,8 +1856,12 @@
             "name": "Content Wrap"
         },
         {
-            "key": "content-layouts/banner",
-            "name": "Banner"
+            "key": "content-layouts/image-slider-banner",
+            "name": "Image Slider Banner"
+        },
+        {
+            "key": "content-layouts/text-banner",
+            "name": "Text Banner"
         },
         {
             "key": "forms/grid",
@@ -3896,8 +3900,8 @@
     ],
     "contentLayouts": [
         {
-            "key": "banner",
-            "name": "Banner",
+            "key": "image-slider-banner",
+            "name": "Image Slider Banner",
             "description": "",
             "availableOnSnippets": true,
             "availableOnContentAreas": "specific",
@@ -4090,66 +4094,16 @@
                             ]
                         },
                         {
-                            "key": "images",
+                            "key": "image",
                             "name": "Image",
                             "description": "",
-                            "type": "imageSet",
+                            "type": "image",
                             "size": "medium",
                             "value": "",
                             "configuration": {
-                                "imgSetSingleUpload": "single"
-                            },
-                            "children": [
-                                {
-                                    "key": "large",
-                                    "name": "Large",
-                                    "description": "",
-                                    "type": "image",
-                                    "size": "medium",
-                                    "value": "",
-                                    "configuration": {
-                                        "height": 720,
-                                        "path": "/images/header",
-                                        "width": 2000
-                                    }
-                                },
-                                {
-                                    "key": "medium",
-                                    "name": "Medium",
-                                    "description": "",
-                                    "type": "image",
-                                    "size": "medium",
-                                    "value": "",
-                                    "configuration": {
-                                        "height": 432,
-                                        "path": "/images/header",
-                                        "width": 1200
-                                    }
-                                },
-                                {
-                                    "key": "small",
-                                    "name": "Small",
-                                    "description": "",
-                                    "type": "image",
-                                    "size": "medium",
-                                    "value": "",
-                                    "configuration": {
-                                        "height": 216,
-                                        "path": "/images/header",
-                                        "width": 600
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "key": "altText",
-                            "name": "Image Alt Text",
-                            "description": "",
-                            "type": "text",
-                            "size": "medium",
-                            "value": "",
-                            "configuration": {
-                                "allowCode": "no"
+                                "height": 720,
+                                "path": "/images/header",
+                                "width": 2000
                             }
                         },
                         {
@@ -4220,15 +4174,20 @@
                             }
                         }
                     ]
-                },
-                {
-                    "key": "section14",
-                    "name": "Content Heading",
-                    "description": "",
-                    "type": "section",
-                    "size": "medium",
-                    "value": ""
-                },
+                }
+            ]
+        },
+        {
+            "key": "text-banner",
+            "name": "Text Banner",
+            "description": "",
+            "availableOnSnippets": true,
+            "availableOnContentAreas": "specific",
+            "parseOnRequest": true,
+            "contentAreas": [
+                "banner"
+            ],
+            "fields": [
                 {
                     "key": "title",
                     "name": "Title",
@@ -4241,12 +4200,26 @@
                     }
                 },
                 {
-                    "key": "content",
-                    "name": "Content",
+                    "key": "subtitle",
+                    "name": "Subtitle",
                     "description": "",
-                    "type": "richTextEditor",
+                    "type": "text",
                     "size": "medium",
-                    "value": ""
+                    "value": "",
+                    "configuration": {
+                        "allowCode": "no"
+                    }
+                },
+                {
+                    "key": "titleHeading",
+                    "name": "Output title as an h1",
+                    "description": "",
+                    "type": "selectYesNo",
+                    "size": "medium",
+                    "value": "yes",
+                    "configuration": {
+                        "optionLabel": "yesNo"
+                    }
                 }
             ]
         }
