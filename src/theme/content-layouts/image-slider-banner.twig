@@ -29,7 +29,7 @@
     {% endif %}
 {% endmacro %}
 
-<div class="{{ not title or not subtitle ? 'u-margBottom4' }}">
+<div class="{{ not title and not subtitle ? 'u-margBottom4' }}">
     {% if slides and displayType != 'Hide' %}
         {% import _self as macros %}
         
