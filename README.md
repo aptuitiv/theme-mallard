@@ -32,3 +32,38 @@ The `FTP_ENVIRONMENT` should be set to `live` for uploading to production sites.
 -   `FTP_PASSWORD`: The FTP password
 
 If you are using a clone of the website in the Aptuitiv Development environment for testing then set `FTP_ENVIRONMENT` to "dev" and set the `FTP_DEV_SERVER`, `FTP_DEV_USERNAME`, and `FTP_DEV_PASSWORD`.
+
+## Updating Derivitive Sites
+
+The following websites are based on Mallard and should be updated when new versions of Mallard are released:
+
+- [Carrabassett Veterinary Services](https://github.com/aptuitiv/client-carrabassett-veterinary-service)
+- [Spire Veterinary Services](https://github.com/aptuitiv/client-spire-veterinary-surgery)
+
+### Updating the Repo
+
+First, you'll need to add the remote for the other site locally if you haven't already.
+
+```bash
+git remote add other-site git@github.com:aptuitiv/other-site.git
+git fetch other-site
+git switch -c other-main other-site/main
+```
+
+Then, merge the updates into the other site's main branch.
+
+```bash
+git merge master
+git push -u other-site main
+```
+
+### Updating the Site
+
+Now that the repo is up to date, you'll need to update the files on the FTP server. It is recommended that you keep a separate clone of the other site's repo on your computer for uploading.
+
+```bash
+cd /the/location/of/the/other/site
+git pull
+gulp build
+gulp deploy
+```
