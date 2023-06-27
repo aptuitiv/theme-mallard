@@ -64,7 +64,7 @@ async function deploy() {
             user: process.env.FTP_ENVIRONMENT === 'live' ? process.env.FTP_USERNAME : process.env.FTP_DEV_USERNAME,
             password: process.env.FTP_ENVIRONMENT === 'live' ? process.env.FTP_PASSWORD : process.env.FTP_DEV_PASSWORD,
         });
-        await client.uploadFromDir(config.paths.dist.base, 'new');
+        await client.uploadFromDir(config.paths.dist.base);
 
     } catch (err) {
         fancyLog(chalk.red(err));
