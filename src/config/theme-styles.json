@@ -475,6 +475,15 @@
             ]
         },
         {
+            "name": "Colors",
+            "description": "Below is the theme color palette. Once you set colors you can choose the Palette color in another color picker.",
+            "fields": [
+                {
+                    "type": "colorpalette"
+                }
+            ]
+        },
+        {
             "name": "Columned Content",
             "description": "Styles for the Columned Content block.",
             "sections": [
