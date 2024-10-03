@@ -31,15 +31,15 @@
     {% for row in miniGrid.rows %}
         <tr>
         {% for box in row.boxes %}
-            {% set class = 'CalendarMiniGrid-cell' %}
+            {% set class = 'CalendarMini' %}
             {% if box.isWeekend == true && box.isThisMonth == true %}
-                {% set class = class ~ ' ' ~ 'CalendarMiniGrid-cell--isEnd' %}
+                {% set class = class ~ ' ' ~ 'CalendarMini--isEnd' %}
             {% endif %}
             {% if box.isToday %}
-                {% set class = class ~ ' ' ~ 'CalendarMiniGrid-cell--isToday' %}
+                {% set class = class ~ ' ' ~ 'CalendarMini--isToday' %}
             {% endif %}
             {% if box.isThisMonth == false %}
-                {% set class = class ~ ' ' ~ 'CalendarMiniGrid-cell--isEmpty' %}
+                {% set class = class ~ ' ' ~ 'CalendarMini--isEmpty' %}
             {% endif %}
             <td class="{{ class|trim }}">
             {% if box.isThisMonth %}

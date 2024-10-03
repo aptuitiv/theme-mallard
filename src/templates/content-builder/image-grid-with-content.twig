@@ -6,15 +6,15 @@
     {% endif %}
 
     {% if count % 4 == 0 %}
-        {% set class = 'u-size1of4 u-lg-size1of3 u-md-size1of2 u-sm-sizeFull' %}
+        {% set class = 'col-1-1 col-1-2-sm col-1-3-md col-1-4-lg' %}
     {% elseif count % 3 == 0 %}
-        {% set class = 'u-size1of3 u-md-size1of2 u-sm-sizeFull' %}
+        {% set class = 'col-1-1 col-1-2-sm col-1-3-md' %}
     {% elseif count == 2 %}
-        {% set class = 'u-size1of2 u-sm-sizeFull' %}
+        {% set class = 'col-1-1 col-1-2-sm' %}
     {% elseif count > 4 %}
-        {% set class = 'u-size1of4 u-lg-size1of3 u-md-size1of2 u-sm-sizeFull' %}
+        {% set class = 'col-1-1 col-1-2-sm col-1-3-md col-1-4-lg' %}
     {% elseif count == 1 %}
-        {% set class = '--center u-sm-sizeFull' %}
+        {% set class = 'col-1-1' %}
     {% endif %}
 
     {# Set the title text position class #}

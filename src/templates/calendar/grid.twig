@@ -38,19 +38,19 @@
         {% for row in grid.rows %}
             <tr>
                 {% for box in row.boxes %}
-                    {% set class = 'CalendarGrid-cell' %}
+                    {% set class = 'Calendar' %}
                     {% if box.isWeekend == true and box.isThisMonth == true %}
-                        {% set class = class ~ ' ' ~ 'CalendarGrid-cell--isEnd' %}
+                        {% set class = class ~ ' ' ~ 'Calendar--isEnd' %}
                     {% endif %}
                     {% if box.isToday %}
-                        {% set class = class ~ ' ' ~ 'CalendarGrid-cell--isToday' %}
+                        {% set class = class ~ ' ' ~ 'Calendar--isToday' %}
                     {% endif %}
                     {% if box.isThisMonth == false %}
-                        {% set class = class ~ ' ' ~ 'CalendarGrid-cell--isEmpty' %}
+                        {% set class = class ~ ' ' ~ 'Calendar--isEmpty' %}
                     {% endif %}
                     <td class="{{ class|trim }}">
                         {% if box.isThisMonth %}
-                            <div class="CalendarGrid-cellDate">{{ box.dayShort }}</div>
+                            <div class="CalendarDate">{{ box.dayShort }}</div>
                             {% if box.eventCount > 0 %}
                                 {% for event in box.events %}
                                     <a href="{{ event.url }}" class="link-subtle">{{ event.title }}<br>

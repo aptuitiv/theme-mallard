@@ -43,7 +43,7 @@
         <div class="TopBar">
             <div class="Container Container--pad">
                 <div class="grid align-center">
-                    <div class="{% if _core.theme.settings.headerShowSocial == 'yes' %}u-size2of3 u-md-sizeFull u-md-margBottom1{% else %}w-1-1{% endif %} u-sm-textCenter">
+                    <div class="{% if _core.theme.settings.headerShowSocial == 'yes' %}col-1-1 col-2-3-md{% else %}w-1-1{% endif %}">
                         {% if _core.theme.settings.headerShowPhone == 'yes' or _core.theme.settings.headerShowAddress == 'yes' %}
                             <div class="TopBar-contact">
                                 {% if _core.theme.settings.headerShowAddress == 'yes' %}
@@ -54,7 +54,7 @@
                                         {{ _core.settings.companyAddressCity }}{% if _core.settings.companyAddressState %}, {% endif %}
                                     {% endif %}
                                     {% if _core.settings.companyAddressState %}
-                                        {{ _core.settings.companyAddressState }} 
+                                        {{ _core.settings.companyAddressState }}
                                     {% endif %}
                                     {% if _core.settings.companyAddressPostalCode %}
                                         {{ _core.settings.companyAddressPostalCode }}
@@ -76,7 +76,7 @@
                         {% endif %}
                     </div>
                     {% if _core.theme.settings.headerShowSocial == 'yes' %}
-                        <div class="u-size1of3 u-md-sizeFull text-end u-md-textCenter">
+                        <div class="col-1-1 col-1-3-md text-end text-center-md">
                             <div class="TopBar-social">
                             {% set socialNames = {facebook: 'Facebook', instagram: 'Instagram', linkedin: 'LinkedIn', pinterest: 'Pinterest', twitter: 'Twitter', youtube: 'YouTube'} %}
                             {% for social in _core.theme.settings.social %}
@@ -98,7 +98,7 @@
                         {% set _core.theme.settings.headerLogo.class = "Header-logo" %}
                         <a href="/">{{ _core.theme.settings.headerLogo.tag }}</a>
                     </div>
-                    <div class="NavBar u-lg-padRight1 u-md-padRight0 text-end"><button class="SmScBtn js-ssNavBtn"><span class="SmScBtn-icon"></span>Menu</button></div>
+                    <div class="NavBar pe-1-md text-end"><button class="SmScBtn js-ssNavBtn"><span class="SmScBtn-icon"></span>Menu</button></div>
                     {{ _api.navigation.get.key('main') }}
                 </nav>
             </div>

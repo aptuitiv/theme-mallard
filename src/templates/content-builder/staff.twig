@@ -1,22 +1,22 @@
 {% for person in people %}
     {% set size = 'w-1-1' %}
     {% if person.image %}
-        {% set size = 'u-size3of4 u-lg-size2of3 u-md-sizeFull' %}
+        {% set size = 'col-1-1 col-2-3-md col-3-4-lg' %}
         {% if person.image.alt|length == 0 %}
             {% set person.image.alt = person.name %}
         {% endif %}
-        {% set person.image.class = 'w-1-1 u-lg-sizeAuto u-sm-sizeFull' %}
+        {% set person.image.class = 'w-1-1 w-auto-sm' %}
     {% endif %}
     <div class="grid g-2 mb-3">
         {% if person.image %}
-            <div class="u-size1of4 u-lg-size1of3 u-md-hide">
+            <div class="hidden block-md col-1-3 col-1-4-lg">
                 {{ person.image.tag }}
             </div>
         {% endif %}
         <div class="{{ size }}">
             <h2 class="mb-1">{{ person.name }}</h2>
             {% if person.title %}
-                <div class="u-fontSizeH4">{{ person.title }}</div>
+                <div class="h4">{{ person.title }}</div>
             {% endif %}
             {% if person.email %}
                 <div><a href="mailto:{{ person.email }}">{{ person.email }}</a></div>
@@ -25,7 +25,7 @@
                 <div><a href="tel:{{ person.phoneNumber }}">{{ person.phoneNumber }}</a></div>
             {% endif %}
             {% if person.image %}
-                <div class="hidden u-md-show">{{ person.image.tag }}</div>
+                <div class="hidden-md">{{ person.image.tag }}</div>
             {% endif %}
             {{ person.bio }}
         </div>
