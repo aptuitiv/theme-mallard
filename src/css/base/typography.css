@@ -23,72 +23,6 @@
  * http://clagnut.com/blog/2384/
  */
 
-:root {
-    --base-typography-color: #4d4d4d;
-    --base-typography-fontFamily: 'Open Sans', sans-serif;
-    --base-typography-fontSize: 1.8rem;
-    --base-typography-fontWeight: 400;
-    --base-typography-hrule-width: 1px;
-    --base-typography-letterSpacing: 0;
-    --base-typography-lineHeight: 1.58;
-    --base-typography-spacing: 1.58em;
-}
-
-:root {
-    --base-typography-link-color: var(--color-primary);
-    --base-typography-link-colorHover: #005243;
-    --base-typography-link-decoration: underline;
-    --base-typography-link-decorationHover: underline;
-}
-
-/* Headings */
-:root {
-    --base-typography-h1-fontSize: 1.5em;
-    --base-typography-h2-fontSize: 1.4em;
-    --base-typography-h3-fontSize: 1.3em;
-    --base-typography-h4-fontSize: 1.1em;
-    --base-typography-h5-fontSize: 1em;
-    --base-typography-h6-fontSize: 1em;
-    --base-typography-h1-lineHeight: 1.2;
-    --base-typography-h2-lineHeight: 1.2;
-    --base-typography-h3-lineHeight: 1.2;
-    --base-typography-h4-lineHeight: 1.2;
-    --base-typography-h5-lineHeight: 1.2;
-    --base-typography-h6-lineHeight: 1.2;
-    --base-typography-h1-color: var(--color-primary);
-    --base-typography-h2-color: var(--color-primary);
-    --base-typography-h3-color: var(--color-primary);
-    --base-typography-h4-color: var(--color-primary);
-    --base-typography-h5-color: var(--color-primary);
-    --base-typography-h6-color: var(--color-primary);
-    --base-typography-h1-marginTop: 40px;
-    --base-typography-h2-marginTop: 40px;
-    --base-typography-h3-marginTop: 40px;
-    --base-typography-h4-marginTop: 40px;
-    --base-typography-h5-marginTop: 40px;
-    --base-typography-h6-marginTop: 40px;
-    --base-typography-h1-marginBottom: 15px;
-    --base-typography-h2-marginBottom: 15px;
-    --base-typography-h3-marginBottom: 15px;
-    --base-typography-h4-marginBottom: 15px;
-    --base-typography-h5-marginBottom: 15px;
-    --base-typography-h6-marginBottom: 15px;
-    --base-typography-h1-fontWeight: 700;
-    --base-typography-h2-fontWeight: 700;
-    --base-typography-h3-fontWeight: 700;
-    --base-typography-h4-fontWeight: 700;
-    --base-typography-h5-fontWeight: 700;
-    --base-typography-h6-fontWeight: 700;
-    --base-typography-h1-textTransform: none;
-    --base-typography-h2-textTransform: none;
-    --base-typography-h3-textTransform: none;
-    --base-typography-h4-textTransform: none;
-    --base-typography-h5-textTransform: none;
-    --base-typography-h6-textTransform: none;
-    --base-typography-heading-fontFamily: 'Asap Condensed', sans-serif;
-    --base-typography-heading-letterSpacing: 0;
-}
-
 /* General
    ========================================================================== */
 
@@ -106,12 +40,12 @@ html {
  */
 
 body {
-    color: var(--base-typography-color);
-    font-family: var(--base-typography-fontFamily);
-    font-size: var(--base-typography-fontSize);
-    font-weight: var(--base-typography-fontWeight);
-    letter-spacing: var(--base-typography-letterSpacing);
-    line-height: var(--base-typography-lineHeight);
+    color: var(--base-typography-color, #333);
+    font-family: var(--base-typography-font-family);
+    font-size: var(--base-typography-font-size, 1.8rem);
+    font-weight: var(--base-typography-font-weight, 400);
+    letter-spacing: var(--base-typography-letter-spacing);
+    line-height: var(--base-typography-line-height, 1.58);
 }
 
 /**
@@ -126,7 +60,7 @@ hr,
 ol,
 p,
 ul {
-    margin: 0 0 var(--base-typography-spacing);
+    margin: 0 0 var(--base-typography-spacing, 2.5rem);
 }
 
 /**
@@ -135,8 +69,8 @@ ul {
 
 blockquote {
     border-left: 10px solid #ccc;
-    margin: var(--base-typography-spacing) calc(var(--base-typography-spacing) * .7);
-    padding: .5em 1em;
+    margin: var(--base-typography-spacing, 2.5rem) calc(var(--base-typography-spacing, 2.5rem) * 0.7);
+    padding: 0.5em 1em;
     position: relative;
 }
 
@@ -153,22 +87,24 @@ blockquote p:last-child {
  */
 
 a {
-    color: var(--base-typography-link-color);
-    text-decoration: var(--base-typography-link-decoration);
+    color: var(--base-typography-link-color, #00e);
+    font-weight: var(--base-typography-link-font-weight, 400);
+    text-decoration: var(--base-typography-link-text-decoration, underline);
+    transition: all 250ms;
 }
 
 a:hover {
-    color: var(--base-typography-link-colorHover);
-    text-decoration: var(--base-typography-link-decorationHover);
+    color: var(--base-typography-link-color-hover, #0000cd);
+    text-decoration: var(--base-typography-link-text-decoration-hover, underline);
 }
 
 /**
  * Default styling for telephone links to not look like links
  */
-a[href^="tel"],
-a[href^="tel"]:active,
-a[href^="tel"]:focus,
-a[href^="tel"]:hover {
+a[href^='tel'],
+a[href^='tel']:active,
+a[href^='tel']:focus,
+a[href^='tel']:hover {
     color: inherit;
     text-decoration: none;
 }
@@ -179,7 +115,13 @@ a[href^="tel"]:hover {
 
 ol,
 ul {
-    padding-left: 2.4em;
+    padding: var(--base-typography-list-padding, 0 0 0 2.4em);
+    text-align: var(--base-typography-list-text-align, left);
+}
+
+li {
+    margin: var(--base-typography-list-item-margin, 0);
+    padding: var(--base-typography-list-item-padding, 0);
 }
 
 li > ol,
@@ -219,7 +161,7 @@ address {
 
 hr {
     border-style: solid; /* 1 */
-    border-width: var(--base-typography-hrule-width) 0 0 0;
+    border-width: var(--base-typography-hrule-width, 1px) 0 0 0;
     color: inherit; /* 2 */
 }
 
@@ -227,73 +169,107 @@ hr {
    ========================================================================== */
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--base-typography-heading-fontFamily);
-    letter-spacing: var(--base-typography-heading-letterSpacing);
+.h1,
+.h1 * {
+    color: var(--base-typography-h1-color, #333);
+    font-family: var(--base-typography-h1-font-family);
+    font-size: var(--base-typography-h1-font-size, 3.2rem);
+    font-style: var(--base-typography-h1-font-style);
+    font-weight: var(--base-typography-h1-font-weight, 700);
+    letter-spacing: var(--base-typography-h1-letter-spacing);
+    line-height: var(--base-typography-h1-line-height, 1.58);
+    margin: var(--base-typography-h1-margin, 2.5rem 0 1.25rem);
+    text-align: var(--base-typography-h1-text-align);
+    text-decoration: var(--base-typography-h1-text-decoration);
+    text-shadow: var(--base-typograpy-h1-text-shadow);
+    text-transform: var(--base-typography-h1-text-transform);
 }
 
+h2,
+.h2,
+.h2 * {
+    color: var(--base-typography-h2-color, #333);
+    font-family: var(--base-typography-h2-font-family);
+    font-size: var(--base-typography-h2-font-size, 2.8rem);
+    font-style: var(--base-typography-h2-font-style);
+    font-weight: var(--base-typography-h2-font-weight, 700);
+    letter-spacing: var(--base-typography-h2-letter-spacing);
+    line-height: var(--base-typography-h2-line-height, 1.58);
+    margin: var(--base-typography-h2-margin, 2.5rem 0 1.25rem);
+    text-align: var(--base-typography-h2-text-align);
+    text-decoration: var(--base-typography-h2-text-decoration);
+    text-transform: var(--base-typography-h2-text-transform);
+}
+
+h3,
+.h3,
+.h3 * {
+    color: var(--base-typography-h3-color, #333);
+    font-family: var(--base-typography-h3-font-family);
+    font-size: var(--base-typography-h3-font-size, 2.4rem);
+    font-style: var(--base-typography-h3-font-style);
+    font-weight: var(--base-typography-h3-font-weight, 700);
+    letter-spacing: var(--base-typography-h3-letter-spacing);
+    line-height: var(--base-typography-h3-line-height, 1.58);
+    margin: var(--base-typography-h3-margin, 2.5rem 0 1.25rem);
+    text-align: var(--base-typography-h3-text-align);
+    text-decoration: var(--base-typography-h3-text-decoration);
+    text-transform: var(--base-typography-h3-text-transform);
+}
+
+h4,
+.h4,
+.h4 * {
+    color: var(--base-typography-h4-color, #333);
+    font-family: var(--base-typography-h4-font-family);
+    font-size: var(--base-typography-h4-font-size, 2rem);
+    font-style: var(--base-typography-h4-font-style);
+    font-weight: var(--base-typography-h4-font-weight, 700);
+    letter-spacing: var(--base-typography-h4-letter-spacing);
+    line-height: var(--base-typography-h4-line-height, 1.58);
+    margin: var(--base-typography-h4-margin, 2.5rem 0 1.25rem);
+    text-align: var(--base-typography-h4-text-align);
+    text-decoration: var(--base-typography-h4-text-decoration);
+    text-transform: var(--base-typography-h4-text-transform);
+}
+
+h5,
+.h5,
+.h5 * {
+    color: var(--base-typography-h5-color, #333);
+    font-family: var(--base-typography-h5-font-family);
+    font-size: var(--base-typography-h5-font-size, 1.8rem);
+    font-style: var(--base-typography-h5-font-style);
+    font-weight: var(--base-typography-h5-font-weight, 700);
+    letter-spacing: var(--base-typography-h5-letter-spacing);
+    line-height: var(--base-typography-h5-line-height, 1.58);
+    margin: var(--base-typography-h5-margin, 2.5rem 0 1.25rem);
+    text-align: var(--base-typography-h5-text-align);
+    text-decoration: var(--base-typography-h5-text-decoration);
+    text-transform: var(--base-typography-h5-text-transform);
+}
+
+h6,
+.h6,
+.h6 * {
+    color: var(--base-typography-h6-color, #333);
+    font-family: var(--base-typography-h6-font-family);
+    font-size: var(--base-typography-h6-font-size, 1.8rem);
+    font-style: var(--base-typography-h6-font-style);
+    font-weight: var(--base-typography-h6-font-weight, 700);
+    letter-spacing: var(--base-typography-h6-letter-spacing);
+    line-height: var(--base-typography-h6-line-height, 1.58);
+    margin: var(--base-typography-h6-margin, 2.5rem 0 1.25rem);
+    text-align: var(--base-typography-h6-text-align);
+    text-decoration: var(--base-typography-h6-text-decoration);
+    text-transform: var(--base-typography-h6-text-transform);
+}
+
+h1:first-child,
 h2:first-child,
 h3:first-child,
 h4:first-child,
 h5:first-child,
 h6:first-child {
     margin-top: 0;
-}
-
-h1 {
-    color: var(--base-typography-h1-color);
-    font-size: var(--base-typography-h1-fontSize);
-    font-weight: var(--base-typography-h1-fontWeight);
-    line-height: var(--base-typography-h1-lineHeight);
-    margin: var(--base-typography-h1-marginTop) 0 var(--base-typography-h1-marginBottom);
-    text-transform: var(--base-typography-h1-textTransform);
-}
-
-h2 {
-    color: var(--base-typography-h2-color);
-    font-size: var(--base-typography-h2-fontSize);
-    font-weight: var(--base-typography-h2-fontWeight);
-    line-height: var(--base-typography-h2-lineHeight);
-    margin: var(--base-typography-h2-marginTop) 0 var(--base-typography-h2-marginBottom);
-    text-transform: var(--base-typography-h2-textTransform);
-}
-
-h3 {
-    color: var(--base-typography-h3-color);
-    font-size: var(--base-typography-h3-fontSize);
-    font-weight: var(--base-typography-h3-fontWeight);
-    line-height: var(--base-typography-h3-lineHeight);
-    margin: var(--base-typography-h3-marginTop) 0 var(--base-typography-h3-marginBottom);
-    text-transform: var(--base-typography-h3-textTransform);
-}
-
-h4 {
-    color: var(--base-typography-h4-color);
-    font-size: var(--base-typography-h4-fontSize);
-    font-weight: var(--base-typography-h4-fontWeight);
-    line-height: var(--base-typography-h4-lineHeight);
-    margin: var(--base-typography-h4-marginTop) 0 var(--base-typography-h4-marginBottom);
-    text-transform: var(--base-typography-h4-textTransform);
-}
-
-h5 {
-    color: var(--base-typography-h5-color);
-    font-size: var(--base-typography-h5-fontSize);
-    font-weight: var(--base-typography-h5-fontWeight);
-    line-height: var(--base-typography-h5-lineHeight);
-    margin: var(--base-typography-h5-marginTop) 0 var(--base-typography-h5-marginBottom);
-    text-transform: var(--base-typography-h5-textTransform);
-}
-
-h6 {
-    color: var(--base-typography-h6-color);
-    font-size: var(--base-typography-h6-fontSize);
-    font-weight: var(--base-typography-h6-fontWeight);
-    line-height: var(--base-typography-h6-lineHeight);
-    margin: var(--base-typography-h6-marginTop) 0 var(--base-typography-h6-marginBottom);
-    text-transform: var(--base-typography-h6-textTransform);
 }

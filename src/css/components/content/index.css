@@ -1,4 +1,2 @@
-@import './bar.css';
-@import './columned.css';
-@import './content.css';
-@import './header.css';
+@import "./content.css";
+@import "./header.css";
