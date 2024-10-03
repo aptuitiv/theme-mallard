@@ -38,7 +38,7 @@ Three column gutter width */
 }
 
 /* Two column size */
-@media (--c-bp-md) {
+@media (--m-md) {
     .MasonryGrid-columnWidth {
         width: 48%;
     }
@@ -57,7 +57,7 @@ Three column gutter width */
 }
 
 /* Single column size with full width images */
-@media (--c-bp-sm) {
+@media (--m-sm) {
     .MasonryGrid-item {
         margin-bottom: 4.5%;
         width: 100%;

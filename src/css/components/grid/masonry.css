@@ -72,19 +72,19 @@
     padding: 4px 8px;
 }
 
-@media(--c-bp-lg) {
+@media(--m-lg) {
     .Masonry {
         column-count: 3;
     }
 }
 
-@media (--c-bp-md) {
+@media (--m-md) {
     .Masonry {
         column-count: 2;
     }
 }
 
-@media (--c-bp-sm) {
+@media (--m-sm) {
     .Masonry {
         column-count: 1;
     }

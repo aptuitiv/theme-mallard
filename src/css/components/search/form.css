@@ -19,7 +19,7 @@
     width: 200px;
 }
 
-@media (--c-bp-sm) {
+@media (--m-sm) {
     .SearchForm {
         width: 100%;
     }
@@ -38,13 +38,13 @@
     }
 }
 
-@media (--c-bp-lg) {
+@media (--m-lg) {
     .SearchForm--full {
         width: 100%;
     }
 }
 
-@media (--c-bp-md) {
+@media (--m-md) {
     .SearchForm--full {
         width: 100%;
     }
@@ -87,7 +87,7 @@
     width: 29px;
 }
 
-@media (--c-bp-md) {
+@media (--m-md) {
     .SearchForm-input {
         font-size: 16px;
     }

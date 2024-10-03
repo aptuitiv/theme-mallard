@@ -93,7 +93,7 @@
     z-index: 1;
 }
 
-@media (--c-bp-lg) {
+@media (--m-lg) {
     .ImageGrid-title {
         font-size: 1em;
     }

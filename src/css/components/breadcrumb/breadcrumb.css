@@ -30,7 +30,7 @@
     }
 }
 
-@media (--c-bp-sm) {
+@media (--m-sm) {
     .Breadcrumb {
         padding: 1em var(--g-gutter-sm) 0;
     }

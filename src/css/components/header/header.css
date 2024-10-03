@@ -45,14 +45,14 @@
     width: 100%;
 }
 
-@media (--c-bp-smallScreenNav) {
+@media (--m-smallScreenNav) {
     .Header-items {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (--c-bp-md) {
+@media (--m-md) {
     .Header-items {
         grid-template-columns: 100%;
     }

@@ -14,7 +14,7 @@
     text-align: center;
 }
 
-@media (--c-bp-sm) {
+@media (--m-sm) {
     .ImageWrapper-viewport {
         height: auto;
     }

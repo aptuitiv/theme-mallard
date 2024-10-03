@@ -68,7 +68,7 @@
     display: none;
 }
 
-@media (--c-bp-smallScreenNav) {
+@media (--m-smallScreenNav) {
     .Dropdown-item--smallScreen {
         display: block;
     }

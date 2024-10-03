@@ -16,7 +16,7 @@
     padding: 1rem var(--g-gutter) 2rem;
 }
 
-@media (--c-bp-sm) {
+@media (--m-sm) {
     .Content {
         padding: var(--g-gutter-sm);
     }

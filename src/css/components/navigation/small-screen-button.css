@@ -23,13 +23,13 @@
     text-transform: uppercase;
 }
 
-@media (--c-bp-smallScreenNav) {
+@media (--m-smallScreenNav) {
     .SmScBtn {
         display: inline-block;
     }
 }
 
-@media (--c-bp-md) {
+@media (--m-md) {
     .SmScBtn {
         display: block;
         width: 100%;

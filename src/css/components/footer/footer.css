@@ -30,7 +30,7 @@
     text-transform: var(--Footer-textTransform);
 }
 
-@media (--c-bp-sm) {
+@media (--m-sm) {
     .Footer {
         padding: 1rem var(--g-gutter-sm);
     }
