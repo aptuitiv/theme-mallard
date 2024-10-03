@@ -34,8 +34,8 @@
     {{ _page.themeStyles() }}
 </head>
 <body>
-{{ _page.bodyStartCode() }}
-{{ _api.widgets.collection.get('notification-bar') }}
+    {{ _page.bodyStartCode() }}
+    {{ _api.widgets.collection.get('notifications') }}
     <div class="visually-hidden">{{ source('snippets/svg-icons.twig') }}</div>
     {% apply spaceless %}
     <header>
