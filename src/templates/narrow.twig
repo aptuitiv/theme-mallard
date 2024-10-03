@@ -3,12 +3,12 @@
     {{ _page.content('banner') }}
 {% endblock %}
 <div class="Container">
-    <div class="Content u-cf">
+    <div class="Content clearfix">
         {% if _core.theme.settings.showBreadcrumb == "yes" and _page.isHome == false %}
             {{ _page.breadcrumb() }}
         {% endif %}
-        <div class="Grid">
-            <div class="Grid-cell u-size2of3 u-md-sizeFull u-push1of6 u-md-pushNone">{% block main %}<main id="main">{{ _page.content() }}</main>{% endblock %}</div>
+        <div class="grid">
+            <div class="u-size2of3 u-md-sizeFull u-push1of6 u-md-pushNone">{% block main %}<main id="main">{{ _page.content() }}</main>{% endblock %}</div>
         </div>
     </div>
 </div>

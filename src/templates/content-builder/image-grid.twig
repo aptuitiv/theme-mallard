@@ -14,7 +14,7 @@
     {% elseif count > 4 %}
         {% set class = 'u-size1of4 u-lg-size1of3 u-md-size1of2 u-sm-sizeFull' %}
     {% elseif count == 1 %}
-        {% set class = 'Grid-cell--center u-sm-sizeFull' %}
+        {% set class = '--center u-sm-sizeFull' %}
     {% endif %}
 
     {# Set the title text position class #}
@@ -31,7 +31,7 @@
         {% set titleClass = 'ImageGrid-title--bottom' %}
     {% endif %}
 
-    <div class="Grid Grid--withGutter Grid--equalHeight Grid--alignCenter ImageGrid">
+    <div class="grid g-2 Grid--equalHeight justify-center ImageGrid">
     {% for column in columns %}
         {% if column.image %}
             {% if column.image.alt|length == 0 %}
@@ -44,14 +44,14 @@
                 {% set column.image.class = column.image.class ~ ' ImageGrid-image--scale' %}
             {% endif %}
         {% endif %}
-    <div class="Grid-cell {{ class }} ImageGrid-col">
+    <div class="{{ class }} ImageGrid-col">
         {% if column.link %}
         <a href="{{ column.link }}" class="ImageGrid-item ImageGrid-item--cover ImageGrid-link">
             {% else %}
             <div class="ImageGrid-item ImageGrid-item--cover">
                 {% endif %}
                 {% if column.title and displayTitle != 'Below Image'%}<div class="ImageGrid-title {{ titleClass }}">{{ column.title }}</div>{% endif %}
-                {% if column.displayImage != 'Fit' %}<div class="Constrain u-posRelative">{% endif %}
+                {% if column.displayImage != 'Fit' %}<div class="Constrain relative">{% endif %}
                     {{ column.image.tag }}
                     {% if column.displayImage != 'Fit' %}</div>{% endif %}
                 {% if column.title and displayTitle == 'Below Image'%}<div class="ImageGrid-title {{ titleClass }}">{{ column.title }}</div>{% endif %}

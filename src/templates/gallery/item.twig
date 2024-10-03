@@ -14,9 +14,9 @@
 {# Video Macro #}
 {% macro video(item) %}
     {% set video = item.video.urlInfo|first %}
-    <div class="FlexEmbed u-margBottom2">
-        <div class="FlexEmbed-ratio FlexEmbed-ratio--8by5"></div>
-        <iframe class="FlexEmbed-content" frameborder="0" title="{{ video.title }}" allowfullscreen src="{{ video.iframeEmbed.src }}" loading="lazy"></iframe>
+    <div class="embed mb-2">
+        <div class="aspect-8by5"></div>
+        <iframe class="" frameborder="0" title="{{ video.title }}" allowfullscreen src="{{ video.iframeEmbed.src }}" loading="lazy"></iframe>
     </div>
 {% endmacro %}
 
@@ -26,9 +26,9 @@
     {% if item.video %}
         {# Displaying the video #}
         {% if item.description %}
-            <div class="Grid Grid--withGutterLg">
-                <div class="Grid-cell u-size2of3 u-lg-size1of2 u-md-sizeFull u-md-margBottom2">{{ itemMacros.video(item) }}</div>
-                <div class="Grid-cell u-size1of3 u-lg-size1of2 u-md-sizeFull">{{ item.description }}</div>
+            <div class="grid g-4">
+                <div class="u-size2of3 u-lg-size1of2 u-md-sizeFull u-md-margBottom2">{{ itemMacros.video(item) }}</div>
+                <div class="u-size1of3 u-lg-size1of2 u-md-sizeFull">{{ item.description }}</div>
             </div>
         {% else %}
             <div class="u-push1of6 u-size2of3 u-md-sizeFull u-md-pushNone">{{ itemMacros.video(item) }}</div>
@@ -40,7 +40,7 @@
                         {% for image in item.images %}
                             <li class="splide__slide">
                                 {% set image.image.large.alt = image.altText|default(item.itemName) %}
-                                {% set image.image.large.class = 'u-widthFull' %}
+                                {% set image.image.large.class = 'w-1-1' %}
                                 {% set image.image.large.style = 'object-fit: cover;' %}
                                 {{ image.image.large.tag }}
                             </li>
@@ -48,7 +48,7 @@
                     </ul>
             </div>
         </div>
-        <div id="thumbnail-slider" role="group" class="splide u-margTop1" aria-label="Thumbnail Slider">
+        <div id="thumbnail-slider" role="group" class="splide mt-1" aria-label="Thumbnail Slider">
             <div class="splide__track">
                     <ul class="splide__list">
                         {% for image in item.images %}
@@ -107,7 +107,7 @@
         {% endif %}
         
         {% if item.description %}
-            <div class="u-margTop2">{{ item.description }}</div>
+            <div class="mt-2">{{ item.description }}</div>
         {% endif %}
     {% endif %}
 {% endblock %}

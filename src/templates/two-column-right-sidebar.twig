@@ -3,16 +3,16 @@
     {{ _page.content('banner') }}
 {% endblock %}
 <div class="Container">
-    <div class="Content u-cf">
+    <div class="Content clearfix">
         {% if _core.theme.settings.showBreadcrumb == "yes" and _page.isHome == false %}
             {{ _page.breadcrumb() }}
         {% endif %}
-        <div class="Grid Grid--withGutterLg">
-            <div class="Grid-cell u-size3of4 u-lg-size2of3 u-sm-sizeFull">
+        <div class="grid g-4">
+            <div class="u-size3of4 u-lg-size2of3 u-sm-sizeFull">
                 {% block main %}<main id="main">{{ _page.content() }}</main>{% endblock %}
             </div>
-            <div class="Grid-cell u-size1of4 u-lg-size1of3 u-sm-sizeFull">
-                <div class="u-padLeft2 u-sm-padLeft0">
+            <div class="u-size1of4 u-lg-size1of3 u-sm-sizeFull">
+                <div class="ps-2 u-sm-padLeft0">
                     <aside>
                         {% block sidebar %}
                             {{ _api.navigation.getSubNavigationByUrl.key('main').getParentItem('yes').showSubNav('yes').template('sidebar') }}

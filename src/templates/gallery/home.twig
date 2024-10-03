@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block main %}
-    <div class="u-margBottom3 u-textCenter">
+    <div class="mb-3 text-center">
         <a href="{{ appUrls.itemList }}">Alternate view</a>
         | <a href="{{ appUrls.categoryList }}">Categories</a>
     </div>
@@ -38,15 +38,15 @@
                             {% set videoImage.class = 'MasonryGrid-image' %}
                         {% endif %}
                         <a data-fslightbox href="{{ video.url }}">
-                            <div class="Masonry-title Masonry-title--overlay u-textCenter">{{ item.itemName }}</div>
+                            <div class="Masonry-title Masonry-title--overlay text-center">{{ item.itemName }}</div>
                             <div class="Masonry-play"></div>
                             <div>{{ videoImage.tag }}</div>
                         </a>
                     {% else %}
                         {% set modalId = 'Modal_' ~ random_string() %}
                         <a data-fslightbox data-type="image" href="{{ image.large.src }}">
-                            <div class="Masonry-title Masonry-title--overlay u-textCenter">{{ item.itemName }}</div>
-                            {% set image.large.class = "u-sizeFull" %}
+                            <div class="Masonry-title Masonry-title--overlay text-center">{{ item.itemName }}</div>
+                            {% set image.large.class = "w-1-1" %}
                             <img src="{{ image.large.src }}" alt="{{ item.itemName }}" {{ loop.index > 12 ? 'loading="lazy"' }}>
                         </a>
                     {% endif %}

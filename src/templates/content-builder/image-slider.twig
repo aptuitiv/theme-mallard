@@ -57,9 +57,9 @@
                             {% set numSlides = 2 %}
                             {% set mdNumSlides = 1 %}
                             {% set smNumSlides = 1 %}
-                            <div class="Grid Grid--equalHeight ImageSlider-grid {{ slideGridClass }}">
-                                <div class="Grid-cell u-size1of2 u-sm-sizeFull  u-flexCol">{{ slide_macros.slideImage(slide) }}</div>
-                                <div class="Grid-cell u-size1of2 u-sm-sizeFull ImageSlider-gridContent">
+                            <div class="grid Grid--equalHeight ImageSlider-grid {{ slideGridClass }}">
+                                <div class="u-size1of2 u-sm-sizeFull  flex-col">{{ slide_macros.slideImage(slide) }}</div>
+                                <div class="u-size1of2 u-sm-sizeFull ImageSlider-gridContent">
                                     {{ slide_macros.slideContent(slide) }}
                                 </div>
                             </div>
@@ -67,11 +67,11 @@
                             {% set numSlides = 2 %}
                             {% set mdNumSlides = 1 %}
                             {% set smNumSlides = 1 %}
-                            <div class="Grid Grid--equalHeight ImageSlider-grid {{ slideGridClass }}">
-                                <div class="Grid-cell u-size1of2 u-sm-sizeFull ImageSlider-gridContent">
+                            <div class="grid Grid--equalHeight ImageSlider-grid {{ slideGridClass }}">
+                                <div class="u-size1of2 u-sm-sizeFull ImageSlider-gridContent">
                                     {{ slide_macros.slideContent(slide) }}
                                 </div>
-                                <div class="Grid-cell u-size1of2 u-sm-sizeFull u-flexCol">{{ slide_macros.slideImage(slide) }}</div>
+                                <div class="u-size1of2 u-sm-sizeFull flex-col">{{ slide_macros.slideImage(slide) }}</div>
                             </div>
                         {% elseif displayContent == 'Over Image' %}
                             {% if slide.link %}

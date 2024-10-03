@@ -36,8 +36,8 @@
 {% macro buildGridFieldRow(field) %}
     {% if field.fieldType != "hidden" %}
         {% set field.class = field.class|replace({"error": "is-invalid"}) %}
-        <div class="Grid Grid--withGutter u-margBottom2">
-            <div class="Grid-cell u-size1of4 u-md-sizeFull">
+        <div class="grid g-2 mb-2">
+            <div class="u-size1of4 u-md-sizeFull">
                 {% set field.label.class = field.label.class ~ ' FormLabel' %}
                 {% if field.isRequired %}
                     {% set field.required = true %}
@@ -48,7 +48,7 @@
             {% if field.fieldType in ["radio", "multiCheckbox", "checkbox"] %}
                 {% set field.groupId = "js-field--" ~ random_string() %}
             {% endif %}
-            <div class="Grid-cell u-size3of4 u-md-sizeFull {{ field.groupId ?: '' }}">
+            <div class="u-size3of4 u-md-sizeFull {{ field.groupId ?: '' }}">
                 {{ _self.buildGridField(field) }}
             </div>
         </div>
@@ -60,7 +60,7 @@
 {# Build out each field #}
 {% macro buildGridField(field) %}
     {% if field.fieldType in ['email', 'number', 'password', 'text', 'url', 'tel'] %}
-        {% set field.class = field.class ~ ' TextInput u-sizeFull' %}
+        {% set field.class = field.class ~ ' TextInput w-1-1' %}
         {{ field.tag }}
     {%  elseif field.fieldType in ['date','time','month'] %}
         {% set field.class = field.class ~ ' TextInput' %}
@@ -76,22 +76,22 @@
         {% elseif field.size == 'large' %}
             {% set field.rows = 10 %}
         {% endif %}
-        {% set field.class = field.class ~ ' TextInput u-sizeFull' %}
+        {% set field.class = field.class ~ ' TextInput w-1-1' %}
         {{ field.tag }}
     {% elseif field.fieldType == 'select' %}
-        <div class="SelectInput u-sizeFull">
+        <div class="SelectInput w-1-1">
             {{ field.tag }}
         </div>
     {% elseif field.fieldType == 'radio' %}
         {% if field.config.separator == 'space' %}
             {% for option in field.options %}
-                <label class="u-padRight2">{{ option.tagNoLabel }} {{ option.label }}</label>
+                <label class="pe-2">{{ option.tagNoLabel }} {{ option.label }}</label>
             {% endfor %}
         {% else %}
             {{ field.tag|replace({"error": "is-invalid"}) }}
         {% endif %}
     {% elseif field.fieldType == 'repeatingGrid' || field.fieldType == 'grid' %}
-        <div class="Grid Grid--withGutter">
+        <div class="grid g-2">
             {% for column in field.columns %}
                 {% set class = 'u-size1of' ~ loop.length  %}
                 {% if column.class %}
@@ -102,12 +102,12 @@
                     {% endif %}
                 {% endif %}
                 {% set class = class ~ ' u-md-sizeFull' %}
-                <div class="Grid-cell {{ class }}">
+                <div class="{{ class }}">
                     {% for child in column.childFields %}
                         {% if child.fieldType in ["radio", "multiCheckbox", "checkbox"] %}
                             {% set child.groupId = "js-field--" ~ random_string() %}
                         {% endif %}
-                        <div class="u-margBottom2 {{ child.groupId ?: '' }}">
+                        <div class="mb-2 {{ child.groupId ?: '' }}">
                             {% set child.label.class = child.label.class ~ ' FormLabel FormLabel--block' %}
                             {% if child.isRequired %}
                                 {% set child.required = true %}
@@ -123,14 +123,14 @@
     {% else %}
         {{ field.tag|replace({"error": "is-invalid"}) }}
     {% endif %}
-    {% if field.description %}<p class="u-margBottom0 u-fontSize2">{{ field.description }}</p>{% endif %}
+    {% if field.description %}<p class="mb-0 u-fontSize2">{{ field.description }}</p>{% endif %}
 {% endmacro %}
 
 {# Build the Label Above Field fields #}
 {% macro buildLabelAboveFieldFields(form) %}
     {% for field in form.fields %}
         {% if field.fieldType == 'repeatingGrid' || field.fieldType == 'grid' %}
-            <div class="Grid Grid--withGutter">
+            <div class="grid g-2">
                 {% for column in field.columns %}
                     {% set class = 'u-size1of' ~ loop.length  %}
                     {% if column.class %}
@@ -141,7 +141,7 @@
                         {% endif %}
                     {% endif %}
                     {% set class = class ~ ' u-md-sizeFull' %}
-                    <div class="Grid-cell {{ class }}">
+                    <div class="{{ class }}">
                         {% for child in column.childFields %}
                             {{ _self.buildLabelAboveFieldField(child) }}
                         {% endfor %}
@@ -176,7 +176,7 @@
         {% if field.fieldType in ["radio", "multiCheckbox", "checkbox"] %}
             {% set field.groupId = "js-field--" ~ random_string() %}
         {% endif %}
-        <div class="u-margBottom2 {{ field.groupId ?: '' }}">
+        <div class="mb-2 {{ field.groupId ?: '' }}">
             {% set field.label.class = field.label.class ~ ' FormLabel FormLabel--block' %}
             {% if field.isRequired %}
                 {% set field.required = true %}
@@ -184,7 +184,7 @@
             {% endif %}
             {{ field.label.tag }}
             {% if field.fieldType in ['email', 'number', 'password', 'text', 'url', 'tel'] %}
-                {% set field.class = field.class ~ ' TextInput u-sizeFull' %}
+                {% set field.class = field.class ~ ' TextInput w-1-1' %}
                 {{ field.tag }}
             {%  elseif field.fieldType in ['date','time','month'] %}
                 {% set field.class = field.class ~ ' TextInput' %}
@@ -200,29 +200,29 @@
                 {% elseif field.size == 'large' %}
                     {% set field.rows = 10 %}
                 {% endif %}
-                {% set field.class = field.class ~ ' TextInput u-sizeFull' %}
+                {% set field.class = field.class ~ ' TextInput w-1-1' %}
                 {{ field.tag }}
             {% elseif field.fieldType == 'select' %}
-                <div class="SelectInput u-sizeFull">
+                <div class="SelectInput w-1-1">
                     {{ field.tag }}
                 </div>
             {% elseif field.fieldType in ["radio", "multiCheckbox", "checkbox"] %}
                 {% if field.config.separator == 'space' %}
                     {% for option in field.options %}
-                        <label class="u-padRight2">{{ option.tagNoLabel }} {{ option.label }}</label>
+                        <label class="pe-2">{{ option.tagNoLabel }} {{ option.label }}</label>
                     {% endfor %}
                 {% else %}
                     {{ field.tag|replace({"error": "is-invalid"}) }}
                 {% endif %}
             {% elseif field.fieldType == 'rating' %}
-                <div class="Grid Grid--withGutter">
-                    <div class="Grid-cell u-size3of4 u-lg-size2of3 u-md-size1of2 u-sm-sizeFull">
+                <div class="grid g-2">
+                    <div class="u-size3of4 u-lg-size2of3 u-md-size1of2 u-sm-sizeFull">
                         {{ field.label.tag }}
                     </div>
-                    <div class="Grid-cell u-size1of4 u-lg-size1of3 u-md-size1of2 u-sm-sizeFull">
-                        <div class="u-flex u-flexJustifyEnd u-flexAlignItemsCenter u-heightFull u-sm-flexJustifyStart u-sm-flexAlignItemsStart u-sm-margTop1">
+                    <div class="u-size1of4 u-lg-size1of3 u-md-size1of2 u-sm-sizeFull">
+                        <div class="flex justify-end align-center h-1-1 u-sm-flexJustifyStart u-sm-flexAlignItemsStart u-sm-margTop1">
                             {% for option in field.options %}
-                                <label class="u-padRight2">{{ option.tagNoLabel }} {{ option.label }}</label>
+                                <label class="pe-2">{{ option.tagNoLabel }} {{ option.label }}</label>
                             {% endfor %}
                         </div>
                     </div>
@@ -230,7 +230,7 @@
             {% else %}
                 {{ field.tag|replace({"error": "is-invalid"}) }}
             {% endif %}
-            {% if field.description %}<p class="u-margBottom0 u-fontSize2 u-sm-sizeFull">{{ field.description }}</p>{% endif %}
+            {% if field.description %}<p class="mb-0 u-fontSize2 u-sm-sizeFull">{{ field.description }}</p>{% endif %}
         </div>
     {% else %}
         {{ field.tag }}
@@ -243,7 +243,7 @@
     message: (string) OPTIONAL A custom message to show above the error list.
 #}
 {% macro formErrorContainer(form, message) %}
-    <div class="FormError {% if form.errors is empty and form.paymentErrors is empty %} u-hidden{% endif %}">
+    <div class="FormError {% if form.errors is empty and form.paymentErrors is empty %} hidden{% endif %}">
         {% set errorMessage = form.paymentErrors is empty ? 'There was a problem with your submission. Please correct the issues below' : 'Could not process your payment' %}
         {% set errorMessage = message ? message : errorMessage %}
         <p>{{ errorMessage }}</p>

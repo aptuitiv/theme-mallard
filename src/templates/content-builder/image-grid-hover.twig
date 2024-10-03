@@ -11,7 +11,7 @@
     {% elseif count > 4 %}
         {% set class = 'u-size1of4 u-md-size1of2 u-sm-sizeFull u-md-margBottom2' %}
     {% else %}
-        {% set class = 'Grid-cell--center u-sm-sizeFull u-margBottom2' %}
+        {% set class = '--center u-sm-sizeFull mb-2' %}
     {% endif %}
 
     {# Set the title text position class #}
@@ -25,7 +25,7 @@
     {% elseif displayText == 'Below Image' %}
         {% set titleClass = 'ImageGrid-title--below' %}
     {% endif %}
-    <div class="Grid Grid--withGutter Grid--equalHeight Grid--alignCenter ImageGrid">
+    <div class="grid g-2 Grid--equalHeight justify-center ImageGrid">
         {% for column in images %}
             {% if column.image %}
                 {% if column.image.alt|length == 0 %}
@@ -33,7 +33,7 @@
                 {% endif %}
                 {% set column.image.class = 'ImageGrid-image' %}
             {% endif %}
-            <div class="Grid-cell {{ class }} ImageGrid-col">
+            <div class="{{ class }} ImageGrid-col">
                 {% if column.link %}
                     <a href="{{ column.link }}" class="ImageGrid-item ImageGrid-link ImageGrid-hover">
                 {% else %}

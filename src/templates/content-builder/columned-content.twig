@@ -21,7 +21,7 @@
     {% elseif count > 4 %}
         {% set class = 'u-size1of4 u-md-size1of2 u-sm-sizeFull u-md-margBottom2' %}
     {% else %}
-        {% set class = 'Grid-cell--center u-sm-sizeFull u-margBottom2' %}
+        {% set class = '--center u-sm-sizeFull mb-2' %}
     {% endif %}
 
     {# Set the title text position class #}
@@ -35,7 +35,7 @@
     {% elseif displayText == 'Below Image' %}
         {% set titleClass = 'ColumnedContent-title--below' %}
     {% endif %}
-    <div class="Grid Grid--withGutter ColumnedContent">
+    <div class="grid g-2 ColumnedContent">
         {% for column in columns %}
             {% if column.image %}
                 {% if column.image.alt|length == 0 %}
@@ -43,7 +43,7 @@
                 {% endif %}
                 {% set column.image.class = 'ColumnedContent-image' %}
             {% endif %}
-            <div class="Grid-cell {{ class }} ColumnedContent-col">
+            <div class="{{ class }} ColumnedContent-col">
                 <div class="ColumnedContent-item">
                     {% apply spaceless %}
                         {% if column.link %}

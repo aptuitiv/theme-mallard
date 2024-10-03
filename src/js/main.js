@@ -40,7 +40,7 @@ const setupNotifications = () => {
     notificationButtons.forEach((button) => {
         button.addEventListener('click', (e) => {
             // Hide notification
-            e.currentTarget.closest('.js-notification').classList.add('u-hidden');
+            e.currentTarget.closest('.js-notification').classList.add('hidden');
             // Set cookie to hide on load
             setCookie('notificationMsgHide', e.currentTarget.dataset.id, 10);
         });

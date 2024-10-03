@@ -15,12 +15,12 @@
     {% elseif count > 4 %}
         {% set class = 'u-size1of4 u-lg-size1of3 u-md-size1of2 u-sm-sizeFull' %}
     {% elseif count == 1 %}
-        {% set class = 'Grid-cell--center u-sm-sizeFull' %}
+        {% set class = '--center u-sm-sizeFull' %}
     {% endif %}
 
-    <div class="Grid Grid--withGutterLg ContentGrid">
+    <div class="grid g-4 ContentGrid">
         {% for column in columns %}
-            <div class="Grid-cell {{ class }} ContentGrid-cell">
+            <div class="{{ class }} Content">
                 <div class="ContentGrid-item">
                     {% if column.title %}
                         {% if column.link %}
