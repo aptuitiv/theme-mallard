@@ -1,6 +1,21 @@
 {
     "groups": [
         {
+            "name": "Font test",
+            "fields": [
+                {
+                    "name": "fontFamilyTest",
+                    "label": "Font family test",
+                    "type": "fontFamily",
+                    "preview": {
+                        "type": "css-head",
+                        "cssSelector": ".Notification p",
+                        "cssProperty": "font-family"
+                    }
+                }
+            ]
+        },
+        {
             "name": "Banner",
             "description": "Styles for the page Banner layout.",
             "sections": [
