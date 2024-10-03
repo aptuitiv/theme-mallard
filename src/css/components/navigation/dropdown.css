@@ -15,8 +15,8 @@
     --Dropdown-fontWeight: 400;
     --Dropdown-textTransform: none;
     --Dropdown-lineHeight: inherit;
-    --Dropdown-item-padding: .5em 1em;
-    --Dropdown-item-padding-small-screen: .8em 30px .8em 1em;
+    --Dropdown-item-padding: 0.5em 1em;
+    --Dropdown-item-padding-small-screen: 0.8em 30px 0.8em 1em;
     --Dropdown-link-color: #fff;
     --Dropdown-link-colorHover: #fff;
 }
@@ -46,7 +46,7 @@
 
 .Dropdown-menu::before,
 .Dropdown-menu::after {
-    content: ' ';
+    content: " ";
     display: table;
 }
 
@@ -68,7 +68,7 @@
     display: none;
 }
 
-@media (--m-smallScreenNav) {
+@media (--m-small-screen-nav) {
     .Dropdown-item--smallScreen {
         display: block;
     }
@@ -91,7 +91,7 @@
     white-space: nowrap;
 }
 
-@media (--c-bp-largeScreenNav) {
+@media (--m-large-screen-nav) {
     .Dropdown-link:hover,
     .Dropdown-link.is-current,
     .Dropdown-link.is-currentParent {
@@ -111,20 +111,13 @@
 /* State
    ========================================================================== */
 
-@media (--c-bp-largeScreenNav) {
+@media (--m-large-screen-nav) {
     /* show sub-menus under hovered items */
 
     .Dropdown:hover > .Dropdown-menu,
     .Dropdown.is-active > .Dropdown-menu,
     .Dropdown-item:hover > .Dropdown-menu {
         display: block;
-    }
-
-    /* display sub-menus under the last item to the right */
-
-    .Dropdown.is-last:hover > .Dropdown-menu {
-        left: auto;
-        right: 0;
     }
 
     /* fly-out to the right */
@@ -135,6 +128,13 @@
         left: 100%;
         top: 0;
         transform: none;
+    }
+
+    /* display sub-menus under the last item to the right */
+
+    .Dropdown.is-last:hover > .Dropdown-menu {
+        left: auto;
+        right: 0;
     }
 
     /* fly-out to the left if root parent is last item */
@@ -157,7 +157,7 @@
 .Dropdown-link--parent::before,
 .Dropdown-link--parent::after {
     background: var(--Dropdown-link-color);
-    content: '';
+    content: "";
     display: inline-block;
     height: 1px;
     margin-top: -1px;

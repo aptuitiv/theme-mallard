@@ -5,8 +5,7 @@
     smaller screens.
 \* =========================================================================== */
 
-
-@media (--m-smallScreenNav) {
+@media (--m-small-screen-nav) {
     /**
      * Main Navigation
      */
@@ -34,15 +33,15 @@
 
     .MainNav-link {
         display: block;
-        padding: .8em 1.5rem;
+        padding: 0.8em 1.5rem;
     }
 
     .MainNav-link.is-dropdown::after {
         border: 5px solid transparent;
         border-left-color: #fff;
-        content: '';
+        content: "";
         display: block;
-        opacity: .7;
+        opacity: 0.7;
         position: absolute;
         right: 10px;
         top: 50%;

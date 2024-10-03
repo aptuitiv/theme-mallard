@@ -45,7 +45,7 @@
     width: 100%;
 }
 
-@media (--m-smallScreenNav) {
+@media (--m-small-screen-nav) {
     .Header-items {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -56,11 +56,11 @@
     .Header-items {
         grid-template-columns: 100%;
     }
-    
+
     .Header-logoWrapper {
         text-align: center;
     }
-    
+
     .Header-logo {
         margin-bottom: 30px;
     }
