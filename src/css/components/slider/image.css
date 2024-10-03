@@ -209,7 +209,7 @@
     left: 0;
     overflow: hidden;
     position: absolute;
-    text-shadow: 0 0 5px rgba(0, 0, 0, .6);
+    text-shadow: 0 0 5px rgb(0 0 0 / 60%);
     top: 0;
     width: 100%;
 }
@@ -317,7 +317,6 @@
 }
 
 @media (--c-bp-md) {
-
     /* postcss-bem-linter: ignore */
     .splide__pagination {
         bottom: -27px !important;

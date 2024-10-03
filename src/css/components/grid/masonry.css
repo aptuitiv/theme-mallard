@@ -63,7 +63,6 @@
 .Masonry-link:active .Masonry-image,
 .Masonry-link:focus .Masonry-image,
 .Masonry-link:hover .Masonry-image {
-
     /* transform: scale(1.15); */
 }
 
@@ -105,7 +104,7 @@
 }
 
 .Masonry--tight .Masonry-title {
-    background-image: linear-gradient(transparent, rgba(20, 20, 20, .6));
+    background-image: linear-gradient(transparent, rgb(20 20 20 / 60%));
     bottom: 0;
     color: #fff;
     display: none;
@@ -113,7 +112,7 @@
     padding: 10px 8px;
     position: absolute;
     text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
     width: 100%;
 }
 
@@ -126,12 +125,12 @@
 \* ------------------------------------ */
 
 .Masonry-title--overlay {
-    background-image: linear-gradient(transparent, rgba(20, 20, 20, .6));
+    background-image: linear-gradient(transparent, rgb(20 20 20 / 60%));
     bottom: 0;
     color: #fff;
     left: 0;
     padding: 10px 8px;
     position: absolute;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
     width: 100%;
 }

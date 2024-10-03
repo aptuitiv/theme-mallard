@@ -59,7 +59,7 @@
     border-left: none;
 }
 
-@media (max-width: 750px) {
+@media (width <= 750px) {
     .Footer-credit {
         border-left: none;
         display: block;

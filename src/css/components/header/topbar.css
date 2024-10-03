@@ -39,7 +39,6 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-
     /* postcss-bem-linter: ignore */
     .TopBar-contact a:hover {
         color: var(--TopBar-colorHover);

@@ -5,12 +5,12 @@
 
 .Icon {
     display: inline-block;
-    fill: currentColor;
+    fill: currentcolor;
     height: 1em;
     line-height: 1em;
     margin-left: .2em;
     margin-right: .2em;
-    stroke: currentColor;
+    stroke: currentcolor;
     stroke-width: 0;
     vertical-align: text-bottom;
     width: 1em;

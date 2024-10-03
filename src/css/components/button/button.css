@@ -33,7 +33,6 @@
     --Button-paddingHorizontalLg: 45px;
     --Button-paddingVerticalSm: 5px;
     --Button-paddingHorizontalSm: 15px;
-    
     --Button-padding: var(--Button-paddingVertical) var(--Button-paddingHorizontal);
     --Button-paddingLg: var(--Button-paddingVerticalLg) var(--Button-paddingHorizontalLg);
     --Button-paddingSm: var(--Button-paddingVerticalSm) var(--Button-paddingHorizontalSm);
@@ -52,7 +51,7 @@
  */
 
 .Button,
-.Button[href^=tel] {
+.Button[href^="tel"] {
     background: var(--Button-background);
     border: var(--Button-border);
     border-radius: var(--Button-border-radius);
@@ -76,11 +75,11 @@
  */
 
 .Button:hover,
-.Button[href^=tel]:hover,
+.Button[href^="tel"]:hover,
 .Button:focus,
-.Button[href^=tel]:focus,
+.Button[href^="tel"]:focus,
 .Button:active,
-.Button[href^=tel]:active {
+.Button[href^="tel"]:active {
     background: var(--Button-backgroundHover);
     color: var(--Button-colorHover);
     text-decoration: none;
@@ -91,13 +90,13 @@
  */
 
 .Button--lg,
-.Button--lg[href^=tel] {
+.Button--lg[href^="tel"] {
     font-size: calc(var(--base-typography-fontSize) + 3px);
     padding: var(--Button-paddingLg);
 }
 
 .Button--sm,
-.Button--sm[href^=tel] {
+.Button--sm[href^="tel"] {
     font-size: var(--base-typography-fontSize);
     font-weight: 300;
     padding: var(--Button-paddingSm);
@@ -107,17 +106,17 @@
  * Color modifiers
  */
 .Button--secondary,
-.Button--secondary[href^=tel] {
+.Button--secondary[href^="tel"] {
     background: var(--Button-alt-background);
     color: var(--Button-alt-color);
 }
 
 .Button--secondary:active,
-.Button--secondary[href^=tel]:active,
+.Button--secondary[href^="tel"]:active,
 .Button--secondary:focus,
-.Button--secondary[href^=tel]:focus,
+.Button--secondary[href^="tel"]:focus,
 .Button--secondary:hover,
-.Button--secondary[href^=tel]:hover {
+.Button--secondary[href^="tel"]:hover {
     background: var(--Button-alt-hover-background);
     color: var(--Button-alt-hover-color);
 }
@@ -126,6 +125,6 @@
  * Border modifiers
  */
 .Button--square,
-.Button--square[href^=tel] {
+.Button--square[href^="tel"] {
     border-radius: 0;
 }
