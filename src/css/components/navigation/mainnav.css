@@ -4,20 +4,6 @@
 
 /** @define MainNav */
 
-:root {
-    --MainNav-fontFamily: var(--base-typography-heading-fontFamily);
-    --MainNav-fontSize: 2.4rem;
-    --MainNav-fontWeight: 400;
-    --MainNav-lineHeight: 1.5;
-    --MainNav-link-textTransform: uppercase;
-    --MainNav-link-background: transparent;
-    --MainNav-link-backgroundHover: transparent;
-    --MainNav-link-color: var(--color-primary);
-    --MainNav-link-colorHover: var(--color-primary);
-    --MainNav-link-paddingVertical: 10px;
-    --MainNav-link-paddingHorizontal: 30px;
-}
-
 /**
  * Base menu
  */
@@ -89,8 +75,7 @@
     font-weight: var(--MainNav-fontWeight);
     letter-spacing: 1px;
     line-height: var(--MainNav-lineHeight);
-    padding: var(--MainNav-link-paddingVertical)
-        var(--MainNav-link-paddingHorizontal);
+    padding: var(--MainNav-link-paddingVertical) var(--MainNav-link-paddingHorizontal);
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -111,7 +96,7 @@
     .MainNav-item:hover > .MainNav-link::after {
         border-top: 1px solid var(--MainNav-link-colorHover);
         bottom: -1px;
-        content: "";
+        content: '';
         left: 50%;
         position: absolute;
         transform: translateX(-50%);

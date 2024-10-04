@@ -2,11 +2,6 @@
     Header
 \* =========================================================================== */
 
-:root {
-    --Header-skipMain-color: var(--color-primary);
-    --Header-logo-width: 200px;
-}
-
 /* @define Header */
 .Header {
     padding: 2rem 0;

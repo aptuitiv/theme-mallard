@@ -2,68 +2,36 @@
     Footer
 \* =========================================================================== */
 
-:root {
-    --Footer-border-width: 1px;
-    --Footer-border-color: #ececec;
-    --Footer-border: var(--Footer-border-width) solid var(--Footer-border-color);
-    --Footer-background: #f3f3f3;
-    --Footer-color: #4c5c4c;
-    --Footer-font-size: 1.5rem;
-    --Footer-textTransform: uppercase;
-    --Footer-nav-font: var(--base-typography-fontFamily);
-    --Footer-nav-font-size: 1em;
-    --Footer-nav-color: #4c5c4c;
-    --Footer-nav-color-hover: #4c5c4c;
-    --Footer-padding-vertical: 15px;
-    --Footer-padding-horizontal: 20px;
-    --Footer-padding: var(--Footer-padding-vertical) var(--Footer-padding-horizontal);
-}
-
 /* @define Footer */
 .Footer {
     background: var(--Footer-background);
-    border-top: var(--Footer-border);
-    color: var(--Footer-color);
-    font-size: var(--Footer-font-size);
-    padding: var(--Footer-padding);
+    border: var(--Footer-border);
+    margin: var(--Footer-sm-margin, 0);
+    padding: var(--Footer-sm-padding, 0);
     text-align: center;
-    text-transform: var(--Footer-textTransform);
 }
 
-@media (--m-sm) {
+@media (--m-md) {
     .Footer {
-        padding: 1rem var(--g-gutter-sm);
+        margin: var(--Footer-margin, 0);
+        padding: var(--Footer-padding, 20px 0);
     }
 }
 
-.Footer-link {
-    color: var(--Footer-nav-color);
-    text-decoration: none;
+.Footer-attribution {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.Footer-link:active,
-.Footer-link:focus,
-.Footer-link:hover {
-    color: var(--Footer-nav-color-hover);
-    text-decoration: underline;
-}
+/* ------------------------------------ *\
+    Responsive
+\* ------------------------------------ */
 
-.Footer-credit {
-    border-left: 1px solid var(--Footer-color);
-    display: inline-block;
-    line-height: 1;
-    padding: 0 1rem;
-}
-
-.Footer-credit:first-child {
-    border-left: none;
-}
-
-@media (width <= 750px) {
-    .Footer-credit {
-        border-left: none;
-        display: block;
-        line-height: 1.5;
-        padding: 0;
+@media (--m-lg) {
+    .Footer-attribution {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
     }
 }

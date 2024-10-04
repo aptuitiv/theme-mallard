@@ -2,10 +2,6 @@
     Typography utilities
 \* =========================================================================== */
 
-:root {
-    --Heading-underline-color: var(--color-primary);
-}
-
 .heading-centered {
     margin-bottom: 35px;
     position: relative;
@@ -15,7 +11,7 @@
 .heading-centered::after {
     background: var(--Heading-underline-color);
     bottom: -12px;
-    content: "";
+    content: '';
     height: 3px;
     left: 50%;
     position: absolute;

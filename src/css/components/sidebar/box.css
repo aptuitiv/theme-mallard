@@ -2,11 +2,6 @@
     Sidebar Box Styles
 \* =========================================================================== */
 
-:root {
-    --SidebarBox-heading-color: var(--color-primary);
-    --SidebarBox-secondary-color: #4d4d4d;
-}
-
 /* @define SidebarBox */
 .SidebarBox {
     margin-bottom: 40px;

@@ -13,10 +13,6 @@
  * general UI of the site/app.
  */
 
-:root {
-    --Button-disabled-opacity: 0.6;
-}
-
 /**
  * 1. Normalize `box-sizing` across all elements that this component could be
  *    applied to.

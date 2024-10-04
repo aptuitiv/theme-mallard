@@ -6,10 +6,6 @@
     </div>
 \* =========================================================================== */
 
-:root {
-    --Content-background: #fff;
-}
-
 /* @define Content */
 .Content {
     background: var(--Content-background);

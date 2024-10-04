@@ -10,14 +10,14 @@
     {% endif %}
     {# COMMENT FORM SUCCESS OR ERROR #}
     {% if post.commentForm.success %}
-        <p class="FormSuccess">Your comment was successfully submitted. It will be published once we have reviewed it.</p>
+        <p class="Message Message--success">Your comment was successfully submitted. It will be published once we have reviewed it.</p>
     {% endif %}
     {% if post.commentForm.errors %}
-        <div id="errorContainer" class="FormError {% if form.errors is empty %} hidden{% endif %}">
+        <div id="errorContainer" class="Message Message--error {% if form.errors is empty %} hidden{% endif %}">
             <p>There was a problem with your submission. Please correct the issues below</p>
-            <ul class="FormError-list">
+            <ul>
                 {% for error in post.commentForm.errors %}
-                    <li class="FormError-listItem js-serverError">{{ error.message }}</li>
+                    <li class="js-serverError">{{ error.message }}</li>
                 {% endfor %}
             </ul>
         </div>

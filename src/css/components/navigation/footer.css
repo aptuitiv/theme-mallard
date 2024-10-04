@@ -1,65 +1,46 @@
 /* =========================================================================== *\
-    Footer Navigation
+    Footer Nav
 \* =========================================================================== */
 
-/** @define FooterNav */
-:root {
-    --FooterNav-fontSize: var(--Footer-nav-font-size);
-    --FooterNav-lineHeight: 1;
-    --FooterNav-textTransform: uppercase;
-    --FooterNav-link-color: var(--Footer-nav-color);
-    --FooterNav-link-colorHover: var(--Footer-nav-color-hover);
-}
-
-/**
- * Base menu
- */
-
+/* @define FooterNav */
 .FooterNav {
-    box-sizing: border-box;
-    font-family: var(--Footer-nav-font);
-    font-size: var(--FooterNav-fontSize);
-    line-height: var(--FooterNav-lineHeight);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
     list-style: none;
-    margin: 10px 0 30px;
-    padding: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
-
-/**
- * Items
- */
-
-.FooterNav-item {
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 0 8px;
-}
-
-.FooterNav-item:last-child {
-    margin-right: 0;
-}
-
-/**
- * Links
- */
 
 .FooterNav-link {
-    box-sizing: border-box;
-    color: var(--FooterNav-link-color);
-    display: block;
-    text-decoration: none;
-    text-transform: var(--FooterNav-textTransform);
+    color: var(--FooterNav-color);
 }
-
-.FooterNav-link:hover {
-    color: var(--FooterNav-link-colorHover);
-    text-decoration: underline;
-}
-
 
 @media (--m-md) {
-    .FooterNav-item {
-        display: block;
-        margin: 12px 0;
+    .FooterNav {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .FooterNav-link {
+        line-height: 1;
+        position: relative;
+    }
+
+    .FooterNav-link::after {
+        background: var(--FooterNav-color);
+        content: '';
+        height: 25%;
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+    }
+
+    .FooterNav-item:last-child .FooterNav-link::after {
+        display: none;
     }
 }

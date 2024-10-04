@@ -7,13 +7,137 @@
                     "name": "showBreadcrumb",
                     "label": "Show Breadcrumb Text",
                     "type": "switch",
-                    "default": "yes"
+                    "defaultValue": "yes"
+                }
+            ]
+        },
+        {
+            "name": "Blocks - Google Ratings Bar",
+            "description": "Settings for the Google Ratings Bar",
+            "fields": [
+                {
+                    "name": "googleRatingsBarReviewsLink",
+                    "label": "URL to view reviews on Google",
+                    "type": "url",
+                    "showLinkTextField": true
+                }
+            ]
+        },
+        {
+            "name": "Footer",
+            "description": "Content for the footer that is used on all pages",
+            "fields": [
+                {
+                    "name": "footerShowNavigation",
+                    "label": "Show navigation",
+                    "type": "switch",
+                    "defaultValue": "yes"
+                },
+                {
+                    "name": "footerShowAddress",
+                    "label": "Show address",
+                    "type": "switch",
+                    "defaultValue": "yes"
+                },
+                {
+                    "name": "footerShowEmail",
+                    "label": "Show email",
+                    "type": "switch",
+                    "defaultValue": "no"
+                },
+                {
+                    "name": "footerShowPhone",
+                    "label": "Show phone number",
+                    "type": "switch",
+                    "defaultValue": "yes"
+                },
+                {
+                    "name": "footerShowCredit",
+                    "label": "Show Aptuitiv credit",
+                    "type": "switch",
+                    "defaultValue": "yes"
+                }
+            ]
+        },
+        {
+            "name": "Header",
+            "description": "Content for the header that is used on all pages.",
+            "sidebarSize": "small",
+            "groups": [
+                {
+                    "name": "Image Logo",
+                    "fields": [
+                        {
+                            "name": "headerLogo",
+                            "label": "Logo",
+                            "type": "image",
+                            "path": "images",
+                            "preview": {
+                                "type": "replace",
+                                "contentSelector": "#header-logo",
+                                "template": "<div class=\"Header-logoWrapper\" id=\"header-logo\"><a href=\"/\"><img src=\"{{ url }}\" height=\"{{ imageHeight }}\" width=\"{{ imageWidth }}\" alt=\"{{ alt }}\" class=\"Header-logo\"></a></div>"
+                            }
+                        },
+                        {
+                            "name": "headerLogoWidth",
+                            "label": "Logo width",
+                            "type": "stepper",
+                            "after": "px",
+                            "defaultValue": "200",
+                            "preview": {
+                                "type": "css-head",
+                                "cssVariable": "--Header-logo-width",
+                                "template": "{{ value }}px"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Text Logo",
+                    "description": "Alternative option to the image logo if none is available.",
+                    "fields": [
+                        {
+                            "name": "headerTextLogo",
+                            "label": "Text logo",
+                            "type": "text",
+                            "preview": {
+                                "type": "replace",
+                                "contentSelector": "#header-logo",
+                                "template": "<div class=\"Header-logoWrapper\" id=\"header-logo\"><a href=\"/\" title=\"return to home page\">{% if fields.headerLogo %}<img src=\"{{ fields.headerLogo.url }}\" class=\"Header-logo\">{% elseif value %}<span class=\"Header-textLogo\">{{ value }}</span>{% endif %}</a></div>"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "headerShowAddress",
+                    "label": "Show address",
+                    "type": "switch",
+                    "defaultValue": "yes"
+                },
+                {
+                    "name": "headerShowPhone",
+                    "label": "Show phone number",
+                    "type": "switch",
+                    "defaultValue": "yes"
+                },
+                {
+                    "name": "headerShowEmail",
+                    "label": "Show email",
+                    "type": "switch",
+                    "defaultValue": "no"
+                },
+                {
+                    "name": "headerShowSocial",
+                    "label": "Show social",
+                    "type": "switch",
+                    "defaultValue": "yes"
                 }
             ]
         },
         {
             "name": "Social Icons",
             "description": "Set the links and icons to use for your social networks in the footer of each page.",
+            "sidebarSize": "medium",
             "fields": [
                 {
                     "name": "social",
@@ -27,10 +151,13 @@
                             "type": "select",
                             "options": {
                                 "facebook": "Facebook",
+                                "google": "Google",
                                 "instagram": "Instagram",
                                 "linkedin": "LinkedIn",
                                 "pinterest": "Pinterest",
-                                "twitter": "Twitter",
+                                "tiktok": "TikTok",
+                                "whatsapp": "WhatsApp",
+                                "x": "X (Twitter)",
                                 "youtube": "YouTube"
                             },
                             "columnWidth": "1fr"
@@ -42,91 +169,6 @@
                             "columnWidth": "2fr"
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Header",
-            "description": "Content for the header that is used on all pages",
-            "fields": [
-                {
-                    "name": "headerLogo",
-                    "label": "Logo",
-                    "type": "image",
-                    "path": "images",
-                    "default": "/theme/custom/images/logo.svg",
-                    "preview": {
-                        "type": "replace",
-                        "contentSelector": ".Header-logo",
-                        "template": "<img src=\"{{ url }}\" height=\"{{ imageHeight }}\" width=\"{{ imageWidth }}\" alt=\"{{ alt }}\" class=\"Header-logo\">"
-                    }
-                },
-                {
-                    "name": "logoWidth",
-                    "label": "Logo width",
-                    "description": "The maximum width of header logo.",
-                    "type": "stepper",
-                    "after": "px",
-                    "default": "200",
-                    "preview": {
-                        "type": "css-head",
-                        "cssVariable": "--Header-logo-width",
-                        "template": "{{ value }}px"
-                    }
-                },
-                {
-                    "name": "headerShowAddress",
-                    "label": "Show Address",
-                    "type": "switch",
-                    "default": "yes"
-                },
-                {
-                    "name": "headerShowPhone",
-                    "label": "Show Phone Number",
-                    "type": "switch",
-                    "default": "yes"
-                },
-                {
-                    "name": "headerShowEmail",
-                    "label": "Show Email",
-                    "type": "switch",
-                    "default": "yes"
-                },
-                {
-                    "name": "headerShowSocial",
-                    "label": "Show Social",
-                    "type": "switch",
-                    "default": "yes"
-                }
-            ]
-        },
-        {
-            "name": "Footer",
-            "description": "Content for the footer that is used on all pages",
-            "fields": [
-                {
-                    "name": "footerShowNavigation",
-                    "label": "Show Navigation",
-                    "type": "switch",
-                    "default": "yes"
-                },
-                {
-                    "name": "footerShowAddress",
-                    "label": "Show Address",
-                    "type": "switch",
-                    "default": "yes"
-                },
-                {
-                    "name": "footerShowPhone",
-                    "label": "Show Phone Number",
-                    "type": "switch",
-                    "default": "yes"
-                },
-                {
-                    "name": "footerShowEmail",
-                    "label": "Show Email",
-                    "type": "switch",
-                    "default": "yes"
                 }
             ]
         }

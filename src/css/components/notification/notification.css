@@ -2,13 +2,6 @@
     Notification banner at the top of pages
 \* =========================================================================== */
 
-:root {
-    --Notification-background: var(--ContentHeader-background);
-    --Notification-color: var(--ContentHeader-color);
-    --Notification-link-color: var(--color-primary);
-    --Notification-link-colorHover: var(--color-primary);
-}
-
 /* @define Notification */
 .Notification {
     background: var(--Notification-background);

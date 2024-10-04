@@ -13,7 +13,7 @@
                         {{ _core.settings.companyAddressCity }}{% if _core.settings.companyAddressState %}, {% endif %}
                     {% endif %}
                     {% if _core.settings.companyAddressState %}
-                        {{ _core.settings.companyAddressState }} 
+                        {{ _core.settings.companyAddressState }}
                     {% endif %}
                     {% if _core.settings.companyAddressPostalCode %}
                         {{ _core.settings.companyAddressPostalCode }}
@@ -29,11 +29,17 @@
                     {% if _core.theme.settings.footerShowAddress == 'yes' or _core.theme.settings.footerShowPhone == 'yes' %}
                         /
                     {% endif %}
-                    <a href="mailto:{{ _core.settings.companyEmail }}" title="Email {{ _core.settings.companyEmail }}" class="link-subtle">{{ _core.settings.companyEmail }}</a>
+                    <a href="mailto:{{ _core.settings.companyEmail }}" title="Email {{ _core.settings.companyEmail }}" class="Footer-link">{{ _core.settings.companyEmail }}</a>
                 {% endif %}
             </div>
         {% endif %}
         &copy; {{ _core.date.year }} {{ _core.settings.companyName }}
+        {% if _core.theme.settings.footerShowCredit == 'yes' %}
+            <div class="Footer-attribution">
+                <a href="https://www.aptuitiv.com" target="_blank" class="Footer-attributeLink">Website by Aptuitiv</a>
+                <a href="https://www.branchcms.com" target="_blank" class="Footer-attributeLink">Powered by BranchCMS</a>
+            </div>
+        {% endif %}
     </div>
 </footer>
 {# Do this before you output any inline Javascript in the footer #}

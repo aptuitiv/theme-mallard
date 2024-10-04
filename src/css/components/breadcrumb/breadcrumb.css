@@ -2,12 +2,6 @@
     BREADCRUMB
 \* =========================================================================== */
 
-:root {
-    --Breadcrumbs-color: #4d4d4d;
-    --Breadcrumbs-link-color: #888;
-    --Breadcrumbs-link-colorHover: #008576;
-}
-
 /** @define Breadcrumb **/
 .Breadcrumb {
     color: var(--Breadcrumbs-color);

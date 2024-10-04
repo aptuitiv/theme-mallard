@@ -1,30 +1,8 @@
 /* =========================================================================== *\
-    SIDEBAR NAVIGATION
+    Sidebar Navigation
 \* =========================================================================== */
 
-:root {
-    --SidebarNav-fontFamily: var(--base-typography-fontFamily);
-    --SidebarNav-fontWeight: 400;
-    --SidebarNav-letterSpacing: 1px;
-    --SidebarNav-color: #4d4d4d;
-    
-    /* Hover */
-    --SidebarNav-backgroundHover: var(--color-primary);
-    --SidebarNav-colorHover: #fff;
-    
-    /* Current */
-    --SidebarNav-current-color: var(--color-primary);
-    
-    /* Parent */
-    --SidebarNav-parent-fontWeight: 400;
-    --SidebarNav-parent-fontSize: 2rem;
-    --SidebarNav-parent-fontFamily: var(--base-typography-fontFamily);
-    --SidebarNav-parent-letterSpacing: 1px;
-    --SidebarNav-parent-lineHeight: 1.3;
-    --SidebarNav-parent-color: var(--color-primary);
-}
-
-/** @define SidebarNav */
+/* @define SidebarNav */
 .SidebarNav {
     list-style: none;
     margin: 0;
