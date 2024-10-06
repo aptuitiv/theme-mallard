@@ -3,7 +3,6 @@
     Based on http://w3bits.com/css-masonry/
 \* =========================================================================== */
 
-
 /* @define Masonry */
 
 .Masonry {
@@ -14,7 +13,6 @@
 
 .Masonry-item {
     background-color: #eee;
-    box-sizing: border-box;
     break-inside: avoid;
     display: inline-block;
     margin: 0 0 1em;
@@ -67,12 +65,11 @@
 }
 
 .Masonry-title {
-    box-sizing: border-box;
-    font-size: .9em;
+    font-size: 0.9em;
     padding: 4px 8px;
 }
 
-@media(--m-lg) {
+@media (--m-lg) {
     .Masonry {
         column-count: 3;
     }
@@ -93,7 +90,6 @@
 /* ------------------------------------ *\
     Masonry Tight View
 \* ------------------------------------ */
-
 
 .Masonry--tight {
     column-gap: 0;
