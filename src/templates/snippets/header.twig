@@ -43,10 +43,10 @@
         <div class="TopBar">
             <div class="Container Container--pad">
                 <div class="grid align-center">
-                    <div class="{% if _core.theme.settings.headerShowSocial == 'yes' %}col-1-1 col-2-3-md{% else %}w-1-1{% endif %}">
-                        {% if _core.theme.settings.headerShowPhone == 'yes' or _core.theme.settings.headerShowAddress == 'yes' %}
+                    <div class="{% if _core.theme.settings.topBarShowSocial == 'yes' %}col-1-1 col-2-3-md{% else %}w-1-1{% endif %}">
+                        {% if _core.theme.settings.topBarShowPhone == 'yes' or _core.theme.settings.topBarShowAddress == 'yes' %}
                             <div class="TopBar-contact">
-                                {% if _core.theme.settings.headerShowAddress == 'yes' %}
+                                {% if _core.theme.settings.topBarShowAddress == 'yes' %}
                                     {% if _core.settings.companyAddressStreet %}
                                         {{ _core.settings.companyAddressStreet }} /
                                     {% endif %}
@@ -60,14 +60,14 @@
                                         {{ _core.settings.companyAddressPostalCode }}
                                     {% endif %}
                                 {% endif %}
-                                {% if _core.theme.settings.headerShowPhone == 'yes' and _core.settings.companyPhone|length > 0 %}
-                                    {% if _core.theme.settings.headerShowAddress == 'yes' %}
+                                {% if _core.theme.settings.topBarShowPhone == 'yes' and _core.settings.companyPhone|length > 0 %}
+                                    {% if _core.theme.settings.topBarShowAddress == 'yes' %}
                                         /
                                     {% endif %}
                                     <a href="tel:{{ _core.settings.companyPhone|replace({'(': '', '}': '', '-': '', ' ': ''}) }}" aria-label="Call {{ _core.settings.companyPhone }}">{{ _core.settings.companyPhone }}</a>
                                 {% endif %}
-                                {% if _core.theme.settings.headerShowEmail == 'yes' and _core.settings.companyEmail|length > 0 %}
-                                    {% if _core.theme.settings.headerShowAddress == 'yes' or _core.theme.settings.headerShowPhone == 'yes' %}
+                                {% if _core.theme.settings.topBarShowEmail == 'yes' and _core.settings.companyEmail|length > 0 %}
+                                    {% if _core.theme.settings.topBarShowAddress == 'yes' or _core.theme.settings.topBarShowPhone == 'yes' %}
                                         /
                                     {% endif %}
                                     <a href="mailto:{{ _core.settings.companyEmail }}" title="Email {{ _core.settings.companyEmail }}">{{ _core.settings.companyEmail }}</a>
@@ -75,8 +75,8 @@
                             </div>
                         {% endif %}
                     </div>
-                    {% if _core.theme.settings.headerShowSocial == 'yes' %}
-                        <div class="col-1-1 col-1-3-md text-end text-center-md">
+                    {% if _core.theme.settings.topBarShowSocial == 'yes' %}
+                        <div class="col-1-1 col-1-3-md text-center text-end-md">
                             <div class="TopBar-social">
                             {% set socialNames = {facebook: 'Facebook', instagram: 'Instagram', linkedin: 'LinkedIn', pinterest: 'Pinterest', twitter: 'Twitter', youtube: 'YouTube'} %}
                             {% for social in _core.theme.settings.social %}

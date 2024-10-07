@@ -4,7 +4,9 @@
 
 /* @define Header */
 .Header {
-    padding: 2rem 0;
+    background: var(--Header-background);
+    gap: var(--Header-gap-sm);
+    padding: var(--Header-padding-sm, 20px 0);
 }
 
 .Header-skipToMain {
@@ -18,12 +20,12 @@
 }
 
 .Header-skipToMain:focus {
-    background-color: #fff;
+    background-color: var(--Header-skipMain-background, #fff);
     color: var(--Header-skipMain-color);
-    font-weight: bold;
+    font-weight: var(-Header-skipMain-font-weight, bold);
     height: auto;
     left: 10px;
-    padding: 5px 10px;
+    padding: var(--Header-skipMain-padding, 5px 10px);
     text-decoration: underline;
     width: auto;
 }
@@ -31,13 +33,16 @@
 .Header-items {
     align-items: center;
     display: flex;
-    justify-content: space-between;
 }
 
 .Header-logo {
-    margin-right: 20px;
+    margin-bottom: var(--Header-image-logo-margin-sm, 0);
     max-width: var(--Header-logo-width);
     width: 100%;
+}
+
+.Header-textLogo {
+    font-size: var(--Header-text-logo-font-size-sm);
 }
 
 @media (--m-small-screen-nav) {
@@ -48,15 +53,18 @@
 }
 
 @media (--m-md) {
-    .Header-items {
-        grid-template-columns: 100%;
-    }
-
-    .Header-logoWrapper {
-        text-align: center;
-    }
-
     .Header-logo {
-        margin-bottom: 30px;
+        margin: var(--Header-image-logo-margin, 0);
+    }
+
+    .Header-textLogo {
+        font-size: var(--Header-text-logo-font-size);
+    }
+}
+
+@media (--m-lg) {
+    .Header {
+        gap: var(--Header-gap);
+        padding: var(--Header-padding, 20px 0);
     }
 }

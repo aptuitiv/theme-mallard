@@ -107,30 +107,6 @@
                             }
                         }
                     ]
-                },
-                {
-                    "name": "headerShowAddress",
-                    "label": "Show address",
-                    "type": "switch",
-                    "defaultValue": "yes"
-                },
-                {
-                    "name": "headerShowPhone",
-                    "label": "Show phone number",
-                    "type": "switch",
-                    "defaultValue": "yes"
-                },
-                {
-                    "name": "headerShowEmail",
-                    "label": "Show email",
-                    "type": "switch",
-                    "defaultValue": "no"
-                },
-                {
-                    "name": "headerShowSocial",
-                    "label": "Show social",
-                    "type": "switch",
-                    "defaultValue": "yes"
                 }
             ]
         },
@@ -169,6 +145,36 @@
                             "columnWidth": "2fr"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Top bar",
+            "description": "Options for the top bar that appears above the header.",
+            "fields": [
+                {
+                    "name": "topBarShowAddress",
+                    "label": "Show address",
+                    "type": "switch",
+                    "defaultValue": "yes"
+                },
+                {
+                    "name": "topBarShowEmail",
+                    "label": "Show email",
+                    "type": "switch",
+                    "defaultValue": "no"
+                },
+                {
+                    "name": "topBarShowPhone",
+                    "label": "Show phone number",
+                    "type": "switch",
+                    "defaultValue": "yes"
+                },
+                {
+                    "name": "topBarShowSocial",
+                    "label": "Show social",
+                    "type": "switch",
+                    "defaultValue": "yes"
                 }
             ]
         }
