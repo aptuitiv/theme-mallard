@@ -39,10 +39,10 @@ const smallScreenNav = {
          */
         function toggleNav() {
             button.classList.toggle('is-active');
-            if (nav.style.display === 'block') {
+            if (nav.style.display === 'flex') {
                 nav.style.display = 'none';
             } else {
-                nav.style.display = 'block';
+                nav.style.display = 'flex';
             }
         }
 
