@@ -2704,6 +2704,102 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "Items (small screens)",
+                    "fields": [
+                        {
+                            "name": "mainNavItemBackgroundSm",
+                            "label": "Background color (small screens)",
+                            "type": "color",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-link-background-sm"
+                            }
+                        },
+                        {
+                            "name": "mainNavItemBackgroundHoverSm",
+                            "label": "Hover/active background color (small screens)",
+                            "type": "color",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-link-background-hover-sm"
+                            }
+                        },
+                        {
+                            "name": "mmainNavItemColorSm",
+                            "label": "Text color (small screens)",
+                            "type": "color",
+                            "defaultValue": "#fff",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-color-sm"
+                            }
+                        },
+                        {
+                            "name": "mmainNavItemColorHoverSm",
+                            "label": "Hover/active text color (small screens)",
+                            "type": "color",
+                            "defaultValue": "#fff",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-color-hover-sm"
+                            }
+                        },
+                        {
+                            "name": "mainNavItemBackgroundSm",
+                            "label": "Background color (small screens)",
+                            "type": "color",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-link-background-sm"
+                            }
+                        },
+                        {
+                            "name": "mmainNavItemColorSm",
+                            "label": "Text color (small screens)",
+                            "type": "color",
+                            "defaultValue": "#fff",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-color-sm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Menu small screen styles",
+                    "fields": [
+                        {
+                            "name": "mainNavBackgroundSm",
+                            "label": "Background (small screens)",
+                            "type": "color",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-background-sm"
+                            }
+                        },
+                        {
+                            "name": "mainNavMarginSm",
+                            "label": "Margin (small screens)",
+                            "type": "margin",
+                            "defaultValue": "10px 0",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-margin-sm"
+                            }
+                        },
+                        {
+                            "name": "mainNavPaddingSm",
+                            "label": "Padding (small screens)",
+                            "type": "padding",
+                            "defaultValue": "10px 0",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-padding-sm"
+                            }
+                        }
+                    ]
                 }
             ]
         },

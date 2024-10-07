@@ -10,7 +10,8 @@
 
 .MainNav {
     align-items: center;
-    display: flex;
+    background: var(--MainNav-background-sm);
+    display: none;
     flex-flow: column wrap;
     font-family: var(--MainNav-font-family);
     gap: var(--MainNav-item-gap);
@@ -18,8 +19,8 @@
     justify-content: var(--MainNav-horizontal-alignment);
     line-height: var(--MainNav-lineHeight);
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: var(--MainNav-margin-sm);
+    padding: var(--MainNav-padding-sm);
     width: 100%;
 }
 
@@ -37,7 +38,12 @@
 
 @media (--m-large-screen-nav) {
     .MainNav {
+        background: none;
+        display: flex;
         flex-direction: row;
+        grid-column: 1 / span 1;
+        margin: 0;
+        padding: 0;
     }
 
     .MainNav-item {
@@ -53,19 +59,13 @@
     }
 }
 
-@media (--m-md) {
-    .MainNav {
-        grid-column: 1 / span 1;
-    }
-}
-
 /**
  * Links
  */
 
 .MainNav-link {
-    background: var(--MainNav-link-background, transparent);
-    color: var(--MainNav-color);
+    background: var(--MainNav-link-background-sm, --MainNav-link-background);
+    color: var(--MainNav-color-sm, --MainNav-color);
     display: block;
     font-weight: var(--MainNav-font-weight);
     padding: var(--MainNav-item-padding-sm);
@@ -74,7 +74,20 @@
     text-decoration: none;
 }
 
+.MainNav-item.is-current > .MainNav-link,
+.MainNav-item.is-currentParent > .MainNav-link,
+.MainNav-item:hover > .MainNav-link {
+    background: var(--MainNav-link-background-hover-sm, --MainNav-link-background-hover);
+    color: var(--MainNav-color-hover-sm, --MainNav-color-hover);
+    text-decoration: none;
+}
+
 @media (--m-large-screen-nav) {
+    .MainNav-link {
+        background: var(--MainNav-link-background, transparent);
+        color: var(--MainNav-color);
+    }
+
     .MainNav-item.is-current > .MainNav-link,
     .MainNav-item.is-currentParent > .MainNav-link,
     .MainNav-item:hover > .MainNav-link {
@@ -96,7 +109,6 @@
     }
 
     /* postcss-bem-linter: ignore */
-
     .MainNav-item.Dropdown:hover > .MainNav-link::after {
         display: none;
     }
