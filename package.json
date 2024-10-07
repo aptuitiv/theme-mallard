@@ -44,7 +44,8 @@
         "cacao-css": "^6.3.0",
         "fslightbox": "^3.4.2",
         "just-validate": "^4.3.0",
-        "masonry-layout": "^4.2.2"
+        "masonry-layout": "^4.2.2",
+        "micromodal": "^0.4.10"
     },
     "engines": {
         "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
