@@ -3609,7 +3609,7 @@
                         },
                         {
                             "name": "topBarSocialBackgroundHover",
-                            "label": "Social background color",
+                            "label": "Social background color (hover)",
                             "type": "color",
                             "defaultValue": "#008576",
                             "preview": {
@@ -3629,7 +3629,7 @@
                         },
                         {
                             "name": "topBarSocialColorHover",
-                            "label": "Social icon color",
+                            "label": "Social icon color (hover)",
                             "type": "color",
                             "defaultValue": "#ffffff",
                             "preview": {
