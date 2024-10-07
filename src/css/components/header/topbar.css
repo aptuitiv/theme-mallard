@@ -6,7 +6,7 @@
     --TopBar-background: var(--color-primary);
     --TopBar-color: #fff;
     --TopBar-colorHover: #fff;
-    
+
     /* Social */
     --TopBar-social-background: #fff;
     --TopBar-social-color: var(--color-primary);
@@ -50,25 +50,23 @@
 \* ------------------------------------ */
 
 .TopBar-social {
+    align-items: center;
+    display: flex;
+    gap: var(--TopBar-social-gap, 10px);
+    justify-content: flex-end;
     line-height: 1;
 }
 
 .TopBar-socialLink {
+    align-items: center;
     background: var(--TopBar-social-background);
-    border-radius: 50%;
+    border-radius: var(--TopBar-social-border-radius, 50%);
     color: var(--TopBar-social-color);
-    display: inline-block;
-    font-size: 1.8rem;
-    height: 1.6em;
+    display: flex;
+    justify-content: center;
     line-height: 1;
-    margin-right: 8px;
-    position: relative;
+    padding: var(--TopBar-social-padding, 4px);
     text-decoration: none;
-    width: 1.6em;
-}
-
-.TopBar-socialLink:last-child {
-    margin-right: 0;
 }
 
 .TopBar-socialLink:active,
@@ -80,9 +78,5 @@
 }
 
 .TopBar-socialIcon {
-    left: 50%;
-    margin: 0 !important;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    font-size: var(--TopBar-social-size, 1.6rem);
 }

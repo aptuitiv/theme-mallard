@@ -3419,147 +3419,88 @@
                     ]
                 },
                 {
-                    "name": "H3",
+                    "name": "Social",
                     "fields": [
                         {
-                            "name": "h3FontWeight",
-                            "label": "H3 font weight",
-                            "type": "fontWeight",
-                            "fontPickerField": "headingFontFamily",
-                            "defaultValue": "700",
+                            "name": "topBarSocialGap",
+                            "label": "Space between social icons",
+                            "type": "size",
+                            "defaultValue": "10px",
                             "preview": {
                                 "type": "css-head",
-                                "cssVariable": "--base-typography-h3-fontWeight"
+                                "cssVariable": "--TopBar-social-gap"
                             }
                         },
                         {
-                            "name": "h3TextTransform",
-                            "label": "H3 capitalization",
-                            "type": "select",
-                            "options": {
-                                "none": "Regular",
-                                "uppercase": "UPPERCASE",
-                                "lowercase": "lowercase",
-                                "capitalize": "Title Case"
-                            },
+                            "name": "topBarSocialBorderRadius",
+                            "label": "Border radius around the icon",
+                            "type": "borderRadius",
+                            "defaultValue": "50%",
                             "preview": {
                                 "type": "css-head",
-                                "cssVariable": "--base-typography-h3-textTransform"
+                                "cssVariable": "--TopBar-social-border-radius"
                             }
                         },
                         {
-                            "name": "h3FontSize",
-                            "label": "H3 Font size",
-                            "type": "stepper",
-                            "after": "px",
-                            "defaultValue": "23",
+                            "name": "topBarSocialSize",
+                            "label": "Icon size",
+                            "type": "size",
+                            "defaultValue": "18px",
                             "preview": {
                                 "type": "css-head",
-                                "cssVariable": "--base-typography-h3-fontSize",
-                                "template": "{{ value / 10 }}rem"
+                                "cssVariable": "--TopBar-social-size"
                             }
                         },
                         {
-                            "name": "h3LineHeight",
-                            "label": "H3 Line height",
-                            "type": "stepper",
-                            "step": "0.1",
-                            "decimals": "1",
-                            "defaultValue": "1.2",
+                            "name": "topBarSocialPadding",
+                            "label": "Padding around the icon",
+                            "description": "The padding shows more of the background around the icon",
+                            "type": "padding",
+                            "defaultValue": "4px",
                             "preview": {
                                 "type": "css-head",
-                                "cssVariable": "--base-typography-h3-lineHeight"
+                                "cssVariable": "--TopBar-social-padding"
                             }
                         },
                         {
-                            "name": "h3MarginBottom",
-                            "label": "H3 Bottom Margin",
-                            "type": "stepper",
-                            "after": "px",
-                            "defaultValue": "15",
+                            "name": "topBarSocialBackground",
+                            "label": "Social background color",
+                            "type": "color",
+                            "defaultValue": "#ffffff",
                             "preview": {
                                 "type": "css-head",
-                                "cssVariable": "--base-typography-h3-marginBottom",
-                                "template": "{{ value }}px"
+                                "cssVariable": "--TopBar-social-background"
                             }
                         },
                         {
-                            "name": "h3MarginTop",
-                            "label": "H3 Top Margin",
-                            "type": "stepper",
-                            "after": "px",
-                            "defaultValue": "40",
-                            "preview": {
-                                "type": "css-head",
-                                "cssVariable": "--base-typography-h3-marginTop",
-                                "template": "{{ value }}px"
-                            }
-                        },
-                        {
-                            "name": "fontH3Color",
-                            "label": "H3 color",
+                            "name": "topBarSocialBackgroundHover",
+                            "label": "Social background color",
                             "type": "color",
                             "defaultValue": "#008576",
                             "preview": {
                                 "type": "css-head",
-                                "cssVariable": "--base-typography-h3-color"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "H4",
-                    "fields": [
-                        {
-                            "name": "h4FontWeight",
-                            "label": "H4 font weight",
-                            "type": "fontWeight",
-                            "fontPickerField": "headingFontFamily",
-                            "defaultValue": "700",
-                            "preview": {
-                                "type": "css-head",
-                                "cssVariable": "--base-typography-h4-fontWeight"
+                                "cssVariable": "--TopBar-social-backgroundHover"
                             }
                         },
                         {
-                            "name": "h4TextTransform",
-                            "label": "H4 capitalization",
-                            "type": "select",
-                            "options": {
-                                "none": "Regular",
-                                "uppercase": "UPPERCASE",
-                                "lowercase": "lowercase",
-                                "capitalize": "Title Case"
-                            },
+                            "name": "topBarSocialColor",
+                            "label": "Social icon color",
+                            "type": "color",
+                            "defaultValue": "#008576",
                             "preview": {
                                 "type": "css-head",
-                                "cssVariable": "--base-typography-h4-textTransform"
+                                "cssVariable": "--TopBar-social-color"
                             }
                         },
                         {
-                            "name": "h4FontSize",
-                            "label": "H4 Font size",
-                            "type": "stepper",
-                            "after": "px",
-                            "defaultValue": "20",
+                            "name": "topBarSocialColorHover",
+                            "label": "Social icon color",
+                            "type": "color",
+                            "defaultValue": "#ffffff",
                             "preview": {
                                 "type": "css-head",
-                                "cssVariable": "--base-typography-h4-fontSize",
-                                "template": "{{ value / 10 }}rem"
+                                "cssVariable": "--TopBar-social-colorHover"
                             }
-                        },
-                        {
-                            "name": "h4LineHeight",
-                            "label": "H4 Line height",
-                            "type": "stepper",
-                            "step": "0.1",
-                            "decimals": "1",
-                            "defaultValue": "1.2",
-                            "preview": {
-                                "type": "css-head",
-                                "cssVariable": "--base-typography-h4-lineHeight"
-                            }
-                        },
                         {
                             "name": "h4MarginBottom",
                             "label": "H4 Bottom Margin",
