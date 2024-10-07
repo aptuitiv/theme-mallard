@@ -9,11 +9,11 @@
 /* @define Content */
 .Content {
     background: var(--Content-background);
-    padding: 1rem var(--g-gutter) 2rem;
+    padding: var(--Content-padding-sm);
 }
 
 @media (--m-sm) {
     .Content {
-        padding: var(--g-gutter-sm);
+        padding: var(--Content-padding);
     }
 }
