@@ -1969,7 +1969,10 @@
                             },
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--Footer-border"
+                                "cssVariable": "--Footer-border",
+                                "config": {
+                                    "combine": true
+                                }
                             }
                         }
                     ]
