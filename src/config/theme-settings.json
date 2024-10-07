@@ -82,7 +82,7 @@
                             "label": "Logo",
                             "type": "image",
                             "path": "images",
-                            "preview": {
+                            "render": {
                                 "type": "replace",
                                 "contentSelector": "#header-logo",
                                 "template": "<div class=\"Header-logoWrapper\" id=\"header-logo\"><a href=\"/\"><img src=\"{{ url }}\" height=\"{{ imageHeight }}\" width=\"{{ imageWidth }}\" alt=\"{{ alt }}\" class=\"Header-logo\"></a></div>"
@@ -94,7 +94,7 @@
                             "type": "stepper",
                             "after": "px",
                             "defaultValue": "200",
-                            "preview": {
+                            "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Header-logo-width",
                                 "template": "{{ value }}px"
@@ -110,7 +110,7 @@
                             "name": "headerTextLogo",
                             "label": "Text logo",
                             "type": "text",
-                            "preview": {
+                            "render": {
                                 "type": "replace",
                                 "contentSelector": "#header-logo",
                                 "template": "<div class=\"Header-logoWrapper\" id=\"header-logo\"><a href=\"/\" title=\"return to home page\">{% if fields.headerLogo %}<img src=\"{{ fields.headerLogo.url }}\" class=\"Header-logo\">{% elseif value %}<span class=\"Header-textLogo\">{{ value }}</span>{% endif %}</a></div>"
