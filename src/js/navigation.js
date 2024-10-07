@@ -8,20 +8,6 @@
 
 // eslint-disable-next-line
 const smallScreenNav = {
-    button: null,
-    /**
-     * Holds the navigation object
-     * @type jQuery
-     * @private
-     */
-    nav: null,
-
-    /**
-     * The max window width where the small screen navigation is shown
-     * @type number
-     * @private
-     */
-    width: 1050,
 
     /**
      * Initialization
@@ -33,7 +19,6 @@ const smallScreenNav = {
         // Select elements
         const button = document.querySelector('.js-ssNavBtn');
         const nav = document.querySelector('.js-mainNav');
-        const navLinks = document.querySelectorAll('.js-navLink');
         const dropdowns = document.querySelectorAll('.js-dropdown');
 
         // Make sure that the navigation gets displayed if the window resizes.
@@ -49,7 +34,9 @@ const smallScreenNav = {
             }
         });
 
-        // Function to toggle showing and hiding the small screen navigation
+        /**
+         * Function to toggle showing and hiding the small screen navigation
+         */
         function toggleNav() {
             button.classList.toggle('is-active');
             if (nav.style.display === 'block') {
@@ -375,7 +362,7 @@ const navAccess = {
     /**
      * Gets the first navigation in the element
      *
-     * @param {Element} el
+     * @param {Element} el The element to get the link for
      * @returns {Element}
      */
     getLink(el) {
