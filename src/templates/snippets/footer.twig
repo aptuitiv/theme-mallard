@@ -1,8 +1,13 @@
 <footer class="Footer">
     <div class="Container Container--pad">
         {% if _core.theme.settings.footerShowNavigation == 'yes' %}
-            {{ _api.navigation.get.key('main').showSubNav('no').template('footer') }}
+            {% if _core.theme.settings.footerNavigationMenu == 'footer' %}
+                {{ _api.navigation.get.key('footer') }}
+            {% else %}
+                {{ _api.navigation.get.key('main').template('footer').showSubNav('no') }}
+            {% endif %}
         {% endif %}
+
         {% if _core.theme.settings.footerShowAddress == 'yes' or _core.theme.settings.footerShowPhone == 'yes' or _core.theme.settings.footerShowEmail == 'yes' %}
             <div class="Footer-contact">
                 {% if _core.theme.settings.footerShowAddress == 'yes' %}
