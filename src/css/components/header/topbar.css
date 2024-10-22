@@ -2,18 +2,6 @@
     Header top bar
 \* =========================================================================== */
 
-:root {
-    --TopBar-background: var(--color-primary);
-    --TopBar-color: #fff;
-    --TopBar-colorHover: #fff;
-
-    /* Social */
-    --TopBar-social-background: #fff;
-    --TopBar-social-color: var(--color-primary);
-    --TopBar-social-backgroundHover: var(--color-primary);
-    --TopBar-social-colorHover: #fff;
-}
-
 /* @define TopBar */
 .TopBar {
     background: var(--TopBar-background);
