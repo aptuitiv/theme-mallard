@@ -1454,7 +1454,7 @@
             "fields": [
                 {
                     "name": "bodyBackground",
-                    "label": "Body background",
+                    "label": "Body background color",
                     "description": "The background outside the main content.",
                     "type": "color",
                     "defaultValue": "#ffffff",
