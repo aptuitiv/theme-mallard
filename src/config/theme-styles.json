@@ -3661,7 +3661,7 @@
                         },
                         {
                             "name": "topBarColorHover",
-                            "label": "Text color",
+                            "label": "Text color (hover)",
                             "type": "color",
                             "description": "This applies when hovering over a link, like a phone link",
                             "defaultValue": "#ffffff",
