@@ -1575,7 +1575,7 @@
                             "collapsable": false,
                             "useHover": true,
                             "useTextAlign": false,
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "template": "{% if value.size %}{{ value.size / 10 }}rem{% endif %}"
                             },
                             "color": {
@@ -1678,7 +1678,7 @@
                             "collapsable": false,
                             "useHover": true,
                             "useTextAlign": false,
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "template": "{% if value.size %}{{ value.size / 10 }}rem{% endif %}"
                             },
                             "color": {
@@ -1778,7 +1778,7 @@
                             "collapsable": false,
                             "useHover": true,
                             "useTextAlign": false,
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "template": "{% if value.size %}{{ value.size / 10 }}rem{% endif %}"
                             },
                             "color": {
@@ -2042,7 +2042,7 @@
                                 "type": "css-head",
                                 "cssSelector": ".FooterNav-link"
                             },
-                            "colorPreview": {
+                            "colorRender": {
                                 "cssSelector": "",
                                 "cssVariable": "--FooterNav-color"
                             }
@@ -2279,7 +2279,7 @@
                             "type": "typography",
                             "collapsable": false,
                             "useMargin": true,
-                            "marginPreview": {
+                            "marginRender": {
                                 "cssSelector": "",
                                 "cssVariable": "--FormLabel-margin",
                                 "config": {
@@ -2583,7 +2583,7 @@
                                 "type": "css-head",
                                 "cssSelector": ".Header-textLogo"
                             },
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "cssSelector": "",
                                 "cssVariable": "--Header-text-logo-font-size"
                             }
@@ -3806,7 +3806,7 @@
                                 "type": "css-head",
                                 "cssVariable": "--base-typography"
                             },
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "template": "{% if value.size %}{{ value.size / 10 }}rem{% endif %}"
                             },
                             "color": {
@@ -3917,7 +3917,7 @@
                                 "type": "css-head",
                                 "cssVariable": "--base-typography-link"
                             },
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "template": "{% if value.size %}{{ value.size / 10 }}rem{% endif %}"
                             },
                             "color": {
@@ -3949,7 +3949,7 @@
                                 "type": "css-head",
                                 "cssVariable": "--base-typography-h1"
                             },
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "template": "{% if value.size %}{{ value.size / 10 }}rem{% endif %}"
                             },
                             "color": {
@@ -3988,7 +3988,7 @@
                                 "type": "css-head",
                                 "cssVariable": "--base-typography-h2"
                             },
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "template": "{% if value.size %}{{ value.size / 10 }}rem{% endif %}"
                             },
                             "color": {
@@ -4021,7 +4021,7 @@
                                 "type": "css-head",
                                 "cssVariable": "--base-typography-h3"
                             },
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "template": "{% if value.size %}{{ value.size / 10 }}rem{% endif %}"
                             },
                             "color": {
@@ -4053,7 +4053,7 @@
                                 "type": "css-head",
                                 "cssVariable": "--base-typography-h4"
                             },
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "template": "{% if value.size %}{{ value.size / 10 }}rem{% endif %}"
                             },
                             "color": {
@@ -4085,7 +4085,7 @@
                                 "type": "css-head",
                                 "cssVariable": "--base-typography-h5"
                             },
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "template": "{% if value.size %}{{ value.size / 10 }}rem{% endif %}"
                             },
                             "color": {
@@ -4117,7 +4117,7 @@
                                 "type": "css-head",
                                 "cssVariable": "--base-typography-h6"
                             },
-                            "fontSizePreview": {
+                            "fontSizeRender": {
                                 "template": "{% if value.size %}{{ value.size / 10 }}rem{% endif %}"
                             },
                             "color": {
