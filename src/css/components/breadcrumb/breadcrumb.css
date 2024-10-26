@@ -5,8 +5,8 @@
 /** @define Breadcrumb **/
 .Breadcrumb {
     color: var(--Breadcrumbs-color);
-    font-size: 1.2rem;
-    padding: 0 var(--g-gutter) 1em 0;
+    font-size: var(--Breadcrumbs-fontSize, 1.2rem);
+    padding: var(--Breadcrumbs-padding-sm);
 }
 
 .Breadcrumb-link {
@@ -26,6 +26,6 @@
 
 @media (--m-sm) {
     .Breadcrumb {
-        padding: 1em var(--g-gutter-sm) 0;
+        padding: var(--Breadcrumbs-padding);
     }
 }

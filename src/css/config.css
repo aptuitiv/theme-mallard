@@ -8,9 +8,6 @@
 
 /* Core variables */
 :root {
-    --g-gutter: 20px;
-    --g-gutter-sm: 10px;
-
     /* Fallbacks for Theme Styles */
     --color-primary: #008576;
     --color-light: #fbdcc5;

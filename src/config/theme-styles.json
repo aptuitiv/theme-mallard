@@ -1498,46 +1498,66 @@
         },
         {
             "name": "Breadcrumbs",
-            "sections": [
+            "fields": [
                 {
-                    "name": "General",
-                    "fields": [
-                        {
-                            "name": "breadcrumbsColor",
-                            "label": "Text color",
-                            "type": "color",
-                            "defaultValue": "#4d4d4d",
-                            "render": {
-                                "type": "css-head",
-                                "cssVariable": "--Breadcrumbs-color"
-                            }
-                        }
-                    ]
+                    "name": "breadcrumbsColor",
+                    "label": "Text color",
+                    "type": "color",
+                    "defaultValue": "#4d4d4d",
+                    "render": {
+                        "type": "css-head",
+                        "cssVariable": "--Breadcrumbs-color"
+                    }
                 },
                 {
-                    "name": "Links",
-                    "fields": [
-                        {
-                            "name": "breadcrumbsLinkColor",
-                            "label": "Link color",
-                            "type": "color",
-                            "defaultValue": "#888",
-                            "render": {
-                                "type": "css-head",
-                                "cssVariable": "--Breadcrumbs-link-color"
-                            }
-                        },
-                        {
-                            "name": "breadcrumbsLinkColorHover",
-                            "label": "Link color (hover)",
-                            "type": "color",
-                            "defaultValue": "#008576",
-                            "render": {
-                                "type": "css-head",
-                                "cssVariable": "--Breadcrumbs-link-colorHover"
-                            }
-                        }
-                    ]
+                    "name": "breadcrumbsLinkColor",
+                    "label": "Link color",
+                    "type": "color",
+                    "defaultValue": "#888",
+                    "render": {
+                        "type": "css-head",
+                        "cssVariable": "--Breadcrumbs-link-color"
+                    }
+                },
+                {
+                    "name": "breadcrumbsLinkColorHover",
+                    "label": "Link color (hover)",
+                    "type": "color",
+                    "defaultValue": "#008576",
+                    "render": {
+                        "type": "css-head",
+                        "cssVariable": "--Breadcrumbs-link-colorHover"
+                    }
+                },
+                {
+                    "name": "breadcrumbFontSize",
+                    "label": "Font size",
+                    "type": "fontSize",
+                    "defaultValue": "1.2rem",
+                    "render": {
+                        "type": "css-head",
+                        "cssVariable": "--Breadcrumbs-fontSize"
+                    }
+                },
+                {
+                    "name": "breadcrumbPadding",
+                    "label": "Padding",
+                    "type": "padding",
+                    "defaultValue": "0 20px 1em 20px",
+                    "render": {
+                        "type": "css-head",
+                        "cssVariable": "--Breadcrumbs-padding"
+                    }
+                },
+                {
+                    "name": "breadcrumbPaddingSm",
+                    "label": "Padding",
+                    "type": "padding",
+                    "defaultValue": "1em 10px  0 10px",
+                    "render": {
+                        "type": "css-head",
+                        "cssVariable": "--Breadcrumbs-padding-sm"
+                    }
                 }
             ]
         },
