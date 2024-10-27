@@ -2777,32 +2777,13 @@
                             }
                         },
                         {
-                            "name": "mmainNavItemColorHoverSm",
+                            "name": "mainNavItemColorHoverSm",
                             "label": "Hover/active text color (small screens)",
                             "type": "color",
                             "defaultValue": "#fff",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--MainNav-color-hover-sm"
-                            }
-                        },
-                        {
-                            "name": "mainNavItemBackgroundSm",
-                            "label": "Background color (small screens)",
-                            "type": "color",
-                            "render": {
-                                "type": "css-head",
-                                "cssVariable": "--MainNav-link-background-sm"
-                            }
-                        },
-                        {
-                            "name": "mmainNavItemColorSm",
-                            "label": "Text color (small screens)",
-                            "type": "color",
-                            "defaultValue": "#fff",
-                            "render": {
-                                "type": "css-head",
-                                "cssVariable": "--MainNav-color-sm"
                             }
                         }
                     ]
