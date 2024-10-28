@@ -30,7 +30,6 @@ const smallScreenNav = {
         window.addEventListener('resize', () => {
             if (window.innerWidth >= width) {
                 nav.style.display = '';
-                nav.style.opacity = '';
             }
         });
 
@@ -39,10 +38,14 @@ const smallScreenNav = {
          */
         function toggleNav() {
             button.classList.toggle('is-active');
-            if (nav.style.display === 'flex') {
-                nav.style.display = 'none';
+            if (nav.dataset.open == 'yes') {
+                // Hide the menu
+                nav.dataset.open = 'no';
+                button.setAttribute('aria-expanded', 'false');
             } else {
-                nav.style.display = 'flex';
+                // Show the menu
+                nav.dataset.open = 'yes';
+                button.setAttribute('aria-expanded', 'true');
             }
         }
 
