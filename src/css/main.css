@@ -4,7 +4,7 @@
  * component styles.
  */
 
-@import './config.css';
+@import './config/config.css';
 @import './base';
 @import './components';
 @import './apps';
