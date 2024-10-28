@@ -3,12 +3,11 @@
 {% import 'macros/macros' as macros %}
 
 {% block header %}
-    <div class="ContentHeader">
-        <div class="Container">
-            <h1 class="ContentHeader-title">{{ item.itemName }}</h1>
-            <div class="ContentHeader-content"><a href="{{ item.goBackUrl }}"> {{ macros.iconImg("caret-left", "Go Back") }} Back</a></div>
-        </div>
-    </div>
+    {% set content %}
+        <h1>{{ item.itemName }}</h1>
+        <p><a href="{{ item.goBackUrl }}"> {{ macros.iconImg("caret-left", "Go Back") }} Back</a></p>
+    {% endset %}
+    {% include('content-builder/banner-bar') %}
 {% endblock %}
 
 {# Video Macro #}

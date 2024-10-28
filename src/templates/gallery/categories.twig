@@ -2,11 +2,10 @@
 {% import 'macros/macros' as macros %}
 
 {% block banner %}
-    <div class="ContentHeader">
-        <div class="Container">
-            <h1 class="ContentHeader-title">View By Category</h1>
-        </div>
-    </div>
+    {% set content %}
+        <h1>View By Category</h1>
+    {% endset %}
+    {% include('content-builder/banner-bar') %}
 {% endblock %}
 
 {% block main %}
