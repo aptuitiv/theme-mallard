@@ -10,7 +10,10 @@
 }
 
 .Header-skipToMain {
+    align-items: center;
+    display: flex;
     height: 1px;
+    justify-content: center;
     left: -10000px;
     overflow: hidden;
     position: absolute;
