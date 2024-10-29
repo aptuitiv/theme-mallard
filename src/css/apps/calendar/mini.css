@@ -8,6 +8,14 @@
     width: 100%;
 }
 
+.CalendarMiniGrid-navPrev {
+    margin-right: 10px;
+}
+
+.CalendarMiniGrid-navNext {
+    margin-left: 10px;
+}
+
 .CalendarMiniGrid-navPrev,
 .CalendarMiniGrid-navPrev:active,
 .CalendarMiniGrid-navPrev:focus,
@@ -17,14 +25,6 @@
 .CalendarMiniGrid-navNext:focus,
 .CalendarMiniGrid-navNext:hover {
     text-decoration: none;
-}
-
-.CalendarMiniGrid-navPrev {
-    margin-right: 10px;
-}
-
-.CalendarMiniGrid-navNext {
-    margin-left: 10px;
 }
 
 /* ------------------------------------ *\
