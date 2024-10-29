@@ -106,16 +106,13 @@
     }
 
     .MainNav-link {
+        background: var(--MainNav-link-background, transparent);
+        color: var(--MainNav-color);
         padding: var(--MainNav-item-padding);
     }
 
     .MainNav-item--smallScreen {
         display: none;
-    }
-
-    .MainNav-link {
-        background: var(--MainNav-link-background, transparent);
-        color: var(--MainNav-color);
     }
 
     .MainNav-item.is-current > .MainNav-link,
