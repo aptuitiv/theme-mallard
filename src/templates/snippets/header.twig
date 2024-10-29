@@ -42,41 +42,41 @@
         <a class="Header-skipToMain" href="#main">skip to main content {{ macros.iconAriaHidden("chevron-small-right") }}</a>
         <div class="TopBar">
             <div class="Container Container--pad">
-                <div class="grid align-center">
+                <div class="TopBar-inner grid align-center">
                     <div class="{% if _core.theme.settings.topBarShowSocial == 'yes' %}col-1-1 col-2-3-md{% else %}w-1-1{% endif %}">
                         {% if _core.theme.settings.topBarShowPhone == 'yes' or _core.theme.settings.topBarShowAddress == 'yes' %}
                             <div class="TopBar-contact">
                                 {% if _core.theme.settings.topBarShowAddress == 'yes' %}
-                                    {% if _core.settings.companyAddressStreet %}
-                                        {{ _core.settings.companyAddressStreet }} /
-                                    {% endif %}
-                                    {% if _core.settings.companyAddressCity %}
-                                        {{ _core.settings.companyAddressCity }}{% if _core.settings.companyAddressState %}, {% endif %}
-                                    {% endif %}
-                                    {% if _core.settings.companyAddressState %}
-                                        {{ _core.settings.companyAddressState }}
-                                    {% endif %}
-                                    {% if _core.settings.companyAddressPostalCode %}
-                                        {{ _core.settings.companyAddressPostalCode }}
-                                    {% endif %}
+                                    <div>
+                                        {% if _core.settings.companyAddressStreet %}
+                                            {{ _core.settings.companyAddressStreet }},
+                                        {% endif %}
+                                        {% if _core.settings.companyAddressCity %}
+                                            {{ _core.settings.companyAddressCity }}{% if _core.settings.companyAddressState %}, {% endif %}
+                                        {% endif %}
+                                        {% if _core.settings.companyAddressState %}
+                                            {{ _core.settings.companyAddressState }}
+                                        {% endif %}
+                                        {% if _core.settings.companyAddressPostalCode %}
+                                            {{ _core.settings.companyAddressPostalCode }}
+                                        {% endif %}
+                                    </div>
                                 {% endif %}
                                 {% if _core.theme.settings.topBarShowPhone == 'yes' and _core.settings.companyPhone|length > 0 %}
-                                    {% if _core.theme.settings.topBarShowAddress == 'yes' %}
-                                        /
-                                    {% endif %}
-                                    <a href="tel:{{ _core.settings.companyPhone|replace({'(': '', '}': '', '-': '', ' ': ''}) }}" aria-label="Call {{ _core.settings.companyPhone }}">{{ _core.settings.companyPhone }}</a>
+                                    <div>
+                                        <a href="tel:{{ _core.settings.companyPhone|replace({'(': '', '}': '', '-': '', ' ': ''}) }}" aria-label="Call {{ _core.settings.companyPhone }}">{{ _core.settings.companyPhone }}</a>
+                                    </div>
                                 {% endif %}
                                 {% if _core.theme.settings.topBarShowEmail == 'yes' and _core.settings.companyEmail|length > 0 %}
-                                    {% if _core.theme.settings.topBarShowAddress == 'yes' or _core.theme.settings.topBarShowPhone == 'yes' %}
-                                        /
-                                    {% endif %}
-                                    <a href="mailto:{{ _core.settings.companyEmail }}" title="Email {{ _core.settings.companyEmail }}">{{ _core.settings.companyEmail }}</a>
+                                    <div>
+                                        <a href="mailto:{{ _core.settings.companyEmail }}" title="Email {{ _core.settings.companyEmail }}">{{ _core.settings.companyEmail }}</a>
+                                    </div>
                                 {% endif %}
                             </div>
                         {% endif %}
                     </div>
                     {% if _core.theme.settings.topBarShowSocial == 'yes' %}
-                        <div class="col-1-1 col-1-3-md text-center text-end-md">
+                        <div class="col-1-1 col-1-3-md">
                             <div class="TopBar-social">
                             {% set socialNames = {facebook: 'Facebook', instagram: 'Instagram', linkedin: 'LinkedIn', pinterest: 'Pinterest', twitter: 'Twitter', youtube: 'YouTube'} %}
                             {% for social in _core.theme.settings.social %}

@@ -3650,24 +3650,93 @@
                             }
                         },
                         {
-                            "name": "topBarColor",
-                            "label": "Text color",
-                            "type": "color",
-                            "defaultValue": "#ffffff",
+                            "name": "topBarPadding",
+                            "label": "Padding",
+                            "type": "padding",
+                            "defaultValue": "6px 0",
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--TopBar-color"
+                                "cssVariable": "--TopBar-padding"
                             }
                         },
                         {
-                            "name": "topBarColorHover",
-                            "label": "Text color (hover)",
-                            "type": "color",
-                            "description": "This applies when hovering over a link, like a phone link",
-                            "defaultValue": "#ffffff",
+                            "name": "topBarPaddingSm",
+                            "label": "Padding (small screens)",
+                            "type": "padding",
+                            "defaultValue": "6px 0 12px 0",
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--TopBar-colorHover"
+                                "cssVariable": "--TopBar-padding-sm"
+                            }
+                        },
+                        {
+                            "name": "topBarGap",
+                            "label": "Horizontal space between address and social icons",
+                            "type": "size",
+                            "defaultValue": "20px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-gap"
+                            }
+                        },
+                        {
+                            "name": "topBarGapSm",
+                            "label": "Vertical space between address and social icons (small screens)",
+                            "type": "size",
+                            "defaultValue": "10px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-gap-sm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Contact information",
+                    "fields": [
+                        {
+                            "name": "topBarContactGap",
+                            "label": "Horizontal space between address, phone, and email",
+                            "type": "size",
+                            "defaultValue": "20px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-contact-gap"
+                            }
+                        },
+                        {
+                            "name": "topBarContactGapSm",
+                            "label": "Vertical space between address, phone, and email (small screen)",
+                            "type": "size",
+                            "defaultValue": "6px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-contact-gap-sm"
+                            }
+                        },
+                        {
+                            "name": "topBarContactTypography",
+                            "label": "Typography",
+                            "type": "typography",
+                            "collapsable": false,
+                            "useHover": true,
+                            "useTextAlign": false,
+                            "useFontSizeHover": false,
+                            "color": {
+                                "defaultValue": "#ffffff"
+                            },
+                            "colorHover": {
+                                "defaultValue": "#ffffff"
+                            },
+                            "fontSize": {
+                                "defaultValue": "1.6rem"
+                            },
+                            "fontWeight": {
+                                "defaultValue": "300"
+                            },
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-contact"
                             }
                         }
                     ]
@@ -3679,10 +3748,20 @@
                             "name": "topBarSocialGap",
                             "label": "Space between social icons",
                             "type": "size",
-                            "defaultValue": "10px",
+                            "defaultValue": "6px",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--TopBar-social-gap"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialGapSm",
+                            "label": "Space between social icons (small screens)",
+                            "type": "size",
+                            "defaultValue": "10px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-gap-sm"
                             }
                         },
                         {
