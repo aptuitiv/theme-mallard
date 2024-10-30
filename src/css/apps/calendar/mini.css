@@ -59,6 +59,7 @@
     #DATE LINKS
 \* ------------------------------------ */
 
+/* postcss-bem-linter: ignore */
 .CalendarMiniGrid-dateLink,
 .CalendarMiniGrid-dateLink.CalendarMiniGrid-cell--isToday {
     color: var(--CalendarMiniGrid-date-link-color, var(--base-typography-link-color));
