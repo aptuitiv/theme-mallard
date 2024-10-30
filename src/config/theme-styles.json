@@ -2062,7 +2062,7 @@
                             "name": "alt1ButtonPadding",
                             "label": "Padding",
                             "type": "padding",
-                            "defaultValue": "6px",
+                            "defaultValue": "6px 20px",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Button-alt-padding"
@@ -2150,7 +2150,7 @@
                             "name": "alt2ButtonPadding",
                             "label": "Padding",
                             "type": "padding",
-                            "defaultValue": "6px 12px",
+                            "defaultValue": "6px 20px",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Button-alt2-padding"
