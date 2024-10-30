@@ -88,7 +88,7 @@ blockquote p:last-child {
 
 a {
     color: var(--base-typography-link-color, #00e);
-    font-weight: var(--base-typography-link-font-weight, 400);
+    font-weight: var(--base-typography-link-font-weight);
     text-decoration: var(--base-typography-link-text-decoration, underline);
     transition: all 250ms;
 }
