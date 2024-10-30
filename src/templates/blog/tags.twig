@@ -1,10 +1,8 @@
 {% extends 'two-column-right-sidebar' %}
 
 {% block banner %}
-    {% set title = "Blog Tags" %}
-    {% set titleHeading = true %}
-    {% set subtitle = header %}
-    {% include("content-layouts/text-banner") %}
+    {% set content = '<h1>Blog Tags</h1>' %}
+    {% include('content-builder/banner-bar') %}
 {% endblock %}
 
 {% block main %}
@@ -20,11 +18,5 @@
 {% endblock %}
 
 {% block sidebar %}
-    <div class="Sidebar">
-        {{ _api.blog.categoryFilter.template('api-category-filter') }}
-        {{ _api.blog.tagFilter.template('api-tag-filter') }}
-        {{ _api.blog.recentPosts.template('api-recent-posts') }}
-        {{ _api.blog.recentComments.template('api-recent-comments') }}
-        {{ _api.blog.postArchive.template('api-post-archive') }}
-    </div>
+    {% include 'blog/sidebar' %}
 {% endblock %}
