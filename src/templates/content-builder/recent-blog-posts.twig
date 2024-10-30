@@ -4,7 +4,7 @@
     <div class="Wrapper Wrapper--bg{{ background|pascal}}{#{% if background == 'None' %} Wrapper--noPad{% endif %}#}">
         <div class="Container {{ width == 'Narrow' ? 'Container--narrow' : 'Container--pad' }}">
             <div class="RecentPosts">
-                <div class="flex flex-col align-center">
+                <div class="flex flex-col align-center py-1">
                     {% if heading %}
                         <h2 class="RecentPosts-heading">{{ heading }}</h2>
                     {% endif %}

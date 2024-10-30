@@ -1593,6 +1593,9 @@
                             "label": "Typography",
                             "type": "typography",
                             "useMargin": true,
+                            "textAlign": {
+                                "defaultValue": "center"
+                            },
                             "render": {
                                 "type": "css-head",
                                 "cssSelector": ".RecentPosts-heading"
