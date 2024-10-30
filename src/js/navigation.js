@@ -14,7 +14,7 @@ const smallScreenNav = {
      */
     init() {
         // The max window width where the small screen navigation is shown
-        const width = 1050;
+        const width = 1024;
 
         // Select elements
         const button = document.querySelector('.js-ssNavBtn');
