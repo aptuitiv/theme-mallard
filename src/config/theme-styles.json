@@ -3517,28 +3517,51 @@
             "description": "Styles for the sidebar navigation used in two-column page templates.",
             "groups": [
                 {
-                    "name": "Heading and secondary content",
-                    "description": "Styles for the Blog app sidebar.",
+                    "name": "Heading",
                     "fields": [
                         {
-                            "name": "blogSidebarHeadingColor",
-                            "label": "Heading color",
-                            "type": "color",
-                            "defaultValue": "#008576",
+                            "name": "sidebarHeadingTypography",
+                            "label": "Typography",
+                            "type": "typography",
+                            "fontSize": {
+                                "defaultValue": "2rem"
+                            },
+                            "fontWeight": {
+                                "defaultValue": "700"
+                            },
+                            "useHover": true,
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--SidebarBox-heading-color"
+                                "cssSelector": ".SidebarBox-heading"
                             }
                         },
                         {
-                            "name": "blogSidebarSecondaryColor",
-                            "label": "Accent color",
-                            "description": "Used for post count and dates.",
-                            "type": "color",
-                            "defaultValue": "#4d4d4d",
+                            "name": "sidebarHeadingBorder",
+                            "label": "Border",
+                            "type": "border",
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--SidebarBox-secondary-color"
+                                "cssSelector": ".SidebarBox-heading"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Secondary content",
+                    "fields": [
+                        {
+                            "name": "sidebarSecondaryTypography",
+                            "label": "Typography",
+                            "type": "typography",
+                            "color": {
+                                "defaultValue": "#4D4D4D"
+                            },
+                            "fontSize": {
+                                "defaultValue": "1.4rem"
+                            },
+                            "render": {
+                                "type": "css-head",
+                                "cssSelector": ".SidebarBox-secondary"
                             }
                         }
                     ]
@@ -3547,72 +3570,40 @@
                     "name": "Links",
                     "fields": [
                         {
-                            "name": "sideNavFontWeight",
-                            "label": "Font weight",
-                            "type": "fontWeight",
-                            "fontPickerField": "mainNavFontFamily",
-                            "defaultValue": "400",
-                            "render": {
-                                "type": "css-head",
-                                "cssVariable": "--SidebarNav-fontWeight"
-                            }
-                        },
-                        {
-                            "name": "sideNavLetterSpacing",
-                            "label": "Letter spacing",
-                            "type": "stepper",
-                            "after": "px",
-                            "defaultValue": "1",
-                            "render": {
-                                "type": "css-head",
-                                "cssVariable": "--SidebarNav-letterSpacing",
-                                "template": "{{ value }}px"
-                            }
-                        },
-                        {
-                            "name": "sideNavColor",
-                            "label": "Text color",
+                            "name": "sideNavBackground",
+                            "label": "Background",
                             "type": "color",
-                            "defaultValue": "#4d4d4d",
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--SidebarNav-color"
+                                "cssVariable": "--SidebarNav-background"
                             }
-                        }
-                    ]
-                },
-                {
-                    "name": "Links (hover)",
-                    "fields": [
+                        },
                         {
                             "name": "sideNavBackgroundHover",
-                            "label": "Background color",
+                            "label": "Background (hover)",
                             "type": "color",
                             "defaultValue": "#008576",
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--SidebarNav-backgroundHover"
+                                "cssVariable": "--SidebarNav-background-hover"
                             }
                         },
                         {
-                            "name": "sideNavColorHover",
-                            "label": "Text color",
-                            "type": "color",
-                            "defaultValue": "#ffffff",
+                            "name": "sideNavTypography",
+                            "label": "Typography",
+                            "type": "typography",
+                            "useHover": true,
+                            "useTextAlign": false,
+                            "usePadding": true,
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--SidebarNav-colorHover"
+                                "cssVariable": "--SidebarNav"
                             }
-                        }
-                    ]
-                },
-                {
-                    "name": "Links (current)",
-                    "description": "The link for the page page number a given user is on.",
-                    "fields": [
+                        },
                         {
                             "name": "sideNavCurrentColor",
-                            "label": "Text color",
+                            "label": "Current link color",
+                            "description": "The link for the page page number a given user is on.",
                             "type": "color",
                             "defaultValue": "#008576",
                             "render": {
@@ -3622,65 +3613,33 @@
                         }
                     ]
                 },
+
                 {
                     "name": "Parent Link",
                     "description": "Styles for the current page's parent link.",
                     "fields": [
                         {
-                            "name": "sideNavParentFontWeight",
-                            "label": "Font weight",
-                            "type": "fontWeight",
-                            "fontPickerField": "baseFontFamily",
-                            "defaultValue": "400",
+                            "name": "sideNavParentTypography",
+                            "label": "Typography",
+                            "type": "typography",
+                            "useHover": true,
+                            "useTextAlign": false,
+                            "usePadding": true,
+                            "padding": {
+                                "defaultValue": "0 0 8px 0"
+                            },
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--SidebarNav-parent-fontWeight"
+                                "cssVariable": "--SidebarNav-parent"
                             }
                         },
                         {
-                            "name": "sideNavParentFontSize",
-                            "label": "Font size",
-                            "type": "stepper",
-                            "after": "px",
-                            "defaultValue": "20",
+                            "name": "sideNavBorder",
+                            "label": "Border",
+                            "type": "border",
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--SidebarNav-parent-fontSize",
-                                "template": "{{ value / 10 }}rem"
-                            }
-                        },
-                        {
-                            "name": "sideNavParentLineHeight",
-                            "label": "Line height",
-                            "type": "stepper",
-                            "step": "0.1",
-                            "decimals": "1",
-                            "defaultValue": "1.3",
-                            "render": {
-                                "type": "css-head",
-                                "cssVariable": "--SidebarNav-parent-lineHeight"
-                            }
-                        },
-                        {
-                            "name": "sideNavParentLetterSpacing",
-                            "label": "Letter spacing",
-                            "type": "stepper",
-                            "after": "px",
-                            "defaultValue": "1",
-                            "render": {
-                                "type": "css-head",
-                                "cssVariable": "--SidebarNav-parent-letterSpacing",
-                                "template": "{{ value }}px"
-                            }
-                        },
-                        {
-                            "name": "sideNavParentColor",
-                            "label": "Text color",
-                            "type": "color",
-                            "defaultValue": "#008576",
-                            "render": {
-                                "type": "css-head",
-                                "cssVariable": "--SidebarNav-parent-color"
+                                "cssSelector": ".SidebarNav-link--isParent"
                             }
                         }
                     ]
