@@ -2,7 +2,7 @@
 {% block banner %}
     {{ _page.content('banner') }}
 {% endblock %}
-<div class="Container">
+<div class="Container Container--pad">
     <div class="Content clearfix">
         {% if _core.theme.settings.showBreadcrumb == "yes" and _page.isHome == false %}
             {{ _page.breadcrumb() }}
