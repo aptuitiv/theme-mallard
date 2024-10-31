@@ -49,9 +49,6 @@
 @import 'cacao-css/dist/display/flex.css';
 @import 'cacao-css/dist/display/justify.css';
 
-/* Display (sm) */
-@import 'cacao-css/dist/display/sm/order.css';
-
 /* Display (md) */
 @import 'cacao-css/dist/display/md/flex.css';
 @import 'cacao-css/dist/display/md/justify.css';
@@ -158,6 +155,7 @@
 @import 'cacao-css/dist/margin/md/start.css';
 
 /* Margin (lg) */
+@import 'cacao-css/dist/margin/lg/bottom.css';
 @import 'cacao-css/dist/margin/lg/top.css';
 
 /* --------------------------------------------*
@@ -198,9 +196,6 @@
 
 @import 'cacao-css/dist/typography/align.css';
 @import 'cacao-css/dist/typography/transform.css';
-
-/* Typography (md) */
-@import 'cacao-css/dist/typography/md/align.css';
 
 /* --------------------------------------------*
    Width
