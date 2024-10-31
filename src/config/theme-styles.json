@@ -3800,6 +3800,7 @@
             "groups": [
                 {
                     "name": "Heading",
+                    "description": "The heading above each block of sidebar content",
                     "fields": [
                         {
                             "name": "sidebarHeadingTypography",
@@ -3830,6 +3831,7 @@
                 },
                 {
                     "name": "Secondary content",
+                    "description": "This is used for smaller text in the sidebar. The blog sidebar uses this for dates and post counts.",
                     "fields": [
                         {
                             "name": "sidebarSecondaryTypography",
