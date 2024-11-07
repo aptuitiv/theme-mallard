@@ -3614,7 +3614,7 @@
                     "name": "messageBackgroundFailure",
                     "label": "Background color (failure message)",
                     "type": "color",
-                    "defaultValue": "#008576",
+                    "defaultValue": "#871E0F",
                     "render": {
                         "type": "css-head",
                         "cssVariable": "--Message-background-failure"
@@ -3879,6 +3879,9 @@
                             "useHover": true,
                             "useTextAlign": false,
                             "usePadding": true,
+                            "colorHover": {
+                                "defaultValue": "#ffffff"
+                            },
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--SidebarNav"
