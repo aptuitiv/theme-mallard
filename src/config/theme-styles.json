@@ -2578,10 +2578,7 @@
                             },
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--Footer-border",
-                                "config": {
-                                    "combine": true
-                                }
+                                "cssSelector": ".Footer"
                             }
                         }
                     ]
