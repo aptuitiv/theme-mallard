@@ -3449,7 +3449,7 @@
                             },
                             "render": {
                                 "type": "css-head",
-                                "cssVariable": "--Dropdown-left"
+                                "template": ":root {--Dropdown-left: {{ value }}; --Dropdown-transform: {% if value == '50%' %}translateX(-50%){% else %}none{% endif %};}"
                             }
                         }
                     ]
