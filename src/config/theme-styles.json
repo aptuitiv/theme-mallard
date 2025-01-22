@@ -3964,6 +3964,160 @@
             ]
         },
         {
+            "name": "Popups",
+            "description": "Styles for the optional popup that shows on page load and the notifications under the banner.",
+            "sections": [
+                {
+                    "name": "General",
+                    "fields": [
+                        {
+                            "name": "modalBackground",
+                            "label": "Background color",
+                            "type": "color",
+                            "defaultValue": "#fff",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Modal-background"
+                            }
+                        },
+                        {
+                            "name": "modalColor",
+                            "label": "Text color",
+                            "type": "color",
+                            "defaultValue": "#333",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Modal-color"
+                            }
+                        },
+                        {
+                            "name": "modalWidth",
+                            "label": "Max width",
+                            "type": "size",
+                            "defaultValue": "500px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Modal-width"
+                            }
+                        },
+                        {
+                            "name": "modalBorderRadius",
+                            "label": "Border radius",
+                            "type": "borderRadius",
+                            "defaultValue": "4px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Modal-border-radius"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Overlay",
+                    "fields": [
+                        {
+                            "name": "modalOverlayBackground",
+                            "label": "Background color",
+                            "type": "color",
+                            "defaultValue": "rgba(0, 0, 0, .6)",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Modal-overlay-background"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Header",
+                    "fields": [
+                        {
+                            "name": "modalHeaderPadding",
+                            "label": "Padding",
+                            "type": "padding",
+                            "defaultValue": "20px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Modal-header-padding"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Title",
+                    "description": "The title is shown for notifications.",
+                    "fields": [
+                        {
+                            "name": "modalTitleTypography",
+                            "label": "Typography",
+                            "type": "typography",
+                            "collapsable": false,
+                            "useTextAlign": false,
+                            "fontWeight": {
+                                "defaultValue": "700"
+                            },
+                            "fontSize": {
+                                "defaultValue": "20px"
+                            },
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Modal-title"
+                            }
+                        },
+                        {
+                            "name": "modalTitleFontSizeSm",
+                            "label": "Font size (small screens)",
+                            "type": "fontSize",
+                            "defaultValue": "20px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Modal-title-font-size-sm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Close Button",
+                    "fields": [
+                        {
+                            "name": "modalCloseColor",
+                            "label": "Icon color",
+                            "type": "color",
+                            "defaultValue": "#333",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Modal-close-color"
+                            }
+                        },
+                        {
+                            "name": "modalCloseColorHover",
+                            "label": "Icon color (hover)",
+                            "type": "color",
+                            "defaultValue": "#871E0F",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Modal-close-color-hover"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Content",
+                    "fields": [
+                        {
+                            "name": "modalContentPadding",
+                            "label": "Padding",
+                            "type": "padding",
+                            "defaultValue": "20px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Modal-content-padding"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Sidebar Navigation",
             "description": "Styles for the sidebar navigation used in two-column page templates.",
             "groups": [
