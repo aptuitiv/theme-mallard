@@ -82,6 +82,16 @@
  * ------------------------------------------- */
 
 @import 'cacao-css/dist/grid/grid.css';
+@import 'cacao-css/dist/grid/num-columns.css';
+
+/* Grid (sm) */
+@import 'cacao-css/dist/grid/sm/num-columns.css';
+
+/* Grid (md) */
+@import 'cacao-css/dist/grid/md/num-columns.css';
+
+/* Grid (lg) */
+@import 'cacao-css/dist/grid/lg/num-columns.css';
 
 /* --------------------------------------------*
    Grid Columns
@@ -196,6 +206,9 @@
 
 @import 'cacao-css/dist/typography/align.css';
 @import 'cacao-css/dist/typography/transform.css';
+
+/* Typography (lg) */
+@import 'cacao-css/dist/typography/lg/align.css';
 
 /* --------------------------------------------*
    Width
