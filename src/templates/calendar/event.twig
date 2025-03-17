@@ -1,4 +1,3 @@
-
 {% extends 'one-column.twig' %}
 
 {% import 'macros/macros' as macros %}
@@ -37,6 +36,10 @@
 
 
         <div class="mt-2">{{ event.description }}</div>
+
+        {% if event.registration %}
+            <p><a href="{{ event.registration.url }}" class="Button">Register for this event</a></p>
+        {% endif %}
 
         <div class="mt-2">
             <a href="{{ goBackUrl }}" class="flex align-center">

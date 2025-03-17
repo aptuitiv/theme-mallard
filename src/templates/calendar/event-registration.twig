@@ -1,0 +1,13 @@
+
+{% extends 'one-column.twig' %}
+
+{% block banner %}
+    {% set content %}
+        <h1>{{ 'Register for ' ~ event.title }}</h1>
+    {% endset %}
+    {% include('content-builder/banner-bar') %}
+{% endblock %}
+
+{% block main %}
+    {{ registrationForm.content }}
+{% endblock %}
