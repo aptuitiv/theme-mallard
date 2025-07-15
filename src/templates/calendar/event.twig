@@ -1,3 +1,4 @@
+
 {% extends 'one-column.twig' %}
 
 {% import 'macros/macros' as macros %}
@@ -11,7 +12,7 @@
 {% block main %}
     <div class="Container Container--narrow">
         <div class="h2 flex align-center g-1">
-            {{ macros.iconImg('calendar', 'Date', 'm-0') }}
+            {{ macros.iconImg('calendar', 'Date') }}
             {{ event.date }}
         </div>
         {% if event.time.type != 'notime' %}
@@ -36,10 +37,6 @@
 
 
         <div class="mt-2">{{ event.description }}</div>
-
-        {% if event.registration %}
-            <p><a href="{{ event.registration.url }}" class="Button">Register for this event</a></p>
-        {% endif %}
 
         <div class="mt-2">
             <a href="{{ goBackUrl }}" class="flex align-center">
