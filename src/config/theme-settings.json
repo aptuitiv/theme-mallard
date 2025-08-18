@@ -183,6 +183,12 @@
             "description": "Options for the top bar that appears above the header.",
             "fields": [
                 {
+                    "name": "topBarShow",
+                    "label": "Show top bar",
+                    "type": "switch",
+                    "defaultValue": "yes"
+                },
+                {
                     "name": "topBarShowAddress",
                     "label": "Show address",
                     "type": "switch",
