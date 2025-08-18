@@ -1,7 +1,7 @@
 {% extends 'two-column-right-sidebar' %}
 
 {% block banner %}
-    {% set content = '<h1 class="flex flex-col align-center g-1">Blog<span class="h3 m-0">' ~ category.categoryName ~ '</span></h1>' %}
+    {% set content = '<h1 class="flex flex-col align-center g-1">' ~ _core.theme.settings.blogMainPageBannerHeading|default('Blog') ~ '<span class="h3 m-0">' ~ category.categoryName ~ '</span></h1>' %}
     {% include('content-builder/banner-bar') %}
 {% endblock %}
 

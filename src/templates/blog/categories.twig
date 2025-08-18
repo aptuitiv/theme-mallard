@@ -15,7 +15,7 @@
 {% endmacro %}
 
 {% block banner %}
-    {% set content = '<h1>Blog Categories</h1>' %}
+    {% set content = '<h1>' ~ _core.theme.settings.blogMainPageBannerHeading|default('Blog') ~' Categories</h1>' %}
     {% include('content-builder/banner-bar') %}
 {% endblock %}
 
