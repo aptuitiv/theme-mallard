@@ -2401,9 +2401,7 @@
                             "label": "Border size",
                             "type": "size",
                             "defaultValue": "1px",
-                            "allowedUnits": [
-                                "px"
-                            ],
+                            "allowedUnits": ["px"],
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--CalendarGrid-cell-border-size"
@@ -2432,8 +2430,8 @@
                         {
                             "name": "calendarGridEmptyCellBackground",
                             "label": "Empty cell background",
-                            "type": "color",
                             "description": "The background of the cell when it has no date.",
+                            "type": "color",
                             "default": "#e9e9e9",
                             "render": {
                                 "type": "css-head",
@@ -2462,8 +2460,8 @@
                         {
                             "name": "calendarGridTodayCellBackground",
                             "label": "Today cell background",
-                            "type": "color",
                             "description": "The background of the current day cell.",
+                            "type": "color",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--CalendarGrid-today-cell-background"
@@ -2472,8 +2470,8 @@
                         {
                             "name": "calendarGridTodayCellColor",
                             "label": "Today cell color",
-                            "type": "color",
                             "description": "The color of the current day cell.",
+                            "type": "color",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--CalendarGrid-today-cell-color"
@@ -2482,8 +2480,8 @@
                         {
                             "name": "calendarGridTodayCellOutlineColor",
                             "label": "Today cell outline color",
-                            "type": "color",
                             "description": "The outline color of the current day cell. Use an outline instead of a background color for a subtle highlight",
+                            "type": "color",
                             "defaultValue": "#1456A7",
                             "render": {
                                 "type": "css-head",
@@ -2493,12 +2491,10 @@
                         {
                             "name": "calendarGridTodayCellOutlineSize",
                             "label": "Today cell outline size",
-                            "type": "size",
                             "description": "The outline size of the current day cell. Use an outline instead of a background color for a subtle highlight",
+                            "type": "size",
                             "default": "2px",
-                            "allowedUnits": [
-                                "px"
-                            ],
+                            "allowedUnits": ["px"],
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--CalendarGrid-today-cell-outline-size"
@@ -2551,9 +2547,7 @@
                             "label": "Border size",
                             "type": "size",
                             "defaultValue": "1px",
-                            "allowedUnits": [
-                                "px"
-                            ],
+                            "allowedUnits": ["px"],
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--CalendarMiniGrid-cell-border-size"
@@ -2582,8 +2576,8 @@
                         {
                             "name": "calendarMiniGridEmptyCellBackground",
                             "label": "Empty cell background",
-                            "type": "color",
                             "description": "The background of the cell when it has no date.",
+                            "type": "color",
                             "default": "#e9e9e9",
                             "render": {
                                 "type": "css-head",
@@ -2612,8 +2606,8 @@
                         {
                             "name": "calendarMiniGridTodayCellBackground",
                             "label": "Today cell background",
-                            "type": "color",
                             "description": "The background of the current day cell.",
+                            "type": "color",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--CalendarMiniGrid-today-cell-background"
@@ -2622,8 +2616,8 @@
                         {
                             "name": "calendarMiniGridTodayCellColor",
                             "label": "Today cell color",
-                            "type": "color",
                             "description": "The color of the current day cell.",
+                            "type": "color",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--CalendarMiniGrid-today-cell-color"

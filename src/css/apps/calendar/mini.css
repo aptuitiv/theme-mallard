@@ -59,16 +59,24 @@
     #DATE LINKS
 \* ------------------------------------ */
 
-/* postcss-bem-linter: ignore */
-.CalendarMiniGrid-dateLink,
-.CalendarMiniGrid-dateLink.CalendarMiniGrid-cell--isToday {
+.CalendarMiniGrid-dateLink {
     color: var(--CalendarMiniGrid-date-link-color, var(--base-typography-link-color));
     cursor: pointer;
     display: block;
     text-decoration: none;
 }
 
-.CalendarMiniGrid-dateLink--isToday,
+.CalendarMiniGrid-dateLink--isToday {
+    background: var(--CalendarMiniGrid-today-cell-background);
+    color: var(--CalendarMiniGrid-today-cell-color, var(--base-typography-color));
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+
+.CalendarMiniGrid-dateLink--isToday:active,
+.CalendarMiniGrid-dateLink--isToday:focus,
+.CalendarMiniGrid-dateLink--isToday:hover,
 .CalendarMiniGrid-dateLink:active,
 .CalendarMiniGrid-dateLink:focus,
 .CalendarMiniGrid-dateLink:hover {

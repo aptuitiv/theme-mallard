@@ -5,11 +5,21 @@
     <div class="Container Container--narrow">
         <h1>Calendar Search</h1>
         {{ form.openTag }}
-            {% set form.fields.term.class = 'TextInput' %}
-            {% set form.fields.term.placeholder = 'Search...' %}
-            <label for="{{ form.fields.term.id }}" class="visually-hidden">Search</label>
-            {{ form.fields.term.tag }}
-            <button type="submit" class="Button">Search</button>
+            <div class="grid g-2-lg mb-2 nc-1 nc-3-lg">
+                <div class="col-1-1 col-1-4-lg text-end-lg">
+                    {% set form.fields.term.label.text = 'Search Term' %}
+                    {% set form.fields.term.label.class = form.fields.term.label.class ~ ' FormLabel' %}
+                    {{ form.fields.term.label.tag }}
+                </div>
+                {% set form.fields.term.class = 'TextInput' %}
+                {% set form.fields.term.placeholder = 'Search...' %}
+                <div class="col-1-1 col-1-2-lg">
+                    {{ form.fields.term.tag }}
+                </div>
+                <div class="col-1-1 col-1-4-lg">
+                    <button type="submit" class="Button">Search</button>
+                </div>
+            </div>
         {{ form.closeTag }}
     </div>
 {% endblock %}

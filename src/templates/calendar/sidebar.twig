@@ -15,7 +15,7 @@
     {% endif %}
 </div>
 
-<table class="CalendarMiniGrid">
+<table class="CalendarMiniGrid u-margBottom4">
     <thead class="CalendarMiniGrid-head">
         <tr>
             <th class="CalendarMiniGrid-headCell">S</th>
@@ -31,15 +31,15 @@
     {% for row in miniGrid.rows %}
         <tr>
         {% for box in row.boxes %}
-            {% set class = 'CalendarMini' %}
+            {% set class = 'CalendarMiniGrid-cell' %}
             {% if box.isWeekend == true && box.isThisMonth == true %}
-                {% set class = class ~ ' ' ~ 'CalendarMini--isEnd' %}
+                {% set class = class ~ ' ' ~ 'CalendarMiniGrid-cell--isEnd' %}
             {% endif %}
             {% if box.isToday %}
-                {% set class = class ~ ' ' ~ 'CalendarMini--isToday' %}
+                {% set class = class ~ ' ' ~ 'CalendarMiniGrid-cell--isToday' %}
             {% endif %}
             {% if box.isThisMonth == false %}
-                {% set class = class ~ ' ' ~ 'CalendarMini--isEmpty' %}
+                {% set class = class ~ ' ' ~ 'CalendarMiniGrid-cell--isEmpty' %}
             {% endif %}
             <td class="{{ class|trim }}">
             {% if box.isThisMonth %}
@@ -62,10 +62,12 @@
     <div class="pt-1">
         <form action="{{ dateNavigation.form.action }}" method="{{ dateNavigation.form.method }}">
             <div class="flex align-center g-1">
-                {% set dateNavigation.form.fields.month.class = "SelectInput" %}
-                {{ dateNavigation.form.fields.month.tag }}
-                {% set dateNavigation.form.fields.year.class = "SelectInput" %}
-                {{ dateNavigation.form.fields.year.tag }}
+                <div class="SelectInput">
+                    {{ dateNavigation.form.fields.month.tag }}
+                </div>
+                <div class="SelectInput">
+                    {{ dateNavigation.form.fields.year.tag }}
+                </div>
                 {{ dateNavigation.form.fields.view.tag }}
                 <button type="submit" class="Button">Go</button>
             </div>
