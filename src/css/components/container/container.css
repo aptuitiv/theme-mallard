@@ -13,6 +13,7 @@
 }
 
 .Container--narrow {
+    max-width: var(--Container-narrow-width);
     padding: 0 30px;
 }
 
