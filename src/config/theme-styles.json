@@ -2045,7 +2045,7 @@
                 },
                 {
                     "name": "breadcrumbPaddingSm",
-                    "label": "Padding",
+                    "label": "Padding (small screens)",
                     "type": "padding",
                     "defaultValue": "0 0 1em 0",
                     "render": {
