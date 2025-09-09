@@ -1995,7 +1995,7 @@
             "fields": [
                 {
                     "name": "breadcrumbsColor",
-                    "label": "Text color",
+                    "label": "Current page text color",
                     "type": "color",
                     "defaultValue": "#4d4d4d",
                     "render": {
