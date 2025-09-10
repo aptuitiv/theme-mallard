@@ -11,17 +11,21 @@
         {% if _core.theme.settings.footerShowAddress == 'yes' or _core.theme.settings.footerShowPhone == 'yes' or _core.theme.settings.footerShowEmail == 'yes' %}
             <div class="Footer-contact">
                 {% if _core.theme.settings.footerShowAddress == 'yes' %}
-                    {% if _core.settings.companyAddressStreet %}
-                        {{ _core.settings.companyAddressStreet }} /
-                    {% endif %}
-                    {% if _core.settings.companyAddressCity %}
-                        {{ _core.settings.companyAddressCity }}{% if _core.settings.companyAddressState %}, {% endif %}
-                    {% endif %}
-                    {% if _core.settings.companyAddressState %}
-                        {{ _core.settings.companyAddressState }}
-                    {% endif %}
-                    {% if _core.settings.companyAddressPostalCode %}
-                        {{ _core.settings.companyAddressPostalCode }}
+                    {% if _core.theme.settings.footerCustomAddress %}
+                        {{ _core.theme.settings.footerCustomAddress }}
+                    {% else %}
+                        {% if _core.settings.companyAddressStreet %}
+                            {{ _core.settings.companyAddressStreet }} /
+                        {% endif %}
+                        {% if _core.settings.companyAddressCity %}
+                            {{ _core.settings.companyAddressCity }}{% if _core.settings.companyAddressState %}, {% endif %}
+                        {% endif %}
+                        {% if _core.settings.companyAddressState %}
+                            {{ _core.settings.companyAddressState }}
+                        {% endif %}
+                        {% if _core.settings.companyAddressPostalCode %}
+                            {{ _core.settings.companyAddressPostalCode }}
+                        {% endif %}
                     {% endif %}
                 {% endif %}
                 {% if _core.theme.settings.footerShowPhone == 'yes' and _core.settings.companyPhone|length > 0 %}

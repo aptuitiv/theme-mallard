@@ -48,17 +48,21 @@
                                 <div class="TopBar-contact">
                                     {% if _core.theme.settings.topBarShowAddress == 'yes' %}
                                         <div>
-                                            {% if _core.settings.companyAddressStreet %}
-                                                {{ _core.settings.companyAddressStreet }},
-                                            {% endif %}
-                                            {% if _core.settings.companyAddressCity %}
-                                                {{ _core.settings.companyAddressCity }}{% if _core.settings.companyAddressState %}, {% endif %}
-                                            {% endif %}
-                                            {% if _core.settings.companyAddressState %}
-                                                {{ _core.settings.companyAddressState }}
-                                            {% endif %}
-                                            {% if _core.settings.companyAddressPostalCode %}
-                                                {{ _core.settings.companyAddressPostalCode }}
+                                            {% if _core.theme.settings.topBarCustomAddress %}
+                                                {{ _core.theme.settings.topBarCustomAddress }}
+                                            {% else %}
+                                                {% if _core.settings.companyAddressStreet %}
+                                                    {{ _core.settings.companyAddressStreet }},
+                                                {% endif %}
+                                                {% if _core.settings.companyAddressCity %}
+                                                    {{ _core.settings.companyAddressCity }}{% if _core.settings.companyAddressState %}, {% endif %}
+                                                {% endif %}
+                                                {% if _core.settings.companyAddressState %}
+                                                    {{ _core.settings.companyAddressState }}
+                                                {% endif %}
+                                                {% if _core.settings.companyAddressPostalCode %}
+                                                    {{ _core.settings.companyAddressPostalCode }}
+                                                {% endif %}
                                             {% endif %}
                                         </div>
                                     {% endif %}

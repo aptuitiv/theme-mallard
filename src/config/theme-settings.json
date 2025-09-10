@@ -70,6 +70,12 @@
                     "defaultValue": "yes"
                 },
                 {
+                    "name": "footerCustomAddress",
+                    "label": "Custom address",
+                    "type": "text",
+                    "description": "If \"Show address\" is enabled, this field will be used in the footer instead of the address from Settings -> Company Information."
+                },
+                {
                     "name": "footerShowEmail",
                     "label": "Show email",
                     "type": "switch",
@@ -193,6 +199,12 @@
                     "label": "Show address",
                     "type": "switch",
                     "defaultValue": "yes"
+                },
+                {
+                    "name": "topBarCustomAddress",
+                    "label": "Custom address",
+                    "type": "text",
+                    "description": "If \"Show address\" is enabled, this field will be used in the top bar instead of the address from Settings -> Company Information."
                 },
                 {
                     "name": "topBarShowEmail",
