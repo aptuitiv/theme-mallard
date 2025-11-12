@@ -108,9 +108,7 @@
                             "label": "Icon size",
                             "type": "size",
                             "defaultValue": "12px",
-                            "allowedUnits": [
-                                "px"
-                            ],
+                            "allowedUnits": ["px"],
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Accordion-icon-size"
@@ -1673,9 +1671,7 @@
                             "name": "size",
                             "label": "Size",
                             "type": "size",
-                            "allowedUnits": [
-                                "px"
-                            ]
+                            "allowedUnits": ["px"]
                         }
                     ]
                 }
@@ -2860,9 +2856,7 @@
                             "name": "textInputBorderWidth",
                             "label": "Border width",
                             "type": "size",
-                            "allowedUnits": [
-                                "px"
-                            ],
+                            "allowedUnits": ["px"],
                             "defaultValue": "1px",
                             "render": {
                                 "type": "css-head",
@@ -2928,9 +2922,7 @@
                             "name": "selectInputBorderWidth",
                             "label": "Border width",
                             "type": "size",
-                            "allowedUnits": [
-                                "px"
-                            ],
+                            "allowedUnits": ["px"],
                             "defaultValue": "1px",
                             "render": {
                                 "type": "css-head",
@@ -3288,7 +3280,7 @@
                             },
                             "fontSizeRender": {
                                 "cssSelector": "",
-                                "cssVariable": "--Header-text-logo-font-size"
+                                "cssVariable": "--Header-text-logo"
                             }
                         }
                     ]
@@ -3526,9 +3518,7 @@
                             "name": "dropdownMinWidth",
                             "label": "Minimum width",
                             "type": "size",
-                            "allowedUnits": [
-                                "px"
-                            ],
+                            "allowedUnits": ["px"],
                             "defaultValue": "220",
                             "render": {
                                 "type": "css-head",
@@ -3539,9 +3529,7 @@
                             "name": "dropdownMaxWidth",
                             "label": "Maximum width",
                             "type": "size",
-                            "allowedUnits": [
-                                "px"
-                            ],
+                            "allowedUnits": ["px"],
                             "defaultValue": "300",
                             "render": {
                                 "type": "css-head",
@@ -4982,9 +4970,7 @@
                             "label": "Horizontal rule size",
                             "type": "size",
                             "defaultValue": "1px",
-                            "allowedUnits": [
-                                "px"
-                            ],
+                            "allowedUnits": ["px"],
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--base-typography-hrule-width"
