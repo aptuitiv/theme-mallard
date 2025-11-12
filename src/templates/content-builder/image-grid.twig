@@ -114,7 +114,7 @@
      #}
     {% macro textOnImage(column, positionSetting) %}
         {% if column.title && positionSetting in ['bottom', 'center'] %}
-            <div class="ImageGridItem-overlay"></div>
+            {% if positionSetting == 'center' %}<div class="ImageGridItem-overlay"></div>{% endif %}
             <div class="ImageGridItem-overlayContent ImageGridItem-overlayContent--{{ positionSetting }}">
                 <div class="ImageGridItem-title{{ positionSetting|pascal }}">{{ column.title }}</div>
                 {% if column.hoverText %}
