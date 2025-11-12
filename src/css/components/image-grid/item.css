@@ -36,6 +36,12 @@
     text-transform: var(--ImageGridItem-title-above-text-transform);
 }
 
+.ImageGridItem:hover .ImageGridItem-titleAbove {
+    color: var(--ImageGridItem-title-above-color-hover);
+    font-style: var(--ImageGridItem-title-above-font-style-hover);
+    text-decoration: var(--ImageGridItem-title-above-text-decoration-hover);
+}
+
 .ImageGridItem-titleBelow {
     color: var(--ImageGridItem-title-below-color, var(--base-typography-color));
     display: block;
@@ -50,6 +56,12 @@
     text-align: var(--ImageGridItem-title-below-text-align);
     text-decoration: var(--ImageGridItem-title-below-text-decoration, none);
     text-transform: var(--ImageGridItem-title-below-text-transform);
+}
+
+.ImageGridItem:hover .ImageGridItem-titleBelow {
+    color: var(--ImageGridItem-title-below-color-hover);
+    font-style: var(--ImageGridItem-title-below-font-style-hover);
+    text-decoration: var(--ImageGridItem-title-below-text-decoration-hover);
 }
 
 .ImageGridItem-titleBottom {
@@ -89,6 +101,12 @@
     text-decoration: var(--ImageGridItem-title-center-text-decoration);
     text-shadow: var(--ImageGridItem-title-center-text-shadow);
     text-transform: var(--ImageGridItem-title-center-text-transform);
+}
+
+.ImageGridItem:hover .ImageGridItem-titleCenter {
+    color: var(--ImageGridItem-title-center-color-hover);
+    font-style: var(--ImageGridItem-title-center-font-style-hover);
+    text-decoration: var(--ImageGridItem-title-center-text-decoration-hover);
 }
 
 /* ------------------------------------ *\
