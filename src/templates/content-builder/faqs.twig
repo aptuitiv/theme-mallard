@@ -1,10 +1,13 @@
 {% if faqs|length > 0 %}
     <div class="Container Container--pad" itemscope itemtype="https://schema.org/FAQPage">
         {% for item in faqs %}
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 class="text-start" itemprop="name">{{ item.question }}</h3>
+            <div class="Accordion js-accordion" data-collapsed="{% if expandFirstItem and loop.index == 1 %}no{% else %}initial{% endif %}" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="Accordion-heading js-accordionHeading">
+                    <h3 class="Accordion-title" itemprop="name">{{ item.question }}</h3>
+                    <span class="Accordion-icon"></span>
+                </div>
                 <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">{{ item.answer }}</p>
+                    <div class="Accordion-content clearfix last-child-sb-0 js-accordionContent" itemprop="text">{{ item.answer }}</p>
                 </div>
                 </div>
             </div>
