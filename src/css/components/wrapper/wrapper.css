@@ -25,3 +25,8 @@
 .Wrapper--bgDark *:not(.Button, input, select, textarea) {
     color: var(--Wrapper-background-dark-color, #fff);
 }
+
+/* postcss-bem-linter: ignore */
+.Wrapper *:last-child {
+    margin-bottom: 0;
+}

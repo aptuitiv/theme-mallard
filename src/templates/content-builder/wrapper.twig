@@ -1,5 +1,5 @@
 <div class="Wrapper Wrapper--bg{{ background|pascal}}{% if topMargin == 'none' %} mt-0{% endif %}">
-    <div class="Container {{ width == 'Narrow' ? 'Container--narrow' : 'Container--pad' }}">
+    <div class="Container {{ width == 'Narrow' ? 'Container--narrow' : 'Container--pad' }} first-child-st-0 last-child-sb-0">
         {% for element in content.elements %}
             {{ element.content }}
         {% endfor %}

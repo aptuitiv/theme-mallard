@@ -67,3 +67,8 @@
     color: var(--Wrapper-wbgimage-background-dark-color, #fff);
     text-shadow: var(--Wrapper-wbgimage-background-dark-text-shadow);
 }
+
+/* postcss-bem-linter: ignore */
+.WrapperWithBgImage *:last-child {
+    margin-bottom: 0;
+}
