@@ -1983,7 +1983,6 @@
                             "name": "defaultButtonBackground",
                             "label": "Background color",
                             "type": "color",
-                            "defaultValue": "#a21514",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Button-background"
@@ -1993,7 +1992,6 @@
                             "name": "defaultButtonBackgroundHover",
                             "label": "Background color (hover)",
                             "type": "color",
-                            "defaultValue": "#7a0504",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Button-background-hover"
@@ -2080,7 +2078,6 @@
                             "name": "alt1ButtonBackground",
                             "label": "Background color",
                             "type": "color",
-                            "defaultValue": "#a21514",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Button-alt-background"
@@ -2090,7 +2087,6 @@
                             "name": "alt1ButtonBackgroundHover",
                             "label": "Background color (hover)",
                             "type": "color",
-                            "defaultValue": "#7a0504",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Button-alt-background-hover"
@@ -2124,7 +2120,6 @@
                             "name": "alt1ButtonBorderColor",
                             "label": "Border color",
                             "type": "color",
-                            "defaultValue": "#333333",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Button-alt-border-color"
@@ -2134,7 +2129,6 @@
                             "name": "alt1ButtonBorderColorHover",
                             "label": "Border color (hover)",
                             "type": "color",
-                            "defaultValue": "#333333",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Button-alt-border-color-hover"
@@ -2179,7 +2173,6 @@
                             "name": "alt2ButtonBackground",
                             "label": "Background color",
                             "type": "color",
-                            "defaultValue": "#a21514",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Button-alt2-background"
@@ -2189,7 +2182,6 @@
                             "name": "alt2ButtonBackgroundHover",
                             "label": "Background color (hover)",
                             "type": "color",
-                            "defaultValue": "#7a0504",
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--Button-alt2-background-hover"
