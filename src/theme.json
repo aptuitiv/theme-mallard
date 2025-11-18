@@ -1563,10 +1563,10 @@
                 "display_order": "2",
                 "elements": [
                     {
-                        "key": "banner-bar",
+                        "key": "banner",
                         "name": "Banner Bar",
                         "type": "full",
-                        "template": "banner-bar",
+                        "template": "banner",
                         "enabled": true,
                         "parse": true,
                         "description": "",
@@ -2365,7 +2365,7 @@
             "name": "Wrapper with background image"
         },
         {
-            "key": "content-builder/banner-bar",
+            "key": "content-builder/banner",
             "name": "Banner Bar"
         },
         {

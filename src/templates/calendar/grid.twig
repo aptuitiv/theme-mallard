@@ -5,7 +5,7 @@
     {% set content %}
         <h1>Calendar of Events: {{ startDate }}{% if dateRangeKey != 'day' %} - {{ endDate }}{% endif %}</h1>
     {% endset %}
-    {% include('content-builder/banner-bar') %}
+    {% include('content-builder/banner') %}
 {% endblock %}
 
 {% block main %}
