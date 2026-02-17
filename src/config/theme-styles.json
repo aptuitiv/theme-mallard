@@ -3101,6 +3101,16 @@
                             }
                         },
                         {
+                            "name": "formButtonMargin",
+                            "label": "Margin",
+                            "type": "margin",
+                            "defaultValue": "0",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--FormButton-margin"
+                            }
+                        },
+                        {
                             "name": "formButtonFullWidthSmallScreens",
                             "label": "Have the button be full width on small screens",
                             "type": "switch",
