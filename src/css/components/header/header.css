@@ -41,6 +41,7 @@
 .Header-logo {
     margin-bottom: var(--Header-image-logo-margin-sm, 0);
     max-width: var(--Header-logo-width);
+    transition: max-width 250ms ease, width 250ms ease;
     width: 100%;
 }
 
@@ -76,5 +77,48 @@
     .Header {
         gap: var(--Header-gap);
         padding: var(--Header-padding, 20px 0);
+    }
+}
+
+/* =========================================================================== *\
+    Sticky header (Masthead wrapper)
+\* =========================================================================== */
+
+/* stylelint-disable-next-line plugin/selector-bem-pattern -- Utility class applied to <html> by header.twig when sticky is enabled. */
+.has-sticky-header {
+    scroll-padding-top: var(--Header-sticky-anchor-offset, 100px);
+}
+
+/* @define Masthead */
+.Masthead--sticky {
+    background: var(--Header-sticky-background, var(--Header-background, #fff));
+    position: sticky;
+    top: 0;
+    transition: transform 250ms ease, box-shadow 250ms ease;
+    z-index: var(--Header-sticky-z-index, 100);
+}
+
+.Masthead--sticky.is-sticky {
+    box-shadow: var(--Header-sticky-box-shadow, 0 2px 6px rgb(0 0 0 / 15%));
+}
+
+/* stylelint-disable-next-line plugin/selector-bem-pattern -- Masthead modifier styling the Header-logo when sticky. */
+.Masthead--sticky.is-sticky .Header-logo {
+    max-width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct, 75) / 100);
+}
+
+/* stylelint-disable-next-line plugin/selector-bem-pattern -- Masthead modifier styling the Header-logo when sticky. */
+.Masthead--sticky.is-sticky .Header-logo[src$='.svg'] {
+    width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct, 75) / 100);
+}
+
+/* stylelint-disable-next-line plugin/selector-bem-pattern -- Masthead modifier hiding the TopBar when sticky. */
+.Masthead--hideTopBar.is-sticky .TopBar {
+    display: none;
+}
+
+@media (width <= 1050px) {
+    .Masthead--hideOnScroll.is-hidden {
+        transform: translateY(-100%);
     }
 }

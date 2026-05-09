@@ -153,6 +153,58 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "Sticky behavior",
+                    "fields": [
+                        {
+                            "name": "headerStickyEnabled",
+                            "label": "Enable sticky header",
+                            "type": "switch",
+                            "description": "When enabled the header (and top bar) stay visible at the top of the page as the user scrolls.",
+                            "defaultValue": "no"
+                        },
+                        {
+                            "name": "headerStickyHideTopBar",
+                            "label": "Hide top bar when sticky",
+                            "type": "switch",
+                            "description": "When the header becomes sticky, hide the top bar so only the logo and navigation stay visible. Requires the sticky header to be enabled.",
+                            "defaultValue": "yes"
+                        },
+                        {
+                            "name": "headerStickyLogoScale",
+                            "label": "Logo size when sticky",
+                            "type": "stepper",
+                            "description": "Percentage of the normal logo width while the header is sticky. 100 = unchanged, 75 = three-quarters size.",
+                            "after": "%",
+                            "defaultValue": "75",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Header-sticky-logo-scale-pct",
+                                "template": "{{ value }}"
+                            }
+                        },
+                        {
+                            "name": "headerStickyAnchorOffset",
+                            "label": "Anchor link offset",
+                            "type": "stepper",
+                            "description": "How far above an in-page anchor target the page should scroll so the sticky header doesn't cover it. Only applied when the sticky header is enabled.",
+                            "after": "px",
+                            "defaultValue": "100",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Header-sticky-anchor-offset",
+                                "template": "{{ value }}px"
+                            }
+                        },
+                        {
+                            "name": "headerStickyHideOnScroll",
+                            "label": "Hide on scroll down (small screens)",
+                            "type": "switch",
+                            "description": "On small screens, hide the header when scrolling down and reveal it when scrolling up. Requires the sticky header to be enabled.",
+                            "defaultValue": "no"
+                        }
+                    ]
                 }
             ]
         },
