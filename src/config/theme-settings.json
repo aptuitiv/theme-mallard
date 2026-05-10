@@ -153,45 +153,6 @@
                             }
                         }
                     ]
-                },
-                {
-                    "name": "Sticky behavior",
-                    "fields": [
-                        {
-                            "name": "headerStickyEnabled",
-                            "label": "Enable sticky header",
-                            "type": "switch",
-                            "description": "When enabled the header (and top bar) stay visible at the top of the page as the user scrolls.",
-                            "defaultValue": "no"
-                        },
-                        {
-                            "name": "headerStickyHideTopBar",
-                            "label": "Hide top bar when sticky",
-                            "type": "switch",
-                            "description": "When the header becomes sticky, hide the top bar so only the logo and navigation stay visible. Requires the sticky header to be enabled.",
-                            "defaultValue": "yes"
-                        },
-                        {
-                            "name": "headerStickyLogoScale",
-                            "label": "Logo size when sticky",
-                            "type": "stepper",
-                            "description": "Percentage of the normal logo width while the header is sticky. 100 = unchanged, 75 = three-quarters size.",
-                            "after": "%",
-                            "defaultValue": "75",
-                            "render": {
-                                "type": "css-head",
-                                "cssVariable": "--Header-sticky-logo-scale-pct",
-                                "template": "{{ value }}"
-                            }
-                        },
-                        {
-                            "name": "headerStickyHideOnScroll",
-                            "label": "Hide on scroll down (small screens)",
-                            "type": "switch",
-                            "description": "On small screens, hide the header when scrolling down and reveal it when scrolling up. Requires the sticky header to be enabled.",
-                            "defaultValue": "no"
-                        }
-                    ]
                 }
             ]
         },
@@ -228,6 +189,69 @@
                             "label": "URL to your page on this social network",
                             "type": "text",
                             "columnWidth": "2fr"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sticky Header",
+            "description": "Make the header stay at the top of the page as the user scrolls, with control over what shrinks or hides at each screen size.",
+            "sidebarSize": "small",
+            "groups": [
+                {
+                    "name": "General",
+                    "fields": [
+                        {
+                            "name": "headerStickyEnabled",
+                            "label": "Enable sticky header",
+                            "type": "switch",
+                            "description": "When enabled the header (and top bar) stay visible at the top of the page as the user scrolls.",
+                            "defaultValue": "no"
+                        },
+                        {
+                            "name": "headerStickyLogoScale",
+                            "label": "Logo size when sticky",
+                            "type": "stepper",
+                            "description": "Percentage of the normal logo width while the header is sticky. 100 = unchanged, 75 = three-quarters size.",
+                            "after": "%",
+                            "defaultValue": "75",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Header-sticky-logo-scale-pct",
+                                "template": "{{ value }}"
+                            }
+                        },
+                        {
+                            "name": "headerStickyHideOnScroll",
+                            "label": "Hide on scroll down (small screens)",
+                            "type": "switch",
+                            "description": "On small screens, hide the header when scrolling down and reveal it when scrolling up. Requires the sticky header to be enabled.",
+                            "defaultValue": "no"
+                        }
+                    ]
+                },
+                {
+                    "name": "Large screen show/hide",
+                    "description": "Hide elements when the header is sticky on large screens (1051px and wider).",
+                    "fields": [
+                        {
+                            "name": "headerStickyHideTopBar",
+                            "label": "Hide top bar",
+                            "type": "switch",
+                            "defaultValue": "yes"
+                        }
+                    ]
+                },
+                {
+                    "name": "Small screen show/hide",
+                    "description": "Hide elements when the header is sticky on small screens (1050px and below) — applies in the same range as the hide-on-scroll behavior.",
+                    "fields": [
+                        {
+                            "name": "headerStickyHideTopBarSm",
+                            "label": "Hide top bar",
+                            "type": "switch",
+                            "defaultValue": "yes"
                         }
                     ]
                 }

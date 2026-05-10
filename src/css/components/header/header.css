@@ -118,7 +118,16 @@
     font-size: calc(var(--Header-text-logo-font-size-sm) * var(--Header-sticky-logo-scale-pct, 75) / 100);
 }
 
-/* stylelint-disable-next-line plugin/selector-bem-pattern -- Header modifier hiding the TopBar (different BEM block) when sticky. */
-.Header--hideTopBar.is-sticky .TopBar {
-    display: none;
+@media (--m-large-screen-nav) {
+    /* stylelint-disable-next-line plugin/selector-bem-pattern -- Header modifier hiding the TopBar (different BEM block) when sticky. */
+    .Header--hideTopBar.is-sticky .TopBar {
+        display: none !important;
+    }
+}
+
+@media (--m-small-screen-nav) {
+    /* stylelint-disable-next-line plugin/selector-bem-pattern -- Header modifier hiding the TopBar (different BEM block) when sticky. */
+    .Header--hideTopBarSm.is-sticky .TopBar {
+        display: none !important;
+    }
 }
