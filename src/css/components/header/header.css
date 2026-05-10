@@ -97,7 +97,7 @@
     position: sticky;
     top: 0;
     transition:
-        transform 250ms ease,
+        top 300ms ease,
         box-shadow 250ms ease;
     z-index: var(--Header-sticky-z-index, 100);
 }
@@ -121,10 +121,4 @@
 /* stylelint-disable-next-line plugin/selector-bem-pattern -- Header modifier hiding the TopBar (different BEM block) when sticky. */
 .Header--hideTopBar.is-sticky .TopBar {
     display: none;
-}
-
-@media (width <= 1050px) {
-    .Header--hideOnScroll.is-hidden {
-        transform: translateY(-100%);
-    }
 }

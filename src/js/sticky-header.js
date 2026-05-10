@@ -28,12 +28,24 @@ const stickyHeader = {
         }
     },
 
+    hide() {
+        if (this.header.classList.contains('is-hidden')) return;
+        this.header.style.top = `-${this.header.offsetHeight}px`;
+        this.header.classList.add('is-hidden');
+    },
+
+    show() {
+        if (!this.header.classList.contains('is-hidden')) return;
+        this.header.style.top = '';
+        this.header.classList.remove('is-hidden');
+    },
+
     featuresSupported() {
         return (
-            'IntersectionObserver' in window
-            && typeof CSS !== 'undefined'
-            && typeof CSS.supports === 'function'
-            && CSS.supports('position', 'sticky')
+            'IntersectionObserver' in window &&
+            typeof CSS !== 'undefined' &&
+            typeof CSS.supports === 'function' &&
+            CSS.supports('position', 'sticky')
         );
     },
 
@@ -80,23 +92,23 @@ const stickyHeader = {
     handleScroll() {
         const currentScrollY = window.scrollY;
         if (window.innerWidth >= this.smallScreenBreakpoint) {
-            this.header.classList.remove('is-hidden');
+            this.show();
             this.lastScrollY = currentScrollY;
             return;
         }
         if (currentScrollY < 50) {
-            this.header.classList.remove('is-hidden');
+            this.show();
         } else if (currentScrollY > this.lastScrollY) {
-            this.header.classList.add('is-hidden');
+            this.hide();
         } else if (currentScrollY < this.lastScrollY) {
-            this.header.classList.remove('is-hidden');
+            this.show();
         }
         this.lastScrollY = currentScrollY;
     },
 
     handleResize() {
         if (window.innerWidth >= this.smallScreenBreakpoint) {
-            this.header.classList.remove('is-hidden');
+            this.show();
         }
     },
 };
