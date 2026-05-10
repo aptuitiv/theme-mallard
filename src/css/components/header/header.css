@@ -41,7 +41,9 @@
 .Header-logo {
     margin-bottom: var(--Header-image-logo-margin-sm, 0);
     max-width: var(--Header-logo-width);
-    transition: max-width 250ms ease, width 250ms ease;
+    transition:
+        max-width 250ms ease,
+        width 250ms ease;
     width: 100%;
 }
 
@@ -54,6 +56,7 @@
 
 .Header-textLogo {
     font-size: var(--Header-text-logo-font-size-sm);
+    transition: font-size 250ms ease;
 }
 
 @media (--m-small-screen-nav) {
@@ -93,7 +96,9 @@
     background: var(--Header-sticky-background, var(--Header-background, #fff));
     position: sticky;
     top: 0;
-    transition: transform 250ms ease, box-shadow 250ms ease;
+    transition:
+        transform 250ms ease,
+        box-shadow 250ms ease;
     z-index: var(--Header-sticky-z-index, 100);
 }
 
@@ -107,6 +112,10 @@
 
 .Header--sticky.is-sticky .Header-logo[src$='.svg'] {
     width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct, 75) / 100);
+}
+
+.Header--sticky.is-sticky .Header-textLogo {
+    font-size: calc(var(--Header-text-logo-font-size-sm) * var(--Header-sticky-logo-scale-pct, 75) / 100);
 }
 
 /* stylelint-disable-next-line plugin/selector-bem-pattern -- Header modifier hiding the TopBar (different BEM block) when sticky. */
