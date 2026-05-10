@@ -22,10 +22,25 @@ const stickyHeader = {
         this.header = document.querySelector('.Header--sticky');
         if (!this.header) return;
         if (!this.featuresSupported()) return;
+        this.updateAnchorOffset();
         this.observeSticky();
+        window.addEventListener('resize', () => this.updateAnchorOffset());
         if (this.header.classList.contains('Header--hideOnScroll')) {
             this.setupScrollListener();
         }
+    },
+
+    /**
+     * Set --Header-sticky-anchor-offset to the live header height so that
+     * scroll-padding-top on .has-sticky-header always matches the current
+     * header — across desktop / mobile breakpoints, sticky-state shrink,
+     * and the TopBar collapse when Header--hideTopBar is set.
+     */
+    updateAnchorOffset() {
+        document.documentElement.style.setProperty(
+            '--Header-sticky-anchor-offset',
+            `${this.header.offsetHeight}px`,
+        );
     },
 
     hide() {
@@ -87,6 +102,7 @@ const stickyHeader = {
     resyncScrollY() {
         requestAnimationFrame(() => {
             this.lastScrollY = window.scrollY;
+            this.updateAnchorOffset();
         });
     },
 
