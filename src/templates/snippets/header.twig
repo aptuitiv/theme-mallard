@@ -1,6 +1,9 @@
 {% import 'macros/macros' as macros %}
 <!doctype html>
-<html lang="en"{% if _core.theme.settings.headerStickyEnabled == 'yes' %} class="has-sticky-header"{% endif %}>
+{% set stickyEnabled = _core.theme.settings.headerStickyEnabled == 'yes' %}
+{% set stickyCollapseLg = stickyEnabled and _core.theme.settings.headerStickyHideTopBar == 'yes' %}
+{% set stickyCollapseSm = stickyEnabled and _core.theme.settings.headerStickyHideTopBarSm == 'yes' %}
+<html lang="en"{% if stickyEnabled %} class="has-sticky-header{% if stickyCollapseLg %} has-sticky-collapse-lg{% endif %}{% if stickyCollapseSm %} has-sticky-collapse-sm{% endif %}"{% endif %}>
 <head>
     <meta charset="utf-8">
     {{ _page.priorityHead() }}

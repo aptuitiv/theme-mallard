@@ -89,12 +89,27 @@
 
 /* stylelint-disable-next-line plugin/selector-bem-pattern -- Utility class applied to <html> by header.twig when sticky is enabled. */
 .has-sticky-header {
-    /* Disable scroll anchoring so that layout shifts inside the sticky
-       header (TopBar collapsing via display: none) don't cause the
-       browser to silently nudge scrollY back across the sticky-detection
-       threshold and trigger an oscillation loop. */
-    overflow-anchor: none;
     scroll-padding-top: var(--Header-sticky-anchor-offset, 100px);
+}
+
+/* Disable scroll anchoring only when a hide-when-sticky setting is
+   active for the current breakpoint — the TopBar collapse causes a
+   large enough layout shift that the browser's anchoring would nudge
+   scrollY back across the sticky threshold and produce an oscillation
+   loop. The smaller layout change from logo shrink alone is absorbed
+   by the JS hysteresis, so anchoring stays on by default. */
+@media (--m-large-screen-nav) {
+    /* stylelint-disable-next-line plugin/selector-bem-pattern -- Utility class applied to <html> by header.twig. */
+    .has-sticky-collapse-lg {
+        overflow-anchor: none;
+    }
+}
+
+@media (--m-small-screen-nav) {
+    /* stylelint-disable-next-line plugin/selector-bem-pattern -- Utility class applied to <html> by header.twig. */
+    .has-sticky-collapse-sm {
+        overflow-anchor: none;
+    }
 }
 
 .Header--sticky {
