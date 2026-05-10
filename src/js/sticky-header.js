@@ -1,9 +1,9 @@
 /* ===========================================================================
     Sticky header behavior
 
-    Adds .is-sticky to the masthead when it crosses the viewport top, using an
-    IntersectionObserver against a JS-injected sentinel. When Masthead--hideOnScroll
-    is also present, the masthead hides on scroll-down / reveals on scroll-up
+    Adds .is-sticky to the header when it crosses the viewport top, using an
+    IntersectionObserver against a JS-injected sentinel. When Header--hideOnScroll
+    is also present, the header hides on scroll-down / reveals on scroll-up
     below the 1051px nav breakpoint.
 =========================================================================== */
 
@@ -17,11 +17,11 @@ const stickyHeader = {
     },
 
     init() {
-        this.header = document.querySelector('.Masthead--sticky');
+        this.header = document.querySelector('.Header--sticky');
         if (!this.header) return;
         if (!this.featuresSupported()) return;
         this.observeSticky();
-        if (this.header.classList.contains('Masthead--hideOnScroll')) {
+        if (this.header.classList.contains('Header--hideOnScroll')) {
             this.setupScrollListener();
         }
     },

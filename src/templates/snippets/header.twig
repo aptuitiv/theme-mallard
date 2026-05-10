@@ -38,10 +38,10 @@
     {{ _api.widgets.collection.get('notifications') }}
     <div class="visually-hidden">{{ source('snippets/svg-icons.twig') }}</div>
     {% apply spaceless %}
-    <header class="Masthead
-        {%- if _core.theme.settings.headerStickyEnabled == 'yes' %} Masthead--sticky{% endif -%}
-        {%- if _core.theme.settings.headerStickyEnabled == 'yes' and _core.theme.settings.headerStickyHideOnScroll == 'yes' %} Masthead--hideOnScroll{% endif -%}
-        {%- if _core.theme.settings.headerStickyEnabled == 'yes' and _core.theme.settings.headerStickyHideTopBar == 'yes' %} Masthead--hideTopBar{% endif -%}
+    <header class="Header
+        {%- if _core.theme.settings.headerStickyEnabled == 'yes' %} Header--sticky{% endif -%}
+        {%- if _core.theme.settings.headerStickyEnabled == 'yes' and _core.theme.settings.headerStickyHideOnScroll == 'yes' %} Header--hideOnScroll{% endif -%}
+        {%- if _core.theme.settings.headerStickyEnabled == 'yes' and _core.theme.settings.headerStickyHideTopBar == 'yes' %} Header--hideTopBar{% endif -%}
     ">
         {% if _core.theme.settings.topBarShow == 'yes' %}
             <div class="TopBar">
@@ -97,7 +97,7 @@
                 </div>
             </div>
         {% endif %}
-        <div class="Header">
+        <div class="Header-inner">
             <div class="Container Container--pad">
                 <nav class="Header-items">
                     <div class="Header-logoWrapper" id="header-logo">
