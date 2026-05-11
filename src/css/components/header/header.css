@@ -6,7 +6,8 @@
 .Header-inner {
     background: var(--Header-background);
     gap: var(--Header-gap-sm);
-    padding: var(--Header-padding-sm, 20px 0);
+    padding: var(--Header-inner-padding-sm, 20px 0);
+    transition: padding 300ms ease;
 }
 
 .Header-skipToMain {
@@ -42,8 +43,8 @@
     margin-bottom: var(--Header-image-logo-margin-sm, 0);
     max-width: var(--Header-logo-width);
     transition:
-        max-width 250ms ease,
-        width 250ms ease;
+        max-width 300ms ease,
+        width 300ms ease;
     width: 100%;
 }
 
@@ -56,7 +57,7 @@
 
 .Header-textLogo {
     font-size: var(--Header-text-logo-font-size-sm);
-    transition: font-size 250ms ease;
+    transition: font-size 300ms ease;
 }
 
 @media (--m-small-screen-nav) {
@@ -79,7 +80,7 @@
 @media (--m-lg) {
     .Header-inner {
         gap: var(--Header-gap);
-        padding: var(--Header-padding, 20px 0);
+        padding: var(--Header-inner-padding, 20px 0);
     }
 }
 
@@ -118,7 +119,7 @@
     top: 0;
     transition:
         top 300ms ease,
-        box-shadow 250ms ease;
+        box-shadow 300ms ease;
     z-index: var(--Header-sticky-z-index, 100);
 }
 
