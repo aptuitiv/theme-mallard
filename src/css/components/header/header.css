@@ -41,7 +41,7 @@
 
 .Header-logo {
     margin-bottom: var(--Header-image-logo-margin-sm, 0);
-    max-width: var(--Header-logo-width);
+    max-width: var(--Header-logo-width-sm);
     transition:
         max-width 300ms ease,
         width 300ms ease;
@@ -52,7 +52,7 @@
 .Header-logo[src$='.svg'] {
     height: auto;
     max-width: 100%;
-    width: var(--Header-logo-width);
+    width: var(--Header-logo-width-sm);
 }
 
 .Header-textLogo {
@@ -74,6 +74,16 @@
 
     .Header-textLogo {
         font-size: var(--Header-text-logo-font-size);
+    }
+}
+
+@media (--m-large-screen-nav) {
+    .Header-logo {
+        max-width: var(--Header-logo-width);
+    }
+
+    .Header-logo[src$='.svg'] {
+        width: var(--Header-logo-width);
     }
 }
 
@@ -129,11 +139,11 @@
 }
 
 .Header.is-sticky .Header-logo {
-    max-width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct-sm, 75) / 100);
+    max-width: calc(var(--Header-logo-width-sm) * var(--Header-sticky-logo-scale-pct-sm, 75) / 100);
 }
 
 .Header.is-sticky .Header-logo[src$='.svg'] {
-    width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct-sm, 75) / 100);
+    width: calc(var(--Header-logo-width-sm) * var(--Header-sticky-logo-scale-pct-sm, 75) / 100);
 }
 
 .Header.is-sticky .Header-textLogo {
