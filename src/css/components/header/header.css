@@ -129,18 +129,30 @@
 }
 
 .Header.is-sticky .Header-logo {
-    max-width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct, 75) / 100);
+    max-width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct-sm, 75) / 100);
 }
 
 .Header.is-sticky .Header-logo[src$='.svg'] {
-    width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct, 75) / 100);
+    width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct-sm, 75) / 100);
 }
 
 .Header.is-sticky .Header-textLogo {
-    font-size: calc(var(--Header-text-logo-font-size-sm) * var(--Header-sticky-logo-scale-pct, 75) / 100);
+    font-size: calc(var(--Header-text-logo-font-size-sm) * var(--Header-sticky-logo-scale-pct-sm, 75) / 100);
 }
 
 @media (--m-large-screen-nav) {
+    .Header.is-sticky .Header-logo {
+        max-width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct, 75) / 100);
+    }
+
+    .Header.is-sticky .Header-logo[src$='.svg'] {
+        width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct, 75) / 100);
+    }
+
+    .Header.is-sticky .Header-textLogo {
+        font-size: calc(var(--Header-text-logo-font-size) * var(--Header-sticky-logo-scale-pct, 75) / 100);
+    }
+
     /* stylelint-disable-next-line plugin/selector-bem-pattern -- Header modifier hiding the TopBar (different BEM block) when sticky. */
     .Header--hideTopBar.is-sticky .TopBar {
         display: none !important;
