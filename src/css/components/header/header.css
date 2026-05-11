@@ -123,19 +123,19 @@
     z-index: var(--Header-sticky-z-index, 100);
 }
 
-.Header--sticky.is-sticky {
+.Header.is-sticky {
     box-shadow: var(--Header-sticky-box-shadow, 0 2px 6px rgb(0 0 0 / 15%));
 }
 
-.Header--sticky.is-sticky .Header-logo {
+.Header.is-sticky .Header-logo {
     max-width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct, 75) / 100);
 }
 
-.Header--sticky.is-sticky .Header-logo[src$='.svg'] {
+.Header.is-sticky .Header-logo[src$='.svg'] {
     width: calc(var(--Header-logo-width) * var(--Header-sticky-logo-scale-pct, 75) / 100);
 }
 
-.Header--sticky.is-sticky .Header-textLogo {
+.Header.is-sticky .Header-textLogo {
     font-size: calc(var(--Header-text-logo-font-size-sm) * var(--Header-sticky-logo-scale-pct, 75) / 100);
 }
 
