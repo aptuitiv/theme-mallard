@@ -5238,6 +5238,213 @@
             ]
         },
         {
+            "name": "Top Bar",
+            "description": "Styles for the bar above the header.",
+            "groups": [
+                {
+                    "name": "General",
+                    "fields": [
+                        {
+                            "name": "topBarBackground",
+                            "label": "Background color",
+                            "type": "color",
+                            "defaultValue": "#008576",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-background"
+                            }
+                        },
+                        {
+                            "name": "topBarPadding",
+                            "label": "Padding",
+                            "type": "padding",
+                            "defaultValue": "6px 0",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-padding"
+                            }
+                        },
+                        {
+                            "name": "topBarPaddingSm",
+                            "label": "Padding (small screens)",
+                            "type": "padding",
+                            "defaultValue": "6px 0 12px 0",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-padding-sm"
+                            }
+                        },
+                        {
+                            "name": "topBarGap",
+                            "label": "Horizontal space between address and social icons",
+                            "type": "size",
+                            "defaultValue": "20px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-gap"
+                            }
+                        },
+                        {
+                            "name": "topBarGapSm",
+                            "label": "Vertical space between address and social icons (small screens)",
+                            "type": "size",
+                            "defaultValue": "10px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-gap-sm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Contact information",
+                    "fields": [
+                        {
+                            "name": "topBarContactGap",
+                            "label": "Horizontal space between address, phone, and email",
+                            "type": "size",
+                            "defaultValue": "20px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-contact-gap"
+                            }
+                        },
+                        {
+                            "name": "topBarContactGapSm",
+                            "label": "Vertical space between address, phone, and email (small screen)",
+                            "type": "size",
+                            "defaultValue": "6px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-contact-gap-sm"
+                            }
+                        },
+                        {
+                            "name": "topBarContactTypography",
+                            "label": "Typography",
+                            "type": "typography",
+                            "collapsable": false,
+                            "useHover": true,
+                            "useTextAlign": false,
+                            "useFontSizeHover": false,
+                            "color": {
+                                "defaultValue": "#ffffff"
+                            },
+                            "colorHover": {
+                                "defaultValue": "#ffffff"
+                            },
+                            "fontSize": {
+                                "defaultValue": "1.6rem"
+                            },
+                            "fontWeight": {
+                                "defaultValue": "300"
+                            },
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-contact"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Social",
+                    "fields": [
+                        {
+                            "name": "topBarSocialGap",
+                            "label": "Space between social icons",
+                            "type": "size",
+                            "defaultValue": "6px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-gap"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialGapSm",
+                            "label": "Space between social icons (small screens)",
+                            "type": "size",
+                            "defaultValue": "10px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-gap-sm"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialBorderRadius",
+                            "label": "Border radius around the icon",
+                            "type": "borderRadius",
+                            "defaultValue": "50%",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-border-radius"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialSize",
+                            "label": "Icon size",
+                            "type": "size",
+                            "defaultValue": "18px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-size"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialPadding",
+                            "label": "Padding around the icon",
+                            "type": "padding",
+                            "description": "The padding shows more of the background around the icon",
+                            "defaultValue": "4px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-padding"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialBackground",
+                            "label": "Social background color",
+                            "type": "color",
+                            "defaultValue": "#ffffff",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-background"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialBackgroundHover",
+                            "label": "Social background color (hover)",
+                            "type": "color",
+                            "defaultValue": "#008576",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-backgroundHover"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialColor",
+                            "label": "Social icon color",
+                            "type": "color",
+                            "defaultValue": "#008576",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-color"
+                            }
+                        },
+                        {
+                            "name": "topBarSocialColorHover",
+                            "label": "Social icon color (hover)",
+                            "type": "color",
+                            "defaultValue": "#ffffff",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--TopBar-social-colorHover"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Typography",
             "description": "Styles for typography throughout the website.",
             "groups": [
