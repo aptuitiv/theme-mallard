@@ -6,8 +6,8 @@
 <html lang="en"{% if stickyEnabled %} class="has-sticky-header{% if stickyCollapseLg %} has-sticky-collapse-lg{% endif %}{% if stickyCollapseSm %} has-sticky-collapse-sm{% endif %}"{% endif %}>
 <head>
     <meta charset="utf-8">
-    {{ _page.priorityHead() }}
     <title>{{ _page.title }}</title>
+    {{ _page.priorityHead() }}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ _page.meta() }}
     <link type="text/css" rel="stylesheet" href="{{ 'css/main.css'|theme_url }}">
