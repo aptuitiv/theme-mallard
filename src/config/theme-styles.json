@@ -2778,6 +2778,25 @@
                                 "type": "css-head",
                                 "cssVariable": "--Footer-sm"
                             }
+                        },
+                        {
+                            "name": "footerBorder",
+                            "label": "Border",
+                            "type": "border",
+                            "defaultValue": {
+                                "top": {
+                                    "color": "#ececec",
+                                    "style": "solid",
+                                    "width": {
+                                        "size": 1,
+                                        "unit": "px"
+                                    }
+                                }
+                            },
+                            "render": {
+                                "type": "css-head",
+                                "cssSelector": ".Footer"
+                            }
                         }
                     ]
                 },
@@ -3445,6 +3464,66 @@
             "description": "Styles for the header of the website.",
             "groups": [
                 {
+                    "name": "General",
+                    "fields": [
+                        {
+                            "name": "headerBackground",
+                            "label": "Background",
+                            "type": "color",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Header-background"
+                            }
+                        },
+                        {
+                            "name": "headerGap",
+                            "label": "Space between the logo and the navigation",
+                            "type": "size",
+                            "defaultValue": "20px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Header-gap"
+                            }
+                        },
+                        {
+                            "name": "headerGapSm",
+                            "label": "Space between the logo and the navigation (small screens)",
+                            "type": "size",
+                            "defaultValue": "20px",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Header-gap-sm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Image logo",
+                    "description": "Styles for the image logo",
+                    "fields": [
+                        {
+                            "name": "headerImageLogoMargin",
+                            "label": "Margin",
+                            "type": "margin",
+                            "defaultValue": "0",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Header-image-logo-margin"
+                            }
+                        },
+                        {
+                            "name": "headerImageLogoMarginSm",
+                            "label": "Margin (small screens)",
+                            "type": "margin",
+                            "defaultValue": "0",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--Header-image-logo-margin-sm"
+                            }
+                        }
+                    ]
+                },
+                {
                     "name": "Padding",
                     "fields": [
                         {
@@ -3966,6 +4045,83 @@
                             "render": {
                                 "type": "css-head",
                                 "cssVariable": "--MainNav-link-background-hover"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Items (small screens)",
+                    "fields": [
+                        {
+                            "name": "mainNavItemBackgroundSm",
+                            "label": "Background color (small screens)",
+                            "type": "color",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-link-background-sm"
+                            }
+                        },
+                        {
+                            "name": "mainNavItemBackgroundHoverSm",
+                            "label": "Hover/active background color (small screens)",
+                            "type": "color",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-link-background-hover-sm"
+                            }
+                        },
+                        {
+                            "name": "mmainNavItemColorSm",
+                            "label": "Text color (small screens)",
+                            "type": "color",
+                            "defaultValue": "#fff",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-color-sm"
+                            }
+                        },
+                        {
+                            "name": "mainNavItemColorHoverSm",
+                            "label": "Hover/active text color (small screens)",
+                            "type": "color",
+                            "defaultValue": "#fff",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-color-hover-sm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Menu small screen styles",
+                    "fields": [
+                        {
+                            "name": "mainNavBackgroundSm",
+                            "label": "Background (small screens)",
+                            "type": "color",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-background-sm"
+                            }
+                        },
+                        {
+                            "name": "mainNavMarginSm",
+                            "label": "Margin (small screens)",
+                            "type": "margin",
+                            "defaultValue": "10px 0",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-margin-sm"
+                            }
+                        },
+                        {
+                            "name": "mainNavPaddingSm",
+                            "label": "Padding (small screens)",
+                            "type": "padding",
+                            "defaultValue": "10px 0",
+                            "render": {
+                                "type": "css-head",
+                                "cssVariable": "--MainNav-padding-sm"
                             }
                         }
                     ]
