@@ -56,3 +56,9 @@ Carmine isn't a good reference for these — each needs a new fix. Items marked 
 - [ ] `npm run build` completes and `npm run stylelint` shows no new warnings. Stylelint is clean. `npm run build` wasn't run. `npm run jslint` reports one error, which was already there: `no-useless-assignment` in `js/navigation/accessibility.js:96`, a file these changes didn't touch.
 - [ ] Every changed block renders in the CMS, including the Margin and Width options
 - [ ] Keyboard check: the skip link appears above the sticky header and works on the full-width layout; focus inside the sticky header keeps it visible; accordion headings open with Enter/Space
+
+## Follow-up fixes (2026-09-13)
+
+- [x] **`blocks/columned-content.twig` width override** — removed the `width:` values from `count2`–`count6` and every `{% set width = countN.width %}` line. They overwrote the block's Width field, so the Width setting never took effect (same fix as image-grid, Carmine commit `1745710`).
+- [x] **`blocks/image-grid.twig`** — changed `blockWidth(width)` to `blockWidth(width, true)` so it matches the other themes. The file is now identical to Carmine's.
+- [x] **`blog/post.twig`** — the comment author's website link opens in a new window; added `rel="noopener"` and a visually hidden "(opens in a new window)" (same as Carmine).
