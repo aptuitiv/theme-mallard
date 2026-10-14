@@ -24,22 +24,22 @@
     border: var(--Button-border-width) solid var(--Button-border-color);
     border-radius: var(--Button-border-radius);
     box-shadow: var(--Button-box-shadow, none);
-    color: var(--Button-typography-color);
+    color: var(--Button-color);
     cursor: pointer;
     display: inline-flex;
-    font-family: var(--Button-typography-font-family);
-    font-size: var(--Button-typography-font-size);
-    font-style: var(--Button-typography-font-style);
-    font-weight: var(--Button-typography-font-weight);
+    font-family: var(--Button-font-family);
+    font-size: var(--Button-font-size);
+    font-style: var(--Button-font-style);
+    font-weight: var(--Button-font-weight);
     justify-content: center;
-    letter-spacing: var(--Button-typography-letter-spacing);
-    line-height: var(--Button-typography-line-height);
+    letter-spacing: var(--Button-letter-spacing);
+    line-height: var(--Button-line-height);
     margin: 0;
     padding: var(--Button-padding);
     text-align: center;
-    text-decoration: var(--Button-typography-text-decoration);
+    text-decoration: var(--Button-text-decoration);
     text-shadow: none; /* Done in case this is within another element that has text-shadow applied to it */
-    text-transform: var(--Button-typography-text-transform);
+    text-transform: var(--Button-text-transform);
     user-select: none; /* 1 */
 }
 
@@ -56,9 +56,9 @@
     background: var(--Button-background-hover);
     border-color: var(--Button-border-color-hover);
     box-shadow: var(--Button-box-shadow-hover, var(--Button-box-shadow, none));
-    color: var(--Button-typography-color-hover);
-    font-style: var(--Button-typography-font-style-hover);
-    text-decoration: var(--Button-typography-text-decoration-hover);
+    color: var(--Button-color-hover);
+    font-style: var(--Button-font-style-hover);
+    text-decoration: var(--Button-text-decoration-hover);
 }
 
 /**
@@ -71,17 +71,17 @@
     border: var(--Button-alt-border-width) solid var(--Button-alt-border-color);
     border-radius: var(--Button-alt-border-radius);
     box-shadow: var(--Button-alt-box-shadow, var(--Button-box-shadow, none));
-    color: var(--Button-alt-typography-color);
-    font-family: var(--Button-alt-typography-font-family);
-    font-size: var(--Button-alt-typography-font-size);
-    font-style: var(--Button-alt-typography-font-style);
-    font-weight: var(--Button-alt-typography-font-weight);
-    letter-spacing: var(--Button-alt-typography-letter-spacing);
-    line-height: var(--Button-alt-typography-line-height);
+    color: var(--Button-alt-color);
+    font-family: var(--Button-alt-font-family);
+    font-size: var(--Button-alt-font-size);
+    font-style: var(--Button-alt-font-style);
+    font-weight: var(--Button-alt-font-weight);
+    letter-spacing: var(--Button-alt-letter-spacing);
+    line-height: var(--Button-alt-line-height);
     padding: var(--Button-alt-padding);
-    text-decoration: var(--Button-alt-typography-text-decoration);
+    text-decoration: var(--Button-alt-text-decoration);
     text-shadow: none; /* Done in case this is within another element that has text-shadow applied to it */
-    text-transform: var(--Button-alt-typography-text-transform);
+    text-transform: var(--Button-alt-text-transform);
 }
 
 .Button--alt:hover,
@@ -96,9 +96,9 @@
         --Button-alt-box-shadow-hover,
         var(--Button-alt-box-shadow, var(--Button-box-shadow-hover, var(--Button-box-shadow, none)))
     );
-    color: var(--Button-alt-typography-color-hover);
-    font-style: var(--Button-alt-typography-font-style-hover);
-    text-decoration: var(--Button-alt-typography-text-decoration-hover);
+    color: var(--Button-alt-color-hover);
+    font-style: var(--Button-alt-font-style-hover);
+    text-decoration: var(--Button-alt-text-decoration-hover);
 }
 
 .Button--alt2,
@@ -107,17 +107,17 @@
     border: var(--Button-alt2-border-width) solid var(--Button-alt2-border-color);
     border-radius: var(--Button-alt2-border-radius);
     box-shadow: var(--Button-alt2-box-shadow, var(--Button-box-shadow, none));
-    color: var(--Button-alt2-typography-color);
-    font-family: var(--Button-alt2-typography-font-family);
-    font-size: var(--Button-alt2-typography-font-size);
-    font-style: var(--Button-alt2-typography-font-style);
-    font-weight: var(--Button-alt2-typography-font-weight);
-    letter-spacing: var(--Button-alt2-typography-letter-spacing);
-    line-height: var(--Button-alt2-typography-line-height);
+    color: var(--Button-alt2-color);
+    font-family: var(--Button-alt2-font-family);
+    font-size: var(--Button-alt2-font-size);
+    font-style: var(--Button-alt2-font-style);
+    font-weight: var(--Button-alt2-font-weight);
+    letter-spacing: var(--Button-alt2-letter-spacing);
+    line-height: var(--Button-alt2-line-height);
     padding: var(--Button-alt2-padding);
-    text-decoration: var(--Button-alt2-typography-text-decoration);
+    text-decoration: var(--Button-alt2-text-decoration);
     text-shadow: none; /* Done in case this is within another element that has text-shadow applied to it */
-    text-transform: var(--Button-alt2-typography-text-transform);
+    text-transform: var(--Button-alt2-text-transform);
 }
 
 .Button--alt2:hover,
@@ -132,9 +132,9 @@
         --Button-alt2-box-shadow-hover,
         var(--Button-alt2-box-shadow, var(--Button-box-shadow-hover, var(--Button-box-shadow, none)))
     );
-    color: var(--Button-alt2-typography-color-hover);
-    font-style: var(--Button-alt2-typography-font-style-hover);
-    text-decoration: var(--Button-alt2-typography-text-decoration-hover);
+    color: var(--Button-alt2-color-hover);
+    font-style: var(--Button-alt2-font-style-hover);
+    text-decoration: var(--Button-alt2-text-decoration-hover);
 }
 
 /**
@@ -180,7 +180,7 @@
     background: var(--Button-background-disabled);
     border-color: var(--Button-border-color-disabled);
     box-shadow: none;
-    color: var(--Button-typography-color-disabled);
+    color: var(--Button-color-disabled);
     cursor: not-allowed;
 }
 
